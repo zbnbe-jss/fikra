@@ -1,0 +1,3605 @@
+{
+  "saas": {
+    "term": "SaaS",
+    "aliases": [
+      "saas",
+      "software as a service",
+      "ساس"
+    ],
+    "explanationAr": "Software as a Service — برنامج أو تطبيق تشتغله عبر الإنترنت بدون ما تنزّله، وتدفع اشتراك شهري أو سنوي. مثال: Netflix، Google Workspace.",
+    "explanationEn": "Software as a Service — cloud-based software accessed via the internet, paid as a monthly or yearly subscription.",
+    "example": "لو سويت أداة تساعد المحلات تتبع مخزونها باشتراك شهري، هذا SaaS."
+  },
+  "b2b": {
+    "term": "B2B",
+    "aliases": [
+      "b2b",
+      "business to business",
+      "بي تو بي"
+    ],
+    "explanationAr": "Business to Business — تبيع خدماتك أو منتجاتك لشركات ثانية مو لأفراد. مثال: شركة تبيع أنظمة محاسبة للمحلات.",
+    "explanationEn": "Business to Business — selling to other companies, not individuals.",
+    "example": "خدمة تصميم تبيعها للشركات = B2B."
+  },
+  "b2c": {
+    "term": "B2C",
+    "aliases": [
+      "b2c",
+      "business to consumer",
+      "بي تو سي"
+    ],
+    "explanationAr": "Business to Consumer — تبيع مباشرة للعميل النهائي (الأفراد). أغلب المتاجر والمطاعم تستخدم هذا النموذج.",
+    "explanationEn": "Business to Consumer — selling directly to end customers (individuals).",
+    "example": "متجر ملابس يبيع للناس العاديين = B2C."
+  },
+  "c2c": {
+    "term": "C2C",
+    "aliases": [
+      "c2c",
+      "consumer to consumer",
+      "سي تو سي"
+    ],
+    "explanationAr": "Consumer to Consumer — أفراد يبيعون ويشترون من بعض عبر منصة. مثال: أوليكس، eBay.",
+    "explanationEn": "Consumer to Consumer — individuals selling to each other via a platform.",
+    "example": "أوليكس اللي الناس تعرض فيه شيها للبيع = C2C."
+  },
+  "marketplace": {
+    "term": "Marketplace",
+    "aliases": [
+      "marketplace",
+      "سوق الكتروني",
+      "منصه بيع"
+    ],
+    "explanationAr": "منصة تربط بين البائعين والمشترين. أنت ما تبيع ولا تشتري، أنت توفر المنصة وتاخذ عمولة. مثال: أمازون، نون.",
+    "explanationEn": "A platform connecting sellers and buyers. You provide the platform and take a commission.",
+    "example": "موقع يخلي الناس يبيعون ويشترون = marketplace."
+  },
+  "e-commerce": {
+    "term": "E-commerce",
+    "aliases": [
+      "ecommerce",
+      "e-commerce",
+      "تجاره الكترونيه",
+      "متجر الكتروني"
+    ],
+    "explanationAr": "بيع وشراء المنتجات عبر الإنترنت. يشمل متجرك الخاص أو البيع على منصات مثل نون وأمازون.",
+    "explanationEn": "Buying and selling products online.",
+    "example": "متجر على شوبيفاي = e-commerce."
+  },
+  "dropshipping": {
+    "term": "Dropshipping",
+    "aliases": [
+      "dropshipping",
+      "drop shipping",
+      "دروب شيبنج"
+    ],
+    "explanationAr": "تبيع منتجات بدون ما تشتري مخزون. العميل يطلب منك، وأنت تطلب من المورد وهو يشحن مباشرة للعميل.",
+    "explanationEn": "Selling products without holding inventory. The supplier ships directly to the customer.",
+    "example": "تعرض منتج بـ 200، تشتريه من المورد بـ 100، ربحك 100."
+  },
+  "subscription": {
+    "term": "Subscription",
+    "aliases": [
+      "subscription",
+      "اشتراك",
+      "اشتراك شهري"
+    ],
+    "explanationAr": "العميل يدفع مبلغ ثابت شهري أو سنوي مقابل خدمة مستمرة. يعطيك دخل متوقع ومستمر.",
+    "explanationEn": "Customer pays a fixed amount periodically for ongoing access.",
+    "example": "كورس أونلاين باشتراك شهري = subscription."
+  },
+  "recurring_revenue": {
+    "term": "Recurring Revenue",
+    "aliases": [
+      "recurring",
+      "recurring revenue",
+      "دخل متكرر"
+    ],
+    "explanationAr": "دخل يتكرر بانتظام من نفس العملاء. أسهل للتخطيط والنمو من البيع لمرة واحدة.",
+    "explanationEn": "Revenue that repeats regularly from the same customers.",
+    "example": "اشتراك شهري في خدمة وجبات = recurring revenue."
+  },
+  "digital_product": {
+    "term": "Digital Product",
+    "aliases": [
+      "digital product",
+      "منتج رقمي",
+      "منتج الكتروني"
+    ],
+    "explanationAr": "منتج رقمي تصنعه مرة وتبيعه مرات بلا تكلفة إضافية. مثل: كورس، كتاب PDF، قوالب تصميم.",
+    "explanationEn": "A digital product you create once and sell unlimited times with no extra cost.",
+    "example": "كورس فيديو تبيعه لـ 100 شخص = منتج رقمي."
+  },
+  "service_business": {
+    "term": "Service Business",
+    "aliases": [
+      "service business",
+      "خدمات",
+      "service"
+    ],
+    "explanationAr": "مشروع تقدم فيه خدمة (مهارة) بدل منتج ملموس. مثال: تصميم، استشارات، تدريب.",
+    "explanationEn": "A business providing a service (skill) instead of a physical product.",
+    "example": "مصمم جرافيك يقدم خدماته = service business."
+  },
+  "agency": {
+    "term": "Agency",
+    "aliases": [
+      "agency",
+      "وكاله",
+      "شركه خدمات"
+    ],
+    "explanationAr": "شركة خدمات تدير فريق من المختصين وتقدم خدمات لعملاء متعددين.",
+    "explanationEn": "A service company managing a team of specialists for multiple clients.",
+    "example": "وكالة تصميم فيها 3 مصممين تخدم 10 شركات = agency."
+  },
+  "freelance": {
+    "term": "Freelance",
+    "aliases": [
+      "freelance",
+      "فريلانس",
+      "مستقل"
+    ],
+    "explanationAr": "تشتغل بشكل مستغل وتقدم خدماتك مباشرة للعملاء بدون شركة. مرن وتتحكم في وقتك.",
+    "explanationEn": "Working independently, offering services directly to clients.",
+    "example": "كاتب محتوى يخدم عدة عملاء من البيت = freelance."
+  },
+  "consulting": {
+    "term": "Consulting",
+    "aliases": [
+      "consulting",
+      "استشارات",
+      "مستشار"
+    ],
+    "explanationAr": "تقدم خبرتك ومعرفتك كاستشارات للشركات أو الأفراد مقابل رسوم.",
+    "explanationEn": "Providing expert advice to companies or individuals for a fee.",
+    "example": "مستشار تسويق يساعد الشركات = consulting."
+  },
+  "mvp": {
+    "term": "MVP",
+    "aliases": [
+      "mvp",
+      "minimum viable product",
+      "المنتج الادنى"
+    ],
+    "explanationAr": "Minimum Viable Product — أبسط نسخة من فكرتك تطلعها للسوق لتختبر إذا الناس يبونها.",
+    "explanationEn": "The simplest version of your idea that you can release to test demand.",
+    "example": "صفحة بيع واحدة بدل متجر كامل = MVP."
+  },
+  "scalability": {
+    "term": "Scalability",
+    "aliases": [
+      "scalability",
+      "scalable",
+      "قابلية التوسع",
+      "يتوسع",
+      "يكبر"
+    ],
+    "explanationAr": "قدرة المشروع على النمو وزيادة الدخل بدون ما يزيد الشغل بنفس النسبة.",
+    "explanationEn": "The ability to grow revenue without work increasing proportionally.",
+    "example": "كورس يبيع لـ 10 أو 1000 بنفس الجهد = scalable."
+  },
+  "passive_income": {
+    "term": "Passive Income",
+    "aliases": [
+      "passive income",
+      "دخل سلبي",
+      "دخل اوتوماتيكي",
+      "passive"
+    ],
+    "explanationAr": "دخل يجيك بدون شغل نشط كل يوم. تبني الشيء مرة ويستمر يجيب دخل.",
+    "explanationEn": "Income that comes without actively working on it every day.",
+    "example": "كورس فيديو يتباع لسنوات = passive income."
+  },
+  "print_on_demand": {
+    "term": "Print on Demand",
+    "aliases": [
+      "print on demand",
+      "pod",
+      "طباعه عند الطلب"
+    ],
+    "explanationAr": "تبيع منتجات مطبوعة (تيشيرتات، أكواب) بدون مخزون. تطبع فقط عندما يطلب العميل.",
+    "explanationEn": "Selling printed products without inventory. Printed only when ordered.",
+    "example": "متجر تيشيرتات بدون ما تشتري مخزون = print on demand."
+  },
+  "white_label": {
+    "term": "White Label",
+    "aliases": [
+      "white label",
+      "وايت ليب"
+    ],
+    "explanationAr": "منتج يصنعه شخص ثاني وتبيعه أنت باسم براندك.",
+    "explanationEn": "A product made by someone else that you sell under your own brand.",
+    "example": "تشتري كريم من مصنع وتبيعه باسمك = white label."
+  },
+  "private_label": {
+    "term": "Private Label",
+    "aliases": [
+      "private label",
+      "برايفت ليب"
+    ],
+    "explanationAr": "تُصنّع منتج باسم براندك الخاص عبر مصنع ثاني. المنتج حصري لك.",
+    "explanationEn": "Manufacturing a product with your brand via a third-party factory.",
+    "example": "تشيّل ماركة عطور خاصة بك = private label."
+  },
+  "subscription_box": {
+    "term": "Subscription Box",
+    "aliases": [
+      "subscription box",
+      "صندوق اشتراك",
+      "بوكس شهري"
+    ],
+    "explanationAr": "ترسل للعميل صندوق فيه منتجات منتقاة كل شهر مقابل اشتراك.",
+    "explanationEn": "Sending curated products to customers monthly via subscription.",
+    "example": "صندوق وجبات صحية يوصل كل شهر = subscription box."
+  },
+  "franchise": {
+    "term": "Franchise",
+    "aliases": [
+      "franchise",
+      "امتياز",
+      "فرانشايز"
+    ],
+    "explanationAr": "تشتري حق استخدام اسم ونظام شركة ناجحة موجودة لتفتح فرع خاص بك.",
+    "explanationEn": "Buying the right to use an established company's brand and system.",
+    "example": "افتتاح فرع مطعم موجود مسبقاً = franchise."
+  },
+  "affiliate_marketing": {
+    "term": "Affiliate Marketing",
+    "aliases": [
+      "affiliate",
+      "affiliate marketing",
+      "تسويق بالعموله"
+    ],
+    "explanationAr": "تروج منتجات ثانية وتاخذ عمولة عن كل بيع يتم عبر رابطك.",
+    "explanationEn": "Promoting others' products and earning commission on sales via your link.",
+    "example": "تنشر رابط منتج وتاخذ 10% عن كل بيع = affiliate marketing."
+  },
+  "d2c": {
+    "term": "D2C",
+    "aliases": [
+      "d2c",
+      "direct to consumer",
+      "دي تو سي"
+    ],
+    "explanationAr": "Direct to Consumer — تبيع منتجك مباشرة للعميل بدون وسطاء.",
+    "explanationEn": "Direct to Consumer — selling directly without middlemen.",
+    "example": "براند ملابس يبيع من موقعه مباشرة = D2C."
+  },
+  "freemium": {
+    "term": "Freemium",
+    "aliases": [
+      "freemium",
+      "فريميوم"
+    ],
+    "explanationAr": "تقدم نسخة مجانية من منتجك مع ميزات محدودة، والعميل يدفع للنسخة الكاملة.",
+    "explanationEn": "Offering a free version with limited features; paying unlocks the full version.",
+    "example": "تطبيق مجاني مع اشتراك بريميوم = freemium."
+  },
+  "membership": {
+    "term": "Membership",
+    "aliases": [
+      "membership",
+      "عضويه",
+      "عضوية"
+    ],
+    "explanationAr": "العميل يدفع رسوم عضوية للوصول إلى محتوى أو مجتمع حصري.",
+    "explanationEn": "Customer pays a membership fee for exclusive content or community access.",
+    "example": "موقع كورسات باشتراك عضوية = membership."
+  },
+  "seo": {
+    "term": "SEO",
+    "aliases": [
+      "seo",
+      "search engine optimization"
+    ],
+    "explanationAr": "Search Engine Optimization — تحسين موقعك عشان يطلع في نتائج البحث الأولى على جوجل.",
+    "explanationEn": "Improving your site to appear in top Google search results.",
+    "example": "تكتب مقالات تطلع في جوجل = SEO."
+  },
+  "sem": {
+    "term": "SEM",
+    "aliases": [
+      "sem",
+      "search engine marketing"
+    ],
+    "explanationAr": "Search Engine Marketing — الإعلانات المدفوعة على محركات البحث مثل Google Ads.",
+    "explanationEn": "Paid advertising on search engines like Google Ads.",
+    "example": "تدفع لجوجل عشان يطلع إعلانك أول = SEM."
+  },
+  "branding": {
+    "term": "Branding",
+    "aliases": [
+      "branding",
+      "براندينج",
+      "الهويه",
+      "هوية"
+    ],
+    "explanationAr": "بناء هوية لمشروعك — الاسم، الشعار، الألوان، والشعور اللي يربط الناس فيك.",
+    "explanationEn": "Building an identity — name, logo, colors, and the feeling people associate with you.",
+    "example": "أبل تبيع \"إبداع وأناقة\" مو بس لابتوب = branding."
+  },
+  "funnel": {
+    "term": "Funnel",
+    "aliases": [
+      "funnel",
+      "قمع التسويق",
+      "marketing funnel"
+    ],
+    "explanationAr": "رحلة العميل من ما يعرف عنك لين يشتري. تشمل: جذب، اهتمام، قرار، شراء.",
+    "explanationEn": "The customer journey from discovery to purchase.",
+    "example": "تيك توك → متابع → إيميل → شراء = funnel."
+  },
+  "cta": {
+    "term": "CTA",
+    "aliases": [
+      "cta",
+      "call to action",
+      "دعوه لاتخاذ اجراء"
+    ],
+    "explanationAr": "Call to Action — الزر أو الجملة اللي تطلب من العميل يسوي شيء، مثل \"اشتري الآن\".",
+    "explanationEn": "Call to Action — the button or phrase asking the customer to act.",
+    "example": "زر \"اطلب الآن\" على صفحة المنتج = CTA."
+  },
+  "landing_page": {
+    "term": "Landing Page",
+    "aliases": [
+      "landing page",
+      "صفحه هبوط"
+    ],
+    "explanationAr": "صفحة واحدة مصممة لتحويل الزائر إلى عميل — تعرض عرضاً واحداً واضحاً.",
+    "explanationEn": "A single page designed to convert visitors into customers.",
+    "example": "صفحة تبيع كورس واحد = landing page."
+  },
+  "conversion_rate": {
+    "term": "Conversion Rate",
+    "aliases": [
+      "conversion rate",
+      "معدل التحويل",
+      "conversion"
+    ],
+    "explanationAr": "نسبة الزوار اللي يسوون اللي تبيه (شراء، تسجيل). لو 100 زائر و5 اشتروا = 5%.",
+    "explanationEn": "The percentage of visitors who take the desired action.",
+    "example": "100 زائر و10 اشتروا = conversion rate 10%."
+  },
+  "ctr": {
+    "term": "CTR",
+    "aliases": [
+      "ctr",
+      "click through rate",
+      "معدل النقر"
+    ],
+    "explanationAr": "Click Through Rate — نسبة الناس اللي تضغط على إعلانك أو رابطك من اللي يشوفونه.",
+    "explanationEn": "The percentage of people who click your ad or link out of those who see it.",
+    "example": "1000 شافوا إعلانك و50 ضغطوا = CTR 5%."
+  },
+  "cac": {
+    "term": "CAC",
+    "aliases": [
+      "cac",
+      "customer acquisition cost",
+      "تكلفه اكتساب العميل"
+    ],
+    "explanationAr": "Customer Acquisition Cost — كم تكلفك كل عميل جديد. لو صرفت 1000 درهم وجبت 10 عملاء = 100 درهم لكل عميل.",
+    "explanationEn": "How much it costs to acquire each new customer.",
+    "example": "صرفت 500 وجبت 5 عملاء = CAC 100 درهم."
+  },
+  "ltv": {
+    "term": "LTV",
+    "aliases": [
+      "ltv",
+      "lifetime value",
+      "قيمه العميل"
+    ],
+    "explanationAr": "Lifetime Value — كم يجيب لك العميل الواحد خلال كل فترة تعامله معك.",
+    "explanationEn": "Total revenue a customer brings over their entire relationship with you.",
+    "example": "عميل يشتري كل شهر بـ 200 لمدة سنة = LTV 2400."
+  },
+  "retention": {
+    "term": "Retention",
+    "aliases": [
+      "retention",
+      "الاحتفاظ بالعملاء",
+      "retention rate"
+    ],
+    "explanationAr": "قدرتك على الحفاظ على عملائك الحاليين بدل البحث عن جدد.",
+    "explanationEn": "Your ability to keep existing customers.",
+    "example": "اشتراك شهري يخلي العميل يرجع = retention عالي."
+  },
+  "churn": {
+    "term": "Churn",
+    "aliases": [
+      "churn",
+      "churn rate",
+      "معدل التسرب"
+    ],
+    "explanationAr": "نسبة العملاء اللي يتركون خدمتك كل شهر. كل ما كان أقل، كل ما كان مشروعك أصح.",
+    "explanationEn": "The percentage of customers who leave each month.",
+    "example": "100 مشترك و5 يلغون = churn 5%."
+  },
+  "a/b_testing": {
+    "term": "A/B Testing",
+    "aliases": [
+      "a/b testing",
+      "ab testing",
+      "اختبار ايه بي"
+    ],
+    "explanationAr": "تختبر نسختين من شيء (إعلان، صفحة) لتشوف أيهما أفضل قبل ما تطلقها للكل.",
+    "explanationEn": "Testing two versions to see which performs better.",
+    "example": "تختبر عنوانين للإعلان وتشوف أيهما يجيب نقرات أكثر = A/B testing."
+  },
+  "organic_traffic": {
+    "term": "Organic Traffic",
+    "aliases": [
+      "organic traffic",
+      "ترافيك مجاني",
+      "زوار مجانيين"
+    ],
+    "explanationAr": "زوار يجون لموقعك مجاناً عبر بحث جوجل أو محتوى مو إعلانات مدفوعة.",
+    "explanationEn": "Visitors who come to your site for free via search or content.",
+    "example": "مقال يطلع في جوجل ويجيب زوار = organic traffic."
+  },
+  "paid_traffic": {
+    "term": "Paid Traffic",
+    "aliases": [
+      "paid traffic",
+      "ترافيك مدفوع",
+      "زوار مدفوعين"
+    ],
+    "explanationAr": "زوار تجيبهم عبر إعلانات مدفوعة مثل فيسبوك أو جوجل.",
+    "explanationEn": "Visitors brought via paid ads.",
+    "example": "إعلان فيسبوك يجيب زوار = paid traffic."
+  },
+  "niche": {
+    "term": "Niche",
+    "aliases": [
+      "niche",
+      "متخصص",
+      "سوق متخصص",
+      "نيش"
+    ],
+    "explanationAr": "سوق صغير ومتخصص بدل ما تستهدف الكل. منافسة أقل وعملاء أوفياء أكثر.",
+    "explanationEn": "A small specialized market. Less competition, more loyal customers.",
+    "example": "\"ملابس رياضية للمراهقين\" بدل \"ملابس\" = niche."
+  },
+  "usp": {
+    "term": "USP",
+    "aliases": [
+      "usp",
+      "unique selling proposition",
+      "ميزه فريده"
+    ],
+    "explanationAr": "Unique Selling Proposition — المميز اللي يميزك عن كل منافسيك.",
+    "explanationEn": "What makes you unique compared to all competitors.",
+    "example": "\"قهوة مختصة توصل لباب بيتك خلال 30 دقيقة\" = USP."
+  },
+  "influencer_marketing": {
+    "term": "Influencer Marketing",
+    "aliases": [
+      "influencer",
+      "influencer marketing",
+      "مؤثرين"
+    ],
+    "explanationAr": "تتعاون مع مؤثرين على السوشال ميديا للترويج لمنتجك.",
+    "explanationEn": "Collaborating with social media influencers to promote your product.",
+    "example": "مدرب لياقة يرشح مكملاتك = influencer marketing."
+  },
+  "content_marketing": {
+    "term": "Content Marketing",
+    "aliases": [
+      "content marketing",
+      "تسويق بالمحتوى"
+    ],
+    "explanationAr": "تنشئ محتوى مفيد (مقالات، فيديوهات) يجيب عملاء بدل الإعلانات المباشرة.",
+    "explanationEn": "Creating useful content to attract customers instead of direct ads.",
+    "example": "قناة يوتيوب تشرح الطبخ وتبيع كورسك = content marketing."
+  },
+  "email_marketing": {
+    "term": "Email Marketing",
+    "aliases": [
+      "email marketing",
+      "تسويق بالايميل"
+    ],
+    "explanationAr": "ترسل إيميلات لقائمة مشتركين لتبيع لهم أو تبقي علاقتك معهم.",
+    "explanationEn": "Sending emails to a subscriber list to sell or maintain relationships.",
+    "example": "إيميل أسبوعي بكوبونات = email marketing."
+  },
+  "social_media_marketing": {
+    "term": "Social Media Marketing",
+    "aliases": [
+      "social media marketing",
+      "سوشال ميديا",
+      "تسويق اجتماعي"
+    ],
+    "explanationAr": "تستخدم منصات التواصل (إنستغرام، تيك توك) للتسويق لمشروعك.",
+    "explanationEn": "Using social platforms to market your business.",
+    "example": "صفحة إنستغرام تبيع منتجات = social media marketing."
+  },
+  "lead_generation": {
+    "term": "Lead Generation",
+    "aliases": [
+      "lead generation",
+      "توليد عملاء",
+      "leads"
+    ],
+    "explanationAr": "تجيب معلومات تواصل لأشاد مهتمين بمنتجك لتسوق لهم لاحقاً.",
+    "explanationEn": "Collecting contact info from interested prospects to market to later.",
+    "example": "نموذج \"اطلب تجربة مجانية\" يجيب إيميلات = lead generation."
+  },
+  "referral": {
+    "term": "Referral",
+    "aliases": [
+      "referral",
+      "احاله",
+      "توصيه"
+    ],
+    "explanationAr": "عملاء حاليون يرشحون مشروعك لغيرهم. تقدر تحفزهم بمكافآت.",
+    "explanationEn": "Existing customers recommending your business to others.",
+    "example": " \"احلل صديق واحصل على خصم\" = referral."
+  },
+  "profit_margin": {
+    "term": "Profit Margin",
+    "aliases": [
+      "profit margin",
+      "هامش الربح",
+      "margin"
+    ],
+    "explanationAr": "نسبة الربح من كل بيع. لو بعت بـ 100 وتكلفك 60، ربحك 40، والهامش 40%.",
+    "explanationEn": "The percentage of profit from each sale.",
+    "example": "منتج رقمي تكلفته 0 وبيعه بـ 200 = هامش 100%."
+  },
+  "roi": {
+    "term": "ROI",
+    "aliases": [
+      "roi",
+      "return on investment",
+      "العائد على الاستثمار"
+    ],
+    "explanationAr": "Return on Investment — نسبة الربح مقارنة بما صرفته. لو صرفت 1000 وجبت 3000 = 200%.",
+    "explanationEn": "The ratio of profit to what you spent.",
+    "example": "صرفت 500 على إعلان وجبت 2000 مبيعات = ROI ممتاز."
+  },
+  "break-even": {
+    "term": "Break-even",
+    "aliases": [
+      "break-even",
+      "break even",
+      "نقطه التعادل"
+    ],
+    "explanationAr": "النقطة اللي تغطي فيها كل تكاليفك وتبدأ تربح. فوقها = ربح، تحتها = خسارة.",
+    "explanationEn": "The point where revenue covers all costs. Above = profit, below = loss.",
+    "example": "لو رأس مالك 5000 وتربح 500 شهرياً = break-even بعد 10 شهور."
+  },
+  "cash_flow": {
+    "term": "Cash Flow",
+    "aliases": [
+      "cash flow",
+      "التدفق النقدي"
+    ],
+    "explanationAr": "حركة الفلوس داخل وخارج مشروعك. موجب = دخل أكثر من خرج. سالب = عكس.",
+    "explanationEn": "Money moving in and out of your business. Positive = more in than out.",
+    "example": "تدخل 10000 وتطلع 7000 = cash flow موجب 3000."
+  },
+  "startup_cost": {
+    "term": "Startup Cost",
+    "aliases": [
+      "startup cost",
+      "تكلفه البدايه",
+      "تكلفة الانطلاق"
+    ],
+    "explanationAr": "إجمالي الفلوس اللي تحتاجها عشان تفتح مشروعك قبل ما يبدأ يجيب دخل.",
+    "explanationEn": "Total money needed to launch before any revenue comes in.",
+    "example": "تجهيز محل + رخصة + معدات = startup cost."
+  },
+  "operating_cost": {
+    "term": "Operating Cost",
+    "aliases": [
+      "operating cost",
+      "تكاليف تشغيليه",
+      "تكاليف التشغيل"
+    ],
+    "explanationAr": "الفلوس اللي يصرفها مشروعك باستمرار عشان يشتغل: إيجار، رواتب، كهرباء.",
+    "explanationEn": "Ongoing expenses to keep the business running: rent, salaries, utilities.",
+    "example": "إيجار 3000 + رواتب 5000 = operating cost شهري 8000."
+  },
+  "fixed_cost": {
+    "term": "Fixed Cost",
+    "aliases": [
+      "fixed cost",
+      "تكلفه ثابته"
+    ],
+    "explanationAr": "تكاليف ما تتغير سواء بعت كثير أو قليل. مثل: الإيجار.",
+    "explanationEn": "Costs that don't change regardless of sales volume. E.g., rent.",
+    "example": "الإيجار 3000 سواء بعت أو ما بعت = fixed cost."
+  },
+  "variable_cost": {
+    "term": "Variable Cost",
+    "aliases": [
+      "variable cost",
+      "تكلفه متغيره"
+    ],
+    "explanationAr": "تكاليف تتغير مع حجم المبيعات. مثل: تكلفة المواد الخام.",
+    "explanationEn": "Costs that change with sales volume. E.g., raw materials.",
+    "example": "تكلفة كل وجبة 10 درهم = variable cost."
+  },
+  "gross_profit": {
+    "term": "Gross Profit",
+    "aliases": [
+      "gross profit",
+      "اجمالي الربح"
+    ],
+    "explanationAr": "الربح بعد طرح تكلفة المنتج فقط، قبل التكاليف الأخرى.",
+    "explanationEn": "Revenue minus the cost of goods sold, before other expenses.",
+    "example": "بعت بـ 10000 وتكلف المنتج 4000 = gross profit 6000."
+  },
+  "net_profit": {
+    "term": "Net Profit",
+    "aliases": [
+      "net profit",
+      "صافي الربح"
+    ],
+    "explanationAr": "الربح الحقيقي بعد طرح كل التكاليف (منتج + تشغيل + تسويق).",
+    "explanationEn": "The real profit after all expenses are deducted.",
+    "example": "بعت 10000، كل التكاليف 8000 = net profit 2000."
+  },
+  "bootstrapping": {
+    "term": "Bootstrapping",
+    "aliases": [
+      "bootstrapping",
+      "bootstrap",
+      "تمويل ذاتي"
+    ],
+    "explanationAr": "تبني مشروعك بفلوسك الخاصة بدون مستثمرين. تحافظ على كامل الملكية.",
+    "explanationEn": "Building your business with your own money, no investors.",
+    "example": "تبدأ متجر بـ 5000 من جيبك = bootstrapping."
+  },
+  "pricing_strategy": {
+    "term": "Pricing Strategy",
+    "aliases": [
+      "pricing strategy",
+      "استراتيجيه التسعير",
+      "تسعير"
+    ],
+    "explanationAr": "كيف تحدد سعر منتجك. تقدر تسعر عالي لقلة عملاء أو منخفض لحجم كبير.",
+    "explanationEn": "How you set your product's price.",
+    "example": "تسعير بريميوم بسعر مرتفع = pricing strategy."
+  },
+  "unit_economics": {
+    "term": "Unit Economics",
+    "aliases": [
+      "unit economics",
+      "اقتصاديات الوحده"
+    ],
+    "explanationAr": "تحليل ربحية كل وحدة مبيعة — كم تجيب وكم تكلفك كل عملية بيع.",
+    "explanationEn": "Analyzing profitability per unit sold.",
+    "example": "كل وجبة تبيعها بـ 30 وتكلف 15 = unit economics موجب."
+  },
+  "forecast": {
+    "term": "Forecast",
+    "aliases": [
+      "forecast",
+      "توقعات",
+      "توقع مالي"
+    ],
+    "explanationAr": "توقع كم تبيع وتصرف في الفترة القادمة عشان تخطط ميزانيتك.",
+    "explanationEn": "Predicting future sales and expenses for budgeting.",
+    "example": "تتوقع تبيع 1000 وجبة الشهر الجاي = forecast."
+  },
+  "prototype": {
+    "term": "Prototype",
+    "aliases": [
+      "prototype",
+      "نموذج اولي"
+    ],
+    "explanationAr": "نسخة تجريبية بسيطة من منتجك تختبرها قبل ما تنتج النسخة النهائية.",
+    "explanationEn": "A simple trial version of your product to test before final production.",
+    "example": "نموذج كرتون لمنتج قبل التصنيع = prototype."
+  },
+  "product-market_fit": {
+    "term": "Product-Market Fit",
+    "aliases": [
+      "product-market fit",
+      "pmf",
+      "توافق السوق"
+    ],
+    "explanationAr": "لما منتجك يلاقي طلب حقيقي في السوق — الناس يبونه ويشترونه.",
+    "explanationEn": "When your product meets real market demand.",
+    "example": "الناس تطلب منتجك وتقول لغيره = product-market fit."
+  },
+  "automation": {
+    "term": "Automation",
+    "aliases": [
+      "automation",
+      "اتوميشن",
+      "اتمته"
+    ],
+    "explanationAr": "تخلي عمليات تتتم تلقائياً بدون تدخل يدوي — يوفر وقت وجهد.",
+    "explanationEn": "Making processes run automatically without manual intervention.",
+    "example": "إيميل ترحيب يطلع أوتوماتيك لكل مشترك = automation."
+  },
+  "api": {
+    "term": "API",
+    "aliases": [
+      "api",
+      "application programming interface"
+    ],
+    "explanationAr": "واجهة تخلي نظامك يتكلم مع نظام ثاني. مثل ربط متجرك مع بوابة دفع.",
+    "explanationEn": "An interface letting your system communicate with another system.",
+    "example": "ربط متجرك مع Stripe للدفع = استخدام API."
+  },
+  "no-code": {
+    "term": "No-code",
+    "aliases": [
+      "no-code",
+      "نو كود",
+      "بدون كود"
+    ],
+    "explanationAr": "أدوات تخلينك تبني تطبيقات ومواقع بدون ما تكتب كود برمجي.",
+    "explanationEn": "Tools that let you build apps and sites without writing code.",
+    "example": "تبني متجر بـ Shopify بدون برمجة = no-code."
+  },
+  "low-code": {
+    "term": "Low-code",
+    "aliases": [
+      "low-code",
+      "لو كود"
+    ],
+    "explanationAr": "أدوات تحتاج كود بسيط فقط — أسرع من البرمجة الكاملة.",
+    "explanationEn": "Tools needing minimal coding — faster than full programming.",
+    "example": "تبني تطبيق بـ Bubble بقليل كود = low-code."
+  },
+  "webhook": {
+    "term": "Webhook",
+    "aliases": [
+      "webhook",
+      "ويب هوك"
+    ],
+    "explanationAr": "إشعار تلقائي يطلع لنظامك عندما يصير شيء. مثل إشعار عند استلام دفعة.",
+    "explanationEn": "An automatic notification sent to your system when something happens.",
+    "example": "إشعار من Stripe عند كل دفعة = webhook."
+  },
+  "ai": {
+    "term": "AI",
+    "aliases": [
+      "artificial intelligence",
+      "ai",
+      "ذكاء اصطناعي"
+    ],
+    "explanationAr": "أنظمة تقلد الذكاء البشري — تتعلم، تحلل، وتتخذ قرارات.",
+    "explanationEn": "Systems that mimic human intelligence — learning, analyzing, deciding.",
+    "example": "Chatbot يرد على العملاء = استخدام AI."
+  },
+  "dashboard": {
+    "term": "Dashboard",
+    "aliases": [
+      "dashboard",
+      "لوحه تحكم",
+      "داشبورد"
+    ],
+    "explanationAr": "واجهة تعرض لك بيانات مشروعك بشكل مرئي — مبيعات، زوار، أرباح.",
+    "explanationEn": "A visual interface showing your business data.",
+    "example": "لوحة تعرض مبيعات اليوم = dashboard."
+  },
+  "cloud": {
+    "term": "Cloud",
+    "aliases": [
+      "cloud",
+      "سحابه",
+      "كلاود"
+    ],
+    "explanationAr": "تخزين بياناتك وتطبيقاتك على سيرفرات خارجية بدل جهازك.",
+    "explanationEn": "Storing data and apps on external servers instead of your device.",
+    "example": "موقعك على AWS = على الـ cloud."
+  },
+  "hosting": {
+    "term": "Hosting",
+    "aliases": [
+      "hosting",
+      "استضافه"
+    ],
+    "explanationAr": "الخدمة اللي تخلي موقعك متاح على الإنترنت 24/7.",
+    "explanationEn": "The service that keeps your website online 24/7.",
+    "example": "موقعك على Hostinger = استخدام hosting."
+  },
+  "domain": {
+    "term": "Domain",
+    "aliases": [
+      "domain",
+      "نطاق",
+      "دومين"
+    ],
+    "explanationAr": "عنوان موقعك على الإنترنت. مثل: fikra.com.",
+    "explanationEn": "Your website's address on the internet.",
+    "example": "شراء fikra.ae = شراء domain."
+  },
+  "crm": {
+    "term": "CRM",
+    "aliases": [
+      "crm",
+      "customer relationship management",
+      "اداره العملاء"
+    ],
+    "explanationAr": "نظام تدير فيه علاقتك مع عملائك — بياناتهم، تواصلك معهم، ومبيعاتك.",
+    "explanationEn": "A system to manage customer relationships — data, communication, sales.",
+    "example": "HubSpot لتتبع العملاء = CRM."
+  },
+  "supply_chain": {
+    "term": "Supply Chain",
+    "aliases": [
+      "supply chain",
+      "سلسله التوريد"
+    ],
+    "explanationAr": "الرحلة الكاملة للمواد من المورّد لين توصل للعميل.",
+    "explanationEn": "The full journey of materials from supplier to customer.",
+    "example": "المورد → التصنيع → التخزين → الشحن → العميل = supply chain."
+  },
+  "inventory": {
+    "term": "Inventory",
+    "aliases": [
+      "inventory",
+      "مخزون",
+      "المخزون"
+    ],
+    "explanationAr": "المنتجات اللي عندك جاهزة للبيع. تحتاج تتبعها عشان ما تنقص أو تزيد.",
+    "explanationEn": "Products you have ready for sale. Needs tracking.",
+    "example": "100 تيشيرت في المخزن = inventory."
+  },
+  "fulfillment": {
+    "term": "Fulfillment",
+    "aliases": [
+      "fulfillment",
+      "تلبية الطلبات"
+    ],
+    "explanationAr": "عملية تجهيز طلب العميل وshivنه له.",
+    "explanationEn": "The process of preparing and shipping a customer order.",
+    "example": "تستلم طلب → تغلف → تشحن = fulfillment."
+  },
+  "logistics": {
+    "term": "Logistics",
+    "aliases": [
+      "logistics",
+      "لوجستيات"
+    ],
+    "explanationAr": "إدارة حركة البضائع — نقل، تخزين، وتوصيل.",
+    "explanationEn": "Managing the movement of goods — transport, storage, delivery.",
+    "example": "تنسيق توصيل 50 طلب يومياً = logistics."
+  },
+  "wholesale": {
+    "term": "Wholesale",
+    "aliases": [
+      "wholesale",
+      "جمله",
+      "جملة"
+    ],
+    "explanationAr": "شراء أو بيع بكميات كبيرة بسعر أرخص لكل وحدة.",
+    "explanationEn": "Buying or selling in large quantities at lower per-unit prices.",
+    "example": "تشتري 100 تيشيرت بسعر الجملة وتبيعها فردي."
+  },
+  "retail": {
+    "term": "Retail",
+    "aliases": [
+      "retail",
+      "قطاعي",
+      "بيع بالقطاعي"
+    ],
+    "explanationAr": "بيع المنتجات فردي للمستهلك النهائي بسعر أعلى.",
+    "explanationEn": "Selling products individually to end consumers at higher prices.",
+    "example": "متجر يبيع تيشيرت فردي = retail."
+  },
+  "manufacturing": {
+    "term": "Manufacturing",
+    "aliases": [
+      "manufacturing",
+      "تصنيع"
+    ],
+    "explanationAr": "تحويل مواد خام إلى منتج جاهز للبيع.",
+    "explanationEn": "Converting raw materials into finished products.",
+    "example": "مصنع يخيط ملابس من قماش = manufacturing."
+  },
+  "returns": {
+    "term": "Returns",
+    "aliases": [
+      "returns",
+      "مرتجعات",
+      "استرجاع"
+    ],
+    "explanationAr": "منتجات يرجعها العميل. تحتاج سياسة واضحة وترتيب لاستقبالها.",
+    "explanationEn": "Products customers send back. Need a clear policy.",
+    "example": "عميل يرجع تيشيرت مقاس غلط = returns."
+  },
+  "target_audience": {
+    "term": "Target Audience",
+    "aliases": [
+      "target audience",
+      "الجمهور المستهدف",
+      "audience"
+    ],
+    "explanationAr": "المجموعة المحددة من الناس اللي تستهدفها. كل ما كنت أكثر تحديداً، التسويق أسهل.",
+    "explanationEn": "The specific group of people you target.",
+    "example": "\"أمهات شغلات يبون وجبات صحية\" بدل \"الكل\" = target audience."
+  },
+  "value_proposition": {
+    "term": "Value Proposition",
+    "aliases": [
+      "value proposition",
+      "القيمه المقدمه",
+      "value prop"
+    ],
+    "explanationAr": "السبب اللي يخلي العميل يختارك بدل المنافسين. شنو المميز اللي تقدمه؟",
+    "explanationEn": "Why a customer chooses you over competitors.",
+    "example": "\"وجبات طازجة توصل لبابك\" = value proposition."
+  },
+  "business_model": {
+    "term": "Business Model",
+    "aliases": [
+      "business model",
+      "نموذج العمل"
+    ],
+    "explanationAr": "كيف يربح مشروعك — من وين الفلوس، وكيف تبيع، ومن تشتري منك.",
+    "explanationEn": "How your business makes money.",
+    "example": "متجر يبيع منتجات باشتراك شهري = business model جديد."
+  },
+  "revenue_model": {
+    "term": "Revenue Model",
+    "aliases": [
+      "revenue model",
+      "نموذج الربح"
+    ],
+    "explanationAr": "الطريقة المحددة اللي يجيب فيها مشروعك الفلوس.",
+    "explanationEn": "The specific way your business generates money.",
+    "example": "عمولة على كل بيع = revenue model."
+  },
+  "competitor_analysis": {
+    "term": "Competitor Analysis",
+    "aliases": [
+      "competitor analysis",
+      "تحليل المنافسين"
+    ],
+    "explanationAr": "تدرس منافسيك — نقاط قوتهم وضعفهم — عشان تتميز عنهم.",
+    "explanationEn": "Studying competitors to differentiate yourself.",
+    "example": "تشوف أسعار المنافسين وتسعر أرخص = competitor analysis."
+  },
+  "swot": {
+    "term": "SWOT",
+    "aliases": [
+      "swot",
+      "سوات"
+    ],
+    "explanationAr": "تحليل: Strengths (نقاط القوة)، Weaknesses (الضعف)، Opportunities (فرص)، Threats (تهديدات).",
+    "explanationEn": "Analysis: Strengths, Weaknesses, Opportunities, Threats.",
+    "example": "تكتشف أن قوتك جودة المنتج وضعفك تسويق ضعيف = SWOT."
+  },
+  "go-to-market": {
+    "term": "Go-to-Market",
+    "aliases": [
+      "go-to-market",
+      "gtm",
+      "استراتيجيه الانطلاق"
+    ],
+    "explanationAr": "خطة كيف تطلق منتجك وتوصل لأول عملائك.",
+    "explanationEn": "Plan for launching your product and reaching first customers.",
+    "example": "تطلع على إنستغرام + بازار محلي = go-to-market."
+  },
+  "moat": {
+    "term": "Moat",
+    "aliases": [
+      "moat",
+      "خندق دفاعي"
+    ],
+    "explanationAr": "ميزة تحمي مشروعك من المنافسة — شيء صعب ينسخه غيرك.",
+    "explanationEn": "An advantage that protects your business from competition.",
+    "example": "قاعدة عملاء 10000 شخص = moat قوي."
+  },
+  "tam": {
+    "term": "TAM",
+    "aliases": [
+      "tam",
+      "total addressable market",
+      "السوق الكلي"
+    ],
+    "explanationAr": "Total Addressable Market — إجمالي كل الناس اللي تقدر تبيع لهم.",
+    "explanationEn": "Total number of people you could potentially sell to.",
+    "example": "لو تبيع قهوة في دبي، TAM = كل شاربي القهوة في دبي."
+  },
+  "market_research": {
+    "term": "Market Research",
+    "aliases": [
+      "market research",
+      "بحث السوق"
+    ],
+    "explanationAr": "تدرس السوق قبل ما تطلق — من العملاء؟ من المنافسين؟ كم الحجم؟",
+    "explanationEn": "Studying the market before launching.",
+    "example": "استبيان 100 شخص عن اهتمامهم بمنتجك = market research."
+  },
+  "validation": {
+    "term": "Validation",
+    "aliases": [
+      "validation",
+      "تحقق",
+      "تثبت"
+    ],
+    "explanationAr": "تختبر فكرتك بسرعة وبفلوس قليلة عشان تشوف إذا الناس تبونها.",
+    "explanationEn": "Testing your idea quickly and cheaply to see if people want it.",
+    "example": "تطلع صفحة بيع وتشوف كم يطلب = validation."
+  },
+  "upsell": {
+    "term": "Upsell",
+    "aliases": [
+      "upsell",
+      "بيع تصعيدي"
+    ],
+    "explanationAr": "تقنع العميل يشتري نسخة أغلى أو ميزات إضافية.",
+    "explanationEn": "Persuading a customer to buy a more expensive version or add-ons.",
+    "example": "\"تبي ضمان سنتين بدل سنة؟\" = upsell."
+  },
+  "cross-sell": {
+    "term": "Cross-sell",
+    "aliases": [
+      "cross-sell",
+      "بيع متقاطع"
+    ],
+    "explanationAr": "تقنع العميل يشتري منتج مكمل لما اشتراه. مثل: اشترى لابتوب، تبيعه كفر.",
+    "explanationEn": "Selling a complementary product alongside the main purchase.",
+    "example": "اشترى تيشيرت، تقترح بنطلون = cross-sell."
+  },
+  "onboarding": {
+    "term": "Onboarding",
+    "aliases": [
+      "onboarding",
+      "تهيئه",
+      "تأهيل"
+    ],
+    "explanationAr": "تجربة العميل الأولى مع منتجك — تساعده يفهم ويستخدم بسرعة.",
+    "explanationEn": "The customer's first experience with your product.",
+    "example": "رسائل ترحيب تشرح الميزات = onboarding."
+  },
+  "network_effect": {
+    "term": "Network Effect",
+    "aliases": [
+      "network effect",
+      "تاثير الشبكه"
+    ],
+    "explanationAr": "كل ما زاد عدد المستخدمين، زادت قيمة المنتج. مثل واتساب.",
+    "explanationEn": "The product becomes more valuable as more people use it.",
+    "example": "واتساب كل ما زاد مستخدميه صار أنفع = network effect."
+  },
+  "creator_economy": {
+    "term": "Creator Economy",
+    "aliases": [
+      "creator economy",
+      "اقتصاد المبدعين"
+    ],
+    "explanationAr": "أشاد يكسبون من إنشائهم محتوى — يوتيوبرز، تيك توك، بودكاست.",
+    "explanationEn": "People earning from creating content — YouTubers, TikTokers, podcasters.",
+    "example": "تيك توكر يبيع كورسات = creator economy."
+  },
+  "personal_brand": {
+    "term": "Personal Brand",
+    "aliases": [
+      "personal brand",
+      "علامه شخصيه",
+      "براند شخصي"
+    ],
+    "explanationAr": "تبني اسمك وسمعتك كميزة تنافسية — الناس يثقون بك أنت.",
+    "explanationEn": "Building your name and reputation as a competitive advantage.",
+    "example": "مدرب لياقة معروف باسمه = personal brand."
+  },
+  "side_hustle": {
+    "term": "Side Hustle",
+    "aliases": [
+      "side hustle",
+      "مشروع جانبي"
+    ],
+    "explanationAr": "مشروع صغير تشتغله بعد دوامك الرئيسي — دخل إضافي بدون مخاطرة كبيرة.",
+    "explanationEn": "A small business you run alongside your main job.",
+    "example": "تبيع كيك بعد الدوام = side hustle."
+  },
+  "bootstrapped": {
+    "term": "Bootstrapped",
+    "aliases": [
+      "bootstrapped",
+      "ممول ذاتيا"
+    ],
+    "explanationAr": "مشروع بدأ بفلوس صاحبه بدون مستثمرين خارجيين.",
+    "explanationEn": "A business started with the owner's own money, no outside investors.",
+    "example": "بدأت متجر بـ 3000 من جيبك = bootstrapped."
+  },
+  "funding": {
+    "term": "Funding",
+    "aliases": [
+      "funding",
+      "تمويل",
+      "استثمار"
+    ],
+    "explanationAr": "فلوس من مستثمرين عشان تسرّع نمو مشروعك مقابل جزء من الملكية.",
+    "explanationEn": "Money from investors to accelerate growth in exchange for equity.",
+    "example": "مستثمر يعطيك 100000 مقابل 20% = funding."
+  },
+  "investor": {
+    "term": "Investor",
+    "aliases": [
+      "investor",
+      "مستثمر"
+    ],
+    "explanationAr": "شخص أو جهة تعطيك فلوس لمشروعك مقابل جزء من الملكية أو أرباح.",
+    "explanationEn": "A person or entity giving you money for equity or profits.",
+    "example": "ملاك يعطونك 50000 مقابل 10% = investors."
+  },
+  "pitch": {
+    "term": "Pitch",
+    "aliases": [
+      "pitch",
+      "عرض تقديمي"
+    ],
+    "explanationAr": "عرض موجز يشرح فكرتك لمستثمر أو عميل — ليش يهتم، كم تربح، كيف تنمو.",
+    "explanationEn": "A concise presentation of your idea to investors or customers.",
+    "example": "عرض 5 دقايق لمستثمر = pitch."
+  },
+  "business_plan": {
+    "term": "Business Plan",
+    "aliases": [
+      "business plan",
+      "خطة عمل"
+    ],
+    "explanationAr": "وثيقة تشرح كل تفاصيل مشروعك — الفكرة، السوق، المالية، التسويق.",
+    "explanationEn": "A document detailing your business — idea, market, finances, marketing.",
+    "example": "ملف 20 صفحة يشرح مشروعك = business plan."
+  },
+  "pre-order": {
+    "term": "Pre-order",
+    "aliases": [
+      "pre-order",
+      "حجز مسبق",
+      "طلب مسبق"
+    ],
+    "explanationAr": "العميل يدفع قبل ما المنتج جاهز — تختبر الطلب وتجيب فلوس قبل التصنيع.",
+    "explanationEn": "Customer pays before the product is ready — validates demand.",
+    "example": "تفتح حجز لمنتج جديد = pre-order."
+  },
+  "digital_download": {
+    "term": "Digital Download",
+    "aliases": [
+      "digital download",
+      "تحميل رقمي"
+    ],
+    "explanationAr": "منتج رقمي ينزله العميل مباشرة بعد الدفع. مثل: كتاب PDF، قالب تصميم.",
+    "explanationEn": "A digital product the customer downloads after paying.",
+    "example": "كتاب PDF يتباع وينزل فوراً = digital download."
+  },
+  "online_course": {
+    "term": "Online Course",
+    "aliases": [
+      "online course",
+      "كورس اونلاين"
+    ],
+    "explanationAr": "محتوى تعليمي يتعلمه العميل أونلاين — فيديوهات + مواد + اختبارات.",
+    "explanationEn": "Educational content the customer learns online.",
+    "example": "كورس تصوير على Udemy = online course."
+  },
+  "community": {
+    "term": "Community",
+    "aliases": [
+      "community",
+      "مجتمع"
+    ],
+    "explanationAr": "مجموعة من الناس يجمعهم اهتمام مشترك حول براندك.",
+    "explanationEn": "A group of people sharing interest around your brand.",
+    "example": "قروب واتساب لعملائك = community."
+  },
+  "booking_platform": {
+    "term": "Booking Platform",
+    "aliases": [
+      "booking platform",
+      "منصه حجز"
+    ],
+    "explanationAr": "نظام يخلي العملاء يحجزون خدمتك أونلاين — مواعيد، تذاكر.",
+    "explanationEn": "A system letting customers book your service online.",
+    "example": "صفحة حجز مواعيد صالون = booking platform."
+  },
+  "on-demand_service": {
+    "term": "On-demand Service",
+    "aliases": [
+      "on-demand service",
+      "خدمه عند الطلب"
+    ],
+    "explanationAr": "خدمة يطلبها العميل ويوصلها فوراً أو بسرعة. مثل: أوبر، طلبات.",
+    "explanationEn": "A service the customer requests and gets quickly.",
+    "example": "تطبيق توصيل أكل = on-demand service."
+  },
+  "home-based_business": {
+    "term": "Home-based Business",
+    "aliases": [
+      "home-based business",
+      "مشروع منزلي",
+      "من البيت"
+    ],
+    "explanationAr": "مشروع تشتغله من بيتك بدون محل — يوفر تكلفة الإيجار.",
+    "explanationEn": "A business you run from home, no storefront.",
+    "example": "مخبز منزلي = home-based business."
+  },
+  "hybrid_business": {
+    "term": "Hybrid Business",
+    "aliases": [
+      "hybrid business",
+      "مشروع هجين"
+    ],
+    "explanationAr": "مشروع يجمع بين أونلاين وواقعي — مثل متجر + محل.",
+    "explanationEn": "A business combining online and physical.",
+    "example": "متجر + محل = hybrid business."
+  },
+  "commission": {
+    "term": "Commission",
+    "aliases": [
+      "commission",
+      "عموله"
+    ],
+    "explanationAr": "مبلغ أو نسبة تاخذها على كل عملية بيع أو خدمة.",
+    "explanationEn": "An amount or percentage you earn per sale or service.",
+    "example": "تاخذ 10% على كل بيع = commission."
+  },
+  "licensing": {
+    "term": "Licensing",
+    "aliases": [
+      "licensing",
+      "ترخيص",
+      "رخصه"
+    ],
+    "explanationAr": "تبيع حق استخدام علامتك أو منتجك لشخص ثاني مقابل رسوم.",
+    "explanationEn": "Selling rights to use your brand or product for a fee.",
+    "example": "تخلي محلات تستخدم وصفاتك = licensing."
+  },
+  "partnership": {
+    "term": "Partnership",
+    "aliases": [
+      "partnership",
+      "شراكه",
+      "تعاون"
+    ],
+    "explanationAr": "تتعاون مع شخص أو شركة ثانية لمصلحة مشتركة.",
+    "explanationEn": "Collaborating with another person or company for mutual benefit.",
+    "example": "كافيه يتعاون مع مخبز = partnership."
+  },
+  "viral_loop": {
+    "term": "Viral Loop",
+    "aliases": [
+      "viral loop",
+      "حلقه فيروسيه"
+    ],
+    "explanationAr": "كل مستخدم جديد يجيب مستخدمين جدد تلقائياً — نمو سريع بلا إعلانات.",
+    "explanationEn": "Each new user brings more users automatically — fast growth.",
+    "example": "كل مشترك يدعو 3 أصدقاء = viral loop."
+  },
+  "customer_persona": {
+    "term": "Customer Persona",
+    "aliases": [
+      "customer persona",
+      "شخصيه العميل"
+    ],
+    "explanationAr": "وصف تفصيلي لعميلك المثالي — عمر، اهتمامات، مشاكل، احتياجات.",
+    "explanationEn": "A detailed profile of your ideal customer.",
+    "example": "\"سارة، 28، أم شغلة، تبي وجبات صحية سريعة\" = persona."
+  },
+  "positioning": {
+    "term": "Positioning",
+    "aliases": [
+      "positioning",
+      "تموضع"
+    ],
+    "explanationAr": "كيف يرى العملاء براندك مقارنة بالمنافسين — هل أنت الفاخر؟ الرخيص؟ المتخصص؟",
+    "explanationEn": "How customers perceive your brand vs competitors.",
+    "example": "\"القهوة الأعلى جودة في المدينة\" = positioning."
+  },
+  "competitive_advantage": {
+    "term": "Competitive Advantage",
+    "aliases": [
+      "competitive advantage",
+      "ميزه تنافسيه"
+    ],
+    "explanationAr": "شيء تملكه والمنافسين ما يملكونه — يجعلك أفضل.",
+    "explanationEn": "Something you have that competitors don't.",
+    "example": "وصفة سرية = competitive advantage."
+  },
+  "distribution": {
+    "term": "Distribution",
+    "aliases": [
+      "distribution",
+      "توزيع"
+    ],
+    "explanationAr": "كيف يوصل منتجك للعملاء — متجر، أونلاين، تجار جملة.",
+    "explanationEn": "How your product reaches customers.",
+    "example": "تبيع على نون + متجرك = distribution متعدد."
+  },
+  "growth_marketing": {
+    "term": "Growth Marketing",
+    "aliases": [
+      "growth marketing",
+      "تسويق النمو"
+    ],
+    "explanationAr": "تجارب مستمرة على قنوات تسويق مختلفة عشان تلاقي أسرع طريقة للنمو.",
+    "explanationEn": "Continuous experiments across channels to find fastest growth.",
+    "example": "تختبر تيك توك + إعلانات + إيميل = growth marketing."
+  },
+  "product-led_growth": {
+    "term": "Product-led Growth",
+    "aliases": [
+      "product-led growth",
+      "plg"
+    ],
+    "explanationAr": "المنتج نفسه يجيب العملاء — تجربة مجانية ممتازة تخلي الناس تشاركه.",
+    "explanationEn": "The product itself drives growth — great free experience.",
+    "example": "Slack ينتشر لأن الفرق تستخدمه = product-led growth."
+  },
+  "kpi": {
+    "term": "KPI",
+    "aliases": [
+      "kpi",
+      "key performance indicator",
+      "مؤشر الاداء"
+    ],
+    "explanationAr": "Key Performance Indicator — رقم تقيس به أداء مشروعك. مثل: مبيعات شهرية.",
+    "explanationEn": "A metric to measure your business performance.",
+    "example": "مبيعات شهرية = KPI مهم."
+  },
+  "arpu": {
+    "term": "ARPU",
+    "aliases": [
+      "arpu",
+      "average revenue per user",
+      "متوسط دخل العميل"
+    ],
+    "explanationAr": "Average Revenue Per User — كم يجيب لك كل عميل في المتوسط.",
+    "explanationEn": "How much revenue each customer brings on average.",
+    "example": "1000 مشترك و 10000 درهم = ARPU 10."
+  },
+  "pain_point": {
+    "term": "Pain Point",
+    "aliases": [
+      "pain point",
+      "نقطه الالم",
+      "مشكله العميل"
+    ],
+    "explanationAr": "مشكلة يعاني منها العميل ويسعى لحلها — مشروعك يحلها.",
+    "explanationEn": "A problem the customer suffers from — your business solves it.",
+    "example": "\"ما عندي وقت أطبخ\" = pain point يحله توصيل الأكل."
+  },
+  "problem-solution_fit": {
+    "term": "Problem-Solution Fit",
+    "aliases": [
+      "problem-solution fit",
+      "توافق الحل"
+    ],
+    "explanationAr": "لما يحل منتجك مشكلة حقيقية يعاني منها العميل.",
+    "explanationEn": "When your product solves a real customer problem.",
+    "example": "تطبيق يطلب وجبات صحية يحل مشكلة \"ما عندي وقت\" = fit."
+  },
+  "market_segment": {
+    "term": "Market Segment",
+    "aliases": [
+      "market segment",
+      "شريحه السوق"
+    ],
+    "explanationAr": "جزء محدد من السوق تستهدفه. مثل: الشباب 18-25.",
+    "explanationEn": "A specific portion of the market you target.",
+    "example": "تستهدف طلاب الجامعة = market segment."
+  },
+  "barrier_to_entry": {
+    "term": "Barrier to Entry",
+    "aliases": [
+      "barrier to entry",
+      "حاجز الدخول"
+    ],
+    "explanationAr": "صعوبة يواجهها أي شخص يبي يدخل نفس سوقك. كل ما كان أعلى، منافسة أقل.",
+    "explanationEn": "How hard it is for new competitors to enter your market.",
+    "example": "تحتاج رخصة طعام = barrier to entry."
+  },
+  "risk": {
+    "term": "Risk",
+    "aliases": [
+      "risk",
+      "مخاطره",
+      "خطر"
+    ],
+    "explanationAr": "احتمال خسارة أو فشل في مشروعك. تحتاج تتعرف عليها وتخطط لها.",
+    "explanationEn": "The chance of loss or failure in your business.",
+    "example": "تفتح محل بدون دراسة سوق = risk عالي."
+  },
+  "opportunity": {
+    "term": "Opportunity",
+    "aliases": [
+      "opportunity",
+      "فرصه"
+    ],
+    "explanationAr": "فجوة في السوق أو احتياج غير ملبى تقدر تستغله.",
+    "explanationEn": "A gap in the market you can exploit.",
+    "example": "ما في مطعم صحي في المنطقة = opportunity."
+  },
+  "demand": {
+    "term": "Demand",
+    "aliases": [
+      "demand",
+      "طلب"
+    ],
+    "explanationAr": "كم الناس يبون منتجك. كل ما كان أعلى، كل ما كان البيع أسهل.",
+    "explanationEn": "How much people want your product.",
+    "example": "كل واحد يطلب قهوتك = demand عالي."
+  },
+  "supply": {
+    "term": "Supply",
+    "aliases": [
+      "supply",
+      "عرض"
+    ],
+    "explanationAr": "كم من المنتج متوفر. لو العرض أقل من الطلب، السعر يرتفع.",
+    "explanationEn": "How much product is available.",
+    "example": "تنتج 50 كيك يومياً والطلب 100 = supply أقل من demand."
+  },
+  "trend": {
+    "term": "Trend",
+    "aliases": [
+      "trend",
+      "اتجاه",
+      "ترند"
+    ],
+    "explanationAr": "اتجاه في السوق يزداد شعبية. لو اشتغلت عليه بدري، تستفيد.",
+    "explanationEn": "A direction the market is moving toward.",
+    "example": "الأكل النباتي يزداد شعبية = trend."
+  },
+  "customer_support": {
+    "term": "Customer Support",
+    "aliases": [
+      "customer support",
+      "دعم العملاء",
+      "خدمه عملاء"
+    ],
+    "explanationAr": "خدمة عملائك بعد الشراء — ترد على استفساراتهم وتحل مشاكلهم.",
+    "explanationEn": "Serving customers after purchase — answering questions, solving problems.",
+    "example": "واتساب للرد على العملاء = customer support."
+  },
+  "sales_funnel": {
+    "term": "Sales Funnel",
+    "aliases": [
+      "sales funnel",
+      "قمع المبيعات"
+    ],
+    "explanationAr": "مراحل البيع: جذب عميل → اهتمام → قرار → شراء. كل مرحلة تقليل للعدد.",
+    "explanationEn": "Sales stages: attract → interest → decision → buy.",
+    "example": "1000 زائر → 100 مهتم → 10 يشتري = sales funnel."
+  },
+  "prospecting": {
+    "term": "Prospecting",
+    "aliases": [
+      "prospecting",
+      "البحث عن عملاء"
+    ],
+    "explanationAr": "تبحث عن عملاء محتملين — تتعرف عليهم وتتواصل معهم.",
+    "explanationEn": "Searching for potential customers.",
+    "example": "ترسل رسائل لـ 50 شركة = prospecting."
+  },
+  "lead": {
+    "term": "Lead",
+    "aliases": [
+      "lead",
+      "عميل محتمل"
+    ],
+    "explanationAr": "شخص أبدى اهتمام بمنتجك وترك معلوماته. ما اشترى بعد.",
+    "explanationEn": "Someone who showed interest and left info but hasn't bought yet.",
+    "example": "أحد سجل لقائمتك الإيميلية = lead."
+  },
+  "qualified_lead": {
+    "term": "Qualified Lead",
+    "aliases": [
+      "qualified lead",
+      "عميل مؤهل"
+    ],
+    "explanationAr": "عميل محتمل جاهز للشراء — اهتمامه حقيقي وميزانيته متوفرة.",
+    "explanationEn": "A lead ready to buy — genuine interest and budget available.",
+    "example": "أحد سأل عن السعر والتفاصيل = qualified lead."
+  },
+  "brand_identity": {
+    "term": "Brand Identity",
+    "aliases": [
+      "brand identity",
+      "هويه البراند"
+    ],
+    "explanationAr": "العناصر البصرية اللي تميزك — شعار، ألوان، خطوط، أسلوب.",
+    "explanationEn": "Visual elements that distinguish you — logo, colors, fonts, style.",
+    "example": "شعار + ألوان + خط = brand identity."
+  },
+  "brand_voice": {
+    "term": "Brand Voice",
+    "aliases": [
+      "brand voice",
+      "صوت البراند"
+    ],
+    "explanationAr": "نبرة وأسلوب التواصل اللي يميز براندك — رسمي، ودود، مرح.",
+    "explanationEn": "The tone and style that distinguishes your brand.",
+    "example": "براند شبابي يستخدم لغة كاجوال = brand voice."
+  },
+  "ux": {
+    "term": "UX",
+    "aliases": [
+      "ux",
+      "user experience",
+      "تجربه المستخدم"
+    ],
+    "explanationAr": "User Experience — كيف يشعر المستخدم وهو يستخدم منتجك أو موقعك.",
+    "explanationEn": "How the user feels while using your product or site.",
+    "example": "موقع سهل التصفح = UX ممتاز."
+  },
+  "ui": {
+    "term": "UI",
+    "aliases": [
+      "ui",
+      "user interface",
+      "واجهه المستخدم"
+    ],
+    "explanationAr": "User Interface — تصميم الواجهة اللي يشوفها المستخدم ويتفاعل معها.",
+    "explanationEn": "The visual interface the user sees and interacts with.",
+    "example": "ألوان وأزرار مرتبة = UI ممتاز."
+  },
+  "responsive_design": {
+    "term": "Responsive Design",
+    "aliases": [
+      "responsive design",
+      "تصميم متجاوب"
+    ],
+    "explanationAr": "موقعك يظهر بشكل ممتاز على كل الأجهزة — جوال، تابلت، كمبيوتر.",
+    "explanationEn": "Your site looks great on all devices.",
+    "example": "موقعك يشتغل على الآيفون = responsive."
+  },
+  "web_app": {
+    "term": "Web App",
+    "aliases": [
+      "web app",
+      "تطبيق ويب"
+    ],
+    "explanationAr": "تطبيق تشتغله عبر المتصفح بدون ما تنزله. مثل: جوجل دوكس.",
+    "explanationEn": "An app you use via browser without downloading.",
+    "example": "نظام محاسبة على المتصفح = web app."
+  },
+  "mobile_app": {
+    "term": "Mobile App",
+    "aliases": [
+      "mobile app",
+      "تطبيق جوال"
+    ],
+    "explanationAr": "تطبيق ينزله العميل على جواله من App Store أو Google Play.",
+    "explanationEn": "An app customers download from App Store or Google Play.",
+    "example": "تطبيق توصيل على الآيفون = mobile app."
+  },
+  "authentication": {
+    "term": "Authentication",
+    "aliases": [
+      "authentication",
+      "مصادقه",
+      "تسجيل دخول"
+    ],
+    "explanationAr": "نظام تسجيل دخول — يخلينك تتأكد إن المستخدم هو اللي يقول إنه هو.",
+    "explanationEn": "A login system verifying user identity.",
+    "example": "تسجيل بإيميل وكلمة مرور = authentication."
+  },
+  "integration": {
+    "term": "Integration",
+    "aliases": [
+      "integration",
+      "تكامل",
+      "ربط"
+    ],
+    "explanationAr": "تربط نظامك بنظام ثاني عشان يشتغلون مع بعض.",
+    "explanationEn": "Connecting your system with another so they work together.",
+    "example": "ربط متجرك بـ Stripe = integration."
+  },
+  "generative_ai": {
+    "term": "Generative AI",
+    "aliases": [
+      "generative ai",
+      "gen ai",
+      "ذكاء اصطناعي توليدي"
+    ],
+    "explanationAr": "ذكاء اصطناعي ينتج محتوى جديد — نصوص، صور، كود.",
+    "explanationEn": "AI that creates new content — text, images, code.",
+    "example": "ChatGPT يكتب مقالات = generative AI."
+  },
+  "machine_learning": {
+    "term": "Machine Learning",
+    "aliases": [
+      "machine learning",
+      "ml",
+      "تعلم آلي"
+    ],
+    "explanationAr": "أنظمة تتعلم من البيانات وتتحسن تلقائياً بدون برمجة صريحة.",
+    "explanationEn": "Systems that learn from data and improve automatically.",
+    "example": "نظام يرشح منتجات حسب ذوق العميل = ML."
+  },
+  "personalization": {
+    "term": "Personalization",
+    "aliases": [
+      "personalization",
+      "تخصيص"
+    ],
+    "explanationAr": "تخصص تجربة كل عميل حسب اهتماماته وسلوكه.",
+    "explanationEn": "Customizing each customer's experience.",
+    "example": "ترشيحات نتفليكس = personalization."
+  },
+  "customer_interview": {
+    "term": "Customer Interview",
+    "aliases": [
+      "customer interview",
+      "مقابله العميل"
+    ],
+    "explanationAr": "تتكلم مع عملاء محتملين عشان تفهم احتياجاتهم قبل ما تبني.",
+    "explanationEn": "Talking to potential customers to understand needs before building.",
+    "example": "تتصل بـ 10 أشاد وتسألهم عن مشاكلهم = customer interview."
+  },
+  "survey": {
+    "term": "Survey",
+    "aliases": [
+      "survey",
+      "استبيان"
+    ],
+    "explanationAr": "استبيان تجيب فيه آراء الناس عن فكرتك أو منتجك.",
+    "explanationEn": "A questionnaire to gather opinions about your idea or product.",
+    "example": "استبيان جوجل لـ 100 شخص = survey."
+  },
+  "market_size": {
+    "term": "Market Size",
+    "aliases": [
+      "market size",
+      "حجم السوق"
+    ],
+    "explanationAr": "كم يساوي السوق اللي تدخلله — يخليك تعرف هل الفكرة تستاهل.",
+    "explanationEn": "How much the market is worth — tells you if the idea is worth it.",
+    "example": "سوق القهوة في دبي = 100 مليون = market size كبير."
+  },
+  "som": {
+    "term": "SOM",
+    "aliases": [
+      "som",
+      "serviceable obtainable market",
+      "السوق المتاح"
+    ],
+    "explanationAr": "الجزء من السوق اللي تقدر فعلاً ت grasبه في السنوات الأولى.",
+    "explanationEn": "The portion of the market you can realistically capture.",
+    "example": "من 100 مليون سوق، تتوقع تجيب 1 مليون = SOM."
+  },
+  "sam": {
+    "term": "SAM",
+    "aliases": [
+      "sam",
+      "serviceable addressable market",
+      "السوق المستهدف"
+    ],
+    "explanationAr": "الجزء من السوق اللي تستهدفه فعلاً — مثلاً منطقة جغرافية محددة.",
+    "explanationEn": "The portion of the market you actually target.",
+    "example": "سوق القهوة في دبي فقط (من سوق الإمارات كله) = SAM."
+  },
+  "capital": {
+    "term": "Capital",
+    "aliases": [
+      "capital",
+      "راس مال",
+      "رأس المال"
+    ],
+    "explanationAr": "الفلوس اللي تبدأ فيها مشروعك. كل ما كان أكثر، خياراتك أكثر.",
+    "explanationEn": "The money you start your business with.",
+    "example": "تبدأ بـ 5000 درهم = capital 5000."
+  },
+  "budget": {
+    "term": "Budget",
+    "aliases": [
+      "budget",
+      "ميزانيه",
+      "ميزانية"
+    ],
+    "explanationAr": "خطة كيف تصرف فلوسك — كم للتسويق، كم للمواد، كم للإيجار.",
+    "explanationEn": "A plan for how you spend your money.",
+    "example": "تخصص 2000 للتسويق = budget."
+  },
+  "upselling": {
+    "term": "Upselling",
+    "aliases": [
+      "upselling",
+      "بيع تصاعدي"
+    ],
+    "explanationAr": "تقنع العميل يشتري نسخة أغلى أو ميزات إضافية.",
+    "explanationEn": "Persuading a customer to buy a premium version or add-ons.",
+    "example": "\"تبي النسخة برو؟\" = upselling."
+  },
+  "cross-selling": {
+    "term": "Cross-selling",
+    "aliases": [
+      "cross-selling",
+      "بيع متقاطع"
+    ],
+    "explanationAr": "تقنع العميل يشتري منتج مكمل لما اشتراه.",
+    "explanationEn": "Selling a complementary product.",
+    "example": "اشترى لابتوب، تقترح كفر = cross-selling."
+  },
+  "recurring": {
+    "term": "Recurring",
+    "aliases": [
+      "recurring",
+      "متكرر"
+    ],
+    "explanationAr": "دخل أو عميل يجيك بشكل متكرر، مو مرة واحدة.",
+    "explanationEn": "Income or customers that come back regularly.",
+    "example": "اشتراك شهري = recurring."
+  },
+  "transaction_fee": {
+    "term": "Transaction Fee",
+    "aliases": [
+      "transaction fee",
+      "رسوم المعامله"
+    ],
+    "explanationAr": "رسوم تاخذها على كل عملية بيع أو تحويل.",
+    "explanationEn": "A fee charged on each sale or transfer.",
+    "example": "تاخذ 2% على كل بيع = transaction fee."
+  },
+  "subscription_fee": {
+    "term": "Subscription Fee",
+    "aliases": [
+      "subscription fee",
+      "رسوم الاشتراك"
+    ],
+    "explanationAr": "المبلغ اللي يدفعه العميل دورياً للاشتراك في خدمتك.",
+    "explanationEn": "The amount a customer pays periodically for your service.",
+    "example": "49 درهم شهرياً = subscription fee."
+  },
+  "premium": {
+    "term": "Premium",
+    "aliases": [
+      "premium",
+      "بريميوم",
+      "مميز"
+    ],
+    "explanationAr": "نسخة أو خدمة بسعر أعلى فيها ميزات إضافية.",
+    "explanationEn": "A higher-priced version with extra features.",
+    "example": "اشتراك بريميوم بـ 99 درهم = premium."
+  },
+  "b2b_saas": {
+    "term": "B2B SaaS",
+    "aliases": [
+      "b2b saas"
+    ],
+    "explanationAr": "برنامج كاشتراك تبيعه للشركات. مثل: نظام محاسبة شهري للمحلات.",
+    "explanationEn": "Subscription software sold to businesses.",
+    "example": "نظام إدارة مخزون باشتراك شهري للمحلات = B2B SaaS."
+  },
+  "b2c_saas": {
+    "term": "B2C SaaS",
+    "aliases": [
+      "b2c saas"
+    ],
+    "explanationAr": "برنامج كاشتراك تبيعه للأفراد. مثل: نتفليكس، سبوتيفاي.",
+    "explanationEn": "Subscription software sold to individuals.",
+    "example": "تطبيق لياقة باشتراك شهري = B2C SaaS."
+  },
+  "creator": {
+    "term": "Creator",
+    "aliases": [
+      "creator",
+      "مبدع",
+      "صانع محتوى"
+    ],
+    "explanationAr": "شخص ينشئ محتوى ويكسب منه — يوتيوبر، تيك توكر، مدون.",
+    "explanationEn": "A person who creates content and earns from it.",
+    "example": "يوتيوبر يبيع كورسات = creator."
+  },
+  "content_business": {
+    "term": "Content Business",
+    "aliases": [
+      "content business",
+      "مشروع محتوى"
+    ],
+    "explanationAr": "مشروع يربح من إنشاء محتوى — مدونة، قناة، بودكاست.",
+    "explanationEn": "A business that earns from content creation.",
+    "example": "مدونة تربح من إعلانات = content business."
+  },
+  "local_service": {
+    "term": "Local Service",
+    "aliases": [
+      "local service",
+      "خدمه محليه"
+    ],
+    "explanationAr": "خدمة تقدمها في منطقتك — تصوير، تنسيق حفلات، صالون.",
+    "explanationEn": "A service you offer in your local area.",
+    "example": "صالون في الحي = local service."
+  },
+  "remote_business": {
+    "term": "Remote Business",
+    "aliases": [
+      "remote business",
+      "مشروع عن بعد"
+    ],
+    "explanationAr": "مشروع تديره من أي مكان في العالم — تحتاج لابتوب وإنترنت بس.",
+    "explanationEn": "A business you run from anywhere — laptop and internet only.",
+    "example": "فريلانس تصميم من أي دولة = remote business."
+  },
+  "online_business": {
+    "term": "Online Business",
+    "aliases": [
+      "online business",
+      "مشروع اونلاين"
+    ],
+    "explanationAr": "مشروع يشتغل بالكامل عبر الإنترنت — بدون محل.",
+    "explanationEn": "A business operating entirely online.",
+    "example": "متجر إلكتروني = online business."
+  },
+  "physical_business": {
+    "term": "Physical Business",
+    "aliases": [
+      "physical business",
+      "مشروع واقعي"
+    ],
+    "explanationAr": "مشروع له محل أو مكان فعلي — يحتاج إيجار وتجهيز.",
+    "explanationEn": "A business with a physical location.",
+    "example": "مطعم = physical business."
+  },
+  "side_business": {
+    "term": "Side Business",
+    "aliases": [
+      "side business",
+      "مشروع جانبي"
+    ],
+    "explanationAr": "مشروع صغير تشتغله بعد شغلك الرئيسي.",
+    "explanationEn": "A small business you run alongside your main job.",
+    "example": "متجر إلكتروني بعد الدوام = side business."
+  },
+  "active_income": {
+    "term": "Active Income",
+    "aliases": [
+      "active income",
+      "دخل نشط"
+    ],
+    "explanationAr": "دخل يجيك من شغلك المباشر — توقفه = يوقف الدخل.",
+    "explanationEn": "Income from active work — stop working, stop earning.",
+    "example": "فريلانس = active income."
+  },
+  "local_service_business": {
+    "term": "Local Service Business",
+    "aliases": [
+      "local service business",
+      "خدمه محليه"
+    ],
+    "explanationAr": "خدمة تقدمها لعملاء في منطقتك الجغرافية.",
+    "explanationEn": "A service offered to customers in your geographic area.",
+    "example": "خدمة تنظيف منازل = local service business."
+  },
+  "marketplace_fee": {
+    "term": "Marketplace Fee",
+    "aliases": [
+      "marketplace fee",
+      "رسوم المنصه"
+    ],
+    "explanationAr": "عمولة أو رسوم تاخذها المنصة على كل عملية بيع.",
+    "explanationEn": "A commission the platform charges on each sale.",
+    "example": "نون تاخذ 15% على كل بيع = marketplace fee."
+  },
+  "viral": {
+    "term": "Viral",
+    "aliases": [
+      "viral",
+      "فيروسي"
+    ],
+    "explanationAr": "محتوى ينتشر بسرعة كبيرة بين الناس.",
+    "explanationEn": "Content that spreads rapidly.",
+    "example": "فيديو يكسب مليون مشاهدة = viral."
+  },
+  "community-led_growth": {
+    "term": "Community-led Growth",
+    "aliases": [
+      "community-led growth",
+      "نمو بالمجتمع"
+    ],
+    "explanationAr": "مجتمع نشط حول براندك يجيب عملاء جدد بدون إعلانات.",
+    "explanationEn": "An active community that brings new customers without ads.",
+    "example": "قروب فيسبوك نشط يجيب عملاء = community-led growth."
+  },
+  "analytics": {
+    "term": "Analytics",
+    "aliases": [
+      "analytics",
+      "تحليلات",
+      "احصائيات"
+    ],
+    "explanationAr": "بيانات وأرقام تخليك تفهم أداء مشروعك — زوار، مبيعات، تفاعل.",
+    "explanationEn": "Data that helps you understand your business performance.",
+    "example": "جوجل أناليتكس يعرض زوار موقعك = analytics."
+  },
+  "traffic": {
+    "term": "Traffic",
+    "aliases": [
+      "traffic",
+      "زوار",
+      "ترافيك"
+    ],
+    "explanationAr": "عدد الزوار اللي يدخلون موقعك أو صفحتك.",
+    "explanationEn": "The number of visitors to your site or page.",
+    "example": "1000 زائر يومياً = traffic عالي."
+  },
+  "conversion": {
+    "term": "Conversion",
+    "aliases": [
+      "conversion",
+      "تحويل"
+    ],
+    "explanationAr": "لما زائر يسوي اللي تبيه — شراء، تسجيل، اشتراك.",
+    "explanationEn": "When a visitor takes the desired action.",
+    "example": "زائر يشتري = conversion."
+  },
+  "tags": {
+    "term": "Tags",
+    "aliases": [
+      "tags",
+      "وسوم",
+      "تاجز"
+    ],
+    "explanationAr": "كلمات تصنف بها أفكارك أو منتجاتك عشان يسهل البحث والترشيح.",
+    "explanationEn": "Keywords to categorize ideas or products for search.",
+    "example": "تصنيف فكرة بـ \"أونلاين، مبتدئ\" = tags."
+  },
+  "categories": {
+    "term": "Categories",
+    "aliases": [
+      "categories",
+      "تصنيفات",
+      "فئات"
+    ],
+    "explanationAr": "تقسيم المشاريع ل مجموعات حسب المجال — أكل، تقنية، أزياء.",
+    "explanationEn": "Grouping projects by field — food, tech, fashion.",
+    "example": "\"الأكل والمشروبات\" = category."
+  },
+  "recommendation": {
+    "term": "Recommendation",
+    "aliases": [
+      "recommendation",
+      "ترشيح",
+      "توصيه"
+    ],
+    "explanationAr": "اقتراح مشروع يناسب المستخدم حسب ملفه ونتائج اختباره.",
+    "explanationEn": "A project suggestion matching the user's profile.",
+    "example": "FIKRA ترشح لك مخبز منزلي = recommendation."
+  },
+  "compatibility_score": {
+    "term": "Compatibility Score",
+    "aliases": [
+      "compatibility score",
+      "نسبه التوافق",
+      "compatibility"
+    ],
+    "explanationAr": "نسبة مئوية تظهر كم يناسبك مشروع بناءً على ملفك ونتائجك.",
+    "explanationEn": "A percentage showing how well a project fits your profile.",
+    "example": "مشروع بنسبة توافق 85% = مناسب جداً لك."
+  },
+  "filtering": {
+    "term": "Filtering",
+    "aliases": [
+      "filtering",
+      "تصفيه",
+      "فلتره"
+    ],
+    "explanationAr": "تضييق النتائج حسب معايير محددة — ميزانية، وقت، نوع.",
+    "explanationEn": "Narrowing results by specific criteria.",
+    "example": "تختار \"أقل من 500 درهم\" = filtering."
+  },
+  "ranking": {
+    "term": "Ranking",
+    "aliases": [
+      "ranking",
+      "ترتيب"
+    ],
+    "explanationAr": "ترتيب النتائج من الأفضل للأقل بناءً على التوافق.",
+    "explanationEn": "Ordering results from best to least matching.",
+    "example": "مشروع 90% يطلع قبل مشروع 70% = ranking."
+  },
+  "semantic_search": {
+    "term": "Semantic Search",
+    "aliases": [
+      "semantic search",
+      "بحث دلالي"
+    ],
+    "explanationAr": "بحث يفهم المعنى مو الكلمات فقط — يطابق الفكرة والقصد.",
+    "explanationEn": "Search that understands meaning, not just keywords.",
+    "example": "تكتبي \"أبا شي من البيت\" ويفهم = semantic search."
+  },
+  "search": {
+    "term": "Search",
+    "aliases": [
+      "search",
+      "بحث",
+      "دور"
+    ],
+    "explanationAr": "إيجاد مشاريع أو معلومات حسب كلمات أو معايير.",
+    "explanationEn": "Finding projects or info by keywords or criteria.",
+    "example": "تكتبي \"قهوة\" وتشوف كل مشاريع القهوة = search."
+  },
+  "revenue": {
+    "term": "Revenue",
+    "aliases": [
+      "revenue",
+      "ايرادات",
+      "إيرادات",
+      "دخل المشروع"
+    ],
+    "explanationAr": "إجمالي الفلوس اللي يجيبها مشروعك من بيع المنتجات أو الخدمات قبل طرح التكاليف.",
+    "explanationEn": "Total money your business brings in from sales before deducting costs.",
+    "example": "بعت بـ 10000 = revenue 10000."
+  },
+  "gross_margin": {
+    "term": "Gross Margin",
+    "aliases": [
+      "gross margin",
+      "هامش اجمالي",
+      "هامش إجمالي"
+    ],
+    "explanationAr": "نسبة الربح الإجمالي من الإيرادات. كل ما كان أعلى، كل ما كان مشروعك أكثر ربحية.",
+    "explanationEn": "The percentage of revenue that is gross profit.",
+    "example": "إيراد 10000 وكلفة 4000 = gross margin 60%."
+  },
+  "net_margin": {
+    "term": "Net Margin",
+    "aliases": [
+      "net margin",
+      "هامش صافي",
+      "صافي الهامش"
+    ],
+    "explanationAr": "نسبة الصافي من الإيرادات. يعكس الربحية الحقيقية بعد كل التكاليف.",
+    "explanationEn": "The percentage of revenue that is net profit.",
+    "example": "إيراد 10000 وصافي 2000 = net margin 20%."
+  },
+  "operating_expense": {
+    "term": "Operating Expense",
+    "aliases": [
+      "opex",
+      "operating expense",
+      "مصروف تشغيلي"
+    ],
+    "explanationAr": "المصروفات اليومية لتشغيل المشروع — رواتب، إيجار، تسويق، فواتير.",
+    "explanationEn": "Day-to-day expenses of running the business.",
+    "example": "إيجار + رواتب + كهرباء = OPEX."
+  },
+  "capital_expenditure": {
+    "term": "Capital Expenditure",
+    "aliases": [
+      "capex",
+      "capital expenditure",
+      "مصروف رأس مالي"
+    ],
+    "explanationAr": "استثمار في أصول طويلة الأمد — معدات، أجهزة، عقار. لا يُستهلك مرة واحدة.",
+    "explanationEn": "Investment in long-term assets — equipment, property.",
+    "example": "شراء آلة بـ 50000 = CAPEX."
+  },
+  "burn_rate": {
+    "term": "Burn Rate",
+    "aliases": [
+      "burn rate",
+      "معدل الحرق"
+    ],
+    "explanationAr": "كم يصرف مشروعك شهرياً قبل ما يبدأ يجيب دخل. مهم للمشاريع الممولة.",
+    "explanationEn": "How much your business spends monthly before generating revenue.",
+    "example": "تصرف 8000 شهرياً بدون دخل = burn rate 8000."
+  },
+  "runway": {
+    "term": "Runway",
+    "aliases": [
+      "runway",
+      "مدة البقاء"
+    ],
+    "explanationAr": "كم شهر يقدر مشروعك يستمر بفلوسه الحالية قبل ما تخلص. يُحسب: رصيد ÷ burn rate.",
+    "explanationEn": "How many months your business can survive on current cash.",
+    "example": "عندك 40000 و burn rate 8000 = runway 5 شهور."
+  },
+  "valuation": {
+    "term": "Valuation",
+    "aliases": [
+      "valuation",
+      "تقييم",
+      "تقييم الشركه"
+    ],
+    "explanationAr": "كم يساوي مشروعك في السوق. يحدده المستثمرون بناءً على الإيرادات والنمو.",
+    "explanationEn": "How much your company is worth.",
+    "example": "مستثمر يشتري 10% بـ 100000 = valuation مليون."
+  },
+  "equity": {
+    "term": "Equity",
+    "aliases": [
+      "equity",
+      "حصه",
+      "ملكيه",
+      "حصة"
+    ],
+    "explanationAr": "نسبة الملكية في المشروع. كل ما تنازل عن equity، كل ما فقدت سيطرة وأرباح.",
+    "explanationEn": "Ownership stake in the business.",
+    "example": "تملك 60% والشريك 40% = equity split."
+  },
+  "debt": {
+    "term": "Debt",
+    "aliases": [
+      "debt",
+      "دين",
+      "قرض",
+      "قرض"
+    ],
+    "explanationAr": "فلوس تستلفها وترجعها بفائدة. ما تتنازل عن ملكية لكن عليك التزام.",
+    "explanationEn": "Money borrowed that must be repaid with interest.",
+    "example": "قرض بنكي 50000 بفائدة 5% = debt."
+  },
+  "gross_revenue": {
+    "term": "Gross Revenue",
+    "aliases": [
+      "gross revenue",
+      "اجمالي الايرادات"
+    ],
+    "explanationAr": "كل الفلوس اللي دخلت قبل أي خصم أو طرح.",
+    "explanationEn": "All money received before any deductions.",
+    "example": "كل مبيعاتك = gross revenue."
+  },
+  "net_revenue": {
+    "term": "Net Revenue",
+    "aliases": [
+      "net revenue",
+      "صافي الايرادات"
+    ],
+    "explanationAr": "الإيرادات بعد خصم المرتجعات والخصومات، لكن قبل التكاليف.",
+    "explanationEn": "Revenue after returns and discounts, before costs.",
+    "example": "بعت 10000 ومرتجعات 1000 = net revenue 9000."
+  },
+  "cogs": {
+    "term": "COGS",
+    "aliases": [
+      "cogs",
+      "cost of goods sold",
+      "تكلفه البضاعه المباعه"
+    ],
+    "explanationAr": "Cost of Goods Sold — تكلفة المنتجات اللي بعتها مباشرة (مواد خام + تصنيع).",
+    "explanationEn": "Direct cost of producing the goods you sold.",
+    "example": "صنعت 100 منتج بـ 50 درهم = COGS 5000."
+  },
+  "contribution_margin": {
+    "term": "Contribution Margin",
+    "aliases": [
+      "contribution margin",
+      "هامش المساهمه"
+    ],
+    "explanationAr": "كم يبقى من كل بيع بعد تغطية التكاليف المتغيرة — يساهم في تغطية الثابتة.",
+    "explanationEn": "What remains from each sale after variable costs.",
+    "example": "تبيع بـ 100 وتكلف 40 = contribution 60."
+  },
+  "discount": {
+    "term": "Discount",
+    "aliases": [
+      "discount",
+      "خصم",
+      "خصومات"
+    ],
+    "explanationAr": "تخفيض على السعر الأصلي لجذب العملاء أو تصفية مخزون.",
+    "explanationEn": "A reduction on the original price.",
+    "example": "خصم 20% = السعر يصير 80."
+  },
+  "refund": {
+    "term": "Refund",
+    "aliases": [
+      "refund",
+      "استرداد",
+      "ارجاع فلوس"
+    ],
+    "explanationAr": "ترجع فلوس العميل عند إرجاع المنتج أو إلغاء الخدمة.",
+    "explanationEn": "Returning money to the customer when they return a product.",
+    "example": "عميل يرجع المنتج = refund."
+  },
+  "mrr": {
+    "term": "MRR",
+    "aliases": [
+      "mrr",
+      "monthly recurring revenue",
+      "دخل شهري متكرر"
+    ],
+    "explanationAr": "Monthly Recurring Revenue — الدخل الشهري الثابت من الاشتراكات.",
+    "explanationEn": "Predictable monthly revenue from subscriptions.",
+    "example": "100 مشترك بـ 50 درهم = MRR 5000."
+  },
+  "arr": {
+    "term": "ARR",
+    "aliases": [
+      "arr",
+      "annual recurring revenue",
+      "دخل سنوي متكرر"
+    ],
+    "explanationAr": "Annual Recurring Revenue — الدخل السنوي الثابت من الاشتراكات (MRR × 12).",
+    "explanationEn": "Annualized recurring revenue (MRR × 12).",
+    "example": "MRR 5000 = ARR 60000."
+  },
+  "roas": {
+    "term": "ROAS",
+    "aliases": [
+      "roas",
+      "return on ad spend",
+      "العائد على الاعلانات"
+    ],
+    "explanationAr": "Return On Ad Spend — كم تجيب من مبيعات مقابل كل درهم صرفته على إعلان.",
+    "explanationEn": "Revenue generated per dirham spent on ads.",
+    "example": "صرفت 1000 على إعلان وجبت 5000 مبيعات = ROAS 5x."
+  },
+  "cpc": {
+    "term": "CPC",
+    "aliases": [
+      "cpc",
+      "cost per click",
+      "تكلفه النقره"
+    ],
+    "explanationAr": "Cost Per Click — كم تدفع لكل نقرة على إعلانك.",
+    "explanationEn": "How much you pay for each click on your ad.",
+    "example": "صرفت 200 وحصلت على 100 نقرة = CPC 2."
+  },
+  "cpa": {
+    "term": "CPA",
+    "aliases": [
+      "cpa",
+      "cost per acquisition",
+      "تكلفه الاستحواذ"
+    ],
+    "explanationAr": "Cost Per Acquisition — كم تكلفك كل عملية بيع أو تسجيل جديدة.",
+    "explanationEn": "How much each new customer acquisition costs.",
+    "example": "صرفت 1000 وحصلت على 10 عملاء = CPA 100."
+  },
+  "engagement_rate": {
+    "term": "Engagement Rate",
+    "aliases": [
+      "engagement rate",
+      "معدل التفاعل",
+      "interaction rate"
+    ],
+    "explanationAr": "نسبة المتابعين اللي يتفاعلون مع محتواك (إعجابات، تعليقات، مشاركات).",
+    "explanationEn": "The percentage of followers who interact with your content.",
+    "example": "10000 متابع و500 تفاعل = engagement 5%."
+  },
+  "reach": {
+    "term": "Reach",
+    "aliases": [
+      "reach",
+      "وصول",
+      "مدى الوصول"
+    ],
+    "explanationAr": "عدد الأشخاص اللي شافوا محتواك — مختلف عن Impressions اللي تحسب التكرار.",
+    "explanationEn": "Number of unique people who saw your content.",
+    "example": "إعلان شافه 5000 شخص = reach 5000."
+  },
+  "impressions": {
+    "term": "Impressions",
+    "aliases": [
+      "impressions",
+      "ظهور",
+      "مشاهدات"
+    ],
+    "explanationAr": "عدد المرات اللي ظهر فيها محتواك — يحسب التكرار لو نفس الشخص شافه مرتين.",
+    "explanationEn": "Total number of times your content was displayed.",
+    "example": "إعلان ظهر 10000 مرة = impressions 10000."
+  },
+  "brand_awareness": {
+    "term": "Brand Awareness",
+    "aliases": [
+      "brand awareness",
+      "وعي بالعلامه",
+      "معرفه البراند"
+    ],
+    "explanationAr": "كم يعرف الناس براندك — هل يذكرونه لما يفكرون في منتجك؟",
+    "explanationEn": "How familiar people are with your brand.",
+    "example": "ناس تقول \"اشتري من نون\" = brand awareness عالي."
+  },
+  "customer_journey": {
+    "term": "Customer Journey",
+    "aliases": [
+      "customer journey",
+      "رحله العميل"
+    ],
+    "explanationAr": "كل الخطوات اللي يمر فيها العميل من ما يعرف عنك لين يصير عميل وفي.",
+    "explanationEn": "The full experience path from discovery to loyalty.",
+    "example": "إعلان → موقع → شراء → إعادة شراء = customer journey."
+  },
+  "lead_magnet": {
+    "term": "Lead Magnet",
+    "aliases": [
+      "lead magnet",
+      "مغناطيس العملاء"
+    ],
+    "explanationAr": "شيء مجاني تقدمه مقابل معلومات العميل (إيميل، رقم) — مثل كتاب PDF مجاني.",
+    "explanationEn": "A free offering in exchange for customer contact info.",
+    "example": "كتاب PDF مجاني مقابل الإيميل = lead magnet."
+  },
+  "cold_outreach": {
+    "term": "Cold Outreach",
+    "aliases": [
+      "cold outreach",
+      "تواصل بارد",
+      "cold email"
+    ],
+    "explanationAr": "تتواصل مع عملاء ما يعرفونك — إيميل أو رسالة لأول مرة بدون علاقة سابقة.",
+    "explanationEn": "Contacting potential customers who don't know you.",
+    "example": "ترسل 50 إيميل لشركات ما تعرفها = cold outreach."
+  },
+  "warm_lead": {
+    "term": "Warm Lead",
+    "aliases": [
+      "warm lead",
+      "عميل دافئ"
+    ],
+    "explanationAr": "عميل أبدى اهتمام أو تفاعل معك — أسهل في بيع له من العميل البارد.",
+    "explanationEn": "A prospect who has shown interest in your business.",
+    "example": "أحد تابع صفحتك وسأل عن السعر = warm lead."
+  },
+  "customer_segment": {
+    "term": "Customer Segment",
+    "aliases": [
+      "customer segment",
+      "شريحه العملاء"
+    ],
+    "explanationAr": "تقسيم عملائك لمجموعات حسب العمر، السلوك، الاهتمامات — لتسويق أدق.",
+    "explanationEn": "Grouping customers by characteristics for targeted marketing.",
+    "example": "تستهدف الشباب 18-25 = customer segment."
+  },
+  "drip_campaign": {
+    "term": "Drip Campaign",
+    "aliases": [
+      "drip campaign",
+      "حمله تنقيط"
+    ],
+    "explanationAr": "سلسلة إيميلات مجدولة تُرسل تلقائياً للعميل خلال فترة لتسوق له تدريجياً.",
+    "explanationEn": "A series of automated emails sent over time to nurture leads.",
+    "example": "5 إيميلات خلال أسبوعين = drip campaign."
+  },
+  "sponsorship": {
+    "term": "Sponsorship",
+    "aliases": [
+      "sponsorship",
+      "رعايه",
+      "رعاية"
+    ],
+    "explanationAr": "تدفع لمؤثر أو حدث مقابل عرض براندك — يزيد الوعي والثقة.",
+    "explanationEn": "Paying to have your brand featured at an event or by a creator.",
+    "example": "ترعى حدث رياضي = sponsorship."
+  },
+  "monetization": {
+    "term": "Monetization",
+    "aliases": [
+      "monetization",
+      "تحقيق الدخل",
+      "تسييل"
+    ],
+    "explanationAr": "طريقة تحويل جمهورك أو محتواك إلى دخل — إعلانات، اشتراكات، مبيعات.",
+    "explanationEn": "How you turn your audience or content into income.",
+    "example": "قناة يوتيوب تربح من الإعلانات = monetization."
+  },
+  "short-form_content": {
+    "term": "Short-form Content",
+    "aliases": [
+      "short-form content",
+      "محتوى قصير",
+      "shorts",
+      "reels"
+    ],
+    "explanationAr": "فيديوهات قصيرة (15-60 ثانية) على تيك توك أو ريلز — تجيب وصول سريع.",
+    "explanationEn": "Short videos (15-60s) on TikTok or Reels for fast reach.",
+    "example": "ريلز 30 ثانية = short-form content."
+  },
+  "newsletter": {
+    "term": "Newsletter",
+    "aliases": [
+      "newsletter",
+      "نشرة بريديه",
+      "نشرة"
+    ],
+    "explanationAr": "إيميل دوري ترسله لمشتركينك — أخبار، نصائح، عروض. يبقي علاقتك معاهم.",
+    "explanationEn": "A recurring email sent to subscribers with updates, tips, or offers.",
+    "example": "إيميل أسبوعي بآخر الأخبار = newsletter."
+  },
+  "podcast": {
+    "term": "Podcast",
+    "aliases": [
+      "podcast",
+      "بودكاست",
+      "بود"
+    ],
+    "explanationAr": "برنامج صوتي دوري — تكلم فيه عن مجالك وتبني جمهور وفكر.",
+    "explanationEn": "An audio show published regularly to build audience and authority.",
+    "example": "بودكاست أسبوعي عن ريادة الأعمال = podcast."
+  },
+  "founder": {
+    "term": "Founder",
+    "aliases": [
+      "founder",
+      "مؤسس",
+      "صاحب الفكرة"
+    ],
+    "explanationAr": "الشخص اللي أسس المشروع — يبدأ الفكرة، يتحمل المخاطرة، ويقود البداية.",
+    "explanationEn": "The person who starts the business.",
+    "example": "أنت تفتح متجر = founder."
+  },
+  "co-founder": {
+    "term": "Co-founder",
+    "aliases": [
+      "co-founder",
+      "cofounder",
+      "شريك مؤسس"
+    ],
+    "explanationAr": "شريك يشاركك تأسيس المشروع — تكملون نقاط ضعف بعض.",
+    "explanationEn": "A partner who co-founds the business with you.",
+    "example": "أنت وشريك تفتحون مطعم = co-founders."
+  },
+  "early_adopter": {
+    "term": "Early Adopter",
+    "aliases": [
+      "early adopter",
+      "اول المستخدمين",
+      "مستخدم مبكر"
+    ],
+    "explanationAr": "أول عملائك — يستخدمون منتجك في بدايته ويساعدونك يحسنونه برأيهم.",
+    "explanationEn": "The first customers who use your product in its early stage.",
+    "example": "10 أشخاص يجربون نسخة تجريبية = early adopters."
+  },
+  "traction": {
+    "term": "Traction",
+    "aliases": [
+      "traction",
+      "زخم",
+      "اشاره النمو"
+    ],
+    "explanationAr": "دليل أن مشروعك ينمو — مبيعات، مستخدمين، تفاعل. اللي يدور عليه المستثمرون.",
+    "explanationEn": "Evidence that your business is growing.",
+    "example": "500 عميل الشهر الأول و1000 الثاني = traction."
+  },
+  "pivot": {
+    "term": "Pivot",
+    "aliases": [
+      "pivot",
+      "محور",
+      "تغيير المسار"
+    ],
+    "explanationAr": "تغيير جوهري في فكرتك أو نموذجك بعد ما اكتشفت إن اللي كنت تسويه ما يشتغل.",
+    "explanationEn": "A fundamental change in your idea or model.",
+    "example": "تغير من متجر ملابس لمنصة تصميم = pivot."
+  },
+  "iteration": {
+    "term": "Iteration",
+    "aliases": [
+      "iteration",
+      "تكرار",
+      "تحسين مستمر"
+    ],
+    "explanationAr": "نسخة محسنة من منتجك بعد كل تجربة — تحسن شوي شوي بناءً على رأي العملاء.",
+    "explanationEn": "A refined version of your product after each round of feedback.",
+    "example": "نسخة 1 ثم 2 محسنة = iteration."
+  },
+  "launch": {
+    "term": "Launch",
+    "aliases": [
+      "launch",
+      "اطلاق",
+      "إطلاق"
+    ],
+    "explanationAr": "اللحظة اللي تطلق فيها منتجك للسوق — أول مرة الناس تقدر تشتري أو تستخدم.",
+    "explanationEn": "The moment your product goes live to the public.",
+    "example": "تفتح المتجر في 1 سبتمبر = launch."
+  },
+  "beta": {
+    "term": "Beta",
+    "aliases": [
+      "beta",
+      "بيتا",
+      "نسخه تجريبيه"
+    ],
+    "explanationAr": "نسخة شبه نهائية تطلعها لمجموعة محدودة لتجرب قبل الإطلاق العام.",
+    "explanationEn": "A near-final version released to a limited group for testing.",
+    "example": "تطلع تطبيق لـ 50 شخص = beta."
+  },
+  "okr": {
+    "term": "OKR",
+    "aliases": [
+      "okr",
+      "objectives and key results",
+      "الاهداف والنتائج"
+    ],
+    "explanationAr": "Objectives and Key Results — تحدد هدف و3-5 نتائج تقيسها. أداة إدارة.",
+    "explanationEn": "A goal-setting framework: objectives with measurable key results.",
+    "example": "هدف: زود المبيعات. نتائج: 1000 عميل، 20% نمو = OKR."
+  },
+  "milestone": {
+    "term": "Milestone",
+    "aliases": [
+      "milestone",
+      "انجاز",
+      "محطه"
+    ],
+    "explanationAr": "نقطة مهمة في رحلة مشروعك — أول 100 عميل، أول 10000 درهم، break-even.",
+    "explanationEn": "A significant point in your business journey.",
+    "example": "أول 1000 مبيعة = milestone."
+  },
+  "roadmap": {
+    "term": "Roadmap",
+    "aliases": [
+      "roadmap",
+      "خريطه طريق",
+      "خارطة طريق"
+    ],
+    "explanationAr": "خطة زمنية لميزات منتجك أو مراحل نمو مشروعك — ماذا ومتى.",
+    "explanationEn": "A timeline plan for product features or business milestones.",
+    "example": "خطة 6 شهور: إطلاق، تحسين، توسع = roadmap."
+  },
+  "differentiation": {
+    "term": "Differentiation",
+    "aliases": [
+      "differentiation",
+      "تميز",
+      "تمايز"
+    ],
+    "explanationAr": "ما يجعلك مختلف عن المنافسين — جودة أعلى، خدمة أسرع، تصميم فريد.",
+    "explanationEn": "What makes you different from competitors.",
+    "example": "توصيل خلال 30 دقيقة = differentiation."
+  },
+  "market_opportunity": {
+    "term": "Market Opportunity",
+    "aliases": [
+      "market opportunity",
+      "فرصه سوقيه",
+      "فرصه"
+    ],
+    "explanationAr": "فجوة في السوق تقدر تستغلها — احتياج غير ملبى أو سوق نامي.",
+    "explanationEn": "A gap in the market you can exploit.",
+    "example": "ما في مطعم صحي في المنطقة = market opportunity."
+  },
+  "market_trend": {
+    "term": "Market Trend",
+    "aliases": [
+      "market trend",
+      "اتجاه السوق",
+      "ترند السوق"
+    ],
+    "explanationAr": "اتجاه يتحرك عليه السوق — تقدر تركب الموجة أو تسبقها.",
+    "explanationEn": "A direction the market is moving.",
+    "example": "الطلب على الأكل النباتي يزيد = market trend."
+  },
+  "llm": {
+    "term": "LLM",
+    "aliases": [
+      "llm",
+      "large language model",
+      "نموذج لغوي كبير"
+    ],
+    "explanationAr": "Large Language Model — نموذج ذكاء اصطناعي يفهم ويولد نصوص بشرية. مثل ChatGPT.",
+    "explanationEn": "AI models that understand and generate human-like text.",
+    "example": "ChatGPT = LLM."
+  },
+  "chatbot": {
+    "term": "Chatbot",
+    "aliases": [
+      "chatbot",
+      "روبوت محادثه",
+      "شات بوت"
+    ],
+    "explanationAr": "برنامج يحاكي المحادثة البشرية — يرد على العملاء أو يقدم معلومات.",
+    "explanationEn": "A program that simulates human conversation.",
+    "example": "مساعد يرد على عملائك أوتوماتيك = chatbot."
+  },
+  "ai_assistant": {
+    "term": "AI Assistant",
+    "aliases": [
+      "ai assistant",
+      "مساعد ذكي",
+      "ذكاء اصطناعي مساعد"
+    ],
+    "explanationAr": "أداة ذكاء اصطناعي تساعد المستخدم في مهام — كتابة، تحليل، ترشيح.",
+    "explanationEn": "An AI tool that helps users with tasks.",
+    "example": "FIKRA AI = AI assistant."
+  },
+  "recommendation_system": {
+    "term": "Recommendation System",
+    "aliases": [
+      "recommendation system",
+      "نظام ترشيح",
+      "recommendation engine"
+    ],
+    "explanationAr": "نظام يقترح للمستخدم بناءً على اهتماماته وسلوكه — مثل ترشيحات نتفليكس.",
+    "explanationEn": "A system that suggests items based on user preferences.",
+    "example": "FIKRA ترشح لك مشاريع = recommendation system."
+  },
+  "algorithm": {
+    "term": "Algorithm",
+    "aliases": [
+      "algorithm",
+      "خوارزميه",
+      "الخوارزمية"
+    ],
+    "explanationAr": "مجموعة خطوات تحل مشكلة أو تنفذ مهمة — أساس البرمجة والذكاء الاصطناعي.",
+    "explanationEn": "A set of steps to solve a problem or perform a task.",
+    "example": "خوارزمية ترتيب نتائج البحث = algorithm."
+  },
+  "data": {
+    "term": "Data",
+    "aliases": [
+      "data",
+      "بيانات",
+      "داتا"
+    ],
+    "explanationAr": "معلومات تجمعها عن عملائك ومشروعك — أساس كل قرار ذكي.",
+    "explanationEn": "Information collected about customers and business.",
+    "example": "إيميلات عملائك = data."
+  },
+  "notification": {
+    "term": "Notification",
+    "aliases": [
+      "notification",
+      "اشعار",
+      "إشعار"
+    ],
+    "explanationAr": "رسالة تطلع للمستخدم — على الجوال أو المتصفح — تنبهه لحدث جديد.",
+    "explanationEn": "A message sent to users about a new event.",
+    "example": "إشعار \"طلب جديد\" = notification."
+  },
+  "payment_gateway": {
+    "term": "Payment Gateway",
+    "aliases": [
+      "payment gateway",
+      "بوابه دفع",
+      "بوابة الدفع"
+    ],
+    "explanationAr": "خدمة تتيح لك قبول المدفوعات الإلكترونية — Stripe، Tap، PayTabs.",
+    "explanationEn": "A service that lets you accept online payments.",
+    "example": "Stripe في متجرك = payment gateway."
+  },
+  "checkout": {
+    "term": "Checkout",
+    "aliases": [
+      "checkout",
+      "دفع",
+      "صفحة الدفع"
+    ],
+    "explanationAr": "صفحة حيث يكمل العميل الدفع — تصميمها السلس يزيد التحويلات.",
+    "explanationEn": "The page where the customer completes payment.",
+    "example": "صفحة إدخال بطاقة = checkout."
+  },
+  "backend": {
+    "term": "Backend",
+    "aliases": [
+      "backend",
+      "خادم",
+      "الخلفيه",
+      "باكند"
+    ],
+    "explanationAr": "الجزء الخفي من تطبيقك — قاعدة البيانات، المنطق، الخوادم.",
+    "explanationEn": "The hidden part of your app — database, logic, servers.",
+    "example": "قاعدة بيانات عملائك = backend."
+  },
+  "frontend": {
+    "term": "Frontend",
+    "aliases": [
+      "frontend",
+      "واجهه",
+      "الواجهه",
+      "فرونتند"
+    ],
+    "explanationAr": "الجزء اللي يشوفه المستخدم ويتفاعل معه — التصميم والأزرار والنصوص.",
+    "explanationEn": "The visible part of your app — UI, buttons, text.",
+    "example": "تصميم موقعك = frontend."
+  },
+  "api_key": {
+    "term": "API Key",
+    "aliases": [
+      "api key",
+      "مفتاح api"
+    ],
+    "explanationAr": "كلمة سر تتيح لتطبيقك يتكلم مع خدمة خارجية — مثل مفتاح Stripe.",
+    "explanationEn": "A secret key that lets your app talk to an external service.",
+    "example": "مفتاح Stripe = API key."
+  },
+  "environment_variable": {
+    "term": "Environment Variable",
+    "aliases": [
+      "environment variable",
+      "env var",
+      "متغير بيئه"
+    ],
+    "explanationAr": "إعداد سري تخزنه خارج الكود — مثل مفاتيح API — لا يجب أن يُكشف.",
+    "explanationEn": "A secret stored outside code — like API keys.",
+    "example": "SUPABASE_URL = environment variable."
+  },
+  "custom_domain": {
+    "term": "Custom Domain",
+    "aliases": [
+      "custom domain",
+      "دومين مخصص",
+      "نطاق مخصص"
+    ],
+    "explanationAr": "عنوان موقعك الخاص — fikra.com بدل fikra.shopify.com — يعطي مظهر احترافي.",
+    "explanationEn": "Your own web address for a professional look.",
+    "example": "fikra.ae = custom domain."
+  },
+  "online_store": {
+    "term": "Online Store",
+    "aliases": [
+      "online store",
+      "متجر الكتروني",
+      "متجر اونلاين"
+    ],
+    "explanationAr": "متجر على الإنترنت تبيع فيه منتجاتك — على Shopify أو منصة خاصة.",
+    "explanationEn": "A store on the internet where you sell products.",
+    "example": "متجر على Shopify = online store."
+  },
+  "storefront": {
+    "term": "Storefront",
+    "aliases": [
+      "storefront",
+      "واجهه المتجر"
+    ],
+    "explanationAr": "الواجهة الأمامية لمتجرك — أول ما يشوفه الزائر.",
+    "explanationEn": "The front-facing part of your online store.",
+    "example": "صفحة رئيسية بمنتجات = storefront."
+  },
+  "product_page": {
+    "term": "Product Page",
+    "aliases": [
+      "product page",
+      "صفحه المنتج"
+    ],
+    "explanationAr": "صفحة تعرض منتج واحد بتفصيل — صور، وصف، سعر، زر شراء.",
+    "explanationEn": "A page showing one product in detail.",
+    "example": "صفحة تيشيرت بصور وسعر = product page."
+  },
+  "cart": {
+    "term": "Cart",
+    "aliases": [
+      "cart",
+      "سله",
+      "سلة"
+    ],
+    "explanationAr": "السلة اللي يجمع فيها العميل منتجاته قبل الدفع.",
+    "explanationEn": "Where customers collect items before checkout.",
+    "example": "يضيف 3 منتجات = cart."
+  },
+  "shipping": {
+    "term": "Shipping",
+    "aliases": [
+      "shipping",
+      "شحن",
+      "توصيل"
+    ],
+    "explanationAr": "إرسال المنتج للعميل — تكلفة ووقت الشحن يؤثران على قرار الشراء.",
+    "explanationEn": "Sending the product to the customer.",
+    "example": "شحن خلال 3 أيام = shipping."
+  },
+  "inventory_management": {
+    "term": "Inventory Management",
+    "aliases": [
+      "inventory management",
+      "اداره المخزون",
+      "تتبع المخزون"
+    ],
+    "explanationAr": "تتبع كم عندك من كل منتج عشان ما ينقص ولا يزيد أكثر من اللازم.",
+    "explanationEn": "Tracking stock levels to prevent shortages or overstock.",
+    "example": "تعرف أن عندك 50 تيشيرت = inventory management."
+  },
+  "warehouse": {
+    "term": "Warehouse",
+    "aliases": [
+      "warehouse",
+      "مخزن",
+      "مستودع"
+    ],
+    "explanationAr": "مكان تخزن فيه منتجاتك قبل بيعها.",
+    "explanationEn": "A place to store products before sale.",
+    "example": "مخزن 100 م2 = warehouse."
+  },
+  "supplier": {
+    "term": "Supplier",
+    "aliases": [
+      "supplier",
+      "مورد",
+      "مزود"
+    ],
+    "explanationAr": "من يبيعك المواد الخام أو المنتجات اللي تبيعها.",
+    "explanationEn": "Who sells you raw materials or products to resell.",
+    "example": "مصنع في الصين = supplier."
+  },
+  "manufacturer": {
+    "term": "Manufacturer",
+    "aliases": [
+      "manufacturer",
+      "مصنع",
+      "مصنّع"
+    ],
+    "explanationAr": "من يصنع منتجك من مواد خام — تقدر تتعامل معه مباشرة أو عبر وكيل.",
+    "explanationEn": "Who makes your product from raw materials.",
+    "example": "مصنع ملابس = manufacturer."
+  },
+  "product_sourcing": {
+    "term": "Product Sourcing",
+    "aliases": [
+      "product sourcing",
+      "مصدر المنتجات",
+      "توريد"
+    ],
+    "explanationAr": "عملية إيجاد موردين لمنتجاتك — محلياً أو من الخارج (الصين مثلاً).",
+    "explanationEn": "Finding suppliers for your products.",
+    "example": "تبحث في Alibaba = product sourcing."
+  },
+  "packaging": {
+    "term": "Packaging",
+    "aliases": [
+      "packaging",
+      "تغليف",
+      "علبه"
+    ],
+    "explanationAr": "كيف تغلف منتجك — يؤثر على انطباع العميل وقيمة البراند.",
+    "explanationEn": "How you package your product — affects brand perception.",
+    "example": "علبة أنيقة مع شعار = premium packaging."
+  },
+  "returns_policy": {
+    "term": "Returns Policy",
+    "aliases": [
+      "returns policy",
+      "سياسه المرتجعات",
+      "سياسة الإرجاع"
+    ],
+    "explanationAr": "قواعد إرجاع المنتجات — سياسة واضحة تزيد ثقة العميل.",
+    "explanationEn": "Rules for accepting product returns.",
+    "example": "إرجاع خلال 14 يوم = returns policy."
+  },
+  "average_order_value": {
+    "term": "Average Order Value",
+    "aliases": [
+      "aov",
+      "average order value",
+      "متوسط قيمه الطلب"
+    ],
+    "explanationAr": "Average Order Value — كم يصرف العميل في المتوسط في كل طلب.",
+    "explanationEn": "How much customers spend on average per order.",
+    "example": "1000 طلب بمبيعات 50000 = AOV 50."
+  },
+  "product_margin": {
+    "term": "Product Margin",
+    "aliases": [
+      "product margin",
+      "هامش المنتج"
+    ],
+    "explanationAr": "ربح كل منتج على حدة — بعض المنتجات هامشها أعلى من غيرها.",
+    "explanationEn": "Profit margin per individual product.",
+    "example": "منتج تشتريه 50 وتبيعه 100 = margin 50%."
+  },
+  "shipping_cost": {
+    "term": "Shipping Cost",
+    "aliases": [
+      "shipping cost",
+      "تكلفه الشحن"
+    ],
+    "explanationAr": "كم يكلفك شحن كل طلب — تقدر تتحملها أو تمررها للعميل.",
+    "explanationEn": "How much it costs to ship each order.",
+    "example": "شحن 15 درهم = shipping cost."
+  },
+  "seller": {
+    "term": "Seller",
+    "aliases": [
+      "seller",
+      "بائع"
+    ],
+    "explanationAr": "من يبيع المنتج — تقدر تكون البائع على منصة أو في متجرك.",
+    "explanationEn": "The person or entity selling the product.",
+    "example": "أنت على نون = seller."
+  },
+  "buyer": {
+    "term": "Buyer",
+    "aliases": [
+      "buyer",
+      "مشتري",
+      "مشتر"
+    ],
+    "explanationAr": "من يشتري المنتج — العميل النهائي أو تاجر جملة.",
+    "explanationEn": "The person or entity purchasing the product.",
+    "example": "عميل يشتري تيشيرت = buyer."
+  },
+  "catalog": {
+    "term": "Catalog",
+    "aliases": [
+      "catalog",
+      "كتالوج",
+      "دليل المنتجات"
+    ],
+    "explanationAr": "قائمة كل منتجاتك مع تفاصيلها — يسهل على العميل يتصفح ويختار.",
+    "explanationEn": "A list of all your products with details.",
+    "example": "50 منتج بصفحات = catalog."
+  },
+  "customer": {
+    "term": "Customer",
+    "aliases": [
+      "customer",
+      "عميل",
+      "زبون"
+    ],
+    "explanationAr": "كل شخص يشتري منك أو يستخدم خدمتك — ملك المشروع.",
+    "explanationEn": "Anyone who buys from you or uses your service.",
+    "example": "أحد يشتري قهوتك = customer."
+  },
+  "client": {
+    "term": "Client",
+    "aliases": [
+      "client",
+      "موكل",
+      "عميل خدمه"
+    ],
+    "explanationAr": "عميل خدمات — تستخدم \"client\" للخدمات المهنية و\"customer\" للمنتجات.",
+    "explanationEn": "A customer for professional services.",
+    "example": "تقدم استشارات = clients."
+  },
+  "prospect": {
+    "term": "Prospect",
+    "aliases": [
+      "prospect",
+      "مرشح",
+      "عميل محتمل"
+    ],
+    "explanationAr": "شخص أو شركة يحتمل أن تشتري منك — لم تبدأ بعد ببيع له.",
+    "explanationEn": "A potential customer who hasn't bought yet.",
+    "example": "قائمة 50 شركة = prospects."
+  },
+  "customer_acquisition": {
+    "term": "Customer Acquisition",
+    "aliases": [
+      "customer acquisition",
+      "اكتساب العملاء",
+      "جلب عملاء"
+    ],
+    "explanationAr": "عملية جذب عملاء جدد — إعلانات، محتوى، إحالات.",
+    "explanationEn": "The process of getting new customers.",
+    "example": "إعلان فيسبوك يجيب 20 عميل = customer acquisition."
+  },
+  "customer_experience": {
+    "term": "Customer Experience",
+    "aliases": [
+      "customer experience",
+      "تجربه العميل",
+      "cx"
+    ],
+    "explanationAr": "كل ما يمر به العميل من أول تواصل لين بعد الشراء — يحدد رضاه.",
+    "explanationEn": "Everything the customer experiences from first contact to post-purchase.",
+    "example": "موقع سهل + توصيل سريع = CX ممتاز."
+  },
+  "loyalty": {
+    "term": "Loyalty",
+    "aliases": [
+      "loyalty",
+      "ولاء",
+      "وفاء العميل"
+    ],
+    "explanationAr": "مدى التزام العميل بالرجوع لك بدل منافسيك — يبني قاعدة مستقرة.",
+    "explanationEn": "How committed customers are to returning to you.",
+    "example": "عميل يشتري كل شهر = loyalty."
+  },
+  "testimonial": {
+    "term": "Testimonial",
+    "aliases": [
+      "testimonial",
+      "شهاده",
+      "رأي عميل"
+    ],
+    "explanationAr": "رأي عميل سابق ينشره — أداة تسويق قوية لأنه من طرف ثالث.",
+    "explanationEn": "A customer's public endorsement of your product.",
+    "example": "\"أفضل قهوة جربتها!\" = testimonial."
+  },
+  "feedback": {
+    "term": "Feedback",
+    "aliases": [
+      "feedback",
+      "ملاحظات",
+      "تغذيه راجعه"
+    ],
+    "explanationAr": "رأي العملاء عن منتجك — تسمعه وتحسن بناءً عليه.",
+    "explanationEn": "Customer opinions about your product.",
+    "example": "10 عملاء يقولون \"السعر غالي\" = feedback."
+  },
+  "need": {
+    "term": "Need",
+    "aliases": [
+      "need",
+      "حاجه",
+      "احتياج"
+    ],
+    "explanationAr": "ما يبحث عنه العميل — فهمه يجعلك تبيع بشكل صحيح.",
+    "explanationEn": "What the customer is looking for.",
+    "example": "\"أبا قهوة سريعة\" = need."
+  },
+  "purchase_intent": {
+    "term": "Purchase Intent",
+    "aliases": [
+      "purchase intent",
+      "نيه الشراء",
+      "قصد الشراء"
+    ],
+    "explanationAr": "مدى جاهزية العميل للشراء — تقدر تحسسها من سلوكه وأسئلته.",
+    "explanationEn": "How ready a customer is to buy.",
+    "example": "أحد يسأل عن السعر والتفاصيل = purchase intent عالي."
+  },
+  "feature_set": {
+    "term": "Feature Set",
+    "aliases": [
+      "feature set",
+      "مجموعه الميزات",
+      "ميزات"
+    ],
+    "explanationAr": "كل الميزات اللي يقدمها منتجك — كل ما زادت، كل ما زادت القيمة.",
+    "explanationEn": "All the features your product offers.",
+    "example": "تطبيق فيه 10 ميزات = feature set."
+  },
+  "usability": {
+    "term": "Usability",
+    "aliases": [
+      "usability",
+      "سهوله الاستخدام",
+      "قابليه الاستخدام"
+    ],
+    "explanationAr": "مدى سهولة استخدام منتجك — كل ما كان أسهل، كل ما زاد رضا العميل.",
+    "explanationEn": "How easy your product is to use.",
+    "example": "موقع يفتح بـ 3 خطوات = usability جيدة."
+  },
+  "accessibility": {
+    "term": "Accessibility",
+    "aliases": [
+      "accessibility",
+      "سهوله الوصول",
+      "إتاحة"
+    ],
+    "explanationAr": "جعل منتجك متاح للجميع بما فيهم ذوي الاحتياجات الخاصة.",
+    "explanationEn": "Making your product usable by everyone including people with disabilities.",
+    "example": "موقع يدعم قارئ الشاشة = accessibility."
+  },
+  "customization": {
+    "term": "Customization",
+    "aliases": [
+      "customization",
+      "تخصيص",
+      "تخصيص المنتج"
+    ],
+    "explanationAr": "تخصيص منتجك ليناسب احتياجات كل عميل — يزيد القيمة والسعر.",
+    "explanationEn": "Tailoring your product to each customer.",
+    "example": "تيشيرت باسم العميل = customization."
+  },
+  "product_discovery": {
+    "term": "Product Discovery",
+    "aliases": [
+      "product discovery",
+      "اكتشاف المنتج"
+    ],
+    "explanationAr": "مرحلة بحث وتجربة لاكتشاف ما يريده العميل قبل بناء المنتج.",
+    "explanationEn": "Research phase to find what customers want before building.",
+    "example": "تتكلم مع 20 عميل = product discovery."
+  },
+  "product_development": {
+    "term": "Product Development",
+    "aliases": [
+      "product development",
+      "تطوير المنتج"
+    ],
+    "explanationAr": "مرحلة بناء المنتج من الفكرة للإطلاق — تصميم، تصنيع، اختبار.",
+    "explanationEn": "Building the product from idea to launch.",
+    "example": "من رسمة على ورق لمنتج في المتجر = product development."
+  },
+  "product_strategy": {
+    "term": "Product Strategy",
+    "aliases": [
+      "product strategy",
+      "استراتيجيه المنتج"
+    ],
+    "explanationAr": "خطة شاملة لمنتجك — لمن، ماذا، كيف، ومتى.",
+    "explanationEn": "The overall plan for your product.",
+    "example": "تقرر تطلع للمبتدئين أولاً = product strategy."
+  },
+  "cost_structure": {
+    "term": "Cost Structure",
+    "aliases": [
+      "cost structure",
+      "هيكل التكاليف"
+    ],
+    "explanationAr": "كيف تتوزع تكاليف مشروعك — ثابتة ومتغيرة — يساعدك تسعر صح.",
+    "explanationEn": "How your costs are distributed — fixed vs variable.",
+    "example": "إيجار ثابت + مواد متغيرة = cost structure."
+  },
+  "expansion": {
+    "term": "Expansion",
+    "aliases": [
+      "expansion",
+      "توسع",
+      "توسعه"
+    ],
+    "explanationAr": "النمو لمجالات أو مناطق جديدة — منتجات جديدة، مدن جديدة.",
+    "explanationEn": "Growing into new areas or regions.",
+    "example": "تفتح فرع ثاني = expansion."
+  },
+  "internationalization": {
+    "term": "Internationalization",
+    "aliases": [
+      "internationalization",
+      "دوليه",
+      "تدويل"
+    ],
+    "explanationAr": "توسيع مشروعك لدول جديدة — يتطلب تعديل المنتج والتسويق.",
+    "explanationEn": "Expanding your business to new countries.",
+    "example": "تبيع في السعودية بعد الإمارات = internationalization."
+  },
+  "localization": {
+    "term": "Localization",
+    "aliases": [
+      "localization",
+      "توطين",
+      "تخصيص محلي"
+    ],
+    "explanationAr": "تكييف منتجك للسوق المحلي — لغة، عملة، ثقافة.",
+    "explanationEn": "Adapting your product for the local market.",
+    "example": "موقع بالسعودية بالريال = localization."
+  },
+  "collaboration": {
+    "term": "Collaboration",
+    "aliases": [
+      "collaboration",
+      "تعاون",
+      "شراكه"
+    ],
+    "explanationAr": "العمل مع طرف آخر لمصلحة مشتركة — مؤثر، شركة، مزود.",
+    "explanationEn": "Working with another party for mutual benefit.",
+    "example": "كافيه + مخبز = collaboration."
+  },
+  "audience": {
+    "term": "Audience",
+    "aliases": [
+      "audience",
+      "جمهور",
+      "متابعين"
+    ],
+    "explanationAr": "الأشخاص اللي يتابعون محتواك — كل ما زادوا، زادت قدرتك على الربح.",
+    "explanationEn": "The people who follow your content.",
+    "example": "10000 متابع = audience."
+  },
+  "content_strategy": {
+    "term": "Content Strategy",
+    "aliases": [
+      "content strategy",
+      "استراتيجيه المحتوى"
+    ],
+    "explanationAr": "خطة ماذا تنشر، متى، وأين — لتحقيق أهداف تسويقية.",
+    "explanationEn": "A plan for what, when, and where to publish content.",
+    "example": "3 منشورات أسبوعية على إنستغرام = content strategy."
+  },
+  "youtube": {
+    "term": "YouTube",
+    "aliases": [
+      "youtube",
+      "يوتيوب",
+      "يوتيوبر"
+    ],
+    "explanationAr": "منصة فيديو — تقدر تبني قناة وتربح من الإعلانات والرعايات.",
+    "explanationEn": "Video platform where you can build a channel and earn.",
+    "example": "قناة بـ 10000 مشترك = YouTube."
+  },
+  "local_business": {
+    "term": "Local Business",
+    "aliases": [
+      "local business",
+      "مشروع محلي",
+      "مشروع في الحي"
+    ],
+    "explanationAr": "مشروع يخدم منطقتك الجغرافية — بقالة، صالون، كافيه.",
+    "explanationEn": "A business serving your local area.",
+    "example": "صالون في الحي = local business."
+  },
+  "retail_store": {
+    "term": "Retail Store",
+    "aliases": [
+      "retail store",
+      "متجر",
+      "محل"
+    ],
+    "explanationAr": "محل تبيع فيه منتجاتك للعملاء مباشرة.",
+    "explanationEn": "A physical shop selling to customers.",
+    "example": "محل ملابس = retail store."
+  },
+  "kiosk": {
+    "term": "Kiosk",
+    "aliases": [
+      "kiosk",
+      "كيوسك",
+      "باكه"
+    ],
+    "explanationAr": "حل صغير ومتنقل أو ثابت — تكلفة منخفضة وموقع مرن.",
+    "explanationEn": "A small stand or booth — low cost and flexible.",
+    "example": "كيوسك قهوة في المول = kiosk."
+  },
+  "pop-up": {
+    "term": "Pop-up",
+    "aliases": [
+      "pop-up",
+      "بوب اب",
+      "مؤقت"
+    ],
+    "explanationAr": "متجر مؤقت لفترة محدودة — يختبر سوق جديد أو منتج.",
+    "explanationEn": "A temporary store for a limited time.",
+    "example": "بوب اب لمدة أسبوع = pop-up."
+  },
+  "delivery": {
+    "term": "Delivery",
+    "aliases": [
+      "delivery",
+      "توصيل",
+      "ديليفري"
+    ],
+    "explanationAr": "إيصال منتجك للعميل — تقدر تسويه بنفسك أو عبر خدمة.",
+    "explanationEn": "Getting your product to the customer.",
+    "example": "توصيل قهوة = delivery."
+  },
+  "catering": {
+    "term": "Catering",
+    "aliases": [
+      "catering",
+      "تموين",
+      "تموين حفلات"
+    ],
+    "explanationAr": "تقديم الطعام للمناسبات والشركات — دخل كبير لكن يتطلب تنظيم.",
+    "explanationEn": "Providing food for events and companies.",
+    "example": "تموين مؤتمر 200 شخص = catering."
+  },
+  "workshop": {
+    "term": "Workshop",
+    "aliases": [
+      "workshop",
+      "ورشه",
+      "ورشة"
+    ],
+    "explanationAr": "مكان تقدم فيه خدمة أو تصنع فيه — ورشة نجارة، ورشة فن.",
+    "explanationEn": "A space where you provide a service or craft.",
+    "example": "ورشة فن = workshop."
+  },
+  "studio": {
+    "term": "Studio",
+    "aliases": [
+      "studio",
+      "استوديو",
+      "ستوديو"
+    ],
+    "explanationAr": "مساحة عمل متخصصة — تصوير، تسجيل، تصميم.",
+    "explanationEn": "A specialized workspace — photo, recording, design.",
+    "example": "ستوديو تصوير = studio."
+  },
+  "appointment": {
+    "term": "Appointment",
+    "aliases": [
+      "appointment",
+      "موعد",
+      "حجز موعد"
+    ],
+    "explanationAr": "حجز وقت مع العميل لخدمة — طبيب، صالون، استشاري.",
+    "explanationEn": "A scheduled time with a customer for a service.",
+    "example": "موعد قصة شعر = appointment."
+  },
+  "booking": {
+    "term": "Booking",
+    "aliases": [
+      "booking",
+      "حجز",
+      "حجوزات"
+    ],
+    "explanationAr": "نظام حجز المواعيد أونلاين — يسهل على العميل ويقلل المكالمات.",
+    "explanationEn": "An online reservation system for appointments.",
+    "example": "صفحة حجز = booking."
+  },
+  "foot_traffic": {
+    "term": "Foot Traffic",
+    "aliases": [
+      "foot traffic",
+      "حركه المشاه",
+      "حركة المارة"
+    ],
+    "explanationAr": "عدد المارة بجانب محلک — كل ما زاد، زادت فرصة الشراء.",
+    "explanationEn": "The number of people walking past your store.",
+    "example": "محل في شارع رئيسي = foot traffic عالي."
+  },
+  "platform": {
+    "term": "Platform",
+    "aliases": [
+      "platform",
+      "منصه",
+      "منصة"
+    ],
+    "explanationAr": "منصة تربط بين طرفين — بائعين ومشترين، أو مقدمي خدمة وعملاء.",
+    "explanationEn": "A platform connecting two sides — buyers and sellers.",
+    "example": "أوبر = platform."
+  },
+  "on-demand": {
+    "term": "On-demand",
+    "aliases": [
+      "on-demand",
+      "عند الطلب",
+      "حسب الطلب"
+    ],
+    "explanationAr": "خدمة يطلبها العميل ويحصل عليها فوراً — توصيل، نقل، تنظيف.",
+    "explanationEn": "A service the customer gets immediately on request.",
+    "example": "تطبيق توصيل = on-demand."
+  },
+  "commission_model": {
+    "term": "Commission Model",
+    "aliases": [
+      "commission model",
+      "نموذج العموله"
+    ],
+    "explanationAr": "تأخذ نسبة على كل معاملة تتم عبر منصتك.",
+    "explanationEn": "Earning a percentage on each transaction.",
+    "example": "تأخذ 10% على كل بيع = commission model."
+  },
+  "information_business": {
+    "term": "Information Business",
+    "aliases": [
+      "information business",
+      "مشروع معلومات",
+      "مشروع معلوماتي"
+    ],
+    "explanationAr": "تبيع المعرفة والمعلومات — كتب، كورسات، استشارات.",
+    "explanationEn": "Selling knowledge — books, courses, consulting.",
+    "example": "كورس أونلاين = information business."
+  },
+  "community_business": {
+    "term": "Community Business",
+    "aliases": [
+      "community business",
+      "مشروع مجتمعي"
+    ],
+    "explanationAr": "مشروع يبني مجتمع حول براندك — أعضاء يدفعون للانضمام.",
+    "explanationEn": "A business built around a community.",
+    "example": "قروب باشتراك شهري = community business."
+  },
+  "budget_expression": {
+    "term": "Budget Expression",
+    "aliases": [
+      "ميزانيتي",
+      "فلوسي",
+      "راس مالي",
+      "رأس مالي",
+      "براحتي",
+      "بميزانيه"
+    ],
+    "explanationAr": "تعبيرات عربية شائعة عن الميزانية والفلوس المتاحة للمشروع.",
+    "explanationEn": "Common Arabic expressions about available budget.",
+    "example": "\"ميزانيتي 2000\" = budget 2000."
+  },
+  "cheap_expression": {
+    "term": "Cheap Expression",
+    "aliases": [
+      "رخيص",
+      "ارخص",
+      "ابا شي رخيص",
+      "ابا شي ارخص",
+      "عطني ارخص"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في خيار أقل تكلفة.",
+    "explanationEn": "Expressions indicating desire for a cheaper option.",
+    "example": "\"عطني شي أرخص\" = wants cheaper."
+  },
+  "expensive_expression": {
+    "term": "Expensive Expression",
+    "aliases": [
+      "غالي",
+      "غاليه",
+      "غالية",
+      "براحت ميزانيتي",
+      "ما ابا غالي"
+    ],
+    "explanationAr": "تعبيرات عن رأي المستخدم أن الخيار الحالي مكلف.",
+    "explanationEn": "Expressions indicating the option is too expensive.",
+    "example": "\"هاي الفكرة غالية\" = too expensive."
+  },
+  "easy_expression": {
+    "term": "Easy Expression",
+    "aliases": [
+      "سهل",
+      "بسيط",
+      "ابا شي بسيط",
+      "ابا شي سهل",
+      "ما ابا شي صعب"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في خيار سهل التنفيذ.",
+    "explanationEn": "Expressions indicating desire for an easy option.",
+    "example": "\"ابا شي بسيط\" = wants easy."
+  },
+  "online_expression": {
+    "term": "Online Expression",
+    "aliases": [
+      "اونلاين",
+      "أونلاين",
+      "ابا شي اونلاين",
+      "ابا مشروع اونلاين",
+      "من النت"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في مشروع رقمي عبر الإنترنت.",
+    "explanationEn": "Expressions indicating preference for online business.",
+    "example": "\"ابي شي اونلاين\" = wants online."
+  },
+  "physical_expression": {
+    "term": "Physical Expression",
+    "aliases": [
+      "واقعي",
+      "محل",
+      "ابا محل",
+      "ابا شي واقعي",
+      "ميداني"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في مشروع له مكان فعلي.",
+    "explanationEn": "Expressions indicating preference for a physical business.",
+    "example": "\"ابا محل\" = wants physical."
+  },
+  "from_home_expression": {
+    "term": "From Home Expression",
+    "aliases": [
+      "من البيت",
+      "من المنزل",
+      "مشروع منزلي"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في مشروع يشتغله من البيت.",
+    "explanationEn": "Expressions indicating desire for a home-based business.",
+    "example": "\"أبي مشروع من البيت\" = from home."
+  },
+  "after_school_expression": {
+    "term": "After School Expression",
+    "aliases": [
+      "بعد المدرسه",
+      "بعد الدوام",
+      "مشروع جانبي",
+      "دخل اضافي"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في مشروع جانبي بعد الدراسة أو الشغل.",
+    "explanationEn": "Expressions about side projects after school or work.",
+    "example": "\"ابا مشروع بعد المدرسة\" = after school."
+  },
+  "scalable_expression": {
+    "term": "Scalable Expression",
+    "aliases": [
+      "يكبر",
+      "قابل للتوسع",
+      "يتوسع",
+      "ينمو",
+      "يكبر بسرعه"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في مشروع قابل للنمو والتوسع.",
+    "explanationEn": "Expressions about wanting a scalable business.",
+    "example": "\"ابا شي scalable\" = wants scalable."
+  },
+  "no_people_expression": {
+    "term": "No People Expression",
+    "aliases": [
+      "ما ابا اتعامل مع ناس",
+      "ما احب ناس",
+      "بدون ناس",
+      "ما يحتاج ناس"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في مشروع لا يتطلب تفاعلاً كثيراً مع الناس.",
+    "explanationEn": "Expressions about wanting minimal customer interaction.",
+    "example": "\"ما ابا اتعامل مع ناس\" = no people."
+  },
+  "give_me_expression": {
+    "term": "Give Me Expression",
+    "aliases": [
+      "عطني",
+      "اعطني",
+      "ابا",
+      "ابي",
+      "ابغى",
+      "أبغى",
+      "أبي"
+    ],
+    "explanationAr": "تعبيرات عربية شائعة للطلب — \"ابي\"، \"ابا\"، \"أبغى\" كلها تعني \"أريد\".",
+    "explanationEn": "Common Arabic request expressions — all mean \"I want\".",
+    "example": "\"ابي مشروع\" = wants a project."
+  },
+  "what_is_expression": {
+    "term": "What Is Expression",
+    "aliases": [
+      "شو",
+      "شنو",
+      "وش",
+      "ايش",
+      "ويش",
+      "شو يعني",
+      "شنو يعني"
+    ],
+    "explanationAr": "تعبيرات عربية للسؤال — \"شو\"، \"شنو\"، \"وش\" كلها تعني \"ماذا\".",
+    "explanationEn": "Common Arabic question expressions — all mean \"what\".",
+    "example": "\"شو يعني SaaS؟\" = what is SaaS?"
+  },
+  "change_expression": {
+    "term": "Change Expression",
+    "aliases": [
+      "غيرها",
+      "غيرهم",
+      "عطني غير",
+      "ابا غير",
+      "شي ثاني",
+      "لا هذي"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في تغيير الخيار الحالي.",
+    "explanationEn": "Expressions about wanting a different option.",
+    "example": "\"غيرها\" = wants different."
+  },
+  "develop_expression": {
+    "term": "Develop Expression",
+    "aliases": [
+      "طورها",
+      "طور",
+      "طور لي",
+      "طور الفكرة",
+      "حسنها",
+      "قوي"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في تطوير أو تحسين فكرة.",
+    "explanationEn": "Expressions about developing or improving an idea.",
+    "example": "\"طورها\" = develop it."
+  },
+  "compare_expression": {
+    "term": "Compare Expression",
+    "aliases": [
+      "قارن",
+      "قارن لي",
+      "قارن بينهم",
+      "ايهما احسن",
+      "ايهما افضل"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في مقارنة بين خيارين.",
+    "explanationEn": "Expressions about comparing options.",
+    "example": "\"قارن بينهم\" = compare them."
+  },
+  "best_expression": {
+    "term": "Best Expression",
+    "aliases": [
+      "الاحسن",
+      "الأحسن",
+      "الافضل",
+      "الأفضل",
+      "شو الافضل",
+      "شو الاحسن",
+      "شو يناسبني"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في معرفة الخيار الأفضل له.",
+    "explanationEn": "Expressions about wanting the best option.",
+    "example": "\"شو الأفضل لي؟\" = what's best for me?"
+  },
+  "no_experience_expression": {
+    "term": "No Experience Expression",
+    "aliases": [
+      "ما عندي خبره",
+      "ما عندي خبرة",
+      "ما اعرف",
+      "بدون خبره",
+      "اول مره",
+      "جديد"
+    ],
+    "explanationAr": "تعبيرات عن عدم وجود خبرة سابقة في المشاريع.",
+    "explanationEn": "Expressions about having no prior business experience.",
+    "example": "\"ما عندي خبرة\" = no experience."
+  },
+  "no_time_expression": {
+    "term": "No Time Expression",
+    "aliases": [
+      "ما عندي وقت",
+      "ما عندي وقت وايد",
+      "وقت بسيط",
+      "وقت قليل",
+      "مشغول"
+    ],
+    "explanationAr": "تعبيرات عن قلة الوقت المتاح للمشروع.",
+    "explanationEn": "Expressions about having limited time.",
+    "example": "\"ما عندي وقت وايد\" = limited time."
+  },
+  "money_expression": {
+    "term": "Money Expression",
+    "aliases": [
+      "يدر فلوس",
+      "يجيب فلوس",
+      "ربح",
+      "ارباح",
+      "دخل",
+      "يجيب دخل"
+    ],
+    "explanationAr": "تعبيرات عن رغبة المستخدم في الربح والدخل.",
+    "explanationEn": "Expressions about wanting to make money.",
+    "example": "\"يدر فلوس\" = makes money."
+  }
+}

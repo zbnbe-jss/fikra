@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+*.tsbuildinfo
+
+# local env and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+credentials.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+
+# Vite / tooling
+**/.vite/
+
+# agent / local-only
+.claude/
+.cursor/
+
+# duplicate capture artifacts (minified originals are kept)
+**/*.beautified.js
+**/*.beautified.css
+/reference/

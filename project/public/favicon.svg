@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIKRA | فكرة — اكتشف فكرة المشروع المناسبة لك</title>
+    <meta name="description" content="جاوب على أسئلة بسيطة، وخلي فكرة تساعدك تكتشف المشاريع اللي تناسب اهتماماتك، ميزانيتك وطريقتك في العمل." />
+    <meta property="og:title" content="FIKRA | فكرة" />
+    <meta property="og:description" content="اكتشف فكرة المشروع المناسبة لك" />
+    <meta property="og:type" content="website" />
+    <script type="module" crossorigin src="/assets/index-6Mhln4o0.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CWwukEVr.css">
+  <script async src="https://bolt.new/badge.js?s=475355ae-ede8-4e6d-bf07-e80093e3325d"></script><script async src="https://bolt.new/deployed-preview-script.js?origin=https%3A%2F%2Fbolt.new"></script></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

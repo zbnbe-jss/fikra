@@ -1,0 +1,4468 @@
+{
+  "home-bakery": {
+    "titleEn": "Home Bakery",
+    "shortDescriptionEn": "Selling homemade cakes and pastries via social media",
+    "descriptionEn": "A home bakery business selling cakes, cupcakes, cookies, and pastries made with love at home. Start by taking orders via Instagram and WhatsApp, and deliver to nearby areas. Perfect for those who love baking and want to start with a small budget.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Raw ingredients (flour, sugar, eggs)",
+      "Basic baking tools",
+      "Packaging boxes",
+      "Product photography",
+      "Instagram page"
+    ],
+    "firstStepsEn": [
+      "Pick 3-4 signature products",
+      "Calculate cost per product",
+      "Photograph products professionally",
+      "Create an Instagram page",
+      "Start taking orders from friends and family"
+    ],
+    "sellingMethodEn": "Instagram & WhatsApp + delivery"
+  },
+  "specialty-coffee": {
+    "titleEn": "Specialty Coffee Cart",
+    "shortDescriptionEn": "A mobile coffee cart serving specialty coffee in high-traffic areas",
+    "descriptionEn": "A small mobile coffee cart serving fresh specialty coffee. Choose a busy location like an office or residential area and open during peak hours. Requires direct customer interaction and builds a loyal customer base through quality and a smile.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Mobile coffee cart",
+      "Espresso machine",
+      "Specialty coffee beans",
+      "Cups and milk",
+      "Permits (if required)"
+    ],
+    "firstStepsEn": [
+      "Learn specialty coffee basics",
+      "Choose location and hours",
+      "Buy essential equipment",
+      "Run a full trial week",
+      "Build relationships with customers"
+    ],
+    "sellingMethodEn": "Direct sales at location"
+  },
+  "meal-prep": {
+    "titleEn": "Healthy Meal Prep Service",
+    "shortDescriptionEn": "Preparing weekly healthy meals for subscribers and delivering them",
+    "descriptionEn": "A weekly healthy meal prep service for fitness enthusiasts or busy professionals. Meals are prepared at the start of the week and delivered to subscribers. Perfect for those who enjoy healthy cooking and can plan ahead.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Equipped kitchen",
+      "Fresh groceries",
+      "Meal containers",
+      "Delivery app or driver",
+      "Social media page"
+    ],
+    "firstStepsEn": [
+      "Define meal types (diet, organic, athletic)",
+      "Calculate cost per meal",
+      "Trial with 5 subscribers",
+      "Create a fixed weekly menu",
+      "Expand customer base"
+    ],
+    "sellingMethodEn": "Weekly subscription + delivery"
+  },
+  "home-cooked-meals": {
+    "titleEn": "Daily Home-Cooked Meals",
+    "shortDescriptionEn": "Cooking daily lunch meals for employees and families",
+    "descriptionEn": "A daily home-cooked meal service providing freshly made lunches for busy employees and families. Start with a small number of customers and scale gradually. Perfect for excellent home cooks who love feeding people.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Home kitchen",
+      "Groceries",
+      "Packaging containers",
+      "Delivery method",
+      "WhatsApp customer list"
+    ],
+    "firstStepsEn": [
+      "Define your signature dishes",
+      "Start with 5-10 daily customers",
+      "Establish delivery system",
+      "Collect customer feedback",
+      "Gradually expand menu"
+    ],
+    "sellingMethodEn": "WhatsApp + daily delivery"
+  },
+  "snack-brand": {
+    "titleEn": "Healthy Snack Brand",
+    "shortDescriptionEn": "Producing healthy snacks and selling online and in stores",
+    "descriptionEn": "A healthy snack brand making granola, vegetable chips, and roasted nuts. Produce in small batches and sell through your online store and selected local shops. Perfect for health-conscious entrepreneurs looking to build a brand.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Raw ingredients",
+      "Kitchen or production space",
+      "Packaging and labels",
+      "Product photography",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Develop 2-3 signature recipes",
+      "Design brand identity and packaging",
+      "Test sell at a local market",
+      "Set up an online store",
+      "Reach out to local shops"
+    ],
+    "sellingMethodEn": "Online store + local shops + markets"
+  },
+  "fashion-resale": {
+    "titleEn": "Curated Clothing Resale",
+    "shortDescriptionEn": "Buying and selling selected clothing pieces via Instagram",
+    "descriptionEn": "A curated clothing resale business where you buy from wholesalers or discounted brands and sell for a profit. Select trendy, in-demand pieces and showcase them on Instagram. Perfect for those with great fashion sense who love shopping.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Capital for purchasing",
+      "Phone for product photos",
+      "Clothing rack",
+      "Shipping boxes",
+      "Instagram account"
+    ],
+    "firstStepsEn": [
+      "Define your clothing style",
+      "Find good purchasing sources",
+      "Photograph pieces professionally",
+      "Create a dedicated Instagram account",
+      "Start with 20-30 pieces"
+    ],
+    "sellingMethodEn": "Instagram + shipping"
+  },
+  "thrift-store": {
+    "titleEn": "Thrift Store",
+    "shortDescriptionEn": "A store selling carefully selected secondhand clothing",
+    "descriptionEn": "A store selling unique, carefully curated secondhand clothing (thrift). You can open a small shop or sell online. Perfect for lovers of sustainable fashion and unique pieces not found in regular stores.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Source of secondhand clothes",
+      "Storage and display space",
+      "Camera",
+      "Display racks (for shop)",
+      "Online selling platform"
+    ],
+    "firstStepsEn": [
+      "Find reliable thrift sources",
+      "Select pieces carefully",
+      "Wash and iron clothes",
+      "Photograph them attractively",
+      "Start online then open a store"
+    ],
+    "sellingMethodEn": "Online + small shop"
+  },
+  "custom-tshirts": {
+    "titleEn": "Custom Design T-Shirts",
+    "shortDescriptionEn": "Designing and selling t-shirts with unique prints",
+    "descriptionEn": "A business designing and selling t-shirts with unique designs and prints. You create the graphics and print them on blank shirts, or partner with a print shop. Combines creativity with commerce — perfect for artistic entrepreneurs.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Blank t-shirts",
+      "Designs (yours or a designer)",
+      "Heat press or print shop partnership",
+      "Packaging",
+      "Online store or Instagram"
+    ],
+    "firstStepsEn": [
+      "Design 5-10 prints",
+      "Print samples",
+      "Photograph on people",
+      "Showcase on Instagram",
+      "Take orders and print on demand"
+    ],
+    "sellingMethodEn": "Online + print on demand"
+  },
+  "beauty-home": {
+    "titleEn": "At-Home Beauty Services",
+    "shortDescriptionEn": "Providing beauty services (makeup, nails) at home",
+    "descriptionEn": "An at-home beauty service offering makeup, nails, henna, or skincare to clients in their homes or your space. Perfect for those who love beauty, have practical skills, and enjoy working with clients.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Beauty tools",
+      "Products (nail polish, makeup)",
+      "Work table",
+      "Mirror and lighting",
+      "Instagram page"
+    ],
+    "firstStepsEn": [
+      "Define your services",
+      "Practice on friends first",
+      "Photograph your work",
+      "Create a professional page",
+      "Start booking appointments"
+    ],
+    "sellingMethodEn": "Booking via Instagram/WhatsApp"
+  },
+  "natural-cosmetics": {
+    "titleEn": "Natural Cosmetics",
+    "shortDescriptionEn": "Making and selling homemade natural skincare products",
+    "descriptionEn": "A natural skincare business making soap, scrubs, wax, and creams from natural ingredients. Sell via Instagram and local shops. Perfect for those passionate about natural beauty who love handmade creations.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Natural ingredients (oils, herbs)",
+      "Molds and tools",
+      "Packaging and labels",
+      "Camera",
+      "Selling page"
+    ],
+    "firstStepsEn": [
+      "Learn 3 basic recipes",
+      "Make samples and test them",
+      "Design simple elegant packaging",
+      "Photograph products",
+      "Start selling on Instagram"
+    ],
+    "sellingMethodEn": "Instagram + markets + local shops"
+  },
+  "perfume-brand": {
+    "titleEn": "Boutique Perfume Brand",
+    "shortDescriptionEn": "Blending and selling unique perfumes in limited quantities",
+    "descriptionEn": "A small perfume business where you blend fragrance oils to create unique scents and sell them in limited quantities. Perfect for those with an excellent sense of smell looking to build a fragrance brand.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Essential fragrance oils",
+      "Perfume bottles",
+      "Luxury packaging",
+      "Labels",
+      "Online store or Instagram"
+    ],
+    "firstStepsEn": [
+      "Learn perfume blending basics",
+      "Create 3-5 signature scents",
+      "Test on people",
+      "Design brand identity and packaging",
+      "Start selling in small batches"
+    ],
+    "sellingMethodEn": "Instagram + online store + markets"
+  },
+  "car-wash-mobile": {
+    "titleEn": "Mobile Car Wash",
+    "shortDescriptionEn": "Car washing and detailing service at the customer's location",
+    "descriptionEn": "A mobile car wash service that comes to the customer's home or office. Saves the customer time and offers a convenient service. Perfect for car lovers who enjoy hands-on physical work.",
+    "categoryEn": "Cars",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Washing tools (sponges, shampoo)",
+      "Steam cleaner or hose",
+      "Microfiber towels",
+      "Polishing products",
+      "Transportation"
+    ],
+    "firstStepsEn": [
+      "Gather washing equipment",
+      "Define your service area",
+      "Offer service to neighbors",
+      "Set fixed prices",
+      "Build a regular customer base"
+    ],
+    "sellingMethodEn": "WhatsApp + advance booking"
+  },
+  "car-accessories": {
+    "titleEn": "Car Accessories Store",
+    "shortDescriptionEn": "Selling car accessories and care products online",
+    "descriptionEn": "An online store selling car accessories and care products. Buy from suppliers and sell for a profit through your store. Perfect for car enthusiasts who understand what car owners need.",
+    "categoryEn": "Cars",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Capital for inventory",
+      "Reliable supplier",
+      "Storage space",
+      "Product photography",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Define product categories (care, decor, tools)",
+      "Find good suppliers",
+      "Set up an online store",
+      "Photograph products",
+      "Launch a small ad campaign"
+    ],
+    "sellingMethodEn": "Online store + shipping"
+  },
+  "car-detailing": {
+    "titleEn": "Car Detailing Service",
+    "shortDescriptionEn": "Interior and exterior car polishing and deep cleaning",
+    "descriptionEn": "A car detailing service providing deep interior and exterior cleaning and polishing. Requires attention to detail and quality products. Perfect for car enthusiasts who take pride in making vehicles look brand new.",
+    "categoryEn": "Cars",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Polishing machine",
+      "Detailing products",
+      "Microfiber towels",
+      "Interior cleaners",
+      "Brushes and tools"
+    ],
+    "firstStepsEn": [
+      "Learn detailing techniques",
+      "Buy quality products",
+      "Offer service to friends first",
+      "Photograph before/after results",
+      "Build a portfolio and market online"
+    ],
+    "sellingMethodEn": "WhatsApp + booking"
+  },
+  "personal-training": {
+    "titleEn": "Personal Training",
+    "shortDescriptionEn": "One-on-one fitness training for individuals",
+    "descriptionEn": "A personal training business helping individuals achieve their fitness goals through customized workout plans. Perfect for fitness enthusiasts who enjoy motivating others and can build trusting client relationships.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Fitness certification",
+      "Basic equipment",
+      "Exercise mats",
+      "Water and towels",
+      "Client management app"
+    ],
+    "firstStepsEn": [
+      "Get certified",
+      "Define your specialty",
+      "Offer free trial sessions",
+      "Build client testimonials",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Per session or monthly package"
+  },
+  "sports-equipment-rental": {
+    "titleEn": "Sports Equipment Rental",
+    "shortDescriptionEn": "Renting sports equipment to individuals and events",
+    "descriptionEn": "A sports equipment rental service providing gear for individuals and events. Buy quality equipment and rent it out for daily or weekly use. Perfect for sports lovers who can maintain equipment well.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Sports equipment inventory",
+      "Storage space",
+      "Rental agreements",
+      "Cleaning supplies",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Choose equipment types",
+      "Set rental rates",
+      "Create rental terms",
+      "Market to sports communities",
+      "Build a booking system"
+    ],
+    "sellingMethodEn": "Daily/weekly rental fees"
+  },
+  "kids-sports-classes": {
+    "titleEn": "Kids Sports Classes",
+    "shortDescriptionEn": "Training children in a specific sport in small groups",
+    "descriptionEn": "A kids sports training business teaching a specific sport to children in small groups. Perfect for those who love working with kids and have coaching skills. Can be held at parks, community spaces, or schools.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Sports equipment",
+      "First aid kit",
+      "Coaching certification",
+      "Whistles and cones",
+      "Parent communication channel"
+    ],
+    "firstStepsEn": [
+      "Choose sport and age group",
+      "Get coaching certification",
+      "Find a venue",
+      "Market to parents",
+      "Start with a trial class"
+    ],
+    "sellingMethodEn": "Monthly subscription per child"
+  },
+  "phone-repair": {
+    "titleEn": "Phone Repair Service",
+    "shortDescriptionEn": "Repairing phone screens and batteries",
+    "descriptionEn": "A phone repair service fixing screens, batteries, and other common phone issues. Perfect for tech-savvy individuals who can learn repair skills and want a steady-demand business.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Repair tools kit",
+      "Spare screens and parts",
+      "Anti-static mat",
+      "Magnifying glasses",
+      "Workspace"
+    ],
+    "firstStepsEn": [
+      "Learn repair skills (YouTube/courses)",
+      "Buy basic tools and parts",
+      "Practice on old phones",
+      "Offer service to friends",
+      "Market locally and on social media"
+    ],
+    "sellingMethodEn": "Per repair job"
+  },
+  "social-media-management": {
+    "titleEn": "Social Media Management",
+    "shortDescriptionEn": "Managing Instagram pages for local businesses",
+    "descriptionEn": "A social media management service handling Instagram and other platforms for local businesses. Create content, schedule posts, and engage with followers. Perfect for those who understand social media trends and content creation.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Phone with good camera",
+      "Content planning tools",
+      "Editing apps",
+      "Scheduling software",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio with your own pages",
+      "Approach local businesses",
+      "Offer a free audit",
+      "Set monthly retainer pricing",
+      "Deliver consistent results"
+    ],
+    "sellingMethodEn": "Monthly retainer"
+  },
+  "digital-products-shop": {
+    "titleEn": "Digital Products Shop",
+    "shortDescriptionEn": "Selling digital templates and files (planners, templates)",
+    "descriptionEn": "An online shop selling digital products like planners, templates, and downloadable files. Create once and sell infinitely. Perfect for creative individuals who can design useful digital products.",
+    "categoryEn": "Digital Products",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Design software",
+      "Computer",
+      "Digital product ideas",
+      "Online store platform",
+      "Marketing channels"
+    ],
+    "firstStepsEn": [
+      "Research trending digital products",
+      "Create 3-5 products",
+      "Set up an online store",
+      "Market on social media",
+      "Collect feedback and iterate"
+    ],
+    "sellingMethodEn": "Digital download sales"
+  },
+  "online-courses": {
+    "titleEn": "Online Courses",
+    "shortDescriptionEn": "Creating and selling educational courses in your area of expertise",
+    "descriptionEn": "An online course business teaching what you know. Create video courses in your field of expertise and sell them. Perfect for experts who can explain concepts clearly and want scalable income.",
+    "categoryEn": "Education",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Camera/microphone",
+      "Screen recording software",
+      "Course platform",
+      "Editing tools",
+      "Expertise in a topic"
+    ],
+    "firstStepsEn": [
+      "Choose your topic",
+      "Outline course content",
+      "Record and edit lessons",
+      "Choose a platform",
+      "Launch and market"
+    ],
+    "sellingMethodEn": "One-time course purchase"
+  },
+  "tutoring": {
+    "titleEn": "Private Tutoring",
+    "shortDescriptionEn": "Providing private tutoring in a specific subject",
+    "descriptionEn": "A private tutoring service helping students excel in a specific subject. Offer sessions online or in person. Perfect for knowledgeable individuals who enjoy teaching and can explain concepts patiently.",
+    "categoryEn": "Education",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Subject expertise",
+      "Teaching materials",
+      "Laptop/tablet",
+      "Quiet space",
+      "Scheduling system"
+    ],
+    "firstStepsEn": [
+      "Choose subject and level",
+      "Prepare teaching materials",
+      "Set pricing",
+      "Market to parents/students",
+      "Start with a few students"
+    ],
+    "sellingMethodEn": "Per session or monthly"
+  },
+  "language-lessons": {
+    "titleEn": "Language Lessons",
+    "shortDescriptionEn": "Teaching a specific language to beginners online or in person",
+    "descriptionEn": "A language teaching business helping beginners learn a new language. Offer one-on-one or group sessions. Perfect for bilingual individuals who enjoy teaching and sharing their language skills.",
+    "categoryEn": "Education",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Language fluency",
+      "Teaching materials",
+      "Video call software",
+      "Lesson plans",
+      "Practice exercises"
+    ],
+    "firstStepsEn": [
+      "Choose target language",
+      "Create lesson plans",
+      "Set pricing",
+      "Market to beginners",
+      "Start with trial lessons"
+    ],
+    "sellingMethodEn": "Per lesson or package"
+  },
+  "freelance-design": {
+    "titleEn": "Freelance Design Services",
+    "shortDescriptionEn": "Designing logos and visual identities for businesses",
+    "descriptionEn": "A freelance design business creating logos, brand identities, and visual assets for businesses. Perfect for creative individuals with design skills who want flexibility and creative freedom.",
+    "categoryEn": "Design",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Design software",
+      "Portfolio",
+      "Computer",
+      "Stock resources",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio",
+      "Join freelance platforms",
+      "Set competitive rates",
+      "Deliver quality work",
+      "Build client relationships"
+    ],
+    "sellingMethodEn": "Per project"
+  },
+  "custom-illustrations": {
+    "titleEn": "Custom Illustrations",
+    "shortDescriptionEn": "Creating custom illustrations for individuals and businesses",
+    "descriptionEn": "A custom illustration business creating unique artwork for individuals and brands. Perfect for talented artists who can bring ideas to life and want to monetize their artistic skills.",
+    "categoryEn": "Design",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Drawing tablet",
+      "Illustration software",
+      "Portfolio",
+      "Social media presence",
+      "Print-on-demand service"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio",
+      "Set pricing per illustration",
+      "Market on social media",
+      "Take commissions",
+      "Deliver quality work on time"
+    ],
+    "sellingMethodEn": "Per illustration/project"
+  },
+  "branding-studio": {
+    "titleEn": "Branding Studio",
+    "shortDescriptionEn": "Designing complete brand identities for emerging brands",
+    "descriptionEn": "A branding studio creating comprehensive visual identities for new and growing brands. Includes logo, colors, typography, and brand guidelines. Perfect for experienced designers who can deliver professional, cohesive brand packages.",
+    "categoryEn": "Design",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Professional design tools",
+      "Brand template systems",
+      "Portfolio",
+      "Presentation skills",
+      "Client proposal templates"
+    ],
+    "firstStepsEn": [
+      "Build a strong portfolio",
+      "Define your branding process",
+      "Set premium pricing",
+      "Approach startups and businesses",
+      "Deliver exceptional results"
+    ],
+    "sellingMethodEn": "Per branding package"
+  },
+  "photography-events": {
+    "titleEn": "Event Photography",
+    "shortDescriptionEn": "Photographing parties, weddings, and events",
+    "descriptionEn": "An event photography business capturing special moments at weddings, parties, and corporate events. Perfect for skilled photographers who can work under pressure and capture candid moments.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Professional camera",
+      "Lenses",
+      "Lighting equipment",
+      "Editing software",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio (shoot friends' events)",
+      "Invest in quality gear",
+      "Set packages and pricing",
+      "Market on social media",
+      "Network with event planners"
+    ],
+    "sellingMethodEn": "Per event package"
+  },
+  "product-photography": {
+    "titleEn": "Product Photography",
+    "shortDescriptionEn": "Photographing products for local businesses' online stores",
+    "descriptionEn": "A product photography service helping local businesses showcase their products professionally. Perfect for detail-oriented photographers who can make products look appealing online.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Camera",
+      "Lightbox or lighting setup",
+      "Backdrop",
+      "Editing software",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Build a product shot portfolio",
+      "Approach local businesses",
+      "Offer a free sample shoot",
+      "Set per-product pricing",
+      "Deliver consistent quality"
+    ],
+    "sellingMethodEn": "Per product or per session"
+  },
+  "portrait-photography": {
+    "titleEn": "Portrait Photography",
+    "shortDescriptionEn": "Personal and family photo sessions",
+    "descriptionEn": "A portrait photography business offering personal, family, and couple photo sessions. Perfect for photographers who can make people feel comfortable and capture natural expressions.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Professional camera",
+      "Portrait lens",
+      "Lighting equipment",
+      "Editing software",
+      "Studio or outdoor locations"
+    ],
+    "firstStepsEn": [
+      "Build a portrait portfolio",
+      "Set session pricing",
+      "Market on social media",
+      "Offer mini-sessions to start",
+      "Collect and share client photos"
+    ],
+    "sellingMethodEn": "Per session package"
+  },
+  "gaming-streaming": {
+    "titleEn": "Gaming Streamer",
+    "shortDescriptionEn": "Live streaming games and building a community",
+    "descriptionEn": "A gaming streaming business broadcasting gameplay live and building a community. Earn through subscriptions, donations, and sponsorships. Perfect for charismatic gamers who can entertain an audience.",
+    "categoryEn": "Gaming",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Gaming PC or console",
+      "Streaming software",
+      "Microphone and camera",
+      "Good internet connection",
+      "Engaging personality"
+    ],
+    "firstStepsEn": [
+      "Choose your platform",
+      "Set up streaming equipment",
+      "Build a consistent schedule",
+      "Engage with viewers",
+      "Network with other streamers"
+    ],
+    "sellingMethodEn": "Subscriptions + donations + sponsorships"
+  },
+  "gaming-tournament": {
+    "titleEn": "Gaming Tournament Organizer",
+    "shortDescriptionEn": "Organizing local or online gaming tournaments",
+    "descriptionEn": "A gaming tournament business organizing competitive gaming events locally or online. Earn through entry fees and sponsorships. Perfect for gaming enthusiasts who can manage events and build gaming communities.",
+    "categoryEn": "Gaming",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Tournament management platform",
+      "Prize pool or sponsored prizes",
+      "Streaming setup",
+      "Marketing channels",
+      "Partnerships with venues"
+    ],
+    "firstStepsEn": [
+      "Choose game and format",
+      "Set rules and prizes",
+      "Create registration system",
+      "Market to gaming communities",
+      "Run your first tournament"
+    ],
+    "sellingMethodEn": "Entry fees + sponsorships"
+  },
+  "gaming-setup-consulting": {
+    "titleEn": "Gaming Setup Consulting",
+    "shortDescriptionEn": "Helping gamers build and optimize their gaming setups",
+    "descriptionEn": "A gaming setup consulting business helping gamers choose and build their ideal gaming rigs. Perfect for tech-savvy gamers who know hardware and can recommend the best setups for different budgets.",
+    "categoryEn": "Gaming",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Hardware knowledge",
+      "Benchmarking tools",
+      "Component price tracking",
+      "Consultation templates",
+      "Social media presence"
+    ],
+    "firstStepsEn": [
+      "Build your knowledge base",
+      "Create setup guides",
+      "Offer free consultations",
+      "Set consulting fees",
+      "Partner with retailers for commissions"
+    ],
+    "sellingMethodEn": "Per consultation + affiliate commissions"
+  },
+  "pet-grooming": {
+    "titleEn": "Pet Grooming Service",
+    "shortDescriptionEn": "Grooming and care service for cats and dogs",
+    "descriptionEn": "A pet grooming service offering bathing, trimming, and care for cats and dogs. Perfect for animal lovers who are comfortable handling pets and can learn grooming techniques.",
+    "categoryEn": "Pets",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Grooming tools",
+      "Pet shampoo and products",
+      "Grooming table",
+      "Towels and dryer",
+      "Pet restraint tools"
+    ],
+    "firstStepsEn": [
+      "Learn grooming techniques",
+      "Practice on pets you know",
+      "Set up a grooming space",
+      "Market to pet owners",
+      "Build a loyal client base"
+    ],
+    "sellingMethodEn": "Per grooming session"
+  },
+  "pet-supplies": {
+    "titleEn": "Pet Supplies Store",
+    "shortDescriptionEn": "Selling pet food and accessories online",
+    "descriptionEn": "An online pet supplies store selling food, toys, and accessories for pets. Buy from suppliers and sell online. Perfect for pet lovers who understand what pet owners need.",
+    "categoryEn": "Pets",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Capital for inventory",
+      "Pet supply suppliers",
+      "Storage space",
+      "Online store",
+      "Product photography"
+    ],
+    "firstStepsEn": [
+      "Research popular pet products",
+      "Find reliable suppliers",
+      "Set up an online store",
+      "Market to pet communities",
+      "Offer competitive prices"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "pet-treats": {
+    "titleEn": "Homemade Pet Treats",
+    "shortDescriptionEn": "Making and selling healthy treats for pets",
+    "descriptionEn": "A homemade pet treats business making healthy, natural treats for dogs and cats. Perfect for pet lovers who enjoy baking and want to create wholesome pet snacks.",
+    "categoryEn": "Pets",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Pet-safe ingredients",
+      "Baking equipment",
+      "Packaging",
+      "Recipes",
+      "Selling platform"
+    ],
+    "firstStepsEn": [
+      "Research pet-safe recipes",
+      "Create 3-5 treat varieties",
+      "Test with pet owners",
+      "Design packaging",
+      "Sell online and at pet events"
+    ],
+    "sellingMethodEn": "Online + pet events + local shops"
+  },
+  "gift-baskets": {
+    "titleEn": "Gift Baskets",
+    "shortDescriptionEn": "Designing and selling custom gift baskets for occasions",
+    "descriptionEn": "A gift basket business creating custom-themed gift baskets for birthdays, holidays, and special occasions. Perfect for creative individuals who can curate and present beautiful gift packages.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Baskets and containers",
+      "Gift items (chocolates, candles, etc.)",
+      "Wrapping and ribbon",
+      "Decorative materials",
+      "Product photography"
+    ],
+    "firstStepsEn": [
+      "Choose basket themes",
+      "Source gift items",
+      "Design assembly style",
+      "Market on social media",
+      "Offer custom options"
+    ],
+    "sellingMethodEn": "Per basket + custom orders"
+  },
+  "event-planning": {
+    "titleEn": "Small Event Planning",
+    "shortDescriptionEn": "Organizing small parties and events",
+    "descriptionEn": "An event planning business organizing small parties, gatherings, and corporate events. Perfect for organized, detail-oriented individuals who can coordinate vendors and manage timelines.",
+    "categoryEn": "Services",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Vendor contacts",
+      "Planning templates",
+      "Decorating supplies",
+      "Booking system",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Build vendor relationships",
+      "Create planning packages",
+      "Offer to plan a friend's event",
+      "Market on social media",
+      "Build a portfolio"
+    ],
+    "sellingMethodEn": "Per event planning package"
+  },
+  "home-cleaning": {
+    "titleEn": "Home Cleaning Service",
+    "shortDescriptionEn": "Professional cleaning of homes and properties",
+    "descriptionEn": "A home cleaning service offering professional cleaning for homes and apartments. Perfect for detail-oriented individuals who take pride in clean spaces and can build trust with clients.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Cleaning supplies",
+      "Vacuum cleaner",
+      "Mop and buckets",
+      "Microfiber cloths",
+      "Transportation"
+    ],
+    "firstStepsEn": [
+      "Gather cleaning supplies",
+      "Set pricing per home size",
+      "Offer service to neighbors",
+      "Build a client base",
+      "Offer recurring cleaning packages"
+    ],
+    "sellingMethodEn": "Per cleaning session"
+  },
+  "handmade-crafts": {
+    "titleEn": "Handmade Crafts",
+    "shortDescriptionEn": "Making and selling unique handmade products",
+    "descriptionEn": "A handmade crafts business creating and selling unique handcrafted products. Perfect for creative individuals who can turn their crafting hobby into a profitable business.",
+    "categoryEn": "Digital Products",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Craft materials",
+      "Tools",
+      "Packaging",
+      "Camera",
+      "Selling platform"
+    ],
+    "firstStepsEn": [
+      "Choose your craft niche",
+      "Create a product line",
+      "Photograph your work",
+      "Sell on Etsy/Instagram",
+      "Participate in local markets"
+    ],
+    "sellingMethodEn": "Online + craft markets"
+  },
+  "candle-brand": {
+    "titleEn": "Candle Brand",
+    "shortDescriptionEn": "Making and selling luxury scented candles",
+    "descriptionEn": "A candle brand making and selling premium scented candles. Create unique fragrances and beautiful packaging. Perfect for creative individuals who enjoy crafting and want to build a brand.",
+    "categoryEn": "Digital Products",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Wax (soy, beeswax)",
+      "Fragrance oils",
+      "Wicks",
+      "Jars and containers",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Learn candle making",
+      "Develop signature scents",
+      "Design packaging",
+      "Photograph products",
+      "Sell online and at markets"
+    ],
+    "sellingMethodEn": "Online + markets + local shops"
+  },
+  "reselling-wholesale": {
+    "titleEn": "Wholesale Reselling",
+    "shortDescriptionEn": "Buying products wholesale and selling them retail online",
+    "descriptionEn": "A wholesale reselling business buying products in bulk and selling them individually online for a profit. Perfect for those who can find good wholesale deals and understand market demand.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Capital for bulk purchases",
+      "Wholesale supplier contacts",
+      "Storage space",
+      "Online store",
+      "Shipping supplies"
+    ],
+    "firstStepsEn": [
+      "Research trending products",
+      "Find wholesale suppliers",
+      "Buy a test batch",
+      "Set up online store",
+      "Price competitively"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "specialty-store": {
+    "titleEn": "Specialty Store",
+    "shortDescriptionEn": "A small store specializing in a specific product category",
+    "descriptionEn": "A small specialty store focusing on one product category, like specialty foods, gadgets, or accessories. Perfect for entrepreneurs who can identify a niche and curate the best products in that category.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Store space (physical or online)",
+      "Specialty product inventory",
+      "Display fixtures",
+      "Point of sale system",
+      "Marketing materials"
+    ],
+    "firstStepsEn": [
+      "Choose your specialty niche",
+      "Source unique products",
+      "Set up store (online or physical)",
+      "Build a brand around expertise",
+      "Market to your target audience"
+    ],
+    "sellingMethodEn": "Store sales"
+  },
+  "content-creation": {
+    "titleEn": "Content Creation",
+    "shortDescriptionEn": "Creating content on YouTube or Instagram and building an audience",
+    "descriptionEn": "A content creation business building an audience on platforms like YouTube or Instagram and monetizing through ads, sponsorships, and products. Perfect for charismatic creators who can consistently produce engaging content.",
+    "categoryEn": "Digital Products",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Camera or phone",
+      "Editing software",
+      "Microphone",
+      "Lighting",
+      "Content planning tools"
+    ],
+    "firstStepsEn": [
+      "Choose your niche",
+      "Create a content calendar",
+      "Produce consistent content",
+      "Engage with your audience",
+      "Monetize through multiple channels"
+    ],
+    "sellingMethodEn": "Ad revenue + sponsorships + products"
+  },
+  "copywriting": {
+    "titleEn": "Copywriting Services",
+    "shortDescriptionEn": "Writing content for businesses and websites",
+    "descriptionEn": "A copywriting business writing website copy, ads, product descriptions, and marketing content for businesses. Perfect for skilled writers who can craft persuasive, clear content.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Writing portfolio",
+      "Laptop",
+      "Grammar tools",
+      "SEO knowledge",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Build a writing portfolio",
+      "Join freelance platforms",
+      "Set per-word or per-project rates",
+      "Approach businesses",
+      "Deliver quality content on time"
+    ],
+    "sellingMethodEn": "Per project or per word"
+  },
+  "translation": {
+    "titleEn": "Translation Services",
+    "shortDescriptionEn": "Translating documents and content between languages",
+    "descriptionEn": "A translation service translating documents, content, and marketing materials between languages. Perfect for bilingual or multilingual individuals who can translate accurately and naturally.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Language fluency",
+      "Translation tools",
+      "Laptop",
+      "Specialized dictionaries",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Choose language pairs",
+      "Build a translation portfolio",
+      "Join translation platforms",
+      "Set per-word rates",
+      "Market to businesses"
+    ],
+    "sellingMethodEn": "Per word or per project"
+  },
+  "home-plants": {
+    "titleEn": "Houseplants Shop",
+    "shortDescriptionEn": "Selling houseplants and planters online",
+    "descriptionEn": "An online shop selling houseplants, planters, and plant care accessories. Perfect for plant enthusiasts who can source healthy plants and help customers choose the right ones.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Plant suppliers",
+      "Pots and planters",
+      "Storage space with proper light",
+      "Online store",
+      "Packaging for shipping"
+    ],
+    "firstStepsEn": [
+      "Source healthy plants",
+      "Choose attractive pots",
+      "Set up online store",
+      "Create plant care guides",
+      "Market to plant lovers"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "balloons-decor": {
+    "titleEn": "Balloon Decoration",
+    "shortDescriptionEn": "Designing and arranging balloons for events",
+    "descriptionEn": "A balloon decoration business creating custom balloon arrangements for parties, weddings, and events. Perfect for creative individuals who can design beautiful balloon installations.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Balloons in various sizes",
+      "Balloon pump",
+      "Fishing line and frames",
+      "Ribbons and accessories",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Learn balloon arrangement techniques",
+      "Create sample designs",
+      "Set packages and pricing",
+      "Market on social media",
+      "Network with event planners"
+    ],
+    "sellingMethodEn": "Per event package"
+  },
+  "custom-phone-cases": {
+    "titleEn": "Custom Phone Cases",
+    "shortDescriptionEn": "Designing and selling phone cases with custom names and images",
+    "descriptionEn": "A custom phone case business designing and selling personalized cases with names, photos, and unique designs. Perfect for creative individuals who can create appealing designs and manage production.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Blank phone cases",
+      "Design software",
+      "Printing equipment or print partner",
+      "Packaging",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Create design templates",
+      "Find a printing method",
+      "Set up an online store",
+      "Offer custom designs",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Online store + custom orders"
+  },
+  "home-coffee-roasting": {
+    "titleEn": "Home Coffee Roasting",
+    "shortDescriptionEn": "Roasting coffee beans and selling to local customers",
+    "descriptionEn": "A home coffee roasting business roasting green coffee beans and selling freshly roasted coffee to local customers. Perfect for coffee enthusiasts who understand roasting profiles and flavor.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Coffee roaster",
+      "Green coffee beans",
+      "Packaging bags",
+      "Sealing equipment",
+      "Tasting tools"
+    ],
+    "firstStepsEn": [
+      "Learn roasting techniques",
+      "Source quality green beans",
+      "Develop roast profiles",
+      "Package and label",
+      "Sell to local coffee lovers"
+    ],
+    "sellingMethodEn": "Direct sales + online"
+  },
+  "date-farm-boxes": {
+    "titleEn": "Premium Date Gift Boxes",
+    "shortDescriptionEn": "Packaging and selling premium date boxes for events and holidays",
+    "descriptionEn": "A premium date gift box business packaging high-quality dates in beautiful boxes for holidays, weddings, and corporate gifts. Perfect for those who can source quality dates and create elegant packaging.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Premium dates",
+      "Gift boxes",
+      "Ribbon and wrapping",
+      "Labels",
+      "Selling page"
+    ],
+    "firstStepsEn": [
+      "Source premium dates",
+      "Choose 2-3 box styles",
+      "Design elegant packaging",
+      "Market before holidays",
+      "Target individuals and companies"
+    ],
+    "sellingMethodEn": "Instagram + WhatsApp + delivery"
+  },
+  "fresh-juice-cart": {
+    "titleEn": "Fresh Juice Cart",
+    "shortDescriptionEn": "A fresh fruit juice cart in high-traffic areas",
+    "descriptionEn": "A fresh juice cart serving freshly squeezed fruit juices in busy areas. Perfect for those who enjoy making healthy drinks and can find good locations with high foot traffic.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Juice cart",
+      "Juicer",
+      "Fresh fruits",
+      "Cups and straws",
+      "Ice and storage"
+    ],
+    "firstStepsEn": [
+      "Choose locations",
+      "Get equipment",
+      "Source fresh fruits",
+      "Set pricing",
+      "Open during peak hours"
+    ],
+    "sellingMethodEn": "Direct sales at location"
+  },
+  "honey-brand": {
+    "titleEn": "Natural Honey Brand",
+    "shortDescriptionEn": "Packaging and selling natural honey with a brand identity",
+    "descriptionEn": "A natural honey brand sourcing pure honey, packaging it with a strong brand identity, and selling to health-conscious customers. Perfect for those who can source quality honey and build a trusted brand.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Honey supplier",
+      "Glass jars",
+      "Labels and branding",
+      "Packaging",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Find a reliable honey source",
+      "Design brand identity",
+      "Choose packaging",
+      "Set up sales channels",
+      "Market the health benefits"
+    ],
+    "sellingMethodEn": "Online + stores + markets"
+  },
+  "party-food-catering": {
+    "titleEn": "Home Party Catering",
+    "shortDescriptionEn": "Preparing refreshments and small buffets for events",
+    "descriptionEn": "A home catering business preparing refreshments, finger foods, and small buffets for parties and events. Perfect for home cooks who can scale their cooking and present food beautifully.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Kitchen equipment",
+      "Serving platters",
+      "Transportation",
+      "Menu templates",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Create menu options",
+      "Set per-person pricing",
+      "Cater a friend's event",
+      "Photograph your spread",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Per event or per person"
+  },
+  "sprout-microgreens": {
+    "titleEn": "Microgreens Farming",
+    "shortDescriptionEn": "Growing and selling edible sprouts and microgreens",
+    "descriptionEn": "A microgreens business growing and selling edible sprouts to restaurants and health-conscious individuals. Perfect for those interested in urban farming who can maintain consistent growing conditions.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Growing trays",
+      "Seeds",
+      "Growing medium",
+      "Lighting",
+      "Shelving"
+    ],
+    "firstStepsEn": [
+      "Learn microgreen growing",
+      "Choose varieties to grow",
+      "Set up growing space",
+      "Approach restaurants",
+      "Sell at farmers markets"
+    ],
+    "sellingMethodEn": "Weekly delivery to restaurants + direct sales"
+  },
+  "custom-jewelry": {
+    "titleEn": "Custom Handmade Jewelry",
+    "shortDescriptionEn": "Making and selling handmade jewelry with unique designs",
+    "descriptionEn": "A custom jewelry business creating unique handmade pieces. Perfect for artistic individuals who can craft beautiful jewelry and want to sell distinctive designs.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Jewelry making tools",
+      "Beads, wire, and findings",
+      "Design sketches",
+      "Packaging",
+      "Camera"
+    ],
+    "firstStepsEn": [
+      "Learn jewelry techniques",
+      "Create a signature style",
+      "Photograph pieces",
+      "Sell on Etsy/Instagram",
+      "Take custom orders"
+    ],
+    "sellingMethodEn": "Online + custom orders"
+  },
+  "abaya-online-store": {
+    "titleEn": "Abaya Online Store",
+    "shortDescriptionEn": "Selling abayas and modest fashion online",
+    "descriptionEn": "An online store selling abayas and modest fashion to women. Source or design elegant pieces and sell through your online store. Perfect for those with fashion sense who understand the modest fashion market.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Abaya supplier or production",
+      "Online store",
+      "Product photography",
+      "Shipping supplies",
+      "Social media presence"
+    ],
+    "firstStepsEn": [
+      "Source or design abayas",
+      "Set up online store",
+      "Photograph products",
+      "Market on Instagram",
+      "Offer excellent customer service"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "kids-clothing-brand": {
+    "titleEn": "Kids Clothing Brand",
+    "shortDescriptionEn": "Designing and selling comfortable and trendy kids clothing",
+    "descriptionEn": "A kids clothing brand designing and selling comfortable, stylish children's clothing. Perfect for those who understand kids' fashion and can source or produce quality, practical clothing.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Clothing manufacturer or supplier",
+      "Design sketches",
+      "Fabric samples",
+      "Online store",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Design your first collection",
+      "Find a manufacturer",
+      "Order samples",
+      "Set up online store",
+      "Market to parents"
+    ],
+    "sellingMethodEn": "Online store + boutiques"
+  },
+  "sneaker-reselling": {
+    "titleEn": "Sneaker Reselling",
+    "shortDescriptionEn": "Buying and selling rare and limited-edition sneakers",
+    "descriptionEn": "A sneaker reselling business buying rare and limited-edition sneakers and selling them for a profit. Perfect for sneaker enthusiasts who know the market and can spot good deals.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Capital for purchasing",
+      "Sneaker market knowledge",
+      "Authentication skills",
+      "Selling platform accounts",
+      "Shipping supplies"
+    ],
+    "firstStepsEn": [
+      "Learn the sneaker market",
+      "Set up buying alerts",
+      "Buy limited releases",
+      "Authenticate and photograph",
+      "Sell on platforms"
+    ],
+    "sellingMethodEn": "Online platforms"
+  },
+  "henna-art-service": {
+    "titleEn": "Henna Art Service",
+    "shortDescriptionEn": "Providing henna art services for events",
+    "descriptionEn": "A henna art service offering beautiful henna designs for weddings, Eid, and special occasions. Perfect for skilled henna artists who can create intricate designs and work at events.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Quality henna paste",
+      "Design stencils",
+      "Application tools",
+      "Portfolio photos",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Practice henna designs",
+      "Build a portfolio",
+      "Set pricing",
+      "Market on social media",
+      "Offer event bookings"
+    ],
+    "sellingMethodEn": "Per session or per event"
+  },
+  "skincare-brand": {
+    "titleEn": "Skincare Brand",
+    "shortDescriptionEn": "Making and selling natural skincare products",
+    "descriptionEn": "A skincare brand creating and selling natural skincare products. Develop formulas, create a brand, and sell to health-conscious customers. Perfect for those passionate about skincare and beauty.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Skincare ingredients",
+      "Formulation knowledge",
+      "Packaging",
+      "Labels",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Research skincare formulations",
+      "Create 3-5 products",
+      "Test for safety",
+      "Design brand and packaging",
+      "Launch online"
+    ],
+    "sellingMethodEn": "Online + markets + shops"
+  },
+  "lash-extensions": {
+    "titleEn": "Lash Extensions Service",
+    "shortDescriptionEn": "Professional eyelash extension application",
+    "descriptionEn": "A lash extension business offering professional eyelash extension services. Perfect for beauty professionals who can learn the technique and build a loyal client base.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Lash extension kits",
+      "Tweezers",
+      "Adhesive",
+      "Eye pads",
+      "Lighting and magnifying glasses"
+    ],
+    "firstStepsEn": [
+      "Take a lash training course",
+      "Practice on models",
+      "Set up a workspace",
+      "Market on Instagram",
+      "Build before/after portfolio"
+    ],
+    "sellingMethodEn": "Per session"
+  },
+  "organic-soap": {
+    "titleEn": "Organic Handmade Soap",
+    "shortDescriptionEn": "Making and selling natural soap with oils and herbs",
+    "descriptionEn": "An organic soap business making and selling natural handmade soap with essential oils and herbs. Perfect for those who enjoy crafting natural products and want to build a wellness brand.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Soap base",
+      "Essential oils",
+      "Herbs and natural colorants",
+      "Molds",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Learn soap making",
+      "Create signature recipes",
+      "Design packaging",
+      "Photograph products",
+      "Sell online and at markets"
+    ],
+    "sellingMethodEn": "Online + markets + shops"
+  },
+  "mobile-barber": {
+    "titleEn": "Mobile Barber",
+    "shortDescriptionEn": "Men's haircut service at home or office",
+    "descriptionEn": "A mobile barber service offering men's haircuts at the client's home or office. Perfect for licensed barbers who want flexibility and can build a regular clientele.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Professional clippers",
+      "Scissors and combs",
+      "Cape and towels",
+      "Mirror",
+      "Portable chair"
+    ],
+    "firstStepsEn": [
+      "Get licensed",
+      "Assemble your kit",
+      "Market to professionals",
+      "Set pricing",
+      "Build a recurring client base"
+    ],
+    "sellingMethodEn": "Per haircut"
+  },
+  "car-wrap-styling": {
+    "titleEn": "Car Wrap Styling",
+    "shortDescriptionEn": "Wrapping cars with vinyl and custom designs",
+    "descriptionEn": "A car wrap business applying vinyl wraps and custom designs to vehicles. Perfect for detail-oriented professionals who can work with precision and create stunning visual transformations.",
+    "categoryEn": "Cars",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Vinyl wrap materials",
+      "Heat gun",
+      "Squeegees",
+      "Cutting tools",
+      "Workspace"
+    ],
+    "firstStepsEn": [
+      "Learn wrapping techniques",
+      "Practice on your own car",
+      "Build a portfolio",
+      "Market to car owners",
+      "Partner with car shops"
+    ],
+    "sellingMethodEn": "Per wrap project"
+  },
+  "car-parts-reselling": {
+    "titleEn": "Car Parts Reselling",
+    "shortDescriptionEn": "Buying and selling car parts online",
+    "descriptionEn": "A car parts reselling business buying and selling auto parts online. Perfect for those who know car parts well and can find good deals on quality components.",
+    "categoryEn": "Cars",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Car parts knowledge",
+      "Supplier contacts",
+      "Storage space",
+      "Online store",
+      "Shipping supplies"
+    ],
+    "firstStepsEn": [
+      "Research in-demand parts",
+      "Find suppliers",
+      "Set up online store",
+      "Verify part compatibility",
+      "Market to car owners"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "oil-change-mobile": {
+    "titleEn": "Mobile Oil Change",
+    "shortDescriptionEn": "Oil change and car check service at the customer's location",
+    "descriptionEn": "A mobile oil change service coming to the customer to change oil and perform basic checks. Perfect for those with basic mechanical skills who want a straightforward, recurring-revenue business.",
+    "categoryEn": "Cars",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Oil and filters",
+      "Basic tools",
+      "Oil pan",
+      "Gloves and rags",
+      "Transportation"
+    ],
+    "firstStepsEn": [
+      "Learn basic car maintenance",
+      "Buy supplies in bulk",
+      "Market to car owners",
+      "Set pricing per service",
+      "Build a recurring client base"
+    ],
+    "sellingMethodEn": "Per service visit"
+  },
+  "yoga-classes": {
+    "titleEn": "Yoga Classes",
+    "shortDescriptionEn": "Yoga sessions for women or beginners",
+    "descriptionEn": "A yoga instruction business offering classes for women or beginners. Can be held at home, parks, or rented spaces. Perfect for certified yoga instructors who can create a welcoming environment.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Yoga certification",
+      "Yoga mats",
+      "Speaker for music",
+      "Blankets and blocks",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Get certified",
+      "Choose a venue",
+      "Set class schedule",
+      "Market to beginners",
+      "Offer a free trial class"
+    ],
+    "sellingMethodEn": "Per class or monthly membership"
+  },
+  "sports-gear-store": {
+    "titleEn": "Sports Gear Store",
+    "shortDescriptionEn": "Selling sports clothing and equipment online",
+    "descriptionEn": "An online sports gear store selling athletic clothing, equipment, and accessories. Perfect for sports enthusiasts who know what athletes need and can source quality products.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Capital for inventory",
+      "Sports gear suppliers",
+      "Storage space",
+      "Online store",
+      "Product photography"
+    ],
+    "firstStepsEn": [
+      "Choose your sports niche",
+      "Find suppliers",
+      "Set up online store",
+      "Market to sports communities",
+      "Offer competitive pricing"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "swim-lessons": {
+    "titleEn": "Swimming Lessons",
+    "shortDescriptionEn": "One-on-one swimming training for individuals",
+    "descriptionEn": "A swimming instruction business offering private swimming lessons to children and adults. Perfect for strong swimmers with teaching skills who can ensure safety while making lessons fun.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Swimming proficiency",
+      "Lifeguard/first aid certification",
+      "Swim aids",
+      "Access to a pool",
+      "Scheduling system"
+    ],
+    "firstStepsEn": [
+      "Get certified",
+      "Find pool access",
+      "Set lesson pricing",
+      "Market to parents and adults",
+      "Start with trial lessons"
+    ],
+    "sellingMethodEn": "Per lesson or package"
+  },
+  "bike-repair": {
+    "titleEn": "Bike Repair Service",
+    "shortDescriptionEn": "Bicycle maintenance and repair service",
+    "descriptionEn": "A bike repair service maintaining and repairing bicycles. Perfect for cycling enthusiasts who know bike mechanics and can provide quick, reliable service.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Bike repair tools",
+      "Spare parts",
+      "Work stand",
+      "Lubricants and cleaners",
+      "Workspace"
+    ],
+    "firstStepsEn": [
+      "Learn bike mechanics",
+      "Set up a repair space",
+      "Market to cyclists",
+      "Set pricing per repair",
+      "Offer tune-up packages"
+    ],
+    "sellingMethodEn": "Per repair or tune-up package"
+  },
+  "pet-sitting": {
+    "titleEn": "Pet Sitting Service",
+    "shortDescriptionEn": "Caring for pets while owners travel",
+    "descriptionEn": "A pet sitting service taking care of pets in the owner's home while they travel. Perfect for animal lovers who are responsible and can provide loving care to pets.",
+    "categoryEn": "Pets",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Pet care knowledge",
+      "First aid for pets",
+      "Transportation",
+      "References",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Build pet care experience",
+      "Get references",
+      "Set daily rates",
+      "Market to pet owners",
+      "Join pet sitting platforms"
+    ],
+    "sellingMethodEn": "Per day or per visit"
+  },
+  "dog-walking": {
+    "titleEn": "Dog Walking Service",
+    "shortDescriptionEn": "Dog walking service for busy owners",
+    "descriptionEn": "A dog walking service helping busy dog owners keep their pets exercised and happy. Perfect for active animal lovers who can handle dogs of various sizes and temperaments.",
+    "categoryEn": "Pets",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Leashes",
+      "Waste bags",
+      "Water bottles",
+      "Treats",
+      "Booking app"
+    ],
+    "firstStepsEn": [
+      "Get experience with dogs",
+      "Set per-walk pricing",
+      "Market to dog owners",
+      "Build a regular schedule",
+      "Join pet service platforms"
+    ],
+    "sellingMethodEn": "Per walk or weekly package"
+  },
+  "aquarium-maintenance": {
+    "titleEn": "Aquarium Maintenance",
+    "shortDescriptionEn": "Installing and maintaining fish tanks for homes and offices",
+    "descriptionEn": "An aquarium maintenance business installing and servicing fish tanks for homes and offices. Perfect for aquarium enthusiasts who understand water chemistry and fish care.",
+    "categoryEn": "Pets",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Water testing kits",
+      "Cleaning tools",
+      "Water treatments",
+      "Fish knowledge",
+      "Transportation"
+    ],
+    "firstStepsEn": [
+      "Learn aquarium maintenance",
+      "Set service packages",
+      "Market to homes and offices",
+      "Set monthly maintenance fees",
+      "Build a client base"
+    ],
+    "sellingMethodEn": "Monthly maintenance contracts"
+  },
+  "food-photography-blog": {
+    "titleEn": "Food Photography Blog",
+    "shortDescriptionEn": "Creating food photography content and building an audience",
+    "descriptionEn": "A food photography blog creating beautiful food content and building an audience. Monetize through sponsorships, collaborations, and selling presets or courses. Perfect for food lovers with photography skills.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Camera",
+      "Food styling props",
+      "Lighting equipment",
+      "Editing software",
+      "Blog platform"
+    ],
+    "firstStepsEn": [
+      "Choose your food niche",
+      "Create stunning content",
+      "Build social media following",
+      "Approach food brands",
+      "Monetize through partnerships"
+    ],
+    "sellingMethodEn": "Sponsorships + presets + collaborations"
+  },
+  "drone-photography": {
+    "titleEn": "Drone Photography",
+    "shortDescriptionEn": "Aerial photography for events and real estate",
+    "descriptionEn": "A drone photography business capturing aerial shots for events, real estate, and marketing. Perfect for licensed drone pilots who can capture stunning aerial perspectives.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Drone with camera",
+      "Spare batteries",
+      "Editing software",
+      "Drone license",
+      "Insurance"
+    ],
+    "firstStepsEn": [
+      "Get licensed",
+      "Build a portfolio",
+      "Approach real estate agents",
+      "Market to event planners",
+      "Set per-project pricing"
+    ],
+    "sellingMethodEn": "Per project or per session"
+  },
+  "photo-editing-service": {
+    "titleEn": "Photo Editing Service",
+    "shortDescriptionEn": "Editing photos for businesses and event photographers",
+    "descriptionEn": "A photo editing service retouching and enhancing photos for businesses and photographers. Perfect for skilled photo editors who can deliver consistent, high-quality results quickly.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Editing software",
+      "Presets and actions",
+      "Computer",
+      "Portfolio",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio",
+      "Set per-photo pricing",
+      "Approach photographers",
+      "Offer bulk editing packages",
+      "Deliver fast turnaround"
+    ],
+    "sellingMethodEn": "Per photo or per batch"
+  },
+  "logo-templates-shop": {
+    "titleEn": "Logo Templates Shop",
+    "shortDescriptionEn": "Designing and selling ready-made logo templates",
+    "descriptionEn": "A logo template shop selling pre-designed logo templates that businesses can customize. Perfect for designers who can create versatile, appealing logos and want passive income.",
+    "categoryEn": "Design",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Design software",
+      "Template portfolio",
+      "Online store",
+      "License templates",
+      "Marketing channels"
+    ],
+    "firstStepsEn": [
+      "Create 20-50 logo templates",
+      "Set up an online store",
+      "Price per template or bundles",
+      "Market to new businesses",
+      "Offer customization as an upsell"
+    ],
+    "sellingMethodEn": "Digital template sales"
+  },
+  "social-media-templates": {
+    "titleEn": "Social Media Templates",
+    "shortDescriptionEn": "Designing and selling social media post templates",
+    "descriptionEn": "A social media template business selling pre-designed post templates for Instagram, Facebook, and other platforms. Perfect for designers who can create trendy, versatile templates.",
+    "categoryEn": "Design",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Design software",
+      "Template designs",
+      "Online store",
+      "Marketing channels",
+      "Trend research"
+    ],
+    "firstStepsEn": [
+      "Research trending template styles",
+      "Create template packs",
+      "Set up an online store",
+      "Market to businesses",
+      "Offer custom template services"
+    ],
+    "sellingMethodEn": "Digital template sales"
+  },
+  "ui-kit-sales": {
+    "titleEn": "UI Kit Sales",
+    "shortDescriptionEn": "Designing and selling UI kits for developers",
+    "descriptionEn": "A UI kit business designing and selling user interface component kits for developers and designers. Perfect for experienced UI designers who can create comprehensive, well-organized kits.",
+    "categoryEn": "Design",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Design software (Figma)",
+      "UI design expertise",
+      "Documentation skills",
+      "Sales platform",
+      "Marketing channels"
+    ],
+    "firstStepsEn": [
+      "Research developer needs",
+      "Design a comprehensive kit",
+      "Write documentation",
+      "Set up sales platform",
+      "Market to design communities"
+    ],
+    "sellingMethodEn": "Per kit license"
+  },
+  "printables-planners": {
+    "titleEn": "Printable Planners",
+    "shortDescriptionEn": "Designing and selling printable planners and organizers",
+    "descriptionEn": "A printable planners business designing and selling downloadable planners, organizers, and worksheets. Perfect for organized, creative individuals who can design useful planning tools.",
+    "categoryEn": "Digital Products",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Design software",
+      "Printer (optional)",
+      "Planner designs",
+      "Online store",
+      "Marketing channels"
+    ],
+    "firstStepsEn": [
+      "Research popular planner types",
+      "Design 5-10 planner varieties",
+      "Set up an online store",
+      "Market on Pinterest and Instagram",
+      "Offer seasonal designs"
+    ],
+    "sellingMethodEn": "Digital download sales"
+  },
+  "ebook-writing": {
+    "titleEn": "Ebook Writing",
+    "shortDescriptionEn": "Writing and selling ebooks in your area of expertise",
+    "descriptionEn": "An ebook writing business creating and selling digital books in your area of expertise. Perfect for knowledgeable individuals who can write clearly and want passive income from their expertise.",
+    "categoryEn": "Digital Products",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Writing skills",
+      "Expertise in a topic",
+      "Ebook formatting tools",
+      "Cover design",
+      "Sales platform"
+    ],
+    "firstStepsEn": [
+      "Choose your topic",
+      "Outline and write the ebook",
+      "Design or commission a cover",
+      "Format for different platforms",
+      "Launch and market"
+    ],
+    "sellingMethodEn": "Digital book sales"
+  },
+  "stock-photography": {
+    "titleEn": "Stock Photography",
+    "shortDescriptionEn": "Selling your photos on stock photo platforms",
+    "descriptionEn": "A stock photography business selling your photos on commercial stock photo platforms. Perfect for skilled photographers who can capture versatile, in-demand images.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Camera",
+      "Editing software",
+      "Stock platform accounts",
+      "Keyword research tools",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Research trending stock topics",
+      "Shoot versatile photos",
+      "Edit and keyword properly",
+      "Upload to multiple platforms",
+      "Track what sells and shoot more"
+    ],
+    "sellingMethodEn": "Per photo download"
+  },
+  "online-music-lessons": {
+    "titleEn": "Online Music Lessons",
+    "shortDescriptionEn": "Learning to play a musical instrument online",
+    "descriptionEn": "An online music instruction business teaching an instrument to students via video calls. Perfect for skilled musicians who can teach effectively online and build a student base.",
+    "categoryEn": "Education",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Musical instrument",
+      "Video call setup",
+      "Teaching materials",
+      "Sheet music",
+      "Scheduling system"
+    ],
+    "firstStepsEn": [
+      "Choose your instrument",
+      "Create lesson plans",
+      "Set pricing",
+      "Market to beginners",
+      "Start with trial lessons"
+    ],
+    "sellingMethodEn": "Per lesson or monthly package"
+  },
+  "coding-bootcamp-for-kids": {
+    "titleEn": "Kids Coding Bootcamp",
+    "shortDescriptionEn": "Teaching kids programming basics online",
+    "descriptionEn": "A kids coding bootcamp teaching children programming fundamentals through fun, interactive lessons. Perfect for developers who enjoy working with kids and can make coding engaging.",
+    "categoryEn": "Education",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Programming knowledge",
+      "Kid-friendly coding platforms",
+      "Lesson plans",
+      "Video call setup",
+      "Teaching materials"
+    ],
+    "firstStepsEn": [
+      "Choose age group and curriculum",
+      "Create engaging lesson plans",
+      "Set up online classroom",
+      "Market to parents",
+      "Start with a trial class"
+    ],
+    "sellingMethodEn": "Per course or monthly subscription"
+  },
+  "exam-prep-tutoring": {
+    "titleEn": "Exam Prep Tutoring",
+    "shortDescriptionEn": "Training students for university entrance exams",
+    "descriptionEn": "An exam prep tutoring business helping students prepare for university admissions tests. Perfect for knowledgeable tutors who understand exam formats and can teach effective strategies.",
+    "categoryEn": "Education",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Subject expertise",
+      "Practice tests",
+      "Study materials",
+      "Video call setup",
+      "Progress tracking tools"
+    ],
+    "firstStepsEn": [
+      "Choose target exam",
+      "Create study plans",
+      "Set tutoring rates",
+      "Market to students and parents",
+      "Track and show progress"
+    ],
+    "sellingMethodEn": "Per session or package"
+  },
+  "career-coaching": {
+    "titleEn": "Career Coaching",
+    "shortDescriptionEn": "Helping graduates and job seekers with their career journey",
+    "descriptionEn": "A career coaching business helping graduates and job seekers with resumes, interview prep, and career planning. Perfect for experienced professionals who can guide others effectively.",
+    "categoryEn": "Education",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Coaching certification (optional)",
+      "Resume templates",
+      "Interview prep materials",
+      "Video call setup",
+      "LinkedIn presence"
+    ],
+    "firstStepsEn": [
+      "Define your coaching niche",
+      "Create coaching packages",
+      "Build a LinkedIn presence",
+      "Offer free initial consultations",
+      "Market to graduates and job seekers"
+    ],
+    "sellingMethodEn": "Per session or package"
+  },
+  "wedding-decor": {
+    "titleEn": "Wedding Decor",
+    "shortDescriptionEn": "Designing and arranging wedding and large event decor",
+    "descriptionEn": "A wedding decor business designing and setting up decorations for weddings and large events. Perfect for creative, detail-oriented professionals who can manage large-scale installations.",
+    "categoryEn": "Services",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Decor inventory",
+      "Floral supplies",
+      "Lighting",
+      "Setup tools",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Build a decor portfolio",
+      "Create wedding packages",
+      "Partner with wedding planners",
+      "Market on social media",
+      "Deliver memorable experiences"
+    ],
+    "sellingMethodEn": "Per event package"
+  },
+  "party-character-service": {
+    "titleEn": "Party Character Service",
+    "shortDescriptionEn": "Providing entertainment characters for kids parties",
+    "descriptionEn": "A party character business providing costumed entertainers for children's birthday parties. Perfect for energetic, fun-loving individuals who can engage with kids and create magical experiences.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Character costumes",
+      "Props and accessories",
+      "Sound system",
+      "Games and activities",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Choose popular characters",
+      "Get quality costumes",
+      "Set party packages",
+      "Market to parents",
+      "Partner with party venues"
+    ],
+    "sellingMethodEn": "Per party appearance"
+  },
+  "home-organization": {
+    "titleEn": "Home Organization Service",
+    "shortDescriptionEn": "Organizing and arranging homes and closets",
+    "descriptionEn": "A home organization service helping clients declutter and organize their homes, closets, and spaces. Perfect for organized, detail-oriented individuals who can transform chaotic spaces.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Organization tools",
+      "Storage solutions catalog",
+      "Labeling supplies",
+      "Before/after portfolio",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Build organization skills",
+      "Create a portfolio",
+      "Set per-room pricing",
+      "Market on social media",
+      "Offer before/after transformations"
+    ],
+    "sellingMethodEn": "Per session or per project"
+  },
+  "gift-boxes-custom": {
+    "titleEn": "Custom Gift Boxes",
+    "shortDescriptionEn": "Designing custom gift boxes for individuals and companies",
+    "descriptionEn": "A custom gift box business creating personalized gift boxes for individuals and corporate clients. Perfect for creative curators who can design beautiful, thoughtful gift packages.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Gift items catalog",
+      "Boxes and packaging",
+      "Decorative materials",
+      "Customization options",
+      "Corporate client contacts"
+    ],
+    "firstStepsEn": [
+      "Create gift box themes",
+      "Source quality items",
+      "Design packaging",
+      "Market to individuals and companies",
+      "Offer bulk corporate orders"
+    ],
+    "sellingMethodEn": "Per box + corporate orders"
+  },
+  "scrapbooking-service": {
+    "titleEn": "Scrapbooking Service",
+    "shortDescriptionEn": "Designing memory albums and custom stationery",
+    "descriptionEn": "A scrapbooking business creating custom memory albums and personalized stationery. Perfect for crafty, creative individuals who can design beautiful keepsakes.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Scrapbooking materials",
+      "Decorative supplies",
+      "Photo printing",
+      "Album templates",
+      "Craft tools"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio",
+      "Set pricing per album",
+      "Market on social media",
+      "Take custom orders",
+      "Offer digital scrapbooking options"
+    ],
+    "sellingMethodEn": "Per album or project"
+  },
+  "custom-mugs": {
+    "titleEn": "Custom Mugs",
+    "shortDescriptionEn": "Printing designs and names on mugs and selling them",
+    "descriptionEn": "A custom mug business printing personalized designs, names, and quotes on mugs. Perfect for creative individuals who can create appealing designs and manage printing.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Blank mugs",
+      "Design software",
+      "Heat press or sublimation printer",
+      "Packaging",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Create design templates",
+      "Buy printing equipment",
+      "Set up online store",
+      "Offer custom designs",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Online + custom orders"
+  },
+  "home-decor-store": {
+    "titleEn": "Home Decor Store",
+    "shortDescriptionEn": "Selling home decor and accessories online",
+    "descriptionEn": "An online home decor store selling decorative items, wall art, and home accessories. Perfect for those with an eye for interior design who can source appealing products.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Home decor suppliers",
+      "Storage space",
+      "Online store",
+      "Product photography",
+      "Shipping supplies"
+    ],
+    "firstStepsEn": [
+      "Research trending decor",
+      "Find suppliers",
+      "Set up online store",
+      "Style and photograph products",
+      "Market to home enthusiasts"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "stationery-brand": {
+    "titleEn": "Stationery Brand",
+    "shortDescriptionEn": "Designing and selling custom stationery and office supplies",
+    "descriptionEn": "A stationery brand designing and selling custom notebooks, planners, and office supplies. Perfect for creative designers who can create appealing, functional stationery products.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Design software",
+      "Stationery supplier/manufacturer",
+      "Packaging",
+      "Online store",
+      "Product photography"
+    ],
+    "firstStepsEn": [
+      "Design your product line",
+      "Find a manufacturer",
+      "Create brand identity",
+      "Set up online store",
+      "Market to students and professionals"
+    ],
+    "sellingMethodEn": "Online + stationery shops"
+  },
+  "bookstore-cafe": {
+    "titleEn": "Bookstore Cafe",
+    "shortDescriptionEn": "A small cafe combining books and coffee in a cozy space",
+    "descriptionEn": "A bookstore cafe combining a curated book selection with quality coffee in a small, cozy space. Perfect for book and coffee lovers who can create a welcoming community space.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Cafe space",
+      "Coffee equipment",
+      "Book inventory",
+      "Furniture",
+      "Permits and licenses"
+    ],
+    "firstStepsEn": [
+      "Find a suitable location",
+      "Design the space",
+      "Source books and coffee",
+      "Create a cozy atmosphere",
+      "Market as a community space"
+    ],
+    "sellingMethodEn": "Food and beverage sales + book sales"
+  },
+  "online-thrift-marketplace": {
+    "titleEn": "Online Thrift Marketplace",
+    "shortDescriptionEn": "A platform for selling secondhand clothing between individuals",
+    "descriptionEn": "An online thrift marketplace connecting sellers and buyers of secondhand clothing. Perfect for tech-savvy entrepreneurs who understand the sustainable fashion market.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Web development skills",
+      "Platform infrastructure",
+      "Payment processing",
+      "Marketing budget",
+      "Community management tools"
+    ],
+    "firstStepsEn": [
+      "Build the platform",
+      "Create seller guidelines",
+      "Attract initial sellers",
+      "Market to buyers",
+      "Build community trust"
+    ],
+    "sellingMethodEn": "Transaction fees or subscription"
+  },
+  "pottery-studio": {
+    "titleEn": "Pottery Studio",
+    "shortDescriptionEn": "Making and selling handmade pottery and ceramics",
+    "descriptionEn": "A pottery studio creating and selling handmade ceramic pieces. Perfect for skilled potters who can create functional and artistic pieces and want to sell their craft.",
+    "categoryEn": "Services",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Pottery wheel",
+      "Kiln",
+      "Clay and glazes",
+      "Tools",
+      "Studio space"
+    ],
+    "firstStepsEn": [
+      "Learn pottery techniques",
+      "Create a product line",
+      "Photograph pieces",
+      "Sell online and at markets",
+      "Offer pottery classes"
+    ],
+    "sellingMethodEn": "Product sales + classes"
+  },
+  "leather-crafts": {
+    "titleEn": "Leather Crafts",
+    "shortDescriptionEn": "Making and selling handmade leather wallets and bags",
+    "descriptionEn": "A leather crafts business making and selling handmade leather wallets, bags, and accessories. Perfect for skilled leather workers who can create durable, beautiful products.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Leather",
+      "Leather tools",
+      "Thread and needles",
+      "Hardware",
+      "Workspace"
+    ],
+    "firstStepsEn": [
+      "Learn leather craft techniques",
+      "Create a product line",
+      "Photograph products",
+      "Sell online and at markets",
+      "Take custom orders"
+    ],
+    "sellingMethodEn": "Online + markets + custom orders"
+  },
+  "calligraphy-art": {
+    "titleEn": "Arabic Calligraphy Art",
+    "shortDescriptionEn": "Creating and selling custom Arabic calligraphy artworks",
+    "descriptionEn": "An Arabic calligraphy business creating and selling custom calligraphy pieces. Perfect for skilled calligraphers who can create beautiful traditional and modern designs.",
+    "categoryEn": "Design",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Calligraphy tools",
+      "Ink and paper",
+      "Frames",
+      "Portfolio",
+      "Social media presence"
+    ],
+    "firstStepsEn": [
+      "Master calligraphy styles",
+      "Create a portfolio",
+      "Set pricing per piece",
+      "Market on social media",
+      "Take custom commissions"
+    ],
+    "sellingMethodEn": "Per piece + custom commissions"
+  },
+  "food-truck": {
+    "titleEn": "Food Truck",
+    "shortDescriptionEn": "A mobile food truck serving a signature type of cuisine",
+    "descriptionEn": "A food truck serving a specific type of food in various locations. Perfect for chefs who can cook quickly, manage a small space, and find great locations.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Food truck",
+      "Cooking equipment",
+      "Ingredients",
+      "Permits and licenses",
+      "POS system"
+    ],
+    "firstStepsEn": [
+      "Choose your cuisine",
+      "Get a food truck",
+      "Secure permits",
+      "Find locations",
+      "Market your truck"
+    ],
+    "sellingMethodEn": "Direct sales at locations"
+  },
+  "custom-cake-toppers": {
+    "titleEn": "Custom Cake Toppers",
+    "shortDescriptionEn": "Making and selling cake toppers for events",
+    "descriptionEn": "A custom cake topper business creating personalized toppers for weddings, birthdays, and events. Perfect for crafty individuals who can create unique, detailed toppers.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Craft materials (acrylic, wood, clay)",
+      "Cutting tools",
+      "Design software",
+      "Packaging",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Create design templates",
+      "Make sample toppers",
+      "Set up online store",
+      "Market on social media",
+      "Take custom orders"
+    ],
+    "sellingMethodEn": "Per topper + custom orders"
+  },
+  "smart-home-installation": {
+    "titleEn": "Smart Home Installation",
+    "shortDescriptionEn": "Installing and setting up smart home devices for customers",
+    "descriptionEn": "A smart home installation business setting up smart devices like cameras, lights, and thermostats for homes. Perfect for tech-savvy individuals who can configure and troubleshoot smart devices.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Smart home device knowledge",
+      "Installation tools",
+      "Testing equipment",
+      "Partner relationships with brands",
+      "Service vehicle"
+    ],
+    "firstStepsEn": [
+      "Learn smart home systems",
+      "Partner with device brands",
+      "Market to homeowners",
+      "Set installation pricing",
+      "Offer ongoing support"
+    ],
+    "sellingMethodEn": "Per installation + support contracts"
+  },
+  "website-building-service": {
+    "titleEn": "Website Building Service",
+    "shortDescriptionEn": "Designing and building simple websites for local businesses",
+    "descriptionEn": "A website building service creating professional websites for local businesses. Perfect for web developers who can create attractive, functional sites quickly.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Web development skills",
+      "Templates and tools",
+      "Hosting partnerships",
+      "Portfolio",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio",
+      "Approach local businesses",
+      "Set website packages",
+      "Offer maintenance plans",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Per project + maintenance"
+  },
+  "video-editing-service": {
+    "titleEn": "Video Editing Service",
+    "shortDescriptionEn": "Editing videos for content and events",
+    "descriptionEn": "A video editing service editing videos for content creators, businesses, and events. Perfect for skilled editors who can deliver polished videos quickly.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Editing software",
+      "Computer",
+      "Sound library",
+      "Transition and effect packs",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio",
+      "Set per-video pricing",
+      "Approach content creators",
+      "Offer packages (YouTube, ads, events)",
+      "Deliver fast turnaround"
+    ],
+    "sellingMethodEn": "Per video or per project"
+  },
+  "used-books-store": {
+    "titleEn": "Used Books Store",
+    "shortDescriptionEn": "Selling selected used books online or in a shop",
+    "descriptionEn": "A used books business selling carefully selected secondhand books. Perfect for book lovers who can find quality used books and create an appealing collection.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Book sources",
+      "Storage and display",
+      "Online store or shop space",
+      "Book condition grading",
+      "Shipping supplies"
+    ],
+    "firstStepsEn": [
+      "Source quality used books",
+      "Grade and organize books",
+      "Set up sales channels",
+      "Market to book lovers",
+      "Offer rare and popular titles"
+    ],
+    "sellingMethodEn": "Online + physical shop"
+  },
+  "custom-stickers": {
+    "titleEn": "Custom Stickers",
+    "shortDescriptionEn": "Designing, printing, and selling custom stickers",
+    "descriptionEn": "A custom sticker business designing and printing personalized stickers. Perfect for creative individuals who can create appealing designs and manage printing.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Design software",
+      "Sticker printer or print partner",
+      "Vinyl or paper stock",
+      "Cutting tools",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Create sticker designs",
+      "Find a printing method",
+      "Set up an online store",
+      "Offer custom designs",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Online + custom orders"
+  },
+  "aromatherapy-blends": {
+    "titleEn": "Aromatherapy Blends",
+    "shortDescriptionEn": "Making and selling therapeutic essential oil blends",
+    "descriptionEn": "An aromatherapy business creating and selling therapeutic essential oil blends. Perfect for those who understand essential oils and can create beneficial, great-smelling blends.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Essential oils",
+      "Carrier oils",
+      "Bottles",
+      "Blending knowledge",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Learn aromatherapy basics",
+      "Create signature blends",
+      "Design packaging",
+      "Market wellness benefits",
+      "Sell online and at wellness stores"
+    ],
+    "sellingMethodEn": "Online + wellness shops"
+  },
+  "macrame-art": {
+    "titleEn": "Macrame Art",
+    "shortDescriptionEn": "Making and selling handmade macrame products",
+    "descriptionEn": "A macrame art business creating and selling handmade macrame wall hangings, plant hangers, and decor. Perfect for crafty individuals who can create beautiful knot designs.",
+    "categoryEn": "Design",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Macrame cord",
+      "Wooden dowels",
+      "Rings and beads",
+      "Scissors",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Learn macrame techniques",
+      "Create a product line",
+      "Photograph pieces",
+      "Sell on Etsy/Instagram",
+      "Take custom orders"
+    ],
+    "sellingMethodEn": "Online + markets + custom orders"
+  },
+  "personal-chef": {
+    "titleEn": "Personal Chef",
+    "shortDescriptionEn": "Cooking special meals for clients in their homes",
+    "descriptionEn": "A personal chef business cooking customized meals for clients in their homes. Perfect for skilled chefs who can create personalized menus and provide a premium dining experience.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Chef skills",
+      "Portable cooking equipment",
+      "Menu planning tools",
+      "Ingredients sourcing",
+      "Insurance"
+    ],
+    "firstStepsEn": [
+      "Define your cuisine style",
+      "Create sample menus",
+      "Set per-event pricing",
+      "Market to high-end clients",
+      "Build a reputation"
+    ],
+    "sellingMethodEn": "Per event or per meal"
+  },
+  "mini-greenhouse-kits": {
+    "titleEn": "Mini Greenhouse Kits",
+    "shortDescriptionEn": "Selling small greenhouse kits and plants for homes",
+    "descriptionEn": "A mini greenhouse kit business selling small indoor growing kits and plants. Perfect for gardening enthusiasts who can package convenient growing solutions.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Greenhouse kit components",
+      "Seeds and soil",
+      "Pots and planters",
+      "Instructions",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Design kit varieties",
+      "Source components",
+      "Create assembly instructions",
+      "Set up online store",
+      "Market to home gardeners"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "craft-workshops": {
+    "titleEn": "Craft Workshops",
+    "shortDescriptionEn": "Teaching craft and handmade skills workshops",
+    "descriptionEn": "A craft workshop business teaching people how to make handmade products in group sessions. Perfect for skilled crafters who can teach and create a fun, social learning environment.",
+    "categoryEn": "Education",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Craft materials",
+      "Workshop space",
+      "Tools",
+      "Lesson plans",
+      "Marketing"
+    ],
+    "firstStepsEn": [
+      "Choose craft types",
+      "Prepare workshop materials",
+      "Find a venue",
+      "Set workshop pricing",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Per workshop ticket"
+  },
+  "gaming-cafe": {
+    "titleEn": "Gaming Cafe",
+    "shortDescriptionEn": "A cafe combining gaming and hospitality",
+    "descriptionEn": "A gaming cafe offering gaming stations alongside food and drinks. Perfect for gaming enthusiasts who can create a welcoming social space for gamers.",
+    "categoryEn": "Gaming",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Gaming PCs/consoles",
+      "Games library",
+      "Cafe equipment",
+      "Furniture",
+      "Permits"
+    ],
+    "firstStepsEn": [
+      "Find a suitable location",
+      "Set up gaming stations",
+      "Create a food and drink menu",
+      "Set hourly rates",
+      "Market to gaming communities"
+    ],
+    "sellingMethodEn": "Hourly gaming + food and beverage"
+  },
+  "home-pasta-business": {
+    "titleEn": "Homemade Pasta Business",
+    "shortDescriptionEn": "Making and selling fresh homemade pasta",
+    "descriptionEn": "A homemade pasta business making and selling fresh pasta to local customers and restaurants. Perfect for pasta enthusiasts who can create quality fresh pasta consistently.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Pasta machine",
+      "Flour and eggs",
+      "Drying rack",
+      "Packaging",
+      "Distribution channels"
+    ],
+    "firstStepsEn": [
+      "Learn pasta making",
+      "Create pasta varieties",
+      "Set pricing",
+      "Approach restaurants and customers",
+      "Deliver fresh weekly"
+    ],
+    "sellingMethodEn": "Direct sales + restaurant supply"
+  },
+  "organic-baby-food": {
+    "titleEn": "Organic Baby Food",
+    "shortDescriptionEn": "Preparing and selling fresh organic baby food",
+    "descriptionEn": "An organic baby food business preparing and selling fresh, organic baby food. Perfect for health-conscious cooks who can create safe, nutritious baby meals.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Organic ingredients",
+      "Food processor",
+      "Packaging",
+      "Storage",
+      "Food safety certification"
+    ],
+    "firstStepsEn": [
+      "Research baby nutrition",
+      "Create age-appropriate recipes",
+      "Get food safety certified",
+      "Market to parents",
+      "Deliver fresh weekly"
+    ],
+    "sellingMethodEn": "Weekly subscription + direct sales"
+  },
+  "spice-blends-brand": {
+    "titleEn": "Spice Blends Brand",
+    "shortDescriptionEn": "Mixing and selling curated spice blends with a brand identity",
+    "descriptionEn": "A spice blends business creating unique spice mixes and selling them with a strong brand identity. Perfect for food lovers who can create distinctive, flavorful blends.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Whole spices",
+      "Grinder",
+      "Packaging jars",
+      "Labels",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Develop signature blends",
+      "Design brand and packaging",
+      "Create recipes for each blend",
+      "Set up online store",
+      "Market to home cooks"
+    ],
+    "sellingMethodEn": "Online + markets + stores"
+  },
+  "mocktail-business": {
+    "titleEn": "Healthy Mocktail Business",
+    "shortDescriptionEn": "Preparing and selling refreshing mocktails for events",
+    "descriptionEn": "A mocktail business creating and selling non-alcoholic craft drinks for events and parties. Perfect for creative drink makers who can create appealing, refreshing beverages.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Fresh ingredients",
+      "Blender and shakers",
+      "Glassware",
+      "Syrups and garnishes",
+      "Portable bar setup"
+    ],
+    "firstStepsEn": [
+      "Create signature mocktail recipes",
+      "Set event packages",
+      "Market to event planners",
+      "Offer tasting sessions",
+      "Build a brand"
+    ],
+    "sellingMethodEn": "Per event or per drink"
+  },
+  "artisan-chocolate": {
+    "titleEn": "Artisan Chocolate",
+    "shortDescriptionEn": "Making and selling premium handmade chocolate",
+    "descriptionEn": "An artisan chocolate business making and selling premium handmade chocolates. Perfect for chocolate enthusiasts who can craft beautiful, delicious confections.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Quality chocolate",
+      "Molds",
+      "Thermometer",
+      "Packaging",
+      "Flavorings"
+    ],
+    "firstStepsEn": [
+      "Learn chocolate making",
+      "Develop signature flavors",
+      "Design packaging",
+      "Photograph products",
+      "Sell online and at markets"
+    ],
+    "sellingMethodEn": "Online + markets + gift shops"
+  },
+  "online-fashion-accessories": {
+    "titleEn": "Fashion Accessories Store",
+    "shortDescriptionEn": "Selling curated fashion accessories online",
+    "descriptionEn": "An online fashion accessories store selling curated jewelry, bags, scarves, and accessories. Perfect for fashion lovers who can select trendy, appealing pieces.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Accessories supplier",
+      "Storage space",
+      "Online store",
+      "Product photography",
+      "Shipping supplies"
+    ],
+    "firstStepsEn": [
+      "Research trending accessories",
+      "Find suppliers",
+      "Set up online store",
+      "Style and photograph products",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "modest-swimwear": {
+    "titleEn": "Modest Swimwear",
+    "shortDescriptionEn": "Designing and selling modest swimwear for women",
+    "descriptionEn": "A modest swimwear brand designing and selling swimwear that provides coverage for women. Perfect for fashion designers who understand the modest fashion market and swimwear functionality.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Swimwear fabric",
+      "Sewing skills or manufacturer",
+      "Design sketches",
+      "Online store",
+      "Marketing channels"
+    ],
+    "firstStepsEn": [
+      "Research modest swimwear needs",
+      "Design your collection",
+      "Find a manufacturer",
+      "Set up online store",
+      "Market to target audience"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "custom-embroidery": {
+    "titleEn": "Custom Embroidery",
+    "shortDescriptionEn": "Embroidering names and designs on clothing",
+    "descriptionEn": "A custom embroidery business adding names, logos, and designs to clothing items. Perfect for those with embroidery skills and equipment who can serve both individuals and businesses.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Embroidery machine",
+      "Thread sets",
+      "Hoop frames",
+      "Blank garments",
+      "Design software"
+    ],
+    "firstStepsEn": [
+      "Learn embroidery techniques",
+      "Create design library",
+      "Set pricing per item",
+      "Market to individuals and businesses",
+      "Offer bulk orders for companies"
+    ],
+    "sellingMethodEn": "Per item + bulk orders"
+  },
+  "perfume-oils-online": {
+    "titleEn": "Perfume Oils Online",
+    "shortDescriptionEn": "Selling concentrated perfume oils online",
+    "descriptionEn": "An online perfume oil business selling concentrated fragrance oils. Perfect for fragrance enthusiasts who can source quality oils and build an online brand.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Perfume oil suppliers",
+      "Bottles",
+      "Labels",
+      "Online store",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Source quality perfume oils",
+      "Design brand and packaging",
+      "Set up online store",
+      "Create scent descriptions",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "hair-styling-home": {
+    "titleEn": "At-Home Hair Styling",
+    "shortDescriptionEn": "Hair styling service for events at home",
+    "descriptionEn": "An at-home hair styling service offering event styling for clients in their homes. Perfect for hairstylists who can create beautiful updos and styles for special occasions.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Styling tools",
+      "Hair products",
+      "Brushes and combs",
+      "Pins and accessories",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Build styling skills",
+      "Create a portfolio",
+      "Set event pricing",
+      "Market on social media",
+      "Network with event planners"
+    ],
+    "sellingMethodEn": "Per styling session"
+  },
+  "mobile-mechanic": {
+    "titleEn": "Mobile Mechanic",
+    "shortDescriptionEn": "Mobile car maintenance and repair service at the customer's location",
+    "descriptionEn": "A mobile mechanic service performing car maintenance and repairs at the customer's location. Perfect for skilled mechanics who want flexibility and can work on-site.",
+    "categoryEn": "Cars",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Mechanic tools",
+      "Diagnostic equipment",
+      "Common parts",
+      "Jack and stands",
+      "Service vehicle"
+    ],
+    "firstStepsEn": [
+      "Get mechanic certification",
+      "Assemble tool kit",
+      "Market to car owners",
+      "Set per-service pricing",
+      "Build a regular client base"
+    ],
+    "sellingMethodEn": "Per service visit"
+  },
+  "car-tinting-service": {
+    "titleEn": "Car Window Tinting",
+    "shortDescriptionEn": "Car window tinting service",
+    "descriptionEn": "A car window tinting business applying tint film to vehicle windows. Perfect for detail-oriented professionals who can apply tint smoothly without bubbles.",
+    "categoryEn": "Cars",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Tint film rolls",
+      "Application tools",
+      "Heat gun",
+      "Cutting tools",
+      "Workspace"
+    ],
+    "firstStepsEn": [
+      "Learn tinting techniques",
+      "Practice on test windows",
+      "Set pricing per vehicle",
+      "Market to car owners",
+      "Build a portfolio"
+    ],
+    "sellingMethodEn": "Per vehicle"
+  },
+  "cycle-shop": {
+    "titleEn": "Bicycle Shop",
+    "shortDescriptionEn": "Selling and maintaining bicycles and accessories",
+    "descriptionEn": "A bicycle shop selling bikes, accessories, and offering repair services. Perfect for cycling enthusiasts who can advise customers and maintain bikes.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Bike inventory",
+      "Accessories",
+      "Repair tools",
+      "Shop space",
+      "Point of sale system"
+    ],
+    "firstStepsEn": [
+      "Find a location",
+      "Source bikes and accessories",
+      "Set up the shop",
+      "Offer repair services",
+      "Market to cycling community"
+    ],
+    "sellingMethodEn": "Bike sales + repairs + accessories"
+  },
+  "martial-arts-classes": {
+    "titleEn": "Martial Arts Classes",
+    "shortDescriptionEn": "Training individuals in martial arts in small groups",
+    "descriptionEn": "A martial arts instruction business teaching martial arts to individuals and small groups. Perfect for skilled martial artists who can teach safely and build students' skills progressively.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Martial arts certification",
+      "Training mats",
+      "Punching bags",
+      "Safety equipment",
+      "Training space"
+    ],
+    "firstStepsEn": [
+      "Get certified in your discipline",
+      "Find a training space",
+      "Set class schedules",
+      "Market to different age groups",
+      "Build a student base"
+    ],
+    "sellingMethodEn": "Monthly membership + belt testing fees"
+  },
+  "outdoor-adventure-tours": {
+    "titleEn": "Outdoor Adventure Tours",
+    "shortDescriptionEn": "Organizing adventure and hiking tours for the public",
+    "descriptionEn": "An outdoor adventure business organizing hiking, camping, and adventure tours. Perfect for outdoor enthusiasts who can lead groups safely and create memorable experiences.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Outdoor gear",
+      "First aid kit",
+      "Navigation tools",
+      "Transportation",
+      "Tour routes"
+    ],
+    "firstStepsEn": [
+      "Design tour routes",
+      "Get first aid certified",
+      "Set tour packages",
+      "Market to adventure seekers",
+      "Build safety protocols"
+    ],
+    "sellingMethodEn": "Per tour package"
+  },
+  "pet-taxi-service": {
+    "titleEn": "Pet Taxi Service",
+    "shortDescriptionEn": "Transporting pets to vet and parks",
+    "descriptionEn": "A pet taxi service transporting pets to vet appointments, grooming, and parks. Perfect for animal lovers with a suitable vehicle who can safely transport pets.",
+    "categoryEn": "Pets",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Pet-friendly vehicle",
+      "Pet carriers",
+      "Seat covers",
+      "First aid kit",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Set up pet-safe transport",
+      "Set per-trip pricing",
+      "Market to pet owners",
+      "Partner with vets and groomers",
+      "Build a regular client base"
+    ],
+    "sellingMethodEn": "Per trip"
+  },
+  "aquascaping-service": {
+    "titleEn": "Aquascaping Service",
+    "shortDescriptionEn": "Designing and installing planted aquariums for homes and offices",
+    "descriptionEn": "An aquascaping business designing and installing beautiful planted aquariums. Perfect for aquarium artists who can create stunning underwater landscapes.",
+    "categoryEn": "Pets",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Aquariums",
+      "Plants and substrate",
+      "Lighting and filtration",
+      "Hardscape materials",
+      "Installation tools"
+    ],
+    "firstStepsEn": [
+      "Learn aquascaping design",
+      "Build a portfolio",
+      "Set installation packages",
+      "Market to homes and offices",
+      "Offer maintenance services"
+    ],
+    "sellingMethodEn": "Per installation + maintenance"
+  },
+  "aerial-photography-studio": {
+    "titleEn": "Aerial Photography Studio",
+    "shortDescriptionEn": "Professional aerial photography with drones for real estate and events",
+    "descriptionEn": "An aerial photography studio capturing professional drone shots for real estate, events, and marketing. Perfect for licensed drone pilots who can deliver stunning aerial content.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Professional drone",
+      "Spare batteries",
+      "Editing software",
+      "Drone license",
+      "Insurance"
+    ],
+    "firstStepsEn": [
+      "Get licensed",
+      "Build a portfolio",
+      "Approach real estate agencies",
+      "Market to event planners",
+      "Set per-project pricing"
+    ],
+    "sellingMethodEn": "Per project"
+  },
+  "product-video-service": {
+    "titleEn": "Product Video Service",
+    "shortDescriptionEn": "Shooting professional product videos for online stores",
+    "descriptionEn": "A product video business creating professional product videos for e-commerce stores. Perfect for videographers who can make products look appealing through video.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Camera",
+      "Lighting setup",
+      "Tripod and slider",
+      "Editing software",
+      "Product staging area"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio",
+      "Set per-product video pricing",
+      "Approach e-commerce businesses",
+      "Offer batch packages",
+      "Deliver polished videos"
+    ],
+    "sellingMethodEn": "Per video or per batch"
+  },
+  "3d-product-rendering": {
+    "titleEn": "3D Product Rendering",
+    "shortDescriptionEn": "Creating 3D renders of products for stores and ads",
+    "descriptionEn": "A 3D rendering business creating photorealistic 3D product renders for e-commerce and advertising. Perfect for 3D artists who can create stunning, realistic product visualizations.",
+    "categoryEn": "Design",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "3D software",
+      "Rendering hardware",
+      "Texture library",
+      "Portfolio",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Build a 3D portfolio",
+      "Set per-render pricing",
+      "Approach e-commerce businesses",
+      "Offer 360-degree renders",
+      "Deliver high-quality results"
+    ],
+    "sellingMethodEn": "Per render or per project"
+  },
+  "online-bookkeeping": {
+    "titleEn": "Online Bookkeeping",
+    "shortDescriptionEn": "Bookkeeping and financial records service for small businesses",
+    "descriptionEn": "An online bookkeeping service managing financial records for small businesses. Perfect for detail-oriented professionals with accounting knowledge who can serve clients remotely.",
+    "categoryEn": "Services",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Accounting software",
+      "Bookkeeping certification",
+      "Computer",
+      "Client portal",
+      "Secure file sharing"
+    ],
+    "firstStepsEn": [
+      "Get certified",
+      "Set up accounting software",
+      "Set monthly pricing",
+      "Market to small businesses",
+      "Deliver accurate, timely reports"
+    ],
+    "sellingMethodEn": "Monthly retainer"
+  },
+  "virtual-assistant": {
+    "titleEn": "Virtual Assistant",
+    "shortDescriptionEn": "Virtual assistant service for busy businesses",
+    "descriptionEn": "A virtual assistant business helping busy entrepreneurs and businesses with administrative tasks. Perfect for organized, multitasking individuals who can work remotely.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Computer",
+      "Productivity tools",
+      "Communication apps",
+      "Task management software",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Define your services",
+      "Set hourly or package rates",
+      "Join VA platforms",
+      "Market to entrepreneurs",
+      "Build a client base"
+    ],
+    "sellingMethodEn": "Hourly or monthly package"
+  },
+  "resume-writing": {
+    "titleEn": "Resume Writing Service",
+    "shortDescriptionEn": "Writing and improving resumes for job seekers",
+    "descriptionEn": "A resume writing service helping job seekers create professional, compelling resumes. Perfect for skilled writers who understand what employers look for and can craft standout resumes.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Resume templates",
+      "Writing skills",
+      "ATS knowledge",
+      "Computer",
+      "Client intake forms"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio",
+      "Set per-resume pricing",
+      "Market to job seekers",
+      "Offer LinkedIn profile optimization",
+      "Get referrals from satisfied clients"
+    ],
+    "sellingMethodEn": "Per resume or package"
+  },
+  "home-organization-service": {
+    "titleEn": "Home Organization Service",
+    "shortDescriptionEn": "Organizing and arranging homes and spaces",
+    "descriptionEn": "A home organization service helping clients declutter, organize, and optimize their living spaces. Perfect for organized individuals who can transform spaces and teach clients maintenance.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Organization tools",
+      "Storage solution catalog",
+      "Labeling supplies",
+      "Before/after portfolio",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Build organization skills",
+      "Create a portfolio",
+      "Set per-space pricing",
+      "Market on social media",
+      "Show before/after transformations"
+    ],
+    "sellingMethodEn": "Per session or per project"
+  },
+  "errand-running": {
+    "titleEn": "Errand Running Service",
+    "shortDescriptionEn": "Running daily errands for busy people",
+    "descriptionEn": "An errand running service helping busy individuals with daily tasks like shopping, pickups, and deliveries. Perfect for reliable, organized individuals with transportation.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Reliable transportation",
+      "Smartphone",
+      "Time management skills",
+      "Background check",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Define your services",
+      "Set per-errand or hourly rates",
+      "Market to busy professionals",
+      "Join task platforms",
+      "Build a regular client base"
+    ],
+    "sellingMethodEn": "Per errand or hourly"
+  },
+  "painting-service": {
+    "titleEn": "Painting Service",
+    "shortDescriptionEn": "Interior and exterior painting for homes and offices",
+    "descriptionEn": "A painting service offering interior and exterior painting for homes and offices. Perfect for detail-oriented painters who can deliver clean, professional results.",
+    "categoryEn": "Services",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Paint and primer",
+      "Brushes and rollers",
+      "Drop cloths",
+      "Tape",
+      "Ladders"
+    ],
+    "firstStepsEn": [
+      "Gather painting supplies",
+      "Set per-room or per-project pricing",
+      "Market to homeowners",
+      "Offer free estimates",
+      "Build a portfolio"
+    ],
+    "sellingMethodEn": "Per project or per room"
+  },
+  "ac-repair-service": {
+    "titleEn": "AC Repair Service",
+    "shortDescriptionEn": "AC maintenance and cleaning service",
+    "descriptionEn": "An AC repair and maintenance service cleaning, fixing, and installing air conditioning units. Perfect for technicians with AC repair skills who can serve homes and offices.",
+    "categoryEn": "Services",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "AC repair tools",
+      "Cleaning equipment",
+      "Common spare parts",
+      "Refrigerant",
+      "Service vehicle"
+    ],
+    "firstStepsEn": [
+      "Learn AC repair skills",
+      "Get certified if required",
+      "Set per-service pricing",
+      "Market to homeowners and offices",
+      "Offer maintenance contracts"
+    ],
+    "sellingMethodEn": "Per service + maintenance contracts"
+  },
+  "plumbing-service": {
+    "titleEn": "Home Plumbing Service",
+    "shortDescriptionEn": "Pipe repair and bathroom installation service",
+    "descriptionEn": "A plumbing service fixing and installing pipes, faucets, and bathroom fixtures. Perfect for skilled plumbers who can handle common residential plumbing issues.",
+    "categoryEn": "Services",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Plumbing tools",
+      "Common fittings and pipes",
+      "Pipe wrench",
+      "Drain snake",
+      "Service vehicle"
+    ],
+    "firstStepsEn": [
+      "Get plumbing skills",
+      "Set per-service pricing",
+      "Market to homeowners",
+      "Offer emergency services",
+      "Build a regular client base"
+    ],
+    "sellingMethodEn": "Per service visit"
+  },
+  "custom-sticker-shop": {
+    "titleEn": "Custom Sticker Shop",
+    "shortDescriptionEn": "Designing and selling custom and ready-made stickers",
+    "descriptionEn": "A custom sticker shop designing and selling both custom and ready-made stickers. Perfect for creative designers who can create appealing sticker designs and manage production.",
+    "categoryEn": "Digital Products",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Design software",
+      "Sticker printer or print partner",
+      "Vinyl or paper stock",
+      "Cutting tools",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Create sticker designs",
+      "Set up printing",
+      "Set up online store",
+      "Offer custom designs",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Online + custom orders"
+  },
+  "digital-planners-shop": {
+    "titleEn": "Digital Planners Shop",
+    "shortDescriptionEn": "Designing and selling digital planners and journals",
+    "descriptionEn": "A digital planners shop selling downloadable planners, journals, and organizers for tablets and phones. Perfect for organized designers who can create functional, beautiful digital planning tools.",
+    "categoryEn": "Digital Products",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Design software",
+      "Tablet for testing",
+      "Digital planner templates",
+      "Online store",
+      "Marketing channels"
+    ],
+    "firstStepsEn": [
+      "Research popular planner styles",
+      "Design digital planner varieties",
+      "Set up online store",
+      "Market on social media",
+      "Offer seasonal updates"
+    ],
+    "sellingMethodEn": "Digital download sales"
+  },
+  "stock-templates-shop": {
+    "titleEn": "Stock Templates Shop",
+    "shortDescriptionEn": "Designing and selling ready-made templates for businesses and individuals",
+    "descriptionEn": "A stock templates shop selling pre-designed templates for presentations, documents, social media, and more. Perfect for versatile designers who can create useful, professional templates.",
+    "categoryEn": "Digital Products",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Design software",
+      "Template designs",
+      "Online store",
+      "Marketing channels",
+      "Trend research"
+    ],
+    "firstStepsEn": [
+      "Research in-demand templates",
+      "Create template packs",
+      "Set up online store",
+      "Market to businesses",
+      "Offer customization services"
+    ],
+    "sellingMethodEn": "Digital template sales"
+  },
+  "app-development-freelance": {
+    "titleEn": "Freelance App Development",
+    "shortDescriptionEn": "Developing mobile and web apps for clients",
+    "descriptionEn": "A freelance app development business building mobile and web applications for clients. Perfect for experienced developers who can deliver quality apps and manage client projects.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Development skills",
+      "Development tools and IDEs",
+      "Portfolio",
+      "GitHub profile",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Build a strong portfolio",
+      "Join freelance platforms",
+      "Set per-project rates",
+      "Approach businesses",
+      "Deliver quality apps on time"
+    ],
+    "sellingMethodEn": "Per project"
+  },
+  "tech-support-service": {
+    "titleEn": "Tech Support Service",
+    "shortDescriptionEn": "Tech support and device setup for homes and offices",
+    "descriptionEn": "A tech support service helping homes and small offices with device setup, troubleshooting, and tech issues. Perfect for tech-savvy individuals who can solve common tech problems.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Tech knowledge",
+      "Common cables and adapters",
+      "Diagnostic tools",
+      "Transportation",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Define your services",
+      "Set per-visit pricing",
+      "Market to homes and small offices",
+      "Offer remote support options",
+      "Build a regular client base"
+    ],
+    "sellingMethodEn": "Per visit or monthly support"
+  },
+  "data-recovery-service": {
+    "titleEn": "Data Recovery Service",
+    "shortDescriptionEn": "Recovering lost data from devices",
+    "descriptionEn": "A data recovery service helping people recover lost files from hard drives, phones, and other devices. Perfect for tech specialists who can use data recovery tools effectively.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Data recovery software",
+      "Hardware tools",
+      "Clean workspace",
+      "External drives",
+      "Confidentiality agreements"
+    ],
+    "firstStepsEn": [
+      "Learn data recovery techniques",
+      "Get proper tools",
+      "Set per-case pricing",
+      "Market to individuals and businesses",
+      "Build trust with confidentiality"
+    ],
+    "sellingMethodEn": "Per recovery case"
+  },
+  "smart-home-consulting": {
+    "titleEn": "Smart Home Consulting",
+    "shortDescriptionEn": "Consulting and installing smart home systems",
+    "descriptionEn": "A smart home consulting business advising on and setting up smart home systems. Perfect for tech enthusiasts who understand smart home ecosystems and can recommend the best solutions.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Smart home ecosystem knowledge",
+      "Installation tools",
+      "Testing equipment",
+      "Brand partnerships",
+      "Consultation templates"
+    ],
+    "firstStepsEn": [
+      "Learn smart home systems",
+      "Create consultation packages",
+      "Partner with device brands",
+      "Market to homeowners",
+      "Offer installation services"
+    ],
+    "sellingMethodEn": "Per consultation + installation"
+  },
+  "youtube-channel": {
+    "titleEn": "Niche YouTube Channel",
+    "shortDescriptionEn": "Creating a YouTube channel in a specialized niche",
+    "descriptionEn": "A YouTube channel business building an audience in a specialized niche and monetizing through ads, sponsorships, and products. Perfect for consistent creators who can produce quality content regularly.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Camera or phone",
+      "Editing software",
+      "Microphone",
+      "Lighting",
+      "Content planning tools"
+    ],
+    "firstStepsEn": [
+      "Choose your niche",
+      "Create a content calendar",
+      "Produce consistent videos",
+      "Engage with subscribers",
+      "Monetize through multiple channels"
+    ],
+    "sellingMethodEn": "Ad revenue + sponsorships + products"
+  },
+  "podcast-show": {
+    "titleEn": "Niche Podcast",
+    "shortDescriptionEn": "Creating a podcast in a specialized field",
+    "descriptionEn": "A podcast business building an audience in a specialized niche and monetizing through sponsorships and premium content. Perfect for engaging hosts who can produce consistent, valuable audio content.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Microphone",
+      "Recording software",
+      "Editing tools",
+      "Podcast hosting platform",
+      "Content planning"
+    ],
+    "firstStepsEn": [
+      "Choose your niche",
+      "Set up recording equipment",
+      "Create a publishing schedule",
+      "Publish consistently",
+      "Monetize through sponsorships"
+    ],
+    "sellingMethodEn": "Sponsorships + premium content"
+  },
+  "online-music-production": {
+    "titleEn": "Online Music Production",
+    "shortDescriptionEn": "Producing music and sound effects for content and ads",
+    "descriptionEn": "An online music production business creating music tracks and sound effects for content creators, ads, and media. Perfect for musicians who can produce quality audio content.",
+    "categoryEn": "Design",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Music production software",
+      "MIDI keyboard",
+      "Sound libraries",
+      "Studio headphones",
+      "Portfolio platform"
+    ],
+    "firstStepsEn": [
+      "Build a music portfolio",
+      "Set per-track pricing",
+      "Approach content creators and agencies",
+      "Sell on stock music platforms",
+      "Offer custom compositions"
+    ],
+    "sellingMethodEn": "Per track + stock music sales"
+  },
+  "voice-over-service": {
+    "titleEn": "Voice Over Service",
+    "shortDescriptionEn": "Voice over service for videos and ads",
+    "descriptionEn": "A voice over business providing professional voice recordings for videos, ads, and content. Perfect for those with great voice talent who can deliver quality recordings.",
+    "categoryEn": "Design",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Quality microphone",
+      "Recording software",
+      "Soundproofing",
+      "Headphones",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Build a voice portfolio",
+      "Set per-project pricing",
+      "Join voice over platforms",
+      "Approach content creators",
+      "Deliver quality recordings fast"
+    ],
+    "sellingMethodEn": "Per project or per minute"
+  },
+  "photo-restoration": {
+    "titleEn": "Photo Restoration",
+    "shortDescriptionEn": "Restoring and enhancing old photos digitally",
+    "descriptionEn": "A photo restoration business digitally restoring and enhancing old, damaged photos. Perfect for skilled photo editors who can bring old memories back to life.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Photo editing software",
+      "Scanner",
+      "Computer",
+      "Restoration techniques",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Learn restoration techniques",
+      "Build a before/after portfolio",
+      "Set per-photo pricing",
+      "Market to families",
+      "Offer bulk discounts"
+    ],
+    "sellingMethodEn": "Per photo"
+  },
+  "real-estate-photography": {
+    "titleEn": "Real Estate Photography",
+    "shortDescriptionEn": "Professional photography for properties for sale and rent",
+    "descriptionEn": "A real estate photography business capturing professional photos of properties for sale and rent. Perfect for skilled photographers who can make properties look appealing to buyers.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Camera",
+      "Wide-angle lens",
+      "Tripod",
+      "Editing software",
+      "Real estate agent contacts"
+    ],
+    "firstStepsEn": [
+      "Build a portfolio",
+      "Approach real estate agents",
+      "Set per-property pricing",
+      "Offer quick turnaround",
+      "Deliver professional results"
+    ],
+    "sellingMethodEn": "Per property shoot"
+  },
+  "event-photography-studio": {
+    "titleEn": "Event Photography Studio",
+    "shortDescriptionEn": "Professional photography for weddings, parties, and events",
+    "descriptionEn": "An event photography studio providing professional photography for weddings, parties, and corporate events. Perfect for experienced photographers who can capture events under pressure.",
+    "categoryEn": "Photography",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Professional cameras",
+      "Multiple lenses",
+      "Lighting equipment",
+      "Second shooter (optional)",
+      "Editing software"
+    ],
+    "firstStepsEn": [
+      "Build a strong portfolio",
+      "Set event packages",
+      "Network with event planners",
+      "Market on social media",
+      "Deliver exceptional results"
+    ],
+    "sellingMethodEn": "Per event package"
+  },
+  "kids-art-classes": {
+    "titleEn": "Kids Art Classes",
+    "shortDescriptionEn": "Drawing and art lessons for children in small groups",
+    "descriptionEn": "A kids art class business teaching drawing, painting, and crafts to children in small groups. Perfect for artistic individuals who enjoy working with kids and can make art fun.",
+    "categoryEn": "Education",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Art supplies",
+      "Easels or tables",
+      "Aprons",
+      "Lesson plans",
+      "Classroom space"
+    ],
+    "firstStepsEn": [
+      "Create age-appropriate lesson plans",
+      "Find a venue",
+      "Set class pricing",
+      "Market to parents",
+      "Start with a trial class"
+    ],
+    "sellingMethodEn": "Per class or monthly"
+  },
+  "science-experiments-classes": {
+    "titleEn": "Kids Science Experiment Classes",
+    "shortDescriptionEn": "Fun science experiment lessons for children",
+    "descriptionEn": "A kids science class business conducting fun, educational science experiments with children. Perfect for science enthusiasts who can make learning exciting and safe.",
+    "categoryEn": "Education",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Science experiment kits",
+      "Safety equipment",
+      "Lesson plans",
+      "Classroom space",
+      "Parent communication"
+    ],
+    "firstStepsEn": [
+      "Create safe experiment lesson plans",
+      "Find a venue",
+      "Set class pricing",
+      "Market to parents",
+      "Start with a trial class"
+    ],
+    "sellingMethodEn": "Per class or monthly"
+  },
+  "coding-courses-adults": {
+    "titleEn": "Adult Coding Courses",
+    "shortDescriptionEn": "Practical coding lessons for adult beginners",
+    "descriptionEn": "A coding course business teaching practical programming skills to adult beginners. Perfect for developers who can teach clearly and make coding accessible.",
+    "categoryEn": "Education",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Programming expertise",
+      "Course curriculum",
+      "Video call setup or classroom",
+      "Practice exercises",
+      "Project ideas"
+    ],
+    "firstStepsEn": [
+      "Choose languages to teach",
+      "Create a curriculum",
+      "Set course pricing",
+      "Market to adults wanting to learn",
+      "Start with a beginner cohort"
+    ],
+    "sellingMethodEn": "Per course or monthly"
+  },
+  "language-exchange-platform": {
+    "titleEn": "Language Exchange Platform",
+    "shortDescriptionEn": "An online platform for language exchange between learners",
+    "descriptionEn": "A language exchange platform connecting language learners for mutual practice. Perfect for tech-savvy entrepreneurs who understand language learning and community building.",
+    "categoryEn": "Education",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Web development skills",
+      "Platform infrastructure",
+      "Community management tools",
+      "Marketing budget",
+      "Safety guidelines"
+    ],
+    "firstStepsEn": [
+      "Build the platform",
+      "Create user guidelines",
+      "Attract initial users",
+      "Market to language learners",
+      "Build an active community"
+    ],
+    "sellingMethodEn": "Freemium model + premium features"
+  },
+  "test-prep-center": {
+    "titleEn": "Test Prep Center",
+    "shortDescriptionEn": "Preparation courses for standardized tests",
+    "descriptionEn": "A test prep center offering courses to help students prepare for standardized tests. Perfect for experienced educators who understand test formats and strategies.",
+    "categoryEn": "Education",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Test prep materials",
+      "Practice tests",
+      "Classroom space",
+      "Experienced instructors",
+      "Progress tracking tools"
+    ],
+    "firstStepsEn": [
+      "Choose target tests",
+      "Create curriculum",
+      "Find a venue",
+      "Hire instructors if needed",
+      "Market to students and parents"
+    ],
+    "sellingMethodEn": "Per course or package"
+  },
+  "fitness-app-concept": {
+    "titleEn": "Custom Fitness App",
+    "shortDescriptionEn": "A customized fitness and exercise app for a specific audience",
+    "descriptionEn": "A fitness app business creating a specialized fitness app for a specific target audience. Perfect for fitness experts with tech partners who can identify an underserved niche.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "App development (or partner)",
+      "Fitness expertise",
+      "UI/UX design",
+      "Marketing strategy",
+      "App store accounts"
+    ],
+    "firstStepsEn": [
+      "Identify your target audience",
+      "Design app features",
+      "Develop or hire a developer",
+      "Launch on app stores",
+      "Market to your niche"
+    ],
+    "sellingMethodEn": "App subscription or one-time purchase"
+  },
+  "corporate-wellness-program": {
+    "titleEn": "Corporate Wellness Program",
+    "shortDescriptionEn": "Fitness and wellness programs for corporate employees",
+    "descriptionEn": "A corporate wellness business providing fitness and wellness programs for company employees. Perfect for fitness professionals who can design and deliver workplace wellness initiatives.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Fitness certification",
+      "Program materials",
+      "Assessment tools",
+      "Presentation skills",
+      "Corporate contacts"
+    ],
+    "firstStepsEn": [
+      "Design wellness program packages",
+      "Approach HR departments",
+      "Set per-employee or per-program pricing",
+      "Deliver measurable results",
+      "Build corporate relationships"
+    ],
+    "sellingMethodEn": "Per program or per-employee monthly"
+  },
+  "metal-craft-workshop": {
+    "titleEn": "Metal Craft Workshop",
+    "shortDescriptionEn": "Making and selling handmade metal products",
+    "descriptionEn": "A metal craft business creating and selling handmade metal products like decor, jewelry, and tools. Perfect for skilled metalworkers who can create beautiful, durable pieces.",
+    "categoryEn": "Design",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Metal working tools",
+      "Raw metal materials",
+      "Safety equipment",
+      "Workspace",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Learn metal craft techniques",
+      "Create a product line",
+      "Photograph pieces",
+      "Sell online and at markets",
+      "Offer workshops"
+    ],
+    "sellingMethodEn": "Product sales + workshops"
+  },
+  "glass-art-studio": {
+    "titleEn": "Glass Art Studio",
+    "shortDescriptionEn": "Making and selling artistic glass products",
+    "descriptionEn": "A glass art studio creating and selling artistic glass pieces like stained glass, fused glass, and sculptures. Perfect for skilled glass artists who can create stunning visual pieces.",
+    "categoryEn": "Design",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Glass working tools",
+      "Glass supplies",
+      "Kiln (for fused glass)",
+      "Safety equipment",
+      "Studio space"
+    ],
+    "firstStepsEn": [
+      "Learn glass art techniques",
+      "Create a product line",
+      "Photograph pieces",
+      "Sell online and at galleries",
+      "Offer classes"
+    ],
+    "sellingMethodEn": "Product sales + classes"
+  },
+  "wood-craft-business": {
+    "titleEn": "Wood Craft Business",
+    "shortDescriptionEn": "Making and selling handmade wooden products",
+    "descriptionEn": "A wood craft business creating and selling handmade wooden products like cutting boards, decor, and furniture. Perfect for skilled woodworkers who can create beautiful, functional pieces.",
+    "categoryEn": "Design",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Woodworking tools",
+      "Wood materials",
+      "Sanding and finishing supplies",
+      "Workspace",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Learn woodworking techniques",
+      "Create a product line",
+      "Photograph pieces",
+      "Sell online and at markets",
+      "Take custom orders"
+    ],
+    "sellingMethodEn": "Online + markets + custom orders"
+  },
+  "resin-art-business": {
+    "titleEn": "Resin Art Business",
+    "shortDescriptionEn": "Making and selling artistic resin products",
+    "descriptionEn": "A resin art business creating and selling resin art pieces like coasters, trays, and wall art. Perfect for creative individuals who can work with resin and create stunning visual pieces.",
+    "categoryEn": "Design",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Epoxy resin",
+      "Molds",
+      "Pigments and dyes",
+      "Mixing tools",
+      "Workspace"
+    ],
+    "firstStepsEn": [
+      "Learn resin art techniques",
+      "Create a product line",
+      "Photograph pieces",
+      "Sell online and at markets",
+      "Take custom orders"
+    ],
+    "sellingMethodEn": "Online + markets + custom orders"
+  },
+  "digital-art-prints": {
+    "titleEn": "Digital Art Prints",
+    "shortDescriptionEn": "Designing and selling digital art prints",
+    "descriptionEn": "A digital art prints business designing and selling downloadable art prints. Perfect for digital artists who can create appealing artwork and want passive income.",
+    "categoryEn": "Design",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Digital art software",
+      "Drawing tablet",
+      "Print-on-demand service",
+      "Online store",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Create a collection of prints",
+      "Set up an online store",
+      "Offer digital and physical prints",
+      "Market on social media",
+      "Sell on art platforms"
+    ],
+    "sellingMethodEn": "Digital downloads + print sales"
+  },
+  "urban-streetwear-brand": {
+    "titleEn": "Urban Streetwear Brand",
+    "shortDescriptionEn": "Designing and selling modern streetwear clothing",
+    "descriptionEn": "An urban streetwear brand designing and selling trendy streetwear clothing. Perfect for fashion-forward designers who understand street culture and can create appealing, relevant designs.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Clothing manufacturer",
+      "Design software",
+      "Fabric samples",
+      "Online store",
+      "Marketing channels"
+    ],
+    "firstStepsEn": [
+      "Design your first collection",
+      "Find a manufacturer",
+      "Create brand identity",
+      "Set up online store",
+      "Market to streetwear community"
+    ],
+    "sellingMethodEn": "Online store + boutiques"
+  },
+  "modest-fashion-brand": {
+    "titleEn": "Modest Fashion Brand",
+    "shortDescriptionEn": "Designing and selling modern modest clothing",
+    "descriptionEn": "A modest fashion brand designing and selling stylish, modest clothing for women. Perfect for fashion designers who understand the modest fashion market and can create contemporary designs.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Clothing manufacturer",
+      "Design sketches",
+      "Fabric sourcing",
+      "Online store",
+      "Marketing channels"
+    ],
+    "firstStepsEn": [
+      "Design your collection",
+      "Find a manufacturer",
+      "Create brand identity",
+      "Set up online store",
+      "Market to modest fashion audience"
+    ],
+    "sellingMethodEn": "Online store + boutiques"
+  },
+  "watches-brand": {
+    "titleEn": "Watches Brand",
+    "shortDescriptionEn": "Designing and selling watches with a distinctive brand identity",
+    "descriptionEn": "A watches brand designing and selling timepieces with a unique brand identity. Perfect for designers who understand watch aesthetics and can source quality components.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Watch components supplier",
+      "Design skills",
+      "Brand identity",
+      "Online store",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Design your watch line",
+      "Find component suppliers",
+      "Create brand identity",
+      "Set up online store",
+      "Market to watch enthusiasts"
+    ],
+    "sellingMethodEn": "Online store + retail partners"
+  },
+  "kids-toys-brand": {
+    "titleEn": "Kids Toys Brand",
+    "shortDescriptionEn": "Designing and selling educational and safe kids toys",
+    "descriptionEn": "A kids toys brand designing and selling educational, safe children's toys. Perfect for creative designers who understand child development and can create engaging, safe toys.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Toy manufacturer",
+      "Design skills",
+      "Safety certifications",
+      "Packaging",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Design toy prototypes",
+      "Find a manufacturer",
+      "Get safety certifications",
+      "Set up online store",
+      "Market to parents"
+    ],
+    "sellingMethodEn": "Online store + toy shops"
+  },
+  "home-textiles-brand": {
+    "titleEn": "Home Textiles Brand",
+    "shortDescriptionEn": "Designing and selling premium home textile products",
+    "descriptionEn": "A home textiles brand designing and selling premium bedding, towels, and home fabric products. Perfect for designers who understand home aesthetics and can source quality fabrics.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Textile manufacturer",
+      "Design skills",
+      "Fabric sourcing",
+      "Online store",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Design your product line",
+      "Find a manufacturer",
+      "Create brand identity",
+      "Set up online store",
+      "Market to home enthusiasts"
+    ],
+    "sellingMethodEn": "Online store + home goods shops"
+  },
+  "online-shoe-store": {
+    "titleEn": "Online Shoe Store",
+    "shortDescriptionEn": "Selling curated shoes online",
+    "descriptionEn": "An online shoe store selling curated footwear for men or women. Perfect for fashion lovers who can select trendy, quality shoes and manage an online store.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Shoe suppliers",
+      "Storage space",
+      "Online store",
+      "Product photography",
+      "Shipping supplies"
+    ],
+    "firstStepsEn": [
+      "Research trending shoes",
+      "Find suppliers",
+      "Set up online store",
+      "Style and photograph shoes",
+      "Market on social media"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "natural-skincare-line": {
+    "titleEn": "Natural Skincare Line",
+    "shortDescriptionEn": "Making and selling natural skincare products",
+    "descriptionEn": "A natural skincare line creating and selling natural, healthy skincare products. Perfect for skincare enthusiasts who can formulate effective, natural products.",
+    "categoryEn": "Beauty",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Natural ingredients",
+      "Formulation knowledge",
+      "Packaging",
+      "Testing equipment",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Research skincare formulations",
+      "Create a product line",
+      "Test for safety and efficacy",
+      "Design brand and packaging",
+      "Launch online"
+    ],
+    "sellingMethodEn": "Online + markets + shops"
+  },
+  "eyewear-brand": {
+    "titleEn": "Eyewear Brand",
+    "shortDescriptionEn": "Designing and selling eyeglasses and sunglasses with a brand identity",
+    "descriptionEn": "An eyewear brand designing and selling stylish glasses with a unique brand identity. Perfect for designers who understand eyewear trends and can source quality frames.",
+    "categoryEn": "Fashion",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Eyewear manufacturer",
+      "Design skills",
+      "Brand identity",
+      "Online store",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Design your eyewear line",
+      "Find a manufacturer",
+      "Create brand identity",
+      "Set up online store",
+      "Market to fashion-conscious customers"
+    ],
+    "sellingMethodEn": "Online store + optical shops"
+  },
+  "home-coffee-subscription": {
+    "titleEn": "Home Coffee Subscription",
+    "shortDescriptionEn": "Monthly subscription service for curated coffee beans",
+    "descriptionEn": "A coffee subscription service delivering freshly roasted coffee beans to subscribers monthly. Perfect for coffee enthusiasts who can source quality beans and build a subscription business.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Coffee bean suppliers",
+      "Roasting equipment (or partner)",
+      "Packaging",
+      "Subscription platform",
+      "Shipping supplies"
+    ],
+    "firstStepsEn": [
+      "Source quality beans",
+      "Create subscription plans",
+      "Set up subscription platform",
+      "Market to coffee lovers",
+      "Deliver fresh monthly"
+    ],
+    "sellingMethodEn": "Monthly subscription"
+  },
+  "healthy-snack-subscription": {
+    "titleEn": "Healthy Snack Subscription",
+    "shortDescriptionEn": "Monthly subscription service for curated healthy snacks",
+    "descriptionEn": "A healthy snack subscription delivering curated, healthy snacks to subscribers monthly. Perfect for health-conscious entrepreneurs who can source appealing snacks.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Healthy snack suppliers",
+      "Subscription boxes",
+      "Subscription platform",
+      "Packaging",
+      "Shipping supplies"
+    ],
+    "firstStepsEn": [
+      "Source healthy snacks",
+      "Create subscription plans",
+      "Set up subscription platform",
+      "Market to health-conscious consumers",
+      "Deliver monthly boxes"
+    ],
+    "sellingMethodEn": "Monthly subscription"
+  },
+  "flower-subscription": {
+    "titleEn": "Fresh Flower Subscription",
+    "shortDescriptionEn": "Weekly fresh flower delivery service",
+    "descriptionEn": "A flower subscription service delivering fresh flowers to subscribers weekly. Perfect for flower enthusiasts who can source fresh blooms and create beautiful arrangements.",
+    "categoryEn": "Services",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Flower supplier",
+      "Arrangement supplies",
+      "Subscription platform",
+      "Delivery method",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Source fresh flowers",
+      "Create arrangement styles",
+      "Set up subscription platform",
+      "Market to homes and offices",
+      "Deliver fresh weekly"
+    ],
+    "sellingMethodEn": "Weekly or monthly subscription"
+  },
+  "home-brewing-kits": {
+    "titleEn": "Home Brewing Kits",
+    "shortDescriptionEn": "Making and selling home brewing kits for kombucha",
+    "descriptionEn": "A home brewing kit business selling kits for making kombucha, kefir, or other fermented drinks at home. Perfect for fermentation enthusiasts who can package convenient kits.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Brewing components (SCOBY, cultures)",
+      "Bottles and jars",
+      "Ingredients",
+      "Instructions",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Develop kit recipes",
+      "Source components",
+      "Create clear instructions",
+      "Set up online store",
+      "Market to health-conscious consumers"
+    ],
+    "sellingMethodEn": "Online store sales"
+  },
+  "gourmet-butter-business": {
+    "titleEn": "Gourmet Flavored Butter",
+    "shortDescriptionEn": "Making and selling butter with unique flavors",
+    "descriptionEn": "A gourmet butter business making and selling flavored butter varieties. Perfect for food enthusiasts who can create distinctive, delicious flavor combinations.",
+    "categoryEn": "Food & Drinks",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Quality butter",
+      "Flavoring ingredients",
+      "Packaging",
+      "Recipes",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Develop signature flavors",
+      "Create packaging",
+      "Set up sales channels",
+      "Market to food lovers",
+      "Approach local restaurants and shops"
+    ],
+    "sellingMethodEn": "Online + markets + shops"
+  },
+  "drone-show-service": {
+    "titleEn": "Drone Show Service",
+    "shortDescriptionEn": "Organizing drone light shows for events",
+    "descriptionEn": "A drone show business organizing synchronized drone light shows for events and celebrations. Perfect for tech-savvy entrepreneurs who can program and coordinate drone displays.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Drone fleet",
+      "Programming software",
+      "Safety equipment",
+      "Permits and licenses",
+      "Show design tools"
+    ],
+    "firstStepsEn": [
+      "Get licensed and permitted",
+      "Build or source a drone fleet",
+      "Create show designs",
+      "Market to event organizers",
+      "Deliver safe, spectacular shows"
+    ],
+    "sellingMethodEn": "Per show event"
+  },
+  "3d-printing-service": {
+    "titleEn": "3D Printing Service",
+    "shortDescriptionEn": "Printing and selling 3D printed products and parts",
+    "descriptionEn": "A 3D printing service creating and selling custom 3D printed products and parts. Perfect for tech-savvy entrepreneurs who can operate 3D printers and design models.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "3D printers",
+      "Filament/resin",
+      "Design software",
+      "Calibration tools",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Learn 3D printing",
+      "Create popular products",
+      "Set up an online store",
+      "Offer custom printing",
+      "Market to hobbyists and businesses"
+    ],
+    "sellingMethodEn": "Per product + custom orders"
+  },
+  "iot-consulting": {
+    "titleEn": "IoT Consulting",
+    "shortDescriptionEn": "IoT consulting and solutions for businesses",
+    "descriptionEn": "An IoT consulting business providing Internet of Things solutions and advice for companies. Perfect for tech experts who understand connected devices and can design IoT solutions.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "IoT platform knowledge",
+      "Hardware components",
+      "Development skills",
+      "Consulting templates",
+      "Industry contacts"
+    ],
+    "firstStepsEn": [
+      "Build IoT expertise",
+      "Create consulting packages",
+      "Approach businesses",
+      "Set project pricing",
+      "Deliver effective solutions"
+    ],
+    "sellingMethodEn": "Per project + ongoing support"
+  },
+  "cybersecurity-audit": {
+    "titleEn": "Cybersecurity Audit",
+    "shortDescriptionEn": "Cybersecurity audit service for small businesses",
+    "descriptionEn": "A cybersecurity audit business providing security assessments for small businesses. Perfect for security experts who can identify vulnerabilities and recommend solutions.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Security assessment tools",
+      "Certification",
+      "Audit frameworks",
+      "Reporting templates",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Get certified",
+      "Create audit packages",
+      "Approach small businesses",
+      "Set per-audit pricing",
+      "Deliver actionable recommendations"
+    ],
+    "sellingMethodEn": "Per audit + ongoing support"
+  },
+  "seo-consulting": {
+    "titleEn": "SEO Consulting",
+    "shortDescriptionEn": "Search engine optimization for stores and websites",
+    "descriptionEn": "An SEO consulting business helping websites rank higher in search results. Perfect for SEO experts who can improve visibility and drive organic traffic.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "SEO tools",
+      "Analytics knowledge",
+      "Reporting templates",
+      "Case studies",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Build SEO expertise",
+      "Create audit packages",
+      "Approach businesses",
+      "Set monthly retainer pricing",
+      "Deliver measurable results"
+    ],
+    "sellingMethodEn": "Monthly retainer + per-project"
+  },
+  "email-marketing-service": {
+    "titleEn": "Email Marketing Service",
+    "shortDescriptionEn": "Managing email marketing campaigns for stores",
+    "descriptionEn": "An email marketing service managing email campaigns for e-commerce stores and businesses. Perfect for marketing experts who can create engaging emails that drive sales.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Email marketing platforms",
+      "Copywriting skills",
+      "Design templates",
+      "Analytics tools",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Build email marketing expertise",
+      "Create service packages",
+      "Approach e-commerce stores",
+      "Set monthly pricing",
+      "Deliver measurable results"
+    ],
+    "sellingMethodEn": "Monthly retainer"
+  },
+  "influencer-management": {
+    "titleEn": "Influencer Management",
+    "shortDescriptionEn": "Managing influencers and influencer campaigns for brands",
+    "descriptionEn": "An influencer management business managing influencer relationships and campaigns for brands. Perfect for marketing professionals who understand influencer marketing and can manage relationships.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Influencer network",
+      "Campaign management tools",
+      "Contract templates",
+      "Analytics tools",
+      "Brand contacts"
+    ],
+    "firstStepsEn": [
+      "Build an influencer network",
+      "Create management packages",
+      "Approach brands",
+      "Set campaign pricing",
+      "Deliver successful campaigns"
+    ],
+    "sellingMethodEn": "Per campaign + monthly management"
+  },
+  "content-strategy-consulting": {
+    "titleEn": "Content Strategy Consulting",
+    "shortDescriptionEn": "Content strategy consulting and planning for brands",
+    "descriptionEn": "A content strategy consulting business helping brands plan and execute their content strategy. Perfect for experienced content strategists who can create effective content plans.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Content strategy frameworks",
+      "Analytics tools",
+      "Industry knowledge",
+      "Case studies",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Build content strategy expertise",
+      "Create consulting packages",
+      "Approach brands",
+      "Set project pricing",
+      "Deliver effective strategies"
+    ],
+    "sellingMethodEn": "Per project + monthly retainer"
+  },
+  "wedding-favors-business": {
+    "titleEn": "Wedding Favors Business",
+    "shortDescriptionEn": "Designing and selling wedding favors for guests",
+    "descriptionEn": "A wedding favors business designing and selling personalized gifts for wedding guests. Perfect for creative individuals who can create beautiful, memorable favors.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Favor materials",
+      "Design skills",
+      "Packaging",
+      "Customization options",
+      "Wedding planner contacts"
+    ],
+    "firstStepsEn": [
+      "Create favor designs",
+      "Set up production",
+      "Set per-piece pricing",
+      "Market to wedding planners and couples",
+      "Offer custom options"
+    ],
+    "sellingMethodEn": "Per order + bulk wedding orders"
+  },
+  "personal-shopping-service": {
+    "titleEn": "Personal Shopping Service",
+    "shortDescriptionEn": "Personal shopping service for busy individuals",
+    "descriptionEn": "A personal shopping service helping busy individuals with clothing, gift, and grocery shopping. Perfect for fashion-savvy, organized individuals who can shop efficiently for others.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Personal styling knowledge",
+      "Shopping network",
+      "Transportation",
+      "Client intake forms",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Define your services",
+      "Set hourly or per-trip pricing",
+      "Market to busy professionals",
+      "Build a client base",
+      "Offer ongoing relationships"
+    ],
+    "sellingMethodEn": "Per trip or monthly package"
+  },
+  "home-staging-service": {
+    "titleEn": "Home Staging Service",
+    "shortDescriptionEn": "Staging and presenting properties for sale professionally",
+    "descriptionEn": "A home staging business arranging and decorating properties to sell faster and for higher prices. Perfect for interior design enthusiasts who can transform spaces appealingly.",
+    "categoryEn": "Services",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Staging furniture and decor inventory",
+      "Design skills",
+      "Transportation",
+      "Storage space",
+      "Realtor contacts"
+    ],
+    "firstStepsEn": [
+      "Build a staging portfolio",
+      "Create staging packages",
+      "Approach real estate agents",
+      "Set per-property pricing",
+      "Deliver beautiful transformations"
+    ],
+    "sellingMethodEn": "Per property staging"
+  },
+  "mobile-detailing-business": {
+    "titleEn": "Mobile Car Detailing",
+    "shortDescriptionEn": "Car detailing and cleaning service at the customer's location",
+    "descriptionEn": "A mobile car detailing business providing professional detailing at the customer's location. Perfect for detailing professionals who want flexibility and can deliver quality on-site.",
+    "categoryEn": "Cars",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Detailing products",
+      "Polishing machine",
+      "Cleaning tools",
+      "Portable water supply",
+      "Service vehicle"
+    ],
+    "firstStepsEn": [
+      "Learn detailing techniques",
+      "Assemble your kit",
+      "Set per-vehicle pricing",
+      "Market to car owners",
+      "Build a recurring client base"
+    ],
+    "sellingMethodEn": "Per vehicle detailing"
+  },
+  "car-accessories-brand": {
+    "titleEn": "Car Accessories Brand",
+    "shortDescriptionEn": "Designing and selling car accessories with a brand identity",
+    "descriptionEn": "A car accessories brand designing and selling branded car accessories. Perfect for car enthusiasts who can design appealing, functional accessories and build a brand.",
+    "categoryEn": "Cars",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Manufacturer or supplier",
+      "Design skills",
+      "Brand identity",
+      "Online store",
+      "Packaging"
+    ],
+    "firstStepsEn": [
+      "Design your product line",
+      "Find a manufacturer",
+      "Create brand identity",
+      "Set up online store",
+      "Market to car enthusiasts"
+    ],
+    "sellingMethodEn": "Online store + auto shops"
+  },
+  "pet-food-brand": {
+    "titleEn": "Pet Food Brand",
+    "shortDescriptionEn": "Making and selling natural pet food",
+    "descriptionEn": "A pet food brand making and selling natural, healthy food for pets. Perfect for pet lovers who can create nutritious, appealing pet food recipes and build a trusted brand.",
+    "categoryEn": "Pets",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Pet food ingredients",
+      "Formulation knowledge",
+      "Packaging",
+      "Safety certifications",
+      "Online store"
+    ],
+    "firstStepsEn": [
+      "Develop pet food recipes",
+      "Get safety certifications",
+      "Design brand and packaging",
+      "Set up online store",
+      "Market to pet owners"
+    ],
+    "sellingMethodEn": "Online + pet stores"
+  },
+  "horse-riding-lessons": {
+    "titleEn": "Horse Riding Lessons",
+    "shortDescriptionEn": "Horse riding lessons for children and adults",
+    "descriptionEn": "A horse riding instruction business offering riding lessons to children and adults. Perfect for experienced riders who can teach safely and provide a great experience.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Horse(s)",
+      "Riding arena access",
+      "Safety equipment",
+      "Teaching skills",
+      "Insurance"
+    ],
+    "firstStepsEn": [
+      "Get teaching experience",
+      "Secure arena access",
+      "Set lesson pricing",
+      "Market to families and adults",
+      "Build a student base"
+    ],
+    "sellingMethodEn": "Per lesson or package"
+  },
+  "swim-school": {
+    "titleEn": "Swim School",
+    "shortDescriptionEn": "Swimming lessons for children and adults",
+    "descriptionEn": "A swim school offering swimming lessons to children and adults of all levels. Perfect for certified swimming instructors who can teach safely and make lessons enjoyable.",
+    "categoryEn": "Sports",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Swimming certification",
+      "Lifeguard certification",
+      "Pool access",
+      "Teaching aids",
+      "Scheduling system"
+    ],
+    "firstStepsEn": [
+      "Get certified",
+      "Secure pool access",
+      "Set lesson pricing",
+      "Market to families and adults",
+      "Build a student base"
+    ],
+    "sellingMethodEn": "Per lesson or monthly package"
+  },
+  "home-garden-consulting": {
+    "titleEn": "Home Garden Consulting",
+    "shortDescriptionEn": "Home garden consulting and design",
+    "descriptionEn": "A home garden consulting business helping people design and maintain home gardens. Perfect for gardening experts who can advise on plants, layout, and care.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Gardening knowledge",
+      "Design tools",
+      "Plant catalogs",
+      "Soil testing kits",
+      "Portfolio"
+    ],
+    "firstStepsEn": [
+      "Build gardening expertise",
+      "Create consultation packages",
+      "Set per-visit pricing",
+      "Market to homeowners",
+      "Offer ongoing garden support"
+    ],
+    "sellingMethodEn": "Per consultation + ongoing support"
+  },
+  "vertical-farm-systems": {
+    "titleEn": "Vertical Farm Systems",
+    "shortDescriptionEn": "Installing and selling home vertical farming systems",
+    "descriptionEn": "A vertical farm systems business installing home vertical farming setups. Perfect for urban farming enthusiasts who can design and install efficient growing systems.",
+    "categoryEn": "Technology",
+    "startLevelEn": "Advanced",
+    "requiredSuppliesEn": [
+      "Vertical farming components",
+      "Hydroponics knowledge",
+      "Installation tools",
+      "Plant seeds",
+      "Design software"
+    ],
+    "firstStepsEn": [
+      "Learn vertical farming",
+      "Design system packages",
+      "Set installation pricing",
+      "Market to urban gardeners",
+      "Offer maintenance support"
+    ],
+    "sellingMethodEn": "Per installation + maintenance"
+  },
+  "subscription-box-service": {
+    "titleEn": "Specialty Subscription Boxes",
+    "shortDescriptionEn": "Creating and managing monthly subscription boxes",
+    "descriptionEn": "A subscription box business curating and delivering themed boxes monthly. Perfect for creative curators who can identify a niche and source appealing products for subscribers.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Box sourcing",
+      "Product suppliers",
+      "Subscription platform",
+      "Packaging",
+      "Shipping supplies"
+    ],
+    "firstStepsEn": [
+      "Choose your box theme",
+      "Source products",
+      "Set up subscription platform",
+      "Set monthly pricing",
+      "Market to your target audience"
+    ],
+    "sellingMethodEn": "Monthly subscription"
+  },
+  "party-rental-equipment": {
+    "titleEn": "Party Rental Equipment",
+    "shortDescriptionEn": "Renting tables, chairs, and tents for events",
+    "descriptionEn": "A party rental business renting out tables, chairs, tents, and event equipment. Perfect for those with storage space who can maintain and deliver rental inventory.",
+    "categoryEn": "Commerce",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Tables and chairs",
+      "Tents",
+      "Linens",
+      "Storage space",
+      "Delivery vehicle"
+    ],
+    "firstStepsEn": [
+      "Acquire rental inventory",
+      "Set rental rates",
+      "Create rental agreements",
+      "Market to event planners",
+      "Offer delivery and setup"
+    ],
+    "sellingMethodEn": "Per rental + delivery fees"
+  },
+  "home-laundry-service": {
+    "titleEn": "Home Laundry Service",
+    "shortDescriptionEn": "Pickup and delivery laundry service from homes",
+    "descriptionEn": "A home laundry service picking up, washing, ironing, and delivering clothes for busy households. Perfect for reliable individuals who can provide convenient, quality laundry service.",
+    "categoryEn": "Services",
+    "startLevelEn": "Beginner",
+    "requiredSuppliesEn": [
+      "Washing machine",
+      "Dryer",
+      "Ironing equipment",
+      "Detergents",
+      "Delivery vehicle"
+    ],
+    "firstStepsEn": [
+      "Set up laundry equipment",
+      "Set per-load pricing",
+      "Market to busy professionals and families",
+      "Offer weekly pickup schedules",
+      "Build a regular client base"
+    ],
+    "sellingMethodEn": "Per load or weekly package"
+  },
+  "massage-therapy-home": {
+    "titleEn": "Home Massage Therapy",
+    "shortDescriptionEn": "Physical therapy and massage service at home",
+    "descriptionEn": "A home massage therapy service providing massage and physical therapy at the client's home. Perfect for certified therapists who can deliver professional treatments in a home setting.",
+    "categoryEn": "Health & Fitness",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Massage certification",
+      "Portable massage table",
+      "Oils and supplies",
+      "Towels",
+      "Booking system"
+    ],
+    "firstStepsEn": [
+      "Get certified",
+      "Assemble your kit",
+      "Set per-session pricing",
+      "Market to clients seeking home service",
+      "Build a regular client base"
+    ],
+    "sellingMethodEn": "Per session"
+  },
+  "nutrition-consulting": {
+    "titleEn": "Nutrition Consulting",
+    "shortDescriptionEn": "Customized nutrition consulting and plans",
+    "descriptionEn": "A nutrition consulting business providing personalized nutrition plans and advice. Perfect for certified nutritionists who can help clients achieve their health goals.",
+    "categoryEn": "Health & Fitness",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Nutrition certification",
+      "Meal planning tools",
+      "Assessment forms",
+      "Nutrition database",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Get certified",
+      "Create consultation packages",
+      "Set per-session pricing",
+      "Market to health-conscious individuals",
+      "Deliver personalized plans"
+    ],
+    "sellingMethodEn": "Per session or package"
+  },
+  "mental-health-coaching": {
+    "titleEn": "Mental Health Coaching",
+    "shortDescriptionEn": "Mental health coaching and consulting",
+    "descriptionEn": "A mental health coaching business providing coaching and support for mental wellbeing. Perfect for certified coaches who can help clients develop coping strategies and improve mental health.",
+    "categoryEn": "Health & Fitness",
+    "startLevelEn": "Intermediate",
+    "requiredSuppliesEn": [
+      "Coaching certification",
+      "Assessment tools",
+      "Session frameworks",
+      "Video call setup",
+      "Client management system"
+    ],
+    "firstStepsEn": [
+      "Get certified",
+      "Create coaching packages",
+      "Set per-session pricing",
+      "Market to individuals seeking support",
+      "Build a client base with trust"
+    ],
+    "sellingMethodEn": "Per session or package"
+  }
+}

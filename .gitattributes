@@ -1,0 +1,4 @@
+* text=auto eol=lf
+original/** linguist-vendored
+project/reference/** linguist-vendored
+project/src/data/raw/*.json linguist-generated

@@ -1,0 +1,374 @@
+[
+  {
+    "id": "channel",
+    "title": "وين تبي مشروعك؟",
+    "titleEn": "Where do you want your project?",
+    "subtitle": "هل تفضل مشروع أونلاين، واقعي، أو الاثنين؟",
+    "subtitleEn": "Do you prefer an online, physical, or both?",
+    "options": [
+      {
+        "value": "online",
+        "label": "أونلاين",
+        "labelEn": "Online",
+        "icon": "💻"
+      },
+      {
+        "value": "physical",
+        "label": "واقعي",
+        "labelEn": "Physical",
+        "icon": "🏪"
+      },
+      {
+        "value": "both",
+        "label": "الاثنين",
+        "labelEn": "Both",
+        "icon": "🔄"
+      },
+      {
+        "value": "notSure",
+        "label": "ما متأكد",
+        "labelEn": "Not sure",
+        "icon": "🤔"
+      }
+    ]
+  },
+  {
+    "id": "interests",
+    "title": "شنو اهتماماتك؟",
+    "titleEn": "What are your interests?",
+    "subtitle": "اختر اللي يهمك — يمكنك اختيار أكثر من خيار",
+    "subtitleEn": "Choose what interests you — you can select more than one",
+    "multi": true,
+    "options": [
+      {
+        "value": "food",
+        "label": "الأكل والمشروبات",
+        "labelEn": "Food & Drinks",
+        "icon": "🍽️"
+      },
+      {
+        "value": "fashion",
+        "label": "الأزياء",
+        "labelEn": "Fashion",
+        "icon": "👕"
+      },
+      {
+        "value": "beauty",
+        "label": "الجمال",
+        "labelEn": "Beauty",
+        "icon": "💄"
+      },
+      {
+        "value": "cars",
+        "label": "السيارات",
+        "labelEn": "Cars",
+        "icon": "🚗"
+      },
+      {
+        "value": "sports",
+        "label": "الرياضة",
+        "labelEn": "Sports",
+        "icon": "⚽"
+      },
+      {
+        "value": "technology",
+        "label": "التقنية",
+        "labelEn": "Technology",
+        "icon": "📱"
+      },
+      {
+        "value": "design",
+        "label": "التصميم",
+        "labelEn": "Design",
+        "icon": "🎨"
+      },
+      {
+        "value": "gaming",
+        "label": "الألعاب",
+        "labelEn": "Gaming",
+        "icon": "🎮"
+      },
+      {
+        "value": "pets",
+        "label": "الحيوانات",
+        "labelEn": "Pets",
+        "icon": "🐾"
+      },
+      {
+        "value": "education",
+        "label": "التعليم",
+        "labelEn": "Education",
+        "icon": "📚"
+      },
+      {
+        "value": "photography",
+        "label": "التصوير",
+        "labelEn": "Photography",
+        "icon": "📷"
+      },
+      {
+        "value": "shopping",
+        "label": "التجارة",
+        "labelEn": "Commerce",
+        "icon": "🛍️"
+      },
+      {
+        "value": "other",
+        "label": "أخرى",
+        "labelEn": "Other",
+        "icon": "✨"
+      }
+    ]
+  },
+  {
+    "id": "budget",
+    "title": "كم ميزانيتك التقريبية للبداية؟",
+    "titleEn": "What is your approximate starting budget?",
+    "subtitle": "هذا يساعدنا نقترح مشروع يناسب إمكانياتك",
+    "subtitleEn": "This helps us suggest a project that fits your budget",
+    "options": [
+      {
+        "value": "under500",
+        "label": "أقل من 500 درهم",
+        "labelEn": "Under 500 AED",
+        "icon": "💵"
+      },
+      {
+        "value": "500to2000",
+        "label": "500 – 2,000 درهم",
+        "labelEn": "500 – 2,000 AED",
+        "icon": "💰"
+      },
+      {
+        "value": "2000to5000",
+        "label": "2,000 – 5,000 درهم",
+        "labelEn": "2,000 – 5,000 AED",
+        "icon": "💳"
+      },
+      {
+        "value": "5000to15000",
+        "label": "5,000 – 15,000 درهم",
+        "labelEn": "5,000 – 15,000 AED",
+        "icon": "🏦"
+      },
+      {
+        "value": "over15000",
+        "label": "أكثر من 15,000 درهم",
+        "labelEn": "Over 15,000 AED",
+        "icon": "🏢"
+      }
+    ]
+  },
+  {
+    "id": "time",
+    "title": "كم وقت تقدر تخصص للمشروع؟",
+    "titleEn": "How much time can you dedicate to the project?",
+    "subtitle": "صار صريح — هذا يساعدنا نختار مشروع واقعي",
+    "subtitleEn": "Be honest — this helps us pick a realistic project",
+    "options": [
+      {
+        "value": "under1h",
+        "label": "أقل من ساعة يومياً",
+        "labelEn": "Under 1 hour daily",
+        "icon": "⏱️"
+      },
+      {
+        "value": "1to3h",
+        "label": "1 – 3 ساعات يومياً",
+        "labelEn": "1 – 3 hours daily",
+        "icon": "🕐"
+      },
+      {
+        "value": "3to6h",
+        "label": "3 – 6 ساعات يومياً",
+        "labelEn": "3 – 6 hours daily",
+        "icon": "🕒"
+      },
+      {
+        "value": "mostOfDay",
+        "label": "معظم اليوم",
+        "labelEn": "Most of the day",
+        "icon": "🌅"
+      }
+    ]
+  },
+  {
+    "id": "workStyle",
+    "title": "كيف تفضل تشتغل؟",
+    "titleEn": "How do you prefer to work?",
+    "subtitle": "اختر اللي يناسبك — يمكنك اختيار أكثر من خيار",
+    "subtitleEn": "Choose what suits you — you can select more than one",
+    "multi": true,
+    "options": [
+      {
+        "value": "alone",
+        "label": "بمفردي",
+        "labelEn": "By myself",
+        "icon": "👤"
+      },
+      {
+        "value": "onePerson",
+        "label": "مع شخص واحد",
+        "labelEn": "With one person",
+        "icon": "👥"
+      },
+      {
+        "value": "team",
+        "label": "مع فريق",
+        "labelEn": "With a team",
+        "icon": "👨‍👨‍👦"
+      },
+      {
+        "value": "flexible",
+        "label": "مرن",
+        "labelEn": "Flexible",
+        "icon": "🔄"
+      }
+    ]
+  },
+  {
+    "id": "customerInteraction",
+    "title": "كيف تشعر تجاه التعامل مع العملاء؟",
+    "titleEn": "How do you feel about dealing with customers?",
+    "subtitle": "هذا يساعدنا نختار مشروع يناسب شخصيتك",
+    "subtitleEn": "This helps us pick a project that fits your personality",
+    "options": [
+      {
+        "value": "enjoy",
+        "label": "أستمتع به",
+        "labelEn": "I enjoy it",
+        "icon": "😊"
+      },
+      {
+        "value": "dontMind",
+        "label": "ما عندي مانع",
+        "labelEn": "I don't mind",
+        "icon": "🙂"
+      },
+      {
+        "value": "limited",
+        "label": "أفضل تفاعل محدود",
+        "labelEn": "I prefer limited interaction",
+        "icon": "😐"
+      },
+      {
+        "value": "minimal",
+        "label": "أفضل أقل تفاعل مباشر",
+        "labelEn": "I prefer minimal direct interaction",
+        "icon": "😶"
+      }
+    ]
+  },
+  {
+    "id": "motivation",
+    "title": "شنو اللي يحفزك؟",
+    "titleEn": "What motivates you?",
+    "subtitle": "اختر كل اللي ينطبق عليك",
+    "subtitleEn": "Select all that apply to you",
+    "multi": true,
+    "options": [
+      {
+        "value": "money",
+        "label": "أرباح مالية",
+        "labelEn": "Financial profit",
+        "icon": "💰"
+      },
+      {
+        "value": "enjoy",
+        "label": "شي أستمتع به",
+        "labelEn": "Something I enjoy",
+        "icon": "❤️"
+      },
+      {
+        "value": "big",
+        "label": "بناء شيء كبير",
+        "labelEn": "Building something big",
+        "icon": "🚀"
+      },
+      {
+        "value": "freedom",
+        "label": "حرية",
+        "labelEn": "Freedom",
+        "icon": "🕊️"
+      },
+      {
+        "value": "creativity",
+        "label": "إبداع",
+        "labelEn": "Creativity",
+        "icon": "🎨"
+      },
+      {
+        "value": "helping",
+        "label": "مساعدة الناس",
+        "labelEn": "Helping people",
+        "icon": "🤝"
+      }
+    ]
+  },
+  {
+    "id": "experience",
+    "title": "شنو خبرتك؟",
+    "titleEn": "What is your experience?",
+    "subtitle": "هذا يساعدنا نقترح مشروع بمستوى مناسب لك",
+    "subtitleEn": "This helps us suggest a project at the right level for you",
+    "options": [
+      {
+        "value": "first",
+        "label": "أول مشروع لي",
+        "labelEn": "My first project",
+        "icon": "🌱"
+      },
+      {
+        "value": "smallProjects",
+        "label": "جربت مشاريع صغيرة",
+        "labelEn": "Tried small projects",
+        "icon": "🌿"
+      },
+      {
+        "value": "experienced",
+        "label": "خبرة",
+        "labelEn": "Experienced",
+        "icon": "🌳"
+      },
+      {
+        "value": "hasProject",
+        "label": "عندي مشروع حالياً",
+        "labelEn": "I have a current project",
+        "icon": "🏢"
+      }
+    ]
+  },
+  {
+    "id": "readiness",
+    "title": "متى تبي تبدأ؟",
+    "titleEn": "When do you want to start?",
+    "subtitle": "آخر سؤال — احنا قربنا نخلاص",
+    "subtitleEn": "Last question — we're almost done",
+    "options": [
+      {
+        "value": "now",
+        "label": "الحين",
+        "labelEn": "Right now",
+        "icon": "⚡"
+      },
+      {
+        "value": "withinMonth",
+        "label": "خلال شهر",
+        "labelEn": "Within a month",
+        "icon": "📅"
+      },
+      {
+        "value": "later",
+        "label": "بعد فترة",
+        "labelEn": "After a while",
+        "icon": "🗓️"
+      },
+      {
+        "value": "exploring",
+        "label": "بس أستكشف",
+        "labelEn": "Just exploring",
+        "icon": "🔍"
+      }
+    ]
+  }
+]

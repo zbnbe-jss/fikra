@@ -27,6 +27,9 @@ Thumbs.db
 .claude/
 .cursor/
 
+# Vercel CLI link metadata (dashboard Git deploys do not need this)
+.vercel/
+
 # duplicate capture artifacts (minified originals are kept)
 **/*.beautified.js
 **/*.beautified.css

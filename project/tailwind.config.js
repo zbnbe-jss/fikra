@@ -44,7 +44,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Comic Relief", "system-ui", "sans-serif"],
+        sans: ["Comic Relief", "El Messiri", "system-ui", "sans-serif"],
       },
       borderRadius: {
         "2xl": "1.25rem",

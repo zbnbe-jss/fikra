@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight, Lock, Mail } from "lucide-react";
 import { useLang } from "../lib/language";
 import { supabase } from "../lib/supabaseClient";
 import Logo from "../components/Logo";
+import { ease } from "../components/motion";
 
 type Mode = "login" | "signup" | "reset";
 
@@ -21,6 +23,7 @@ function GoogleIcon() {
 export default function Login() {
   const { t } = useLang();
   const navigate = useNavigate();
+  const reduce = useReducedMotion();
   const [mode, setMode] = useState<Mode>("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -73,11 +76,21 @@ export default function Login() {
 
   return (
     <div className="flex min-h-screen items-center justify-center gradient-mesh px-5 pt-20">
-      <div className="w-full max-w-md">
+      <motion.div
+        className="w-full max-w-md"
+        initial={reduce ? false : { opacity: 0, y: 24, scale: 0.96 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.45, ease }}
+      >
         <div className="mb-6 text-center">
-          <button onClick={() => navigate("/")} className="inline-block transition-transform hover:scale-105">
+          <motion.button
+            onClick={() => navigate("/")}
+            className="inline-block"
+            whileHover={reduce ? undefined : { scale: 1.05 }}
+            whileTap={reduce ? undefined : { scale: 0.97 }}
+          >
             <Logo />
-          </button>
+          </motion.button>
         </div>
         <div className="card p-8 shadow-float">
           <h1 className="text-center text-2xl font-bold text-ink-900">{t(titles[mode].ar, titles[mode].en)}</h1>
@@ -117,9 +130,14 @@ export default function Login() {
                 />
               </div>
             )}
-            <button type="submit" disabled={loading} className="btn-primary mt-2 w-full">
+            <motion.button
+              type="submit"
+              disabled={loading}
+              className="btn-primary mt-2 w-full"
+              whileTap={reduce || loading ? undefined : { scale: 0.97 }}
+            >
               {loading ? t("جاري التحميل...", "Loading...") : t(submitLabels[mode].ar, submitLabels[mode].en)}
-            </button>
+            </motion.button>
           </form>
 
           {mode === "login" && (
@@ -182,7 +200,7 @@ export default function Login() {
           <ArrowRight size={14} />
           {t("العودة للرئيسية", "Back to home")}
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 }

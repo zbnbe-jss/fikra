@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Languages, Menu, User, X } from "lucide-react";
 import type { User as AuthUser } from "@supabase/supabase-js";
 import { useLang } from "../lib/language";
 import { supabase } from "../lib/supabaseClient";
 import Logo from "./Logo";
+import { ease } from "./motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -13,6 +15,7 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
   const { t, lang, toggleLang } = useLang();
+  const reduce = useReducedMotion();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -68,12 +71,16 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
-        <button onClick={() => go("/")} className="transition-transform duration-200 hover:scale-105">
+        <motion.button
+          onClick={() => go("/")}
+          whileHover={reduce ? undefined : { scale: 1.05 }}
+          whileTap={reduce ? undefined : { scale: 0.97 }}
+        >
           <Logo />
-        </button>
+        </motion.button>
         <div className="hidden items-center gap-1 lg:flex">
           {links.map((l) => (
-            <button
+            <motion.button
               key={l.href}
               onClick={() => go(l.href)}
               className={`rounded-xl px-4 py-2 text-sm font-medium transition-all duration-200 ${
@@ -81,9 +88,11 @@ export default function Navbar() {
                   ? "bg-fikra-50 text-fikra-700"
                   : "text-ink-600 hover:bg-ink-100/80 hover:text-ink-900"
               }`}
+              whileHover={reduce ? undefined : { y: -1 }}
+              whileTap={reduce ? undefined : { scale: 0.97 }}
             >
               {l.label}
-            </button>
+            </motion.button>
           ))}
         </div>
         <div className="hidden items-center gap-2.5 lg:flex">
@@ -126,8 +135,15 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {open && (
-        <div className="animate-fade-in glass border-t border-ink-100/80 lg:hidden">
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="overflow-hidden glass border-t border-ink-100/80 lg:hidden"
+            initial={reduce ? false : { opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={reduce ? { opacity: 1 } : { opacity: 0, height: 0 }}
+            transition={{ duration: 0.28, ease }}
+          >
           <div className="flex flex-col gap-1 px-5 py-4">
             {links.map((l) => (
               <button
@@ -194,8 +210,9 @@ export default function Navbar() {
               )}
             </div>
           </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

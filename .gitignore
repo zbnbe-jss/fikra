@@ -27,8 +27,10 @@ Thumbs.db
 .claude/
 .cursor/
 
-# Vercel CLI link metadata (dashboard Git deploys do not need this)
-.vercel/
+# Cloudflare Wrangler
+.wrangler/
+.dev.vars
+.dev.vars.*
 
 # duplicate capture artifacts (minified originals are kept)
 **/*.beautified.js

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion, useReducedMotion } from "motion/react";
 import type { LucideIcon } from "lucide-react";
 import {
   ArrowLeft,
@@ -31,6 +32,7 @@ import {
   labelList,
 } from "../lib/labels";
 import Logo from "../components/Logo";
+import { FadeIn, ease } from "../components/motion";
 
 function Snapshot({
   icon: Icon,
@@ -42,7 +44,10 @@ function Snapshot({
   value: string;
 }) {
   return (
-    <div className="flex items-center gap-2.5 rounded-2xl bg-ink-50 px-4 py-2.5 transition-transform hover:scale-105">
+    <motion.div
+      className="flex items-center gap-2.5 rounded-2xl bg-ink-50 px-4 py-2.5"
+      whileHover={{ scale: 1.05 }}
+    >
       <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white shadow-soft">
         <Icon size={16} className="text-fikra-600" />
       </div>
@@ -50,7 +55,7 @@ function Snapshot({
         <div className="text-[10px] font-medium text-ink-400">{lbl}</div>
         <div className="text-xs font-semibold text-ink-700">{value}</div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -59,16 +64,18 @@ function CompatibilityRing({ value }: { value: number }) {
     <div className="relative h-12 w-12">
       <svg className="h-12 w-12 -rotate-90" viewBox="0 0 36 36">
         <circle cx="18" cy="18" r="15" fill="none" stroke="currentColor" strokeWidth="3" className="text-ink-100" />
-        <circle
+        <motion.circle
           cx="18"
           cy="18"
           r="15"
           fill="none"
           stroke="currentColor"
           strokeWidth="3"
-          className="text-fikra-600 transition-all duration-1000"
-          strokeDasharray={`${(value / 100) * 94.2} 94.2`}
+          className="text-fikra-600"
           strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: value / 100 }}
+          transition={{ duration: 1, ease }}
         />
       </svg>
       <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-fikra-700">
@@ -87,12 +94,16 @@ function ResultCard({ scored, primary }: { scored: ScoredIdea; primary?: boolean
   const channelIcon = idea.channel === "online" ? Monitor : idea.channel === "physical" ? Store : Lightbulb;
 
   return (
-    <div
+    <motion.div
       className={
         primary
           ? "relative overflow-hidden rounded-3xl bg-white p-6 shadow-float sm:p-8"
           : "card p-6"
       }
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.45, ease }}
     >
       {primary && (
         <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gradient-to-br from-fikra-100 to-azure-100 opacity-60 blur-3xl" />
@@ -210,13 +221,14 @@ function ResultCard({ scored, primary }: { scored: ScoredIdea; primary?: boolean
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 export default function Result() {
   const { lang, t } = useLang();
   const navigate = useNavigate();
+  const reduce = useReducedMotion();
   const results = getResults();
   const answers = getAnswers();
 
@@ -241,16 +253,16 @@ export default function Result() {
     <div className="min-h-screen bg-ink-50 pt-20">
       <div className="mx-auto max-w-3xl px-5 py-8 lg:py-12">
         <div className="flex items-center justify-between">
-          <button onClick={() => navigate("/")} className="transition-transform hover:scale-105">
+          <motion.button onClick={() => navigate("/")} whileHover={reduce ? undefined : { scale: 1.05 }}>
             <Logo size="sm" />
-          </button>
+          </motion.button>
           <button onClick={() => navigate("/quiz")} className="btn-ghost">
             <ArrowRight size={18} />
             {t("أعد الاختبار", "Retake Quiz")}
           </button>
         </div>
 
-        <div className="mt-10 text-center animate-fade-up">
+        <FadeIn className="mt-10 text-center">
           <h1 className="text-3xl font-bold text-ink-900 sm:text-4xl">
             {t("فكرتك المناسبة لك", "Your Perfect Match")}
           </h1>
@@ -260,9 +272,9 @@ export default function Result() {
               "Based on your answers, here's the best project we recommend you start with"
             )}
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="mt-8 animate-fade-up">
+        <FadeIn className="mt-8" delay={0.08}>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-fikra-600 to-azure-600 p-6 text-white shadow-card sm:p-8">
             <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
             <div className="relative flex items-start gap-4">
@@ -290,7 +302,7 @@ export default function Result() {
               </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
 
         <div className="mt-6">
           <ResultCard scored={best} primary />

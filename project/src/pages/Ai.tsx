@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { motion, useReducedMotion } from "motion/react";
 import {
   ArrowRight,
   BarChart3,
@@ -18,6 +19,7 @@ import { useLang } from "../lib/language";
 import { respond, type AiMessage } from "../lib/aiAssistant";
 import IdeaCard from "../components/IdeaCard";
 import ComparisonTable from "../components/ComparisonTable";
+import { FadeIn, Stagger, StaggerItem, ease } from "../components/motion";
 
 const PROMPTS_AR = [
   { icon: Wallet, text: "عندي 2000 درهم، شو المشروع المناسب لي؟", color: "from-fikra-500 to-fikra-600" },
@@ -40,6 +42,7 @@ const PROMPTS_EN = [
 export default function Ai() {
   const { lang, t } = useLang();
   const location = useLocation() as { state?: { prompt?: string } };
+  const reduce = useReducedMotion();
   const [messages, setMessages] = useState<AiMessage[]>([
     {
       role: "assistant",
@@ -85,7 +88,7 @@ export default function Ai() {
       <div className="relative overflow-hidden border-b border-ink-100 bg-gradient-to-br from-fikra-600 via-fikra-700 to-azure-700">
         <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-white/10 blur-3xl" />
         <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-azure-400/20 blur-3xl" />
-        <div className="relative mx-auto max-w-4xl px-5 py-8 lg:px-8 lg:py-10">
+        <FadeIn className="relative mx-auto max-w-4xl px-5 py-8 lg:px-8 lg:py-10">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-md">
@@ -113,7 +116,7 @@ export default function Ai() {
               <span className="hidden sm:inline">{t("محادثة جديدة", "New conversation")}</span>
             </button>
           </div>
-        </div>
+        </FadeIn>
       </div>
 
       <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-3 py-4 lg:px-8">
@@ -124,16 +127,28 @@ export default function Ai() {
         >
           {messages.map((m, idx) =>
             m.role === "user" ? (
-              <div key={idx} className="flex items-start justify-end gap-2.5 animate-fade-up">
+              <motion.div
+                key={idx}
+                className="flex items-start justify-end gap-2.5"
+                initial={reduce ? false : { opacity: 0, y: 12, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.28, ease }}
+              >
                 <div className="max-w-[80%] rounded-2xl rounded-tl-sm bg-gradient-to-r from-fikra-600 to-azure-600 px-4 py-3 text-sm font-medium leading-relaxed text-white shadow-card sm:text-base">
                   {m.content}
                 </div>
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-ink-200 text-ink-600">
                   <User size={17} />
                 </div>
-              </div>
+              </motion.div>
             ) : (
-              <div key={idx} className="flex items-start gap-2.5 animate-fade-up">
+              <motion.div
+                key={idx}
+                className="flex items-start gap-2.5"
+                initial={reduce ? false : { opacity: 0, y: 12, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.28, ease }}
+              >
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-fikra-500 to-azure-600 text-white shadow-sm">
                   <Bot size={17} />
                 </div>
@@ -160,12 +175,16 @@ export default function Ai() {
                   )}
                   {m.comparison && <ComparisonTable ideas={m.comparison} />}
                 </div>
-              </div>
+              </motion.div>
             )
           )}
 
           {sending && (
-            <div className="flex items-start gap-2.5 animate-fade-up">
+            <motion.div
+              className="flex items-start gap-2.5"
+              initial={reduce ? false : { opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-fikra-500 to-azure-600 text-white shadow-sm">
                 <Bot size={17} />
               </div>
@@ -179,11 +198,11 @@ export default function Ai() {
                   <span className="text-xs text-ink-400">{t("فكرة AI يفكر...", "FIKRA AI is thinking...")}</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
 
           {showEmpty && (
-            <div className="flex flex-col items-center py-6 text-center sm:py-10">
+            <FadeIn className="flex flex-col items-center py-6 text-center sm:py-10">
               <div className="relative mb-5">
                 <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-fikra-100 to-azure-100">
                   <Sparkles size={32} className="text-fikra-600" />
@@ -201,27 +220,30 @@ export default function Ai() {
                   "I can help you find a project that suits you, compare ideas, develop your idea, or explain business terms. Talk naturally — no special format needed."
                 )}
               </p>
-              <div className="mt-6 grid w-full max-w-2xl gap-3 sm:grid-cols-2">
+              <Stagger className="mt-6 grid w-full max-w-2xl gap-3 sm:grid-cols-2">
                 {prompts.map((p) => (
-                  <button
-                    key={p.text}
-                    onClick={() => send(p.text)}
-                    className="group flex items-center gap-3 rounded-2xl border border-ink-100 bg-white p-4 text-right transition-all hover:border-fikra-300 hover:shadow-soft active:scale-[0.98]"
-                  >
+                  <StaggerItem key={p.text}>
+                    <motion.button
+                      onClick={() => send(p.text)}
+                      className="group flex w-full items-center gap-3 rounded-2xl border border-ink-100 bg-white p-4 text-right"
+                      whileHover={reduce ? undefined : { y: -3, boxShadow: "0 2px 8px -2px rgba(15, 23, 42, 0.08)" }}
+                      whileTap={reduce ? undefined : { scale: 0.98 }}
+                    >
                     <div
                       className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${p.color} text-white shadow-sm transition-transform group-hover:scale-110`}
                     >
                       <p.icon size={20} />
                     </div>
                     <span className="flex-1 text-sm font-medium text-ink-700">{p.text}</span>
-                    <ArrowRight
-                      size={16}
-                      className="shrink-0 text-ink-300 transition-all group-hover:-translate-x-1 group-hover:text-fikra-500"
-                    />
-                  </button>
+                      <ArrowRight
+                        size={16}
+                        className="shrink-0 text-ink-300 transition-all group-hover:-translate-x-1 group-hover:text-fikra-500"
+                      />
+                    </motion.button>
+                  </StaggerItem>
                 ))}
-              </div>
-            </div>
+              </Stagger>
+            </FadeIn>
           )}
         </div>
 

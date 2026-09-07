@@ -1,14 +1,17 @@
 import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useLang } from "../lib/language";
 import { ideas } from "../data";
 import ComparisonTable from "../components/ComparisonTable";
+import { FadeIn, ease } from "../components/motion";
 
 const MAX_COMPARE = 3;
 
 export default function Compare() {
   const { lang, t } = useLang();
   const [searchParams] = useSearchParams();
+  const reduce = useReducedMotion();
   const initialIds = (searchParams.get("ids") ?? "").split(",").filter(Boolean);
   const [selectedIds, setSelectedIds] = useState<string[]>(initialIds.slice(0, MAX_COMPARE));
   const [query, setQuery] = useState("");
@@ -34,23 +37,32 @@ export default function Compare() {
   return (
     <div className="min-h-screen bg-ink-50 pt-20">
       <div className="mx-auto max-w-5xl px-5 py-12 lg:px-8">
+      <FadeIn>
       <h1 className="mb-2 text-3xl font-bold text-ink-900">{t("قارن الأفكار", "Compare Ideas")}</h1>
       <p className="mb-8 text-ink-500">
         {t(`اختر حتى ${MAX_COMPARE} أفكار عشان تقارن بينها`, `Pick up to ${MAX_COMPARE} ideas to compare`)}
       </p>
+      </FadeIn>
 
       <div className="mb-6 flex flex-wrap gap-2">
+        <AnimatePresence>
         {selected.map((idea) => (
-          <span
+          <motion.span
             key={idea.id}
             className="flex items-center gap-2 rounded-full bg-fikra-50 px-3 py-1.5 text-sm font-medium text-fikra-700"
+            initial={reduce ? false : { opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={reduce ? { opacity: 1 } : { opacity: 0, scale: 0.85 }}
+            layout
+            transition={{ duration: 0.22, ease }}
           >
             {idea.icon} {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
             <button onClick={() => removeIdea(idea.id)} aria-label={t("إزالة", "Remove")}>
               ✕
             </button>
-          </span>
+          </motion.span>
         ))}
+        </AnimatePresence>
       </div>
 
       {selectedIds.length < MAX_COMPARE && (
@@ -86,7 +98,7 @@ export default function Compare() {
           <ComparisonTable ideas={selected} />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {selected.map((idea) => (
-              <div key={idea.id} className="rounded-2xl border border-ink-100 bg-white p-5">
+              <FadeIn key={idea.id} className="rounded-2xl border border-ink-100 bg-white p-5">
                 <h3 className="mb-2 font-bold text-ink-900">
                   {idea.icon} {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
                 </h3>
@@ -102,7 +114,7 @@ export default function Compare() {
                     ? t("مخاطرة أعلى وتحتاج رأس مال أكبر", "Higher risk and needs more capital")
                     : t("تحتاج وقت لبناء قاعدة عملاء", "Needs time to build a customer base")}
                 </p>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </>

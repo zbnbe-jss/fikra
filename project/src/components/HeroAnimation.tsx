@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useLang } from "../lib/language";
 
 interface Phrase {
@@ -25,23 +26,19 @@ const TRANSITION_MS = 600;
 
 export default function HeroAnimation() {
   const { lang } = useLang();
+  const reduce = useReducedMotion();
   const phrases = lang === "en" ? PHRASES_EN : PHRASES_AR;
   const [index, setIndex] = useState(0);
-  const [entering, setEntering] = useState(true);
 
   const rotate = useCallback(() => {
-    setEntering(false);
-    setTimeout(() => {
-      setIndex((i) => (i + 1) % phrases.length);
-      setEntering(true);
-    }, TRANSITION_MS);
+    setIndex((i) => (i + 1) % phrases.length);
   }, [phrases.length]);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (reduce) return;
     const interval = setInterval(rotate, HOLD_MS + TRANSITION_MS);
     return () => clearInterval(interval);
-  }, [rotate]);
+  }, [rotate, reduce]);
 
   const phrase = phrases[index];
 
@@ -49,13 +46,18 @@ export default function HeroAnimation() {
     <span className="hero-text-container block">
       <span className="hero-text-prefix block text-ink-900">{phrase.prefix}</span>
       <span className="hero-text-highlight-wrap block">
-        <span
-          key={`${lang}-${index}`}
-          className={`hero-text-highlight gradient-text ${entering ? "hero-word-in" : "hero-word-out"}`}
-          style={{ ["--transition-duration" as string]: `${TRANSITION_MS}ms` }}
-        >
-          {phrase.highlight}
-        </span>
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={`${lang}-${index}`}
+            className="hero-text-highlight gradient-text"
+            initial={reduce ? false : { opacity: 0, y: 16, filter: "blur(6px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            exit={reduce ? { opacity: 1 } : { opacity: 0, y: -14, filter: "blur(6px)" }}
+            transition={{ duration: TRANSITION_MS / 1000, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {phrase.highlight}
+          </motion.span>
+        </AnimatePresence>
       </span>
     </span>
   );

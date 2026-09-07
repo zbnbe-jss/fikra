@@ -1,9 +1,11 @@
 import { useRef, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Bot, RotateCcw, Send, Sparkles, User, X } from "lucide-react";
 import { useLang } from "../lib/language";
 import { respond, type AiMessage } from "../lib/aiAssistant";
 import IdeaCard from "./IdeaCard";
 import ComparisonTable from "./ComparisonTable";
+import { ease } from "./motion";
 
 const SUGGESTIONS_AR = [
   "عندي 1000 درهم وابا مشروع اونلاين",
@@ -24,6 +26,7 @@ const SUGGESTIONS_EN = [
 
 export default function FikraAiWidget() {
   const { lang, t } = useLang();
+  const reduce = useReducedMotion();
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<AiMessage[]>([
     {
@@ -67,12 +70,15 @@ export default function FikraAiWidget() {
 
   return (
     <>
-      <button
+      <motion.button
         onClick={() => setOpen(true)}
-        className={`fixed bottom-5 left-5 z-50 flex items-center gap-2.5 rounded-2xl bg-gradient-to-r from-fikra-600 to-azure-600 px-5 py-3.5 text-sm font-semibold text-white shadow-float transition-all duration-300 hover:scale-105 hover:brightness-110 active:scale-95 ${
-          open ? "pointer-events-none scale-0 opacity-0" : "scale-100 opacity-100"
-        }`}
+        className="fixed bottom-5 left-5 z-50 flex items-center gap-2.5 rounded-2xl bg-gradient-to-r from-fikra-600 to-azure-600 px-5 py-3.5 text-sm font-semibold text-white shadow-float"
         aria-label="FIKRA AI"
+        animate={{ scale: open ? 0 : 1, opacity: open ? 0 : 1 }}
+        whileHover={reduce || open ? undefined : { scale: 1.06 }}
+        whileTap={reduce || open ? undefined : { scale: 0.94 }}
+        transition={{ type: "spring", stiffness: 380, damping: 24 }}
+        style={{ pointerEvents: open ? "none" : "auto" }}
       >
         <div className="relative">
           <Sparkles size={20} className="animate-pulse-soft" />
@@ -82,12 +88,25 @@ export default function FikraAiWidget() {
           </span>
         </div>
         <span className="hidden sm:inline">FIKRA AI</span>
-      </button>
+      </motion.button>
 
-      {open && (
-        <div className="fixed inset-0 z-[120] flex items-end justify-end p-0 sm:p-5 lg:p-6">
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="fixed inset-0 z-[120] flex items-end justify-end p-0 sm:p-5 lg:p-6"
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={reduce ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.22, ease }}
+          >
           <div className="absolute inset-0 bg-ink-900/30 backdrop-blur-sm sm:hidden" onClick={() => setOpen(false)} />
-          <div className="relative flex h-[100dvh] w-full flex-col overflow-hidden bg-white shadow-float animate-scale-in sm:h-[600px] sm:max-h-[85vh] sm:w-[400px] sm:rounded-3xl sm:border sm:border-ink-100">
+          <motion.div
+            className="relative flex h-[100dvh] w-full flex-col overflow-hidden bg-white shadow-float sm:h-[600px] sm:max-h-[85vh] sm:w-[400px] sm:rounded-3xl sm:border sm:border-ink-100"
+            initial={reduce ? false : { opacity: 0, y: 28, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={reduce ? { opacity: 1 } : { opacity: 0, y: 16, scale: 0.96 }}
+            transition={{ duration: 0.32, ease }}
+          >
             <div className="relative flex items-center justify-between border-b border-ink-100 bg-gradient-to-r from-fikra-600 to-azure-600 px-5 py-4 text-white">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm">
@@ -122,16 +141,28 @@ export default function FikraAiWidget() {
             <div ref={scrollRef} className="flex-1 space-y-4 overflow-y-auto bg-ink-50/50 px-4 py-5">
               {messages.map((m, idx) =>
                 m.role === "user" ? (
-                  <div key={idx} className="flex items-start justify-end gap-2.5 animate-fade-up">
+                  <motion.div
+                    key={idx}
+                    className="flex items-start justify-end gap-2.5"
+                    initial={reduce ? false : { opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25, ease }}
+                  >
                     <div className="max-w-[80%] rounded-2xl rounded-tl-sm bg-gradient-to-r from-fikra-600 to-azure-600 px-4 py-2.5 text-sm font-medium text-white shadow-card">
                       {m.content}
                     </div>
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-ink-200 text-ink-600">
                       <User size={16} />
                     </div>
-                  </div>
+                  </motion.div>
                 ) : (
-                  <div key={idx} className="flex items-start gap-2.5 animate-fade-up">
+                  <motion.div
+                    key={idx}
+                    className="flex items-start gap-2.5"
+                    initial={reduce ? false : { opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25, ease }}
+                  >
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-fikra-500 to-azure-600 text-white shadow-sm">
                       <Bot size={16} />
                     </div>
@@ -148,7 +179,7 @@ export default function FikraAiWidget() {
                       )}
                       {m.comparison && <ComparisonTable ideas={m.comparison} />}
                     </div>
-                  </div>
+                  </motion.div>
                 )
               )}
               {sending && (
@@ -209,9 +240,10 @@ export default function FikraAiWidget() {
                 </button>
               </form>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

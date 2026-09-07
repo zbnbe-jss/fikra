@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import { motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, Heart, Lightbulb, Sparkles, Target } from "lucide-react";
 import { useLang } from "../lib/language";
+import { FadeIn, Stagger, StaggerItem } from "../components/motion";
 
 export default function About() {
   const { lang, t } = useLang();
   const navigate = useNavigate();
+  const reduce = useReducedMotion();
   const cards =
     lang === "en"
       ? [
@@ -21,7 +24,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-ink-50 pt-20">
       <div className="mx-auto max-w-3xl px-5 py-12 lg:px-8">
-        <div className="text-center animate-fade-up">
+        <FadeIn className="text-center">
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-fikra-500 to-azure-600 shadow-card">
             <Lightbulb size={28} className="text-white" />
           </div>
@@ -32,28 +35,33 @@ export default function About() {
               "FIKRA is a platform that helps you discover projects that match your interests, budget, time, and work style. We believe everyone has a project idea that could succeed — they just need to discover it."
             )}
           </p>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {cards.map((c, r) => (
-            <div
+        </FadeIn>
+        <Stagger className="mt-12 grid gap-6 md:grid-cols-3" stagger={0.12}>
+          {cards.map((c) => (
+            <StaggerItem
               key={c.title}
-              className="card card-hover p-6 text-center animate-fade-up"
-              style={{ animationDelay: `${r * 120}ms` }}
+              className="card card-hover p-6 text-center"
+              whileHover={reduce ? undefined : { y: -6 }}
             >
               <div className="icon-container mx-auto mb-4">
                 <c.icon size={24} />
               </div>
               <h3 className="font-bold text-ink-900">{c.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-600">{c.desc}</p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
-        <div className="mt-12 text-center">
-          <button onClick={() => navigate("/quiz")} className="btn-primary">
+        </Stagger>
+        <FadeIn className="mt-12 text-center" delay={0.15}>
+          <motion.button
+            onClick={() => navigate("/quiz")}
+            className="btn-primary"
+            whileHover={reduce ? undefined : { scale: 1.04 }}
+            whileTap={reduce ? undefined : { scale: 0.97 }}
+          >
             {t("ابدأ الاختبار", "Take the Quiz")}
             <ArrowLeft size={18} />
-          </button>
-        </div>
+          </motion.button>
+        </FadeIn>
       </div>
     </div>
   );

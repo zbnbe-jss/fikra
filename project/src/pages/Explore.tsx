@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import {
   ChevronDown,
   Home as HomeIcon,
@@ -16,6 +17,7 @@ import { useLang } from "../lib/language";
 import { categories, categoryIcons, categoryTranslations, ideas } from "../data";
 import IdeaCard from "../components/IdeaCard";
 import { smartSearch } from "../lib/smartSearch";
+import { FadeIn, Stagger, StaggerItem, ease } from "../components/motion";
 
 type Sort = "default" | "budgetAsc" | "budgetDesc" | "name";
 
@@ -53,6 +55,7 @@ function FilterChip({
 
 export default function Explore() {
   const { lang, t } = useLang();
+  const reduce = useReducedMotion();
   const [category, setCategory] = useState("الكل");
   const [quick, setQuick] = useState<string | null>(null);
   const [sort, setSort] = useState<Sort>("default");
@@ -98,7 +101,7 @@ export default function Explore() {
   return (
     <div className="min-h-screen bg-ink-50 pt-20">
       <div className="mx-auto max-w-7xl px-5 py-8 lg:px-8">
-        <div className="text-center">
+        <FadeIn className="text-center">
           <h1 className="text-3xl font-bold text-ink-900 sm:text-4xl">{t("استكشف الأفكار", "Explore Ideas")}</h1>
           <p className="mt-3 text-ink-500">
             {t(
@@ -106,22 +109,25 @@ export default function Explore() {
               `Browse ${ideas.length}+ project ideas and filter by what suits you`
             )}
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-2">
+        <Stagger className="mt-8 flex flex-wrap justify-center gap-2">
           {QUICK_FILTERS.map((f) => (
-            <button
-              key={f.key}
-              onClick={() => setQuick(quick === f.key ? null : f.key)}
-              className={`flex items-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-medium shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-card ${
-                quick === f.key ? "bg-fikra-600 text-white" : "bg-white text-ink-700 hover:text-fikra-600"
-              }`}
-            >
-              <f.icon size={16} className={quick === f.key ? "text-white" : "text-fikra-500"} />
-              {lang === "en" ? f.en : f.ar}
-            </button>
+            <StaggerItem key={f.key}>
+              <motion.button
+                onClick={() => setQuick(quick === f.key ? null : f.key)}
+                className={`flex items-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-medium shadow-soft ${
+                  quick === f.key ? "bg-fikra-600 text-white" : "bg-white text-ink-700 hover:text-fikra-600"
+                }`}
+                whileHover={reduce ? undefined : { y: -3 }}
+                whileTap={reduce ? undefined : { scale: 0.96 }}
+              >
+                <f.icon size={16} className={quick === f.key ? "text-white" : "text-fikra-500"} />
+                {lang === "en" ? f.en : f.ar}
+              </motion.button>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
         <div className="mt-6 flex gap-2">
           <div className="relative flex-1">
@@ -160,8 +166,16 @@ export default function Explore() {
           </button>
         </div>
 
-        {showFilters && (
-          <div className="card mt-4 animate-fade-up p-5">
+        <AnimatePresence>
+          {showFilters && (
+            <motion.div
+              className="card mt-4 p-5"
+              initial={reduce ? false : { opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={reduce ? { opacity: 1 } : { opacity: 0, height: 0 }}
+              transition={{ duration: 0.28, ease }}
+              style={{ overflow: "hidden" }}
+            >
             <h4 className="mb-2 text-sm font-semibold text-ink-900">{t("المجال", "Category")}</h4>
             <div className="flex flex-wrap gap-2">
               {categories.map((c) => (
@@ -180,8 +194,9 @@ export default function Explore() {
                 {t("مسح الفلاتر", "Clear Filters")}
               </button>
             )}
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <div className="mt-6 text-sm text-ink-500">
           {shown.length} {t("فكرة", "ideas")}
@@ -207,13 +222,13 @@ export default function Explore() {
             </button>
           </div>
         ) : (
-          <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {shown.map((idea, i) => (
-              <div key={idea.id} className="animate-fade-up" style={{ animationDelay: `${Math.min(i * 50, 300)}ms` }}>
+          <Stagger className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.05}>
+            {shown.map((idea) => (
+              <StaggerItem key={idea.id}>
                 <IdeaCard idea={idea} />
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         )}
       </div>
     </div>

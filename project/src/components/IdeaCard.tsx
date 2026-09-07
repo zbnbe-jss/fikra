@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { motion, useReducedMotion } from "motion/react";
 import { ArrowLeft, Bookmark, BookmarkCheck } from "lucide-react";
 import { useLang } from "../lib/language";
 import { isIdeaSaved, setMyIdea, toggleSavedIdea } from "../lib/myIdea";
@@ -13,10 +14,16 @@ const channelLabel = (channel: Idea["channel"], t: (ar: string, en: string) => s
 export default function IdeaCard({ idea, compatibility }: { idea: Idea; compatibility?: number }) {
   const { lang, t } = useLang();
   const navigate = useNavigate();
+  const reduce = useReducedMotion();
   const saved = isIdeaSaved(idea.id);
 
   return (
-    <div className="card card-hover shimmer-hover group flex h-full w-full flex-col p-6 text-right">
+    <motion.div
+      className="card card-hover shimmer-hover group flex h-full w-full flex-col p-6 text-right"
+      whileHover={reduce ? undefined : { y: -6 }}
+      whileTap={reduce ? undefined : { scale: 0.99 }}
+      transition={{ type: "spring", stiffness: 380, damping: 26 }}
+    >
       <div className="flex items-start justify-between gap-3">
         <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-fikra-100 to-azure-100 text-2xl transition-transform duration-300 group-hover:scale-110">
           {idea.icon}
@@ -64,6 +71,6 @@ export default function IdeaCard({ idea, compatibility }: { idea: Idea; compatib
           {saved ? <BookmarkCheck size={18} /> : <Bookmark size={18} />}
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { motion } from "motion/react";
 import { useLang } from "../lib/language";
 import {
   addTask,
@@ -16,6 +17,7 @@ import {
   type StepStatus,
   type Task,
 } from "../lib/myIdea";
+import { FadeIn, Stagger, StaggerItem, ease } from "../components/motion";
 
 const STATUS_CYCLE: StepStatus[] = ["notStarted", "inProgress", "completed"];
 const STATUS_LABEL: Record<StepStatus, { ar: string; en: string; className: string }> = {
@@ -70,7 +72,7 @@ export default function MyIdea() {
   return (
     <div className="min-h-screen bg-ink-50 pt-20">
       <div className="mx-auto max-w-5xl px-5 py-12 lg:px-8">
-      <div className="mb-8 flex flex-wrap items-start justify-between gap-4">
+      <FadeIn className="mb-8 flex flex-wrap items-start justify-between gap-4">
         <div>
           <p className="text-sm font-medium text-fikra-600">{t("فكرتي", "My Idea")}</p>
           <h1 className="text-3xl font-bold text-ink-900">
@@ -96,29 +98,34 @@ export default function MyIdea() {
             {t("تغيير الفكرة", "Change Idea")}
           </button>
         </div>
-      </div>
+      </FadeIn>
 
-      <div className="mb-8 grid gap-4 sm:grid-cols-3">
-        <div className="card p-5">
+      <Stagger className="mb-8 grid gap-4 sm:grid-cols-3">
+        <StaggerItem className="card p-5">
           <p className="text-xs text-ink-500">{t("التقدم", "Progress")}</p>
           <p className="text-2xl font-bold text-fikra-600">{progress.percent}%</p>
           <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-ink-100">
-            <div className="h-full rounded-full bg-fikra-600 transition-all" style={{ width: `${progress.percent}%` }} />
+            <motion.div
+              className="h-full rounded-full bg-fikra-600"
+              initial={false}
+              animate={{ width: `${progress.percent}%` }}
+              transition={{ duration: 0.5, ease }}
+            />
           </div>
-        </div>
-        <div className="card p-5">
+        </StaggerItem>
+        <StaggerItem className="card p-5">
           <p className="text-xs text-ink-500">{t("خطوات الطريق", "Roadmap steps")}</p>
           <p className="text-2xl font-bold text-ink-900">
             <span dir="ltr">{progress.completed} / {progress.total}</span>
           </p>
-        </div>
-        <div className="card p-5">
+        </StaggerItem>
+        <StaggerItem className="card p-5">
           <p className="text-xs text-ink-500">{t("المهام", "Tasks")}</p>
           <p className="text-2xl font-bold text-ink-900">
             <span dir="ltr">{completedTasks} / {tasks.length}</span>
           </p>
-        </div>
-      </div>
+        </StaggerItem>
+      </Stagger>
 
       {nextStep && (
         <div className="mb-8 rounded-2xl bg-fikra-50 p-5 text-sm text-fikra-800">
@@ -130,13 +137,18 @@ export default function MyIdea() {
       <section className="mb-10">
         <h2 className="mb-4 text-xl font-bold text-ink-900">{t("خطة الطريق", "Roadmap")}</h2>
         <div className="space-y-2">
-          {idea.roadmap.map((step) => {
+          {idea.roadmap.map((step, i) => {
             const s = status[step.id] ?? "notStarted";
             return (
-              <button
+              <motion.button
                 key={step.id}
                 onClick={() => cycleStep(step.id)}
                 className="flex w-full items-center justify-between rounded-xl border border-ink-100 bg-white p-4 text-start hover:border-fikra-300"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.04, duration: 0.3, ease }}
+                whileTap={{ scale: 0.99 }}
               >
                 <span className="flex items-center gap-3">
                   <span className="text-xs text-ink-400">{step.order}.</span>
@@ -145,7 +157,7 @@ export default function MyIdea() {
                 <span className={`rounded-full px-3 py-1 text-xs font-semibold ${STATUS_LABEL[s].className}`}>
                   {lang === "en" ? STATUS_LABEL[s].en : STATUS_LABEL[s].ar}
                 </span>
-              </button>
+              </motion.button>
             );
           })}
         </div>

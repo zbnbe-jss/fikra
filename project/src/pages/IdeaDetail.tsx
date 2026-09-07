@@ -4,6 +4,7 @@ import { useLang } from "../lib/language";
 import { ideas } from "../data";
 import { setMyIdea, toggleSavedIdea, isIdeaSaved } from "../lib/myIdea";
 import IdeaCard from "../components/IdeaCard";
+import { FadeIn, Stagger, StaggerItem } from "../components/motion";
 
 export default function IdeaDetail() {
   const { id } = useParams();
@@ -28,7 +29,7 @@ export default function IdeaDetail() {
   return (
     <div className="min-h-screen bg-ink-50 pt-20">
       <div className="mx-auto max-w-4xl px-5 py-12 lg:px-8">
-        <div className="card p-6 shadow-float sm:p-8">
+        <FadeIn className="card p-6 shadow-float sm:p-8">
           <div className="flex items-center gap-4">
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-fikra-500 to-azure-600 text-3xl shadow-card">
               {idea.icon}
@@ -86,10 +87,10 @@ export default function IdeaDetail() {
               {t("اسأل FIKRA AI", "Ask FIKRA AI")}
             </button>
           </div>
-        </div>
+        </FadeIn>
 
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <div className="card p-5">
+        <Stagger className="mt-6 grid gap-6 sm:grid-cols-2">
+          <StaggerItem className="card p-5">
             <h3 className="mb-2 font-bold text-ink-900">{t("المهارات المطلوبة", "Skills needed")}</h3>
             <div className="mt-2 flex flex-wrap gap-2">
               {(lang === "en" ? idea.skillsEn : idea.skills).map((s) => (
@@ -98,37 +99,39 @@ export default function IdeaDetail() {
                 </span>
               ))}
             </div>
-          </div>
-          <div className="card p-5">
+          </StaggerItem>
+          <StaggerItem className="card p-5">
             <h3 className="mb-2 font-bold text-ink-900">{t("طريقة البيع", "Selling method")}</h3>
             <p className="text-sm leading-relaxed text-ink-600">
               {lang === "en" ? idea.sellingMethodEn : idea.sellingMethod}
             </p>
-          </div>
-        </div>
+          </StaggerItem>
+        </Stagger>
 
         <section className="mt-8">
           <h2 className="mb-4 text-xl font-bold text-ink-900">{t("خطة الطريق", "Roadmap")}</h2>
-          <div className="space-y-2">
+          <Stagger className="space-y-2">
             {idea.roadmap.map((step) => (
-              <div key={step.id} className="card flex items-center gap-3 p-4">
+              <StaggerItem key={step.id} className="card flex items-center gap-3 p-4">
                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-fikra-100 text-xs font-bold text-fikra-700">
                   {step.order}
                 </span>
                 <span className="text-sm text-ink-800">{lang === "en" ? step.titleEn : step.title}</span>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </section>
 
         {related.length > 0 && (
           <section className="mt-10">
             <h2 className="mb-4 text-xl font-bold text-ink-900">{t("أفكار مشابهة", "Related Ideas")}</h2>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <Stagger className="grid gap-4 sm:grid-cols-2">
               {related.map((r) => (
-                <IdeaCard key={r.id} idea={r} />
+                <StaggerItem key={r.id}>
+                  <IdeaCard idea={r} />
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </section>
         )}
 

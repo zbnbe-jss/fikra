@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { motion, useReducedMotion } from "motion/react";
 import { LogOut, User } from "lucide-react";
 import type { User as AuthUser } from "@supabase/supabase-js";
 import { useLang } from "../lib/language";
@@ -8,10 +9,12 @@ import { getAnswers } from "../lib/quizState";
 import { getMyIdea, getRoadmapProgress, getSavedIdeas } from "../lib/myIdea";
 import { BUDGET_LABEL, CHANNEL_LABEL, label } from "../lib/labels";
 import Logo from "../components/Logo";
+import { Stagger, StaggerItem } from "../components/motion";
 
 export default function Profile() {
   const { lang, t } = useLang();
   const navigate = useNavigate();
+  const reduce = useReducedMotion();
   const [user, setUser] = useState<AuthUser | null | undefined>(undefined);
 
   useEffect(() => {
@@ -44,9 +47,9 @@ export default function Profile() {
     <div className="min-h-screen bg-ink-50 pt-20">
       <div className="mx-auto max-w-4xl px-5 py-8 lg:px-8">
         <div className="flex items-center justify-between">
-          <button onClick={() => navigate("/")} className="transition-transform hover:scale-105">
+          <motion.button onClick={() => navigate("/")} whileHover={reduce ? undefined : { scale: 1.05 }}>
             <Logo size="sm" />
-          </button>
+          </motion.button>
           <button
             onClick={() => supabase.auth.signOut().then(() => navigate("/"))}
             className="btn-ghost"
@@ -56,7 +59,8 @@ export default function Profile() {
           </button>
         </div>
 
-        <div className="mt-8 card p-6 animate-fade-up">
+        <Stagger className="mt-8 space-y-6" stagger={0.1}>
+        <StaggerItem className="card p-6">
           <div className="flex items-center gap-4">
             <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-fikra-500 to-azure-600 shadow-card">
               <User size={28} className="text-white" />
@@ -68,9 +72,9 @@ export default function Profile() {
               </p>
             </div>
           </div>
-        </div>
+        </StaggerItem>
 
-        <div className="card mt-6 p-6">
+        <StaggerItem className="card p-6">
           <h2 className="mb-3 font-bold text-ink-900">{t("فكرتك الحالية", "Your Current Idea")}</h2>
           {myIdea ? (
             <div className="flex items-center justify-between">
@@ -91,10 +95,10 @@ export default function Profile() {
           ) : (
             <p className="text-sm text-ink-500">{t("ما عندك فكرة مختارة بعد", "No idea chosen yet")}</p>
           )}
-        </div>
+        </StaggerItem>
 
         {answers && (
-          <div className="card mt-6 p-6">
+          <StaggerItem className="card p-6">
             <h2 className="mb-3 font-bold text-ink-900">{t("ملف اختبارك", "Your Quiz Profile")}</h2>
             <div className="grid grid-cols-2 gap-3 text-sm">
               <div>
@@ -109,10 +113,10 @@ export default function Profile() {
             <button onClick={() => navigate("/result/latest")} className="mt-3 text-sm font-semibold text-fikra-600">
               {t("شوف نتيجتك الكاملة →", "See your full result →")}
             </button>
-          </div>
+          </StaggerItem>
         )}
 
-        <div className="card mt-6 p-6">
+        <StaggerItem className="card p-6">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="font-bold text-ink-900">{t("الأفكار المحفوظة", "Saved Ideas")}</h2>
             <Link to="/saved" className="text-sm font-semibold text-fikra-600">
@@ -124,7 +128,8 @@ export default function Profile() {
               ? t(`عندك ${savedIdeas.length} فكرة محفوظة`, `You have ${savedIdeas.length} saved ideas`)
               : t("ما حفظت أي فكرة بعد", "You haven't saved any ideas yet")}
           </p>
-        </div>
+        </StaggerItem>
+        </Stagger>
       </div>
     </div>
   );

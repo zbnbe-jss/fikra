@@ -2,13 +2,14 @@ import { useNavigate } from "react-router-dom";
 import { Bookmark, Compass, Lightbulb, Sparkles } from "lucide-react";
 import { useLang } from "../lib/language";
 import Logo from "./Logo";
+import { FadeIn } from "./motion";
 
 export default function Footer() {
   const { t } = useLang();
   const navigate = useNavigate();
   return (
     <footer className="border-t border-ink-100 bg-white">
-      <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+      <FadeIn className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
             <Logo />
@@ -76,7 +77,7 @@ export default function Footer() {
             <span>FIKRA</span>
           </div>
         </div>
-      </div>
+      </FadeIn>
     </footer>
   );
 }

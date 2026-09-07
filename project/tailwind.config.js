@@ -44,7 +44,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["IBM Plex Sans Arabic", "system-ui", "sans-serif"],
+        sans: ["Comic Relief", "system-ui", "sans-serif"],
       },
       borderRadius: {
         "2xl": "1.25rem",

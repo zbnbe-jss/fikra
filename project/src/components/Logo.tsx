@@ -1,23 +1,21 @@
 import { Lightbulb } from "lucide-react";
 
 const SIZES = {
-  sm: { box: "h-8 w-8", icon: 16, text: "text-lg", sub: "text-[10px]" },
-  md: { box: "h-10 w-10", icon: 20, text: "text-xl", sub: "text-xs" },
-  lg: { box: "h-14 w-14", icon: 28, text: "text-3xl", sub: "text-sm" },
+  sm: { box: "h-8 w-8", icon: 16, text: "text-base", sub: "text-[10px]" },
+  md: { box: "h-9 w-9", icon: 18, text: "text-lg", sub: "text-[11px]" },
+  lg: { box: "h-12 w-12", icon: 24, text: "text-2xl", sub: "text-xs" },
 } as const;
 
 export default function Logo({ size = "md" }: { size?: keyof typeof SIZES }) {
   const s = SIZES[size];
   return (
     <div className="flex items-center gap-2.5" aria-label="FIKRA فكرة">
-      <div
-        className={`flex ${s.box} items-center justify-center rounded-2xl bg-gradient-to-br from-fikra-600 to-azure-600 shadow-card transition-transform duration-300`}
-      >
-        <Lightbulb size={s.icon} className="text-white" strokeWidth={2.5} />
+      <div className={`flex ${s.box} items-center justify-center rounded-lg bg-accent text-accent-fg`}>
+        <Lightbulb size={s.icon} className="icon-static text-accent-fg" strokeWidth={2} />
       </div>
       <div className="flex flex-col leading-none">
-        <span className={`${s.text} font-bold tracking-tight text-ink-900`}>فكرة</span>
-        <span className={`${s.sub} font-medium tracking-wider text-fikra-500`}>FIKRA</span>
+        <span className={`${s.text} font-semibold tracking-tight text-fg`}>فكرة</span>
+        <span className={`${s.sub} font-medium tracking-[0.14em] text-muted`}>FIKRA</span>
       </div>
     </div>
   );

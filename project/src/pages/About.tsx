@@ -1,67 +1,63 @@
 import { useNavigate } from "react-router-dom";
-import { motion, useReducedMotion } from "motion/react";
-import { ArrowLeft, Heart, Lightbulb, Sparkles, Target } from "lucide-react";
+import { Lightbulb } from "lucide-react";
 import { useLang } from "../lib/language";
-import { FadeIn, Stagger, StaggerItem } from "../components/motion";
+import { FadeIn } from "../components/motion";
 
 export default function About() {
-  const { lang, t } = useLang();
+  const { t } = useLang();
   const navigate = useNavigate();
-  const reduce = useReducedMotion();
-  const cards =
-    lang === "en"
-      ? [
-          { icon: Target, title: "Our Mission", desc: "We help you discover a project that fits you — not a generic project for everyone." },
-          { icon: Sparkles, title: "How We Work", desc: "We analyze your answers precisely and match them with a diverse idea database to find the best fit." },
-          { icon: Heart, title: "Our Values", desc: "We believe everyone deserves a chance to start a project that fits their life and abilities." },
-        ]
-      : [
-          { icon: Target, title: "هدفنا", desc: "نساعدك تكتشف مشروع يناسبك أنت — مو مشروع عام يناسب الجميع." },
-          { icon: Sparkles, title: "كيف نعمل", desc: "نحلل إجاباتك بدقة ونطابقها مع قاعدة أفكار متنوعة لنختار الأنسب لك." },
-          { icon: Heart, title: "قيمنا", desc: "نؤمن بأن كل شخص يستحق فرصة بدء مشروع يتناسب مع حياته وقدراته." },
-        ];
+
+  const blocks = [
+    {
+      title: t("المهمة", "Mission"),
+      body: t(
+        "نساعد من يريد مشروعه الأول أن يختار فكرة تناسب حياته الفعلية: الوقت، الميزانية، وطريقة العمل — لا قائمة عامة للجميع.",
+        "We help people choosing a first project find an idea that fits their actual life: time, budget, and work style — not a generic list for everyone."
+      ),
+    },
+    {
+      title: t("كيف تعمل فكرة", "How FIKRA works"),
+      body: t(
+        "تجيب على اختبار قصير. محرك التقييم يطابق إجاباتك مع قاعدة الأفكار. تختار فكرة، ثم تتابعها في فكرتي: خطة طريق، مهام، ملاحظات، ومساعد FIKRA AI بسياق مشروعك.",
+        "You take a short quiz. A scoring engine matches your answers to the idea database. You choose an idea, then work it in My Idea: roadmap, tasks, notes, and FIKRA AI with your project context."
+      ),
+    },
+    {
+      title: t("ما الذي يميز فكرة", "What makes FIKRA different"),
+      body: t(
+        "التوصية مربوطة بإجاباتك، والنسبة ليست زخرفة. بعد الاختيار لا تُترك وحيداً: فكرتي مساحة عمل، وليست صفحة تفاصيل أخرى.",
+        "The recommendation is tied to your answers, and the percentage is not decoration. After you choose, you are not left alone: My Idea is a workspace, not another details page."
+      ),
+    },
+    {
+      title: t("القيم", "Values"),
+      body: t(
+        "وضوح قبل الزخرفة. عربي أولاً بدون أن يبدو المنتج محلياً فقط. الذكاء الاصطناعي أداة داخل المنتج، لا هويته كلها.",
+        "Clarity before ornament. Arabic-first without looking provincial. AI is a tool inside the product, not the entire identity."
+      ),
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-ink-50 pt-20">
-      <div className="mx-auto max-w-3xl px-5 py-12 lg:px-8">
-        <FadeIn className="text-center">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-fikra-500 to-azure-600 shadow-card">
-            <Lightbulb size={28} className="text-white" />
+    <div className="page-shell">
+      <div className="mx-auto max-w-2xl px-5 py-14 lg:px-8">
+        <FadeIn>
+          <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-accent text-accent-fg">
+            <Lightbulb size={20} className="icon-static" />
           </div>
-          <h1 className="mt-6 text-3xl font-bold text-ink-900 sm:text-4xl">{t("عن فكرة", "About FIKRA")}</h1>
-          <p className="mx-auto mt-4 max-w-xl text-ink-600">
-            {t(
-              "فكرة منصة تساعدك تكتشف المشاريع اللي تناسب اهتماماتك، ميزانيتك، وقتك وطريقتك في العمل. نؤمن إن كل شخص عنده فكرة مشروع ممكن تنجح — بس يحتاج يكتشفها.",
-              "FIKRA is a platform that helps you discover projects that match your interests, budget, time, and work style. We believe everyone has a project idea that could succeed — they just need to discover it."
-            )}
-          </p>
+          <h1 className="mt-6 text-3xl text-fg sm:text-4xl">{t("عن فكرة", "About FIKRA")}</h1>
         </FadeIn>
-        <Stagger className="mt-12 grid gap-6 md:grid-cols-3" stagger={0.12}>
-          {cards.map((c) => (
-            <StaggerItem
-              key={c.title}
-              className="card card-hover p-6 text-center"
-              whileHover={reduce ? undefined : { y: -6 }}
-            >
-              <div className="icon-container mx-auto mb-4">
-                <c.icon size={24} />
-              </div>
-              <h3 className="font-bold text-ink-900">{c.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-600">{c.desc}</p>
-            </StaggerItem>
+        <div className="mt-12 space-y-10">
+          {blocks.map((b) => (
+            <section key={b.title}>
+              <h2 className="text-lg font-semibold text-fg">{b.title}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{b.body}</p>
+            </section>
           ))}
-        </Stagger>
-        <FadeIn className="mt-12 text-center" delay={0.15}>
-          <motion.button
-            onClick={() => navigate("/quiz")}
-            className="btn-primary"
-            whileHover={reduce ? undefined : { scale: 1.04 }}
-            whileTap={reduce ? undefined : { scale: 0.97 }}
-          >
-            {t("ابدأ الاختبار", "Take the Quiz")}
-            <ArrowLeft size={18} />
-          </motion.button>
-        </FadeIn>
+        </div>
+        <button type="button" onClick={() => navigate("/quiz")} className="btn-primary mt-12">
+          {t("ابدأ الاختبار", "Take the Quiz")}
+        </button>
       </div>
     </div>
   );

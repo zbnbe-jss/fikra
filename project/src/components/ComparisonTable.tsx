@@ -16,11 +16,11 @@ export default function ComparisonTable({ ideas }: { ideas: Idea[] }) {
     <div className="card overflow-x-auto">
       <table className="w-full min-w-[480px] text-sm">
         <thead>
-          <tr className="bg-ink-50 text-start">
-            <th className="p-3 text-start font-semibold text-ink-500">{t("المقارنة", "Comparison")}</th>
+          <tr className="bg-page text-start">
+            <th className="p-3 text-start font-semibold text-muted">{t("المقارنة", "Comparison")}</th>
             {ideas.map((idea) => (
-              <th key={idea.id} className="p-3 text-start font-bold text-ink-900">
-                {idea.icon} {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
+              <th key={idea.id} className="p-3 text-start font-semibold text-fg">
+                {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
               </th>
             ))}
           </tr>
@@ -28,9 +28,9 @@ export default function ComparisonTable({ ideas }: { ideas: Idea[] }) {
         <tbody>
           {ROWS.map((row) => (
             <tr key={String(row.key)} className="border-t border-ink-100">
-              <td className="p-3 font-medium text-ink-500">{lang === "en" ? row.en : row.ar}</td>
+              <td className="p-3 font-medium text-muted">{lang === "en" ? row.en : row.ar}</td>
               {ideas.map((idea) => (
-                <td key={idea.id} className="p-3 text-ink-800">
+                <td key={idea.id} className="p-3 text-fg">
                   {String(idea[row.key as keyof Idea] ?? "—")}
                 </td>
               ))}

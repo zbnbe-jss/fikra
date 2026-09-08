@@ -37,6 +37,12 @@ export const WORKSTYLE_LABEL: Record<string, { ar: string; en: string }> = {
   team: { ar: "فريق", en: "Team" },
 };
 
+export const DIFFICULTY_LABEL: Record<string, { ar: string; en: string }> = {
+  beginner: { ar: "مبتدئ", en: "Beginner" },
+  intermediate: { ar: "متوسط", en: "Intermediate" },
+  advanced: { ar: "متقدم", en: "Advanced" },
+};
+
 export const AMBITION_LABEL: Record<string, { ar: string; en: string }> = {
   safeSmall: { ar: "أبي أبدأ صغير وآمن", en: "Start small and safe" },
   learnByDoing: { ar: "أبي أجرب وأتعلم", en: "Try things and learn" },

@@ -1,35 +1,29 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { motion, useReducedMotion } from "motion/react";
-import { LogOut, User } from "lucide-react";
+import { LogOut, Settings, User } from "lucide-react";
 import type { User as AuthUser } from "@supabase/supabase-js";
 import { useLang } from "../lib/language";
 import { supabase } from "../lib/supabaseClient";
 import { getAnswers } from "../lib/quizState";
 import { getMyIdea, getRoadmapProgress, getSavedIdeas } from "../lib/myIdea";
 import { BUDGET_LABEL, CHANNEL_LABEL, label } from "../lib/labels";
-import Logo from "../components/Logo";
-import { Stagger, StaggerItem } from "../components/motion";
 
 export default function Profile() {
   const { lang, t } = useLang();
   const navigate = useNavigate();
-  const reduce = useReducedMotion();
   const [user, setUser] = useState<AuthUser | null | undefined>(undefined);
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => setUser(data.user ?? null));
   }, []);
 
-  if (user === undefined) return null; // brief loading state
+  if (user === undefined) return <div className="page-shell min-h-[40vh]" />;
 
   if (!user) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-ink-50 px-5 pt-20">
+      <div className="flex min-h-[60vh] items-center justify-center px-5">
         <div className="mx-auto max-w-md text-center">
-          <p className="mb-6 text-ink-500">
-            {t("لازم تسجل الدخول عشان تشوف ملفك الشخصي", "You need to log in to view your profile")}
-          </p>
+          <p className="mb-6 text-muted">{t("لازم تسجل الدخول عشان تشوف ملفك الشخصي", "You need to log in to view your profile")}</p>
           <Link to="/login" className="btn-primary">
             {t("تسجيل الدخول", "Log in")}
           </Link>
@@ -44,92 +38,87 @@ export default function Profile() {
   const progress = myIdea ? getRoadmapProgress(myIdea) : null;
 
   return (
-    <div className="min-h-screen bg-ink-50 pt-20">
-      <div className="mx-auto max-w-4xl px-5 py-8 lg:px-8">
+    <div className="page-shell">
+      <div className="mx-auto max-w-3xl px-5 py-10 lg:px-8">
         <div className="flex items-center justify-between">
-          <motion.button onClick={() => navigate("/")} whileHover={reduce ? undefined : { scale: 1.05 }}>
-            <Logo size="sm" />
-          </motion.button>
-          <button
-            onClick={() => supabase.auth.signOut().then(() => navigate("/"))}
-            className="btn-ghost"
-          >
-            <LogOut size={18} />
-            {t("تسجيل الخروج", "Log Out")}
-          </button>
+          <h1 className="text-2xl text-fg">{t("حسابي", "My Profile")}</h1>
+          <div className="flex gap-2">
+            <button type="button" onClick={() => navigate("/settings")} className="btn-ghost">
+              <Settings />
+              {t("الإعدادات", "Settings")}
+            </button>
+            <button type="button" onClick={() => supabase.auth.signOut().then(() => navigate("/"))} className="btn-ghost">
+              <LogOut />
+              {t("تسجيل الخروج", "Log Out")}
+            </button>
+          </div>
         </div>
 
-        <Stagger className="mt-8 space-y-6" stagger={0.1}>
-        <StaggerItem className="card p-6">
-          <div className="flex items-center gap-4">
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-fikra-500 to-azure-600 shadow-card">
-              <User size={28} className="text-white" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-ink-900">{t("حسابي", "My Profile")}</h1>
-              <p className="text-sm text-ink-500" dir="ltr">
-                {user.email}
-              </p>
-            </div>
+        <section className="mt-8 flex items-center gap-4 border-b border-line pb-6">
+          <div className="icon-container h-12 w-12">
+            <User size={22} className="icon-static" />
           </div>
-        </StaggerItem>
+          <div>
+            <p className="text-sm font-medium text-fg" dir="ltr">
+              {user.email}
+            </p>
+            <p className="text-xs text-subtle">{t("حساب فكرة", "FIKRA account")}</p>
+          </div>
+        </section>
 
-        <StaggerItem className="card p-6">
-          <h2 className="mb-3 font-bold text-ink-900">{t("فكرتك الحالية", "Your Current Idea")}</h2>
+        <section className="mt-8">
+          <h2 className="text-sm font-semibold text-fg">{t("فكرتك الحالية", "Your current idea")}</h2>
           {myIdea ? (
-            <div className="flex items-center justify-between">
+            <div className="mt-3 flex items-center justify-between gap-4">
               <div>
-                <p className="font-medium text-ink-900">
-                  {myIdea.icon} {lang === "en" ? myIdea.titleEn ?? myIdea.title : myIdea.title}
-                </p>
+                <p className="font-medium text-fg">{lang === "en" ? myIdea.titleEn ?? myIdea.title : myIdea.title}</p>
                 {progress && (
-                  <p className="text-sm text-ink-500">
+                  <p className="text-sm text-muted">
                     {t("التقدم", "Progress")}: {progress.percent}%
                   </p>
                 )}
               </div>
-              <Link to="/my-idea" className="text-sm font-semibold text-fikra-600">
-                {t("افتح فكرتي →", "Open My Idea →")}
+              <Link to="/my-idea" className="text-sm font-medium text-accent-text">
+                {t("افتح فكرتي", "Open My Idea")}
               </Link>
             </div>
           ) : (
-            <p className="text-sm text-ink-500">{t("ما عندك فكرة مختارة بعد", "No idea chosen yet")}</p>
+            <p className="mt-2 text-sm text-muted">{t("ما عندك فكرة مختارة بعد", "No idea chosen yet")}</p>
           )}
-        </StaggerItem>
+        </section>
 
         {answers && (
-          <StaggerItem className="card p-6">
-            <h2 className="mb-3 font-bold text-ink-900">{t("ملف اختبارك", "Your Quiz Profile")}</h2>
-            <div className="grid grid-cols-2 gap-3 text-sm">
+          <section className="mt-8">
+            <h2 className="text-sm font-semibold text-fg">{t("ملف الاختبار", "Quiz profile")}</h2>
+            <div className="mt-3 grid grid-cols-2 gap-3 text-sm">
               <div>
-                <p className="text-ink-500">{t("ميزانيتك", "Budget")}</p>
-                <p className="font-medium text-ink-900">{label(BUDGET_LABEL, answers.budgetRange, lang)}</p>
+                <p className="text-subtle">{t("الميزانية", "Budget")}</p>
+                <p className="font-medium text-fg">{label(BUDGET_LABEL, answers.budgetRange, lang)}</p>
               </div>
               <div>
-                <p className="text-ink-500">{t("تفضيلك", "Preference")}</p>
-                <p className="font-medium text-ink-900">{label(CHANNEL_LABEL, answers.channel, lang)}</p>
+                <p className="text-subtle">{t("التفضيل", "Preference")}</p>
+                <p className="font-medium text-fg">{label(CHANNEL_LABEL, answers.channel, lang)}</p>
               </div>
             </div>
-            <button onClick={() => navigate("/result/latest")} className="mt-3 text-sm font-semibold text-fikra-600">
-              {t("شوف نتيجتك الكاملة →", "See your full result →")}
+            <button type="button" onClick={() => navigate("/result/latest")} className="mt-3 text-sm font-medium text-accent-text">
+              {t("شوف النتيجة", "See your result")}
             </button>
-          </StaggerItem>
+          </section>
         )}
 
-        <StaggerItem className="card p-6">
-          <div className="mb-3 flex items-center justify-between">
-            <h2 className="font-bold text-ink-900">{t("الأفكار المحفوظة", "Saved Ideas")}</h2>
-            <Link to="/saved" className="text-sm font-semibold text-fikra-600">
-              {t("شوف الكل →", "See all →")}
+        <section className="mt-8">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm font-semibold text-fg">{t("الأفكار المحفوظة", "Saved Ideas")}</h2>
+            <Link to="/saved" className="text-sm font-medium text-accent-text">
+              {t("الكل", "See all")}
             </Link>
           </div>
-          <p className="text-sm text-ink-500">
+          <p className="mt-2 text-sm text-muted">
             {savedIdeas.length > 0
               ? t(`عندك ${savedIdeas.length} فكرة محفوظة`, `You have ${savedIdeas.length} saved ideas`)
               : t("ما حفظت أي فكرة بعد", "You haven't saved any ideas yet")}
           </p>
-        </StaggerItem>
-        </Stagger>
+        </section>
       </div>
     </div>
   );

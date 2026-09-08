@@ -10,18 +10,18 @@ export default function SavedIdeas() {
   const saved = getSavedIdeas();
 
   return (
-    <div className="min-h-screen bg-ink-50 pt-20">
+    <div className="page-shell">
       <div className="mx-auto max-w-5xl px-5 py-12 lg:px-8">
       <FadeIn>
-      <h1 className="mb-2 text-3xl font-bold text-ink-900">{t("الأفكار المحفوظة", "Saved Ideas")}</h1>
-      <p className="mb-8 text-ink-500">
+      <h1 className="mb-2 text-3xl text-fg">{t("الأفكار المحفوظة", "Saved Ideas")}</h1>
+      <p className="mb-8 text-muted">
         {t("الأفكار اللي حفظتها عشان ترجع لها لاحقاً", "Ideas you've saved to consider later")}
       </p>
       </FadeIn>
 
       {saved.length === 0 ? (
         <FadeIn className="rounded-2xl border border-dashed border-ink-200 py-16 text-center">
-          <p className="mb-6 text-ink-500">{t("ما حفظت أي فكرة بعد", "You haven't saved any ideas yet")}</p>
+          <p className="mb-6 text-muted">{t("ما حفظت أي فكرة بعد", "You haven't saved any ideas yet")}</p>
           <button
             onClick={() => navigate("/explore")}
             className="btn-primary"

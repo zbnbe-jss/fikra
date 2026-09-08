@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { useLang } from "../lib/language";
+import { useAppReducedMotion } from "../lib/preferences";
 import { ideas } from "../data";
 import ComparisonTable from "../components/ComparisonTable";
 import { FadeIn, ease } from "../components/motion";
@@ -11,7 +12,7 @@ const MAX_COMPARE = 3;
 export default function Compare() {
   const { lang, t } = useLang();
   const [searchParams] = useSearchParams();
-  const reduce = useReducedMotion();
+  const reduce = useAppReducedMotion();
   const initialIds = (searchParams.get("ids") ?? "").split(",").filter(Boolean);
   const [selectedIds, setSelectedIds] = useState<string[]>(initialIds.slice(0, MAX_COMPARE));
   const [query, setQuery] = useState("");
@@ -35,11 +36,11 @@ export default function Compare() {
   const removeIdea = (id: string) => setSelectedIds(selectedIds.filter((i) => i !== id));
 
   return (
-    <div className="min-h-screen bg-ink-50 pt-20">
+    <div className="page-shell">
       <div className="mx-auto max-w-5xl px-5 py-12 lg:px-8">
       <FadeIn>
-      <h1 className="mb-2 text-3xl font-bold text-ink-900">{t("قارن الأفكار", "Compare Ideas")}</h1>
-      <p className="mb-8 text-ink-500">
+      <h1 className="mb-2 text-3xl text-fg">{t("قارن الأفكار", "Compare Ideas")}</h1>
+      <p className="mb-8 text-muted">
         {t(`اختر حتى ${MAX_COMPARE} أفكار عشان تقارن بينها`, `Pick up to ${MAX_COMPARE} ideas to compare`)}
       </p>
       </FadeIn>
@@ -49,14 +50,14 @@ export default function Compare() {
         {selected.map((idea) => (
           <motion.span
             key={idea.id}
-            className="flex items-center gap-2 rounded-full bg-fikra-50 px-3 py-1.5 text-sm font-medium text-fikra-700"
+            className="chip"
             initial={reduce ? false : { opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={reduce ? { opacity: 1 } : { opacity: 0, scale: 0.85 }}
             layout
             transition={{ duration: 0.22, ease }}
           >
-            {idea.icon} {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
+            {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
             <button onClick={() => removeIdea(idea.id)} aria-label={t("إزالة", "Remove")}>
               ✕
             </button>
@@ -74,14 +75,14 @@ export default function Compare() {
             className="input-field"
           />
           {suggestions.length > 0 && (
-            <div className="absolute z-10 mt-1 w-full rounded-xl border border-ink-100 bg-white shadow-lg">
+            <div className="absolute z-10 mt-1 w-full rounded-xl border border-line bg-surface">
               {suggestions.map((idea) => (
                 <button
                   key={idea.id}
                   onClick={() => addIdea(idea.id)}
-                  className="flex w-full items-center gap-2 px-4 py-2 text-start text-sm hover:bg-ink-50"
+                  className="flex w-full items-center gap-2 px-4 py-2 text-start text-sm hover:bg-page"
                 >
-                  {idea.icon} {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
+                  {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
                 </button>
               ))}
             </div>
@@ -90,7 +91,7 @@ export default function Compare() {
       )}
 
       {selected.length < 2 ? (
-        <div className="rounded-2xl border border-dashed border-ink-200 py-16 text-center text-ink-500">
+        <div className="rounded-xl border border-dashed border-line py-16 text-center text-muted">
           {t("أضف فكرتين على الأقل عشان تشوف المقارنة", "Add at least two ideas to see the comparison")}
         </div>
       ) : (
@@ -98,18 +99,18 @@ export default function Compare() {
           <ComparisonTable ideas={selected} />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {selected.map((idea) => (
-              <FadeIn key={idea.id} className="rounded-2xl border border-ink-100 bg-white p-5">
-                <h3 className="mb-2 font-bold text-ink-900">
-                  {idea.icon} {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
+              <FadeIn key={idea.id} className="rounded-xl border border-line bg-surface p-5">
+                <h3 className="mb-2 font-semibold text-fg">
+                  {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
                 </h3>
-                <p className="mb-2 text-xs font-semibold text-green-700">{t("نقاط القوة", "Strengths")}</p>
-                <ul className="mb-3 space-y-1 text-sm text-ink-600">
+                <p className="mb-2 text-xs font-semibold text-ok">{t("نقاط القوة", "Strengths")}</p>
+                <ul className="mb-3 space-y-1 text-sm text-muted">
                   {idea.firstSteps?.slice(0, 2).map((s) => (
-                    <li key={s}>✓ {s}</li>
+                    <li key={s}>{s}</li>
                   ))}
                 </ul>
-                <p className="mb-2 text-xs font-semibold text-amber-700">{t("تحديات محتملة", "Possible challenges")}</p>
-                <p className="text-sm text-ink-600">
+                <p className="mb-2 text-xs font-semibold text-warn">{t("تحديات محتملة", "Possible challenges")}</p>
+                <p className="text-sm text-muted">
                   {idea.riskLevel === "high"
                     ? t("مخاطرة أعلى وتحتاج رأس مال أكبر", "Higher risk and needs more capital")
                     : t("تحتاج وقت لبناء قاعدة عملاء", "Needs time to build a customer base")}

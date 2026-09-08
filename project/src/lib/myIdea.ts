@@ -53,12 +53,29 @@ export function getMyIdea(): Idea | null {
   }
 }
 
+const HISTORY_KEY = "fikra_my_idea_history";
+
 export function setMyIdea(ideaId: string) {
   localStorage.setItem(MY_IDEA_KEY, ideaId);
+  const hist = readJSON<string[]>(HISTORY_KEY, []);
+  writeJSON(HISTORY_KEY, [ideaId, ...hist.filter((id) => id !== ideaId)].slice(0, 24));
+}
+
+export function chooseIdea(ideaId: string) {
+  setMyIdea(ideaId);
 }
 
 export function clearMyIdea() {
   localStorage.removeItem(MY_IDEA_KEY);
+}
+
+export function getIdeaHistory(): Idea[] {
+  const ids = readJSON<string[]>(HISTORY_KEY, []);
+  const active = getMyIdea()?.id;
+  return ids
+    .filter((id) => id !== active)
+    .map((id) => ideas.find((i) => i.id === id))
+    .filter((i): i is Idea => Boolean(i));
 }
 
 export function getRoadmapStatus(ideaId: string): Record<string, StepStatus> {
@@ -97,6 +114,12 @@ export function toggleTask(ideaId: string, taskId: string) {
 
 export function deleteTask(ideaId: string, taskId: string) {
   const tasks = getTasks(ideaId).filter((t) => t.id !== taskId);
+  writeJSON(tasksKey(ideaId), tasks);
+  return tasks;
+}
+
+export function updateTask(ideaId: string, taskId: string, patch: Partial<Pick<Task, "text" | "priority" | "done">>) {
+  const tasks = getTasks(ideaId).map((t) => (t.id === taskId ? { ...t, ...patch } : t));
   writeJSON(tasksKey(ideaId), tasks);
   return tasks;
 }

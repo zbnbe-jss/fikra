@@ -1,22 +1,6 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion, useReducedMotion } from "motion/react";
+import { ArrowLeft, ArrowRight, Bookmark, BookmarkCheck, Check, Clock, Lightbulb, MessageCircle, Monitor, Scale, Store, User, Wallet } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Bookmark,
-  BookmarkCheck,
-  Check,
-  Clock,
-  Lightbulb,
-  MessageCircle,
-  Monitor,
-  Sparkles,
-  Store,
-  User,
-  Wallet,
-} from "lucide-react";
 import { useLang } from "../lib/language";
 import { getAnswers, getResults } from "../lib/quizState";
 import { isIdeaSaved, setMyIdea, toggleSavedIdea } from "../lib/myIdea";
@@ -25,6 +9,7 @@ import {
   AMBITION_LABEL,
   BUDGET_LABEL,
   CHANNEL_LABEL,
+  DIFFICULTY_LABEL,
   INTERACTION_LABEL,
   TIME_LABEL,
   WORKSTYLE_LABEL,
@@ -32,55 +17,16 @@ import {
   labelList,
 } from "../lib/labels";
 import Logo from "../components/Logo";
-import { FadeIn, ease } from "../components/motion";
+import { FadeIn } from "../components/motion";
 
-function Snapshot({
-  icon: Icon,
-  label: lbl,
-  value,
-}: {
-  icon: LucideIcon;
-  label: string;
-  value: string;
-}) {
+function Snapshot({ icon: Icon, label: lbl, value }: { icon: LucideIcon; label: string; value: string }) {
   return (
-    <motion.div
-      className="flex items-center gap-2.5 rounded-2xl bg-ink-50 px-4 py-2.5"
-      whileHover={{ scale: 1.05 }}
-    >
-      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white shadow-soft">
-        <Icon size={16} className="text-fikra-600" />
-      </div>
+    <div className="flex items-center gap-2.5 rounded-lg border border-line bg-page px-3 py-2">
+      <Icon size={16} className="icon-static text-accent-text" />
       <div>
-        <div className="text-[10px] font-medium text-ink-400">{lbl}</div>
-        <div className="text-xs font-semibold text-ink-700">{value}</div>
+        <div className="text-[11px] text-subtle">{lbl}</div>
+        <div className="text-xs font-semibold text-fg">{value}</div>
       </div>
-    </motion.div>
-  );
-}
-
-function CompatibilityRing({ value }: { value: number }) {
-  return (
-    <div className="relative h-12 w-12">
-      <svg className="h-12 w-12 -rotate-90" viewBox="0 0 36 36">
-        <circle cx="18" cy="18" r="15" fill="none" stroke="currentColor" strokeWidth="3" className="text-ink-100" />
-        <motion.circle
-          cx="18"
-          cy="18"
-          r="15"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3"
-          className="text-fikra-600"
-          strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: value / 100 }}
-          transition={{ duration: 1, ease }}
-        />
-      </svg>
-      <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-fikra-700">
-        {value}%
-      </span>
     </div>
   );
 }
@@ -89,157 +35,119 @@ function ResultCard({ scored, primary }: { scored: ScoredIdea; primary?: boolean
   const { lang, t } = useLang();
   const navigate = useNavigate();
   const { idea, score, reasons, challenge } = scored;
-  const [chosen, setChosen] = useState(false);
   const saved = isIdeaSaved(idea.id);
   const channelIcon = idea.channel === "online" ? Monitor : idea.channel === "physical" ? Store : Lightbulb;
 
   return (
-    <motion.div
-      className={
-        primary
-          ? "relative overflow-hidden rounded-3xl bg-white p-6 shadow-float sm:p-8"
-          : "card p-6"
-      }
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.45, ease }}
-    >
-      {primary && (
-        <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gradient-to-br from-fikra-100 to-azure-100 opacity-60 blur-3xl" />
-      )}
-      <div className="relative">
-        <div className="flex items-center justify-between gap-4">
-          {primary ? (
-            <span className="chip bg-gradient-to-r from-fikra-100 to-azure-100 text-fikra-700">
-              <Sparkles size={14} />
-              {t("المشروع المقترح", "Suggested Project")}
-            </span>
-          ) : (
-            <span className="chip bg-fikra-50 text-fikra-700">
-              {lang === "en" ? idea.categoryEn : idea.category}
-            </span>
-          )}
-          <div className="flex items-center gap-3">
-            <CompatibilityRing value={score} />
-            <button
-              onClick={() => toggleSavedIdea(idea.id)}
-              className={`flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium transition-all ${
-                saved ? "bg-fikra-100 text-fikra-700" : "bg-ink-100 text-ink-600 hover:bg-fikra-50 hover:text-fikra-600"
-              }`}
-            >
-              {saved ? <BookmarkCheck size={18} /> : <Bookmark size={18} />}
-              {saved ? t("محفوظة", "Saved") : t("حفظ الفكرة", "Save idea")}
-            </button>
-          </div>
-        </div>
-
-        <div className="mt-6 flex items-start gap-4">
-          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-fikra-500 to-azure-600 text-3xl shadow-card">
-            {idea.icon}
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-ink-900">
-              {lang === "en" ? idea.titleEn ?? idea.title : idea.title}
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-ink-600">
-              {lang === "en" ? idea.shortDescriptionEn ?? idea.shortDescription : idea.shortDescription}
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Snapshot icon={Wallet} label={t("الميزانية المتوقعة", "Expected budget")} value={idea.budgetLabel} />
-          <Snapshot icon={Clock} label={t("الوقت المطلوب", "Time required")} value={idea.timeLabel} />
-          <Snapshot icon={channelIcon} label={t("النوع", "Type")} value={label(CHANNEL_LABEL, idea.channel, lang)} />
-          <Snapshot icon={Lightbulb} label={t("مستوى البداية", "Starting level")} value={idea.difficulty} />
-        </div>
-
-        {reasons.length > 0 && (
-          <div className="mt-5">
-            <h3 className="text-sm font-bold text-ink-900">{t("ليش تناسبك؟", "Why this idea?")}</h3>
-            <div className="mt-2 flex flex-wrap gap-2">
-              {reasons.map((r) => (
-                <span key={r.ar} className="chip bg-fikra-50 text-fikra-700">
-                  <Check size={12} /> {lang === "en" ? r.en : r.ar}
-                </span>
-              ))}
-            </div>
-          </div>
+    <article className={primary ? "border border-line bg-surface p-6 sm:p-8" : "card p-5"}>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        {primary ? (
+          <span className="text-xs font-semibold uppercase tracking-wide text-accent-text">
+            {t("أفضل تطابق", "Your best match")}
+          </span>
+        ) : (
+          <span className="chip">{lang === "en" ? idea.categoryEn : idea.category}</span>
         )}
-        {challenge && (
-          <p className="mt-3 text-xs text-amber-600">
-            ⚠ {lang === "en" ? challenge.en : challenge.ar}
-          </p>
-        )}
-
-        <div className="mt-6 flex flex-wrap gap-2">
+        <div className="flex items-center gap-3">
+          <span className="tabular-nums text-lg font-semibold text-fg">{score}%</span>
           <button
-            onClick={() => {
-              setMyIdea(idea.id);
-              navigate("/my-idea");
-            }}
-            className="btn-primary"
+            type="button"
+            onClick={() => toggleSavedIdea(idea.id)}
+            className="btn-ghost !min-h-9 !px-2 text-xs"
           >
-            {t("ابدأ الآن", "Start Now")}
-          </button>
-          <button
-            onClick={() => {
-              setMyIdea(idea.id);
-              setChosen(true);
-            }}
-            className="btn-secondary"
-          >
-            {chosen ? t("تم الاختيار ✓", "Chosen ✓") : t("اختر هذه الفكرة", "Choose this idea")}
-          </button>
-          <button onClick={() => navigate(`/idea/${idea.id}`)} className="btn-secondary">
-            {t("شوف التفاصيل", "View details")}
-            <ArrowLeft size={14} />
-          </button>
-          <button
-            onClick={() => navigate(`/compare?ids=${idea.id}`)}
-            className="btn-ghost"
-          >
-            {t("قارن مع فكرة أخرى", "Compare With Another")}
-          </button>
-          <button
-            onClick={() =>
-              navigate("/ai", {
-                state: { prompt: t(`طور فكرة ${idea.title}`, `Develop the idea ${idea.titleEn}`) },
-              })
-            }
-            className="btn-ghost"
-          >
-            {t("طور هذه الفكرة", "Improve This Idea")}
-          </button>
-          <button onClick={() => navigate("/ai")} className="btn-ghost">
-            <MessageCircle size={16} />
-            {t("اسأل FIKRA AI", "Ask FIKRA AI")}
-          </button>
-          <button onClick={() => navigate("/explore")} className="btn-ghost">
-            {t("شوف أفكار مشابهة", "See Similar Ideas")}
+            {saved ? <BookmarkCheck /> : <Bookmark />}
+            {saved ? t("محفوظة", "Saved") : t("حفظ", "Save")}
           </button>
         </div>
       </div>
-    </motion.div>
+
+      <h2 className="mt-4 text-2xl text-fg">{lang === "en" ? idea.titleEn ?? idea.title : idea.title}</h2>
+      <p className="mt-2 text-sm leading-relaxed text-muted">
+        {lang === "en" ? idea.shortDescriptionEn ?? idea.shortDescription : idea.shortDescription}
+      </p>
+
+      <div className="mt-5 flex flex-wrap gap-2">
+        <Snapshot icon={Wallet} label={t("الميزانية", "Budget")} value={idea.budgetLabel} />
+        <Snapshot icon={Clock} label={t("الوقت", "Time")} value={idea.timeLabel} />
+        <Snapshot icon={channelIcon} label={t("النوع", "Type")} value={label(CHANNEL_LABEL, idea.channel, lang)} />
+        <Snapshot icon={Lightbulb} label={t("الصعوبة", "Difficulty")} value={label(DIFFICULTY_LABEL, idea.difficulty, lang)} />
+      </div>
+
+      {reasons.length > 0 && (
+        <div className="mt-5">
+          <h3 className="text-sm font-semibold text-fg">{t("لماذا تناسبك", "Why it fits you")}</h3>
+          <ul className="mt-2 space-y-1">
+            {reasons.map((r) => (
+              <li key={r.ar} className="flex items-start gap-2 text-sm text-muted">
+                <Check size={14} className="icon-static mt-0.5 text-ok" />
+                {lang === "en" ? r.en : r.ar}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {challenge && <p className="mt-3 text-sm text-warn">{lang === "en" ? challenge.en : challenge.ar}</p>}
+
+      {primary && idea.roadmap[0] && (
+        <p className="mt-4 text-sm text-fg">
+          <span className="text-muted">{t("الخطوة التالية المقترحة:", "Recommended next step:")} </span>
+          {lang === "en" ? idea.roadmap[0].titleEn : idea.roadmap[0].title}
+        </p>
+      )}
+
+      <div className="mt-6 flex flex-wrap gap-2">
+        <button
+          type="button"
+          onClick={() => {
+            setMyIdea(idea.id);
+            navigate("/my-idea");
+          }}
+          className="btn-primary"
+        >
+          {t("اختر هذه الفكرة", "Choose this idea")}
+        </button>
+        <button type="button" onClick={() => navigate(`/idea/${idea.id}`)} className="btn-secondary">
+          {t("التفاصيل", "Details")}
+        </button>
+        <button type="button" onClick={() => navigate(`/compare?ids=${idea.id}`)} className="btn-ghost">
+          <Scale />
+          {t("قارن", "Compare")}
+        </button>
+        <button
+          type="button"
+          onClick={() =>
+            navigate("/ai", {
+              state: { prompt: t(`طور فكرة ${idea.title}`, `Improve the idea ${idea.titleEn}`) },
+            })
+          }
+          className="btn-ghost"
+        >
+          {t("حسّن", "Improve")}
+        </button>
+        <button type="button" onClick={() => navigate("/ai")} className="btn-ghost">
+          <MessageCircle />
+          {t("اسأل FIKRA AI", "Ask FIKRA AI")}
+        </button>
+        <button type="button" onClick={() => navigate("/explore")} className="btn-ghost">
+          {t("أفكار مشابهة", "Similar ideas")}
+        </button>
+      </div>
+    </article>
   );
 }
 
 export default function Result() {
   const { lang, t } = useLang();
   const navigate = useNavigate();
-  const reduce = useReducedMotion();
   const results = getResults();
   const answers = getAnswers();
 
   if (results.length === 0 || !answers) {
     return (
-      <div className="flex min-h-screen items-center justify-center gradient-mesh pt-20">
+      <div className="flex min-h-dvh items-center justify-center bg-page px-5">
         <div className="text-center">
-          <p className="mb-6 text-ink-500">
-            {t("ما عندنا نتائج بعد. جاوب على الاختبار أول.", "No results yet. Take the quiz first.")}
-          </p>
-          <button onClick={() => navigate("/quiz")} className="btn-primary">
+          <p className="mb-6 text-muted">{t("ما عندنا نتائج بعد. جاوب على الاختبار أول.", "No results yet. Take the quiz first.")}</p>
+          <button type="button" onClick={() => navigate("/quiz")} className="btn-primary">
             {t("ابدأ الاختبار", "Take the Quiz")}
           </button>
         </div>
@@ -250,59 +158,51 @@ export default function Result() {
   const [best, ...rest] = results;
 
   return (
-    <div className="min-h-screen bg-ink-50 pt-20">
+    <div className="min-h-dvh bg-page">
       <div className="mx-auto max-w-3xl px-5 py-8 lg:py-12">
         <div className="flex items-center justify-between">
-          <motion.button onClick={() => navigate("/")} whileHover={reduce ? undefined : { scale: 1.05 }}>
+          <button type="button" onClick={() => navigate("/")}>
             <Logo size="sm" />
-          </motion.button>
-          <button onClick={() => navigate("/quiz")} className="btn-ghost">
-            <ArrowRight size={18} />
+          </button>
+          <button type="button" onClick={() => navigate("/quiz")} className="btn-ghost">
+            <ArrowRight />
             {t("أعد الاختبار", "Retake Quiz")}
           </button>
         </div>
 
-        <FadeIn className="mt-10 text-center">
-          <h1 className="text-3xl font-bold text-ink-900 sm:text-4xl">
-            {t("فكرتك المناسبة لك", "Your Perfect Match")}
-          </h1>
-          <p className="mt-3 text-ink-500">
-            {t(
-              "بناءً على إجاباتك، هذا أفضل مشروع ننصحك تبدأ فيه",
-              "Based on your answers, here's the best project we recommend you start with"
-            )}
+        <FadeIn className="mt-10">
+          <h1 className="text-3xl text-fg sm:text-4xl">{t("تحليل شخصي", "Your analysis")}</h1>
+          <p className="mt-2 text-sm text-muted">
+            {t("النسبة من محرك التقييم — ليست رقماً تجميلياً.", "The score comes from the matching engine — not a decorative number.")}
           </p>
         </FadeIn>
 
-        <FadeIn className="mt-8" delay={0.08}>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-fikra-600 to-azure-600 p-6 text-white shadow-card sm:p-8">
-            <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
-            <div className="relative flex items-start gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/20 backdrop-blur">
-                <User size={28} />
-              </div>
-              <div>
-                <span className="text-xs font-medium text-white/70">{t("ملفك الشخصي", "Your FIKRA Profile")}</span>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {[
-                    labelList(WORKSTYLE_LABEL, answers.workStyles, lang),
-                    label(BUDGET_LABEL, answers.budgetRange, lang),
-                    label(TIME_LABEL, answers.timeRequired, lang),
-                    label(CHANNEL_LABEL, answers.channel, lang),
-                    label(INTERACTION_LABEL, answers.customerInteraction, lang),
-                    label(AMBITION_LABEL, answers.ambition, lang),
-                  ]
-                    .filter(Boolean)
-                    .map((v) => (
-                      <span key={v} className="rounded-full bg-white/20 px-3 py-1 text-xs font-medium backdrop-blur">
-                        {v}
-                      </span>
-                    ))}
-                </div>
+        <div className="mt-8 rounded-xl border border-line bg-surface p-5">
+          <div className="flex items-start gap-3">
+            <div className="icon-container">
+              <User size={18} className="icon-static" />
+            </div>
+            <div>
+              <p className="text-xs font-medium uppercase tracking-wide text-subtle">{t("ملفك", "Your profile")}</p>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {[
+                  labelList(WORKSTYLE_LABEL, answers.workStyles, lang),
+                  label(BUDGET_LABEL, answers.budgetRange, lang),
+                  label(TIME_LABEL, answers.timeRequired, lang),
+                  label(CHANNEL_LABEL, answers.channel, lang),
+                  label(INTERACTION_LABEL, answers.customerInteraction, lang),
+                  label(AMBITION_LABEL, answers.ambition, lang),
+                ]
+                  .filter((v) => v && v !== "—")
+                  .map((v) => (
+                    <span key={v} className="chip">
+                      {v}
+                    </span>
+                  ))}
               </div>
             </div>
           </div>
-        </FadeIn>
+        </div>
 
         <div className="mt-6">
           <ResultCard scored={best} primary />
@@ -310,9 +210,7 @@ export default function Result() {
 
         {rest.length > 0 && (
           <>
-            <h2 className="mt-10 text-lg font-bold text-ink-900">
-              {t("أفكار ثانية تناسبك", "Other good matches")}
-            </h2>
+            <h2 className="mt-10 text-lg font-semibold text-fg">{t("تطابقات أخرى", "Other matches")}</h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               {rest.map((s) => (
                 <ResultCard key={s.idea.id} scored={s} />
@@ -321,17 +219,12 @@ export default function Result() {
           </>
         )}
 
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
-          <button onClick={() => navigate("/quiz")} className="btn-secondary">
-            <ArrowRight size={18} />
-            {t("أعد الاختبار", "Retake Quiz")}
+        <div className="mt-10 flex flex-wrap gap-3">
+          <button type="button" onClick={() => navigate("/explore")} className="btn-secondary">
+            {t("استكشف المزيد", "Explore more")}
+            <ArrowLeft />
           </button>
-          <button onClick={() => navigate("/explore")} className="btn-secondary">
-            {t("استكشف المزيد", "Explore More")}
-            <ArrowLeft size={18} />
-          </button>
-          <button onClick={() => navigate("/ai")} className="btn-primary">
-            <MessageCircle size={18} />
+          <button type="button" onClick={() => navigate("/ai")} className="btn-ghost">
             {t("تكلم مع FIKRA AI", "Talk to FIKRA AI")}
           </button>
         </div>

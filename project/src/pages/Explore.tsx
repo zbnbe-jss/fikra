@@ -1,61 +1,39 @@
 import { useMemo, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import {
   ChevronDown,
   Home as HomeIcon,
   Monitor,
-  Rocket,
   Search,
   Shuffle,
-  Sparkles,
   Store,
   Wallet,
   X,
   Zap,
 } from "lucide-react";
 import { useLang } from "../lib/language";
-import { categories, categoryIcons, categoryTranslations, ideas } from "../data";
+import { categories, categoryTranslations, ideas } from "../data";
+import { CategoryGlyph } from "../lib/categoryIcons";
 import IdeaCard from "../components/IdeaCard";
 import { smartSearch } from "../lib/smartSearch";
-import { FadeIn, Stagger, StaggerItem, ease } from "../components/motion";
+import { FadeIn, ease } from "../components/motion";
+import { useAppReducedMotion } from "../lib/preferences";
 
 type Sort = "default" | "budgetAsc" | "budgetDesc" | "name";
 
 const QUICK_FILTERS = [
-  { key: "random", icon: Shuffle, ar: "فكرة عشوائية", en: "Random Idea" },
-  { key: "online", icon: Monitor, ar: "أفكار أونلاين", en: "Online" },
-  { key: "physical", icon: Store, ar: "أفكار واقعية", en: "Physical" },
-  { key: "fast", icon: Zap, ar: "أفكار سريعة", en: "Quick Start" },
-  { key: "lowBudget", icon: Wallet, ar: "ميزانية صغيرة", en: "Low Budget" },
-  { key: "home", icon: HomeIcon, ar: "من البيت", en: "From Home" },
-  { key: "beginner", icon: Sparkles, ar: "للمبتدئين", en: "Beginner" },
-  { key: "scalable", icon: Rocket, ar: "قابلة للتوسع", en: "Scalable" },
+  { key: "random", icon: Shuffle, ar: "فكرة عشوائية", en: "Random idea" },
+  { key: "online", icon: Monitor, ar: "أونلاين", en: "Online" },
+  { key: "physical", icon: Store, ar: "واقعي", en: "Physical" },
+  { key: "fast", icon: Zap, ar: "بداية سريعة", en: "Quick start" },
+  { key: "lowBudget", icon: Wallet, ar: "ميزانية صغيرة", en: "Low budget" },
+  { key: "home", icon: HomeIcon, ar: "من البيت", en: "From home" },
+  { key: "beginner", icon: Monitor, ar: "للمبتدئين", en: "Beginner" },
 ] as const;
-
-function FilterChip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={`chip transition-all ${
-        active ? "bg-fikra-600 text-white" : "bg-ink-100 text-ink-600 hover:bg-fikra-50 hover:text-fikra-600"
-      }`}
-    >
-      {children}
-    </button>
-  );
-}
 
 export default function Explore() {
   const { lang, t } = useLang();
-  const reduce = useReducedMotion();
+  const reduce = useAppReducedMotion();
   const [category, setCategory] = useState("الكل");
   const [quick, setQuick] = useState<string | null>(null);
   const [sort, setSort] = useState<Sort>("default");
@@ -79,11 +57,6 @@ export default function Explore() {
     if (quick === "lowBudget") list = list.filter((i) => i.budgetRange === "under500" || i.budgetRange === "500to2000");
     if (quick === "home") list = list.filter((i) => i.workStyles?.includes("alone") && i.channel !== "physical");
     if (quick === "beginner") list = list.filter((i) => i.difficulty === "beginner");
-    if (quick === "scalable") {
-      list = list.filter(
-        (i) => i.experienceMatch?.includes("experienced") || i.experienceMatch?.includes("hasProject")
-      );
-    }
 
     if (sort === "budgetAsc") {
       list = list.slice().sort((a, b) => budgetOrder.indexOf(a.budgetLabel) - budgetOrder.indexOf(b.budgetLabel));
@@ -99,67 +72,65 @@ export default function Explore() {
   const activeFilterCount = (category !== "الكل" ? 1 : 0) + (quick && quick !== "random" ? 1 : 0);
 
   return (
-    <div className="min-h-screen bg-ink-50 pt-20">
-      <div className="mx-auto max-w-7xl px-5 py-8 lg:px-8">
-        <FadeIn className="text-center">
-          <h1 className="text-3xl font-bold text-ink-900 sm:text-4xl">{t("استكشف الأفكار", "Explore Ideas")}</h1>
-          <p className="mt-3 text-ink-500">
-            {t(
-              `تصفح أكثر من ${ideas.length} فكرة مشروع وفلتر حسب ما يناسبك`,
-              `Browse ${ideas.length}+ project ideas and filter by what suits you`
-            )}
+    <div className="page-shell">
+      <div className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+        <FadeIn>
+          <h1 className="text-3xl text-fg sm:text-4xl">{t("استكشف الأفكار", "Explore Ideas")}</h1>
+          <p className="mt-2 max-w-xl text-sm text-muted">
+            {t(`تصفح ${ideas.length} فكرة. رشّح حسب الميزانية والنوع والصعوبة.`, `Browse ${ideas.length} ideas. Filter by budget, type, and difficulty.`)}
           </p>
         </FadeIn>
 
-        <Stagger className="mt-8 flex flex-wrap justify-center gap-2">
+        <div className="mt-8 flex flex-wrap gap-2">
           {QUICK_FILTERS.map((f) => (
-            <StaggerItem key={f.key}>
-              <motion.button
-                onClick={() => setQuick(quick === f.key ? null : f.key)}
-                className={`flex items-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-medium shadow-soft ${
-                  quick === f.key ? "bg-fikra-600 text-white" : "bg-white text-ink-700 hover:text-fikra-600"
-                }`}
-                whileHover={reduce ? undefined : { y: -3 }}
-                whileTap={reduce ? undefined : { scale: 0.96 }}
-              >
-                <f.icon size={16} className={quick === f.key ? "text-white" : "text-fikra-500"} />
-                {lang === "en" ? f.en : f.ar}
-              </motion.button>
-            </StaggerItem>
+            <button
+              key={f.key}
+              type="button"
+              onClick={() => setQuick(quick === f.key ? null : f.key)}
+              className={`chip ${quick === f.key ? "border-accent bg-accent-soft text-accent-text" : ""}`}
+            >
+              <f.icon />
+              {lang === "en" ? f.en : f.ar}
+            </button>
           ))}
-        </Stagger>
+        </div>
 
-        <div className="mt-6 flex gap-2">
+        <div className="mt-5 flex flex-col gap-2 sm:flex-row">
           <div className="relative flex-1">
-            <Search size={18} className="absolute right-3 top-1/2 -translate-y-1/2 text-ink-400" />
+            <Search className="pointer-events-none absolute top-1/2 end-3 -translate-y-1/2 text-subtle" />
             <input
-              type="text"
+              type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder={t("ابحث عن فكرة...", "Search for an idea...")}
-              className="input-field pr-10"
+              placeholder={t("ابحث عن فكرة…", "Search for an idea…")}
+              className="input-field pe-10"
             />
           </div>
           <div className="relative">
+            <label className="sr-only" htmlFor="sort">
+              {t("ترتيب", "Sort")}
+            </label>
             <select
+              id="sort"
               value={sort}
               onChange={(e) => setSort(e.target.value as Sort)}
-              className="input-field cursor-pointer appearance-none pl-4 pr-10"
+              className="input-field cursor-pointer appearance-none pe-10"
             >
               <option value="default">{t("الافتراضي", "Default")}</option>
               <option value="budgetAsc">{t("الميزانية: الأقل أولاً", "Budget: Low to High")}</option>
               <option value="budgetDesc">{t("الميزانية: الأعلى أولاً", "Budget: High to Low")}</option>
-              <option value="name">{t("الاسم (أ-ي)", "Name (A-Z)")}</option>
+              <option value="name">{t("الاسم", "Name")}</option>
             </select>
-            <ChevronDown size={16} className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-ink-400" />
+            <ChevronDown size={16} className="pointer-events-none absolute top-1/2 end-3 -translate-y-1/2 text-subtle icon-static" />
           </div>
           <button
+            type="button"
             onClick={() => setShowFilters((v) => !v)}
-            className={`btn-secondary ${showFilters || category !== "الكل" ? "!border-fikra-300 !bg-fikra-50 !text-fikra-700" : ""}`}
+            className={`btn-secondary ${showFilters || category !== "الكل" ? "!border-accent !text-accent-text" : ""}`}
           >
-            {t("فلترة", "Filters")}
+            {t("التصنيفات", "Categories")}
             {activeFilterCount > 0 && (
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-fikra-600 text-xs text-white">
+              <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-accent px-1 text-[11px] text-accent-fg">
                 {activeFilterCount}
               </span>
             )}
@@ -169,48 +140,45 @@ export default function Explore() {
         <AnimatePresence>
           {showFilters && (
             <motion.div
-              className="card mt-4 p-5"
+              className="mt-4 overflow-hidden"
               initial={reduce ? false : { opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={reduce ? { opacity: 1 } : { opacity: 0, height: 0 }}
-              transition={{ duration: 0.28, ease }}
-              style={{ overflow: "hidden" }}
+              transition={{ duration: 0.22, ease }}
             >
-            <h4 className="mb-2 text-sm font-semibold text-ink-900">{t("المجال", "Category")}</h4>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((c) => (
-                <FilterChip key={c} active={category === c} onClick={() => setCategory(c)}>
-                  <span>{categoryIcons[c] ?? "✨"}</span>
-                  <span>{lang === "en" && c !== "الكل" ? categoryTranslations[c] ?? c : c === "الكل" ? t("الكل", "All") : c}</span>
-                </FilterChip>
-              ))}
-            </div>
-            {category !== "الكل" && (
-              <button
-                onClick={() => setCategory("الكل")}
-                className="mt-4 flex items-center gap-1 text-sm font-medium text-fikra-600 hover:text-fikra-700"
-              >
-                <X size={16} />
-                {t("مسح الفلاتر", "Clear Filters")}
-              </button>
-            )}
+              <div className="flex flex-wrap gap-2 py-2">
+                {categories.map((c) => (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => setCategory(c)}
+                    className={`chip ${category === c ? "border-accent bg-accent-soft text-accent-text" : ""}`}
+                  >
+                    {c !== "الكل" && <CategoryGlyph name={c} />}
+                    {lang === "en" && c !== "الكل" ? categoryTranslations[c] ?? c : c === "الكل" ? t("الكل", "All") : c}
+                  </button>
+                ))}
+              </div>
+              {category !== "الكل" && (
+                <button type="button" onClick={() => setCategory("الكل")} className="btn-ghost mt-1 px-0 text-sm">
+                  <X size={14} className="icon-static" />
+                  {t("مسح التصنيف", "Clear category")}
+                </button>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
 
-        <div className="mt-6 text-sm text-ink-500">
+        <p className="mt-6 text-sm text-subtle">
           {shown.length} {t("فكرة", "ideas")}
-        </div>
+        </p>
 
         {shown.length === 0 ? (
-          <div className="mt-12 text-center">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-ink-100 text-ink-400">
-              <Search size={28} />
-            </div>
-            <p className="mt-4 text-ink-600">
-              {t("ما لقينا أفكار تطابق بحثك. جرب كلمات ثانية.", "No ideas match your search. Try different words.")}
-            </p>
+          <div className="mt-16 text-center">
+            <Search className="mx-auto text-subtle" />
+            <p className="mt-3 text-sm text-muted">{t("ما لقينا أفكار تطابق بحثك.", "No ideas match your search.")}</p>
             <button
+              type="button"
               onClick={() => {
                 setQuery("");
                 setCategory("الكل");
@@ -222,13 +190,11 @@ export default function Explore() {
             </button>
           </div>
         ) : (
-          <Stagger className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.05}>
+          <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {shown.map((idea) => (
-              <StaggerItem key={idea.id}>
-                <IdeaCard idea={idea} />
-              </StaggerItem>
+              <IdeaCard key={idea.id} idea={idea} />
             ))}
-          </Stagger>
+          </div>
         )}
       </div>
     </div>

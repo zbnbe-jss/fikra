@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
+import { useAppReducedMotion } from "../lib/preferences";
 import { ArrowRight, Lock, Mail } from "lucide-react";
 import { useLang } from "../lib/language";
 import { supabase } from "../lib/supabaseClient";
@@ -23,7 +24,7 @@ function GoogleIcon() {
 export default function Login() {
   const { t } = useLang();
   const navigate = useNavigate();
-  const reduce = useReducedMotion();
+  const reduce = useAppReducedMotion();
   const [mode, setMode] = useState<Mode>("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -75,7 +76,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center gradient-mesh px-5 pt-20">
+    <div className="flex min-h-dvh items-center justify-center bg-page px-5 py-16">
       <motion.div
         className="w-full max-w-md"
         initial={reduce ? false : { opacity: 0, y: 24, scale: 0.96 }}
@@ -92,9 +93,9 @@ export default function Login() {
             <Logo />
           </motion.button>
         </div>
-        <div className="card p-8 shadow-float">
-          <h1 className="text-center text-2xl font-bold text-ink-900">{t(titles[mode].ar, titles[mode].en)}</h1>
-          <p className="mt-2 text-center text-sm text-ink-500">
+        <div className="card p-8">
+          <h1 className="text-center text-2xl font-semibold text-fg">{t(titles[mode].ar, titles[mode].en)}</h1>
+          <p className="mt-2 text-center text-sm text-muted">
             {mode === "login" && t("ادخل لحسابك واصل رحلتك", "Sign in to continue your journey")}
             {mode === "signup" && t("أنشئ حساب وابدأ اكتشاف أفكارك", "Create an account and start discovering your ideas")}
             {mode === "reset" && t("بنرسل لك رابط لإعادة تعيين كلمة المرور", "We'll send you a link to reset your password")}
@@ -105,7 +106,7 @@ export default function Login() {
 
           <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-3">
             <div className="relative">
-              <Mail size={18} className="absolute right-3 top-1/2 -translate-y-1/2 text-ink-400" />
+              <Mail size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
               <input
                 type="email"
                 required
@@ -118,7 +119,7 @@ export default function Login() {
             </div>
             {mode !== "reset" && (
               <div className="relative">
-                <Lock size={18} className="absolute right-3 top-1/2 -translate-y-1/2 text-ink-400" />
+                <Lock size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
                 <input
                   type="password"
                   required
@@ -143,9 +144,9 @@ export default function Login() {
           {mode === "login" && (
             <>
               <div className="my-4 flex items-center gap-3">
-                <div className="h-px flex-1 bg-ink-100" />
-                <span className="text-xs text-ink-400">{t("أو", "or")}</span>
-                <div className="h-px flex-1 bg-ink-100" />
+                <div className="h-px flex-1 bg-line" />
+                <span className="text-xs text-subtle">{t("أو", "or")}</span>
+                <div className="h-px flex-1 bg-line" />
               </div>
               <button onClick={handleGoogle} disabled={loading} className="btn-secondary w-full">
                 <GoogleIcon />
@@ -154,7 +155,7 @@ export default function Login() {
             </>
           )}
 
-          <p className="mt-4 text-center text-sm text-ink-500">
+          <p className="mt-4 text-center text-sm text-muted">
             {mode !== "signup" && (
               <button
                 onClick={() => {
@@ -164,7 +165,7 @@ export default function Login() {
                 }}
               >
                 {t("ما عندك حساب؟ ", "Don't have an account? ")}
-                <span className="font-semibold text-fikra-600">{t("أنشئ حساب", "Sign up")}</span>
+                <span className="font-semibold text-accent-text">{t("أنشئ حساب", "Sign up")}</span>
               </button>
             )}
             {mode !== "login" && (
@@ -174,7 +175,7 @@ export default function Login() {
                   setError(null);
                   setMessage(null);
                 }}
-                className="font-semibold text-fikra-600"
+                className="font-semibold text-accent-text"
               >
                 {t("رجوع لتسجيل الدخول", "Back to log in")}
               </button>
@@ -187,7 +188,7 @@ export default function Login() {
                 setError(null);
                 setMessage(null);
               }}
-              className="mt-2 w-full text-center text-sm text-ink-400"
+              className="mt-2 w-full text-center text-sm text-subtle"
             >
               {t("نسيت كلمة المرور؟", "Forgot password?")}
             </button>
@@ -195,7 +196,7 @@ export default function Login() {
         </div>
         <button
           onClick={() => navigate("/")}
-          className="mt-4 flex w-full items-center justify-center gap-1 text-sm text-ink-400 transition-colors hover:text-ink-600"
+          className="mt-4 flex w-full items-center justify-center gap-1 text-sm text-subtle hover:text-fg"
         >
           <ArrowRight size={14} />
           {t("العودة للرئيسية", "Back to home")}

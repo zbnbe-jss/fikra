@@ -4,8 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FIKRA | فكرة — اكتشف فكرة المشروع المناسبة لك</title>
+    <title>FIKRA | فكرة — اكتشف مشروعك الأول</title>
     <meta name="description" content="جاوب على أسئلة بسيطة، وخلي فكرة تساعدك تكتشف المشاريع اللي تناسب اهتماماتك، ميزانيتك وطريقتك في العمل." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>
+      (function () {
+        try {
+          var p = JSON.parse(localStorage.getItem("fikra_prefs") || "{}");
+          var dark =
+            p.theme === "dark" ||
+            (p.theme !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          var root = document.documentElement;
+          root.classList.toggle("dark", dark);
+          root.dataset.theme = dark ? "dark" : "light";
+          if (p.accent) root.dataset.accent = p.accent;
+          if (p.fontSize) root.dataset.fontSize = p.fontSize;
+          if (p.fontFamily) root.dataset.fontFamily = p.fontFamily;
+          if (p.iconSize) root.dataset.iconSize = p.iconSize;
+          if (p.reducedMotion) root.dataset.reduceMotion = "on";
+          if (p.highContrast) root.dataset.contrast = "high";
+          var lang = localStorage.getItem("fikra-lang");
+          if (lang === "ar" || lang === "en") {
+            root.lang = lang;
+            root.dir = lang === "ar" ? "rtl" : "ltr";
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta property="og:title" content="FIKRA | فكرة" />
     <meta property="og:description" content="اكتشف فكرة المشروع المناسبة لك" />
     <meta property="og:type" content="website" />

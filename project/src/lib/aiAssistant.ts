@@ -2,7 +2,7 @@ import { glossary, ideas } from "../data";
 import type { Idea } from "../data/types";
 import { getAnswers } from "./quizState";
 import { matchIdeas } from "./scoring";
-import { getMyIdea, getRoadmapStatus } from "./myIdea";
+import { getMyIdea, getNotes, getRoadmapProgress, getRoadmapStatus, getTasks } from "./myIdea";
 import { BUDGET_MIN } from "./labels";
 
 export interface AiMessage {
@@ -14,6 +14,7 @@ export interface AiMessage {
 
 export interface AiContext {
   lastIdeaId: string | null;
+  myIdeaBrief?: string;
 }
 
 /**
@@ -45,6 +46,8 @@ function budgetFloor(range: string): number {
 
 export function respond(message: string, ctx: AiContext): AiMessage {
   const lower = message.toLowerCase();
+  const myIdea = getMyIdea();
+  if (!ctx.lastIdeaId && myIdea) ctx = { ...ctx, lastIdeaId: myIdea.id };
 
   // 1. Glossary lookup
   for (const term of Object.values(glossary)) {
@@ -53,24 +56,29 @@ export function respond(message: string, ctx: AiContext): AiMessage {
     }
   }
 
-  // 2. "What's next" for the user's My Idea roadmap
-  if (/(الخطوة الجاي|شو أسوي الحين|what.?s next|شو ناقصني|كيف أبدأ|how do i start)/i.test(message)) {
-    const myIdea = getMyIdea();
-    if (myIdea) {
-      const status = getRoadmapStatus(myIdea.id);
-      const next = myIdea.roadmap.find((s) => status[s.id] !== "completed");
-      if (next) {
-        return {
-          role: "assistant",
-          content: `خطوتك الجاية في "${myIdea.title}": ${next.title}`,
-        };
-      }
-      return { role: "assistant", content: `خلصت كل خطوات "${myIdea.title}"! 🎉 وقت تركز على تطويرها.` };
+  // 2. Active project — start / customers / cheaper / develop
+  if (myIdea && /(كيف أبدأ|كيف ابدأ|how do i start|الخطوة|شو أسوي|what.?s next|العملاء|customers|أرخص|2000|ميزانية|كيف أطور|طور الفكرة)/i.test(message)) {
+    const status = getRoadmapStatus(myIdea.id);
+    const next = myIdea.roadmap.find((s) => status[s.id] !== "completed");
+    const progress = getRoadmapProgress(myIdea);
+    const tasks = getTasks(myIdea.id).filter((tk) => !tk.done);
+    const notes = getNotes(myIdea.id).trim().slice(0, 180);
+    const parts = [
+      `المشروع النشط: ${myIdea.title}.`,
+      `الميزانية المتوقعة: ${myIdea.budgetLabel}. النوع: ${myIdea.channel}.`,
+      `التقدم: ${progress.percent}% (${progress.completed}/${progress.total}).`,
+    ];
+    if (next) parts.push(`الخطوة التالية: ${next.title}.`);
+    if (/(عملاء|customers)/i.test(message)) {
+      parts.push(`تعامل العملاء في هذه الفكرة: ${myIdea.customerInteraction}. طريقة البيع: ${myIdea.sellingMethod}`);
     }
-    return {
-      role: "assistant",
-      content: "ما عندك فكرة مختارة بعد. سوي الاختبار أو اختر فكرة من استكشف الأفكار أول.",
-    };
+    if (/(أرخص|ميزانية|2000)/i.test(message)) {
+      parts.push("إذا الميزانية ضيقة: ابدأ بنسخة أصغر، اختبر على 10 عملاء، وأجّل المصاريف الكبيرة.");
+    }
+    if (tasks.length) parts.push(`مهام مفتوحة: ${tasks.slice(0, 3).map((tk) => tk.text).join("؛ ")}.`);
+    if (notes) parts.push(`من ملاحظاتك: ${notes}`);
+    if (ctx.myIdeaBrief) parts.push(ctx.myIdeaBrief.slice(0, 280));
+    return { role: "assistant", content: parts.join(" "), ideas: [myIdea] };
   }
 
   // 3. Compare

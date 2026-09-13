@@ -4,6 +4,7 @@ import { getAnswers } from "./quizState";
 import { matchIdeas } from "./scoring";
 import { getMyIdea, getNotes, getRoadmapProgress, getRoadmapStatus, getTasks } from "./myIdea";
 import { BUDGET_MIN } from "./labels";
+import { understandDiscovery } from "./understanding";
 
 export interface AiMessage {
   role: "user" | "assistant";
@@ -46,6 +47,7 @@ function budgetFloor(range: string): number {
 
 export function respond(message: string, ctx: AiContext): AiMessage {
   const lower = message.toLowerCase();
+  const discovery = understandDiscovery(message);
   const myIdea = getMyIdea();
   if (!ctx.lastIdeaId && myIdea) ctx = { ...ctx, lastIdeaId: myIdea.id };
 
@@ -124,14 +126,15 @@ export function respond(message: string, ctx: AiContext): AiMessage {
   }
 
   // 6. Budget mention → filter ideas
-  const budgetMatch = message.match(/(\d{3,6})/);
-  if (budgetMatch) {
-    const budget = parseInt(budgetMatch[1], 10);
-    const wantsOnline = /اونلاين|أونلاين|online/i.test(lower);
+  if (discovery.budget) {
+    const budget = discovery.budget;
     const matches = ideas
       .filter((i) => {
         const min = budgetFloor(i.budgetRange);
-        return min <= budget && (!wantsOnline || i.channel !== "physical");
+        return min <= budget
+          && (!discovery.channel || discovery.channel !== "online" || i.channel !== "physical")
+          && (!discovery.beginner || i.difficulty === "beginner")
+          && (!discovery.lowInteraction || i.customerInteraction === "minimal" || i.customerInteraction === "none");
       })
       .slice(0, 3);
     return {
@@ -141,7 +144,31 @@ export function respond(message: string, ctx: AiContext): AiMessage {
     };
   }
 
-  // 7. Quiz-result based suggestion
+  // 7. Natural-language discovery request with no explicit numeric budget.
+  if (discovery.channel || discovery.beginner || discovery.lowBudget || discovery.solo || discovery.lowInteraction || discovery.scalable || discovery.home) {
+    const matches = ideas
+      .filter((idea) => {
+        if (discovery.channel === "online" && idea.channel === "physical") return false;
+        if (discovery.channel === "physical" && idea.channel === "online") return false;
+        if (discovery.beginner && idea.difficulty !== "beginner") return false;
+        if (discovery.lowBudget && !["under500", "500to2000"].includes(idea.budgetRange)) return false;
+        if (discovery.solo && !idea.workStyles.some((style) => style === "alone" || style === "onePerson")) return false;
+        if (discovery.lowInteraction && !["minimal", "none"].includes(idea.customerInteraction)) return false;
+        if (discovery.scalable && idea.scalability !== "high") return false;
+        return true;
+      })
+      .slice(0, 3);
+
+    if (matches.length > 0) {
+      return {
+        role: "assistant",
+        content: `هذي خيارات قريبة من اللي وصفته:`,
+        ideas: matches,
+      };
+    }
+  }
+
+  // 8. Quiz-result based suggestion
   if (/نتيجة اختباري|quiz/i.test(lower)) {
     const answers = getAnswers();
     if (answers) {

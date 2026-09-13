@@ -34,15 +34,15 @@ function Snapshot({ icon: Icon, label: lbl, value }: { icon: LucideIcon; label: 
 function ResultCard({ scored, primary }: { scored: ScoredIdea; primary?: boolean }) {
   const { lang, t } = useLang();
   const navigate = useNavigate();
-  const { idea, score, reasons, challenge } = scored;
+  const { idea, score, reasons, challenge, signals } = scored;
   const saved = isIdeaSaved(idea.id);
   const channelIcon = idea.channel === "online" ? Monitor : idea.channel === "physical" ? Store : Lightbulb;
 
   return (
-    <article className={primary ? "border border-line bg-surface p-6 sm:p-8" : "card p-5"}>
+    <article className={primary ? "glass-medium rounded-[22px] p-6 sm:p-8" : "card card-hover p-5"}>
       <div className="flex flex-wrap items-center justify-between gap-3">
         {primary ? (
-          <span className="text-xs font-semibold uppercase tracking-wide text-accent-text">
+          <span className="text-xs font-semibold text-accent-text">
             {t("أفضل تطابق", "Your best match")}
           </span>
         ) : (
@@ -87,6 +87,20 @@ function ResultCard({ scored, primary }: { scored: ScoredIdea; primary?: boolean
         </div>
       )}
       {challenge && <p className="mt-3 text-sm text-warn">{lang === "en" ? challenge.en : challenge.ar}</p>}
+
+      <div className="mt-5 grid gap-2 sm:grid-cols-3">
+        {signals
+          .filter((signal) => signal.state === "strong" || signal.state === "partial")
+          .slice(0, 3)
+          .map((signal) => (
+            <div key={signal.id} className="rounded-xl border border-line bg-page/70 px-3 py-2.5">
+              <p className="text-[11px] text-subtle">{lang === "en" ? signal.en : signal.ar}</p>
+              <p className="mt-0.5 text-xs font-semibold text-fg">
+                {signal.state === "strong" ? t("تطابق قوي", "Strong fit") : t("تطابق جيد", "Good fit")}
+              </p>
+            </div>
+          ))}
+      </div>
 
       {primary && idea.roadmap[0] && (
         <p className="mt-4 text-sm text-fg">
@@ -173,11 +187,11 @@ export default function Result() {
         <FadeIn className="mt-10">
           <h1 className="text-3xl text-fg sm:text-4xl">{t("تحليل شخصي", "Your analysis")}</h1>
           <p className="mt-2 text-sm text-muted">
-            {t("النسبة من محرك التقييم — ليست رقماً تجميلياً.", "The score comes from the matching engine — not a decorative number.")}
+            {t("نقرأ ميزانيتك ووقتك واهتماماتك وطريقة عملك معاً، ثم نوضح لماذا ظهر كل تطابق.", "We read your budget, time, interests and work style together, then explain why each match appears.")}
           </p>
         </FadeIn>
 
-        <div className="mt-8 rounded-xl border border-line bg-surface p-5">
+        <div className="glass-subtle mt-8 rounded-2xl p-5">
           <div className="flex items-start gap-3">
             <div className="icon-container">
               <User size={18} className="icon-static" />

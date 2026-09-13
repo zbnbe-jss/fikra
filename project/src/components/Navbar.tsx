@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { Languages, Menu, Settings, User, X } from "lucide-react";
 import type { User as AuthUser } from "@supabase/supabase-js";
 import { useLang } from "../lib/language";
@@ -19,13 +19,12 @@ export default function Navbar() {
   const navigate = useNavigate();
   const { t, lang, toggleLang } = useLang();
   const reduce = useAppReducedMotion();
+  const { scrollY } = useScroll();
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const next = latest > 8;
+    setScrolled((current) => (current === next ? current : next));
+  });
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => setUser(data.user ?? null));
@@ -70,11 +69,13 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-colors duration-200 ${
-        scrolled ? "border-line bg-surface/95 backdrop-blur-md" : "border-transparent bg-page/80 backdrop-blur-sm"
+      className={`sticky top-0 z-50 px-3 pt-3 transition-[padding] duration-200 sm:px-5 ${
+        scrolled ? "pb-1.5" : "pb-3"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 lg:px-8">
+      <nav className={`mx-auto flex max-w-7xl items-center justify-between gap-3 rounded-2xl px-3 py-2 transition-all duration-200 sm:px-4 ${
+        scrolled ? "glass-medium" : "border border-transparent bg-transparent"
+      }`}>
         <button type="button" onClick={() => go("/")} className="shrink-0 rounded-md">
           <Logo />
         </button>
@@ -84,7 +85,7 @@ export default function Navbar() {
               key={l.href}
               type="button"
               onClick={() => go(l.href)}
-              className={`rounded-md px-3 py-2 text-sm transition-colors ${
+              className={`rounded-lg px-3 py-2 text-sm transition-colors ${
                 isActive(l.href) ? "bg-accent-soft font-medium text-accent-text" : "text-muted hover:bg-accent-soft hover:text-fg"
               }`}
             >
@@ -152,7 +153,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="flex h-11 w-11 items-center justify-center rounded-md text-fg hover:bg-accent-soft xl:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg text-fg hover:bg-accent-soft xl:hidden"
           aria-label={t("القائمة", "Menu")}
           aria-expanded={open}
         >
@@ -163,7 +164,7 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="overflow-hidden border-t border-line bg-surface xl:hidden"
+            className="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-line bg-surface/95 shadow-float backdrop-blur-xl xl:hidden"
             initial={reduce ? false : { opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={reduce ? { opacity: 1 } : { opacity: 0, height: 0 }}

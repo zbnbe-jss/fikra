@@ -57,7 +57,30 @@ export interface ScoredIdea {
   score: number; // 0-100
   reasons: { ar: string; en: string }[];
   challenge?: { ar: string; en: string };
+  signals: MatchSignal[];
 }
+
+export interface MatchSignal {
+  id: keyof typeof WEIGHTS;
+  score: number;
+  weight: number;
+  state: "strong" | "partial" | "mismatch" | "neutral";
+  ar: string;
+  en: string;
+}
+
+const SIGNAL_COPY: Record<keyof typeof WEIGHTS, { ar: string; en: string }> = {
+  budget: { ar: "الميزانية", en: "Budget" },
+  interests: { ar: "الاهتمامات", en: "Interests" },
+  personality: { ar: "الشخصية", en: "Personality" },
+  time: { ar: "الوقت", en: "Time" },
+  skills: { ar: "المهارات", en: "Skills" },
+  workStyle: { ar: "أسلوب العمل", en: "Work style" },
+  channel: { ar: "نوع المشروع", en: "Project type" },
+  customerInteraction: { ar: "التعامل مع العملاء", en: "Customer interaction" },
+  motivation: { ar: "الدافع", en: "Motivation" },
+  experience: { ar: "الخبرة", en: "Experience" },
+};
 
 function scoreDimensions(idea: Idea, answers: QuizAnswers) {
   const dims: Record<keyof typeof WEIGHTS, number> = {
@@ -124,7 +147,22 @@ export function scoreIdea(idea: Idea, answers: QuizAnswers): ScoredIdea {
     };
   }
 
-  return { idea, score, reasons, challenge };
+  const signals = (Object.keys(WEIGHTS) as (keyof typeof WEIGHTS)[])
+    .map((id) => {
+      const dimension = dims[id];
+      const copy = SIGNAL_COPY[id];
+      const state: MatchSignal["state"] = dimension >= 0.95
+        ? "strong"
+        : dimension >= 0.45
+          ? "partial"
+          : dimension === 0
+            ? "mismatch"
+            : "neutral";
+      return { id, score: dimension, weight: WEIGHTS[id], state, ...copy };
+    })
+    .sort((a, b) => b.score * b.weight - a.score * a.weight);
+
+  return { idea, score, reasons, challenge, signals };
 }
 
 export function matchIdeas(answers: QuizAnswers, limit = 6): ScoredIdea[] {

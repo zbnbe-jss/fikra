@@ -88,8 +88,8 @@ export default function Ai() {
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-page">
-      <div className="border-b border-line bg-surface">
-        <div className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-5 py-5 lg:px-0">
+      <div className="px-3 pt-3 sm:px-5">
+        <div className="glass-medium mx-auto flex max-w-3xl items-center justify-between gap-4 rounded-2xl px-4 py-3 sm:px-5">
           <div className="flex items-center gap-3">
             <div className="icon-container">
               <Sparkles size={18} className="icon-static" />
@@ -119,8 +119,8 @@ export default function Ai() {
           {messages.map((m, idx) =>
             m.role === "user" ? (
               <div key={idx} className="flex items-start justify-end gap-2">
-                <div className="max-w-[80%] rounded-lg bg-accent px-4 py-2.5 text-sm text-accent-fg">{m.content}</div>
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-line text-muted">
+                <div className="max-w-[80%] rounded-xl bg-accent px-4 py-2.5 text-sm text-accent-fg shadow-sm">{m.content}</div>
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-line text-muted">
                   <User size={14} className="icon-static" />
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function Ai() {
                   <Lightbulb size={14} className="icon-static" />
                 </div>
                 <div className="max-w-[85%] space-y-3">
-                  <div className="rounded-lg border border-line bg-surface px-4 py-3 text-sm leading-relaxed text-fg">
+                  <div className="glass-subtle rounded-2xl px-4 py-3 text-sm leading-relaxed text-fg">
                     {m.content.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
                       part.startsWith("**") && part.endsWith("**") ? (
                         <strong key={i}>{part.slice(2, -2)}</strong>
@@ -173,7 +173,7 @@ export default function Ai() {
             e.preventDefault();
             send(input);
           }}
-          className="mt-3 flex items-end gap-2 border-t border-line bg-page py-3"
+          className="glass-medium mt-3 flex items-end gap-2 rounded-2xl p-2"
         >
           <textarea
             value={input}
@@ -213,7 +213,7 @@ function StaggerPrompts({
           key={p.text}
           type="button"
           onClick={() => onSend(p.text)}
-          className="flex items-center gap-3 rounded-lg border border-line bg-surface p-3 text-start text-sm text-fg hover:border-line-strong"
+          className="card-hover flex items-center gap-3 rounded-xl border border-line bg-surface p-3 text-start text-sm text-fg hover:border-line-strong"
         >
           <p.icon className="shrink-0 text-accent-text" />
           <span>{p.text}</span>

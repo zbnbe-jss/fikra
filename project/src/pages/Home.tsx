@@ -1,19 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Brain, Clock, Lightbulb, User, Wallet } from "lucide-react";
+import { ArrowLeft, Brain, Lightbulb, Route } from "lucide-react";
 import { useLang } from "../lib/language";
 import { categories, categoryTranslations, ideas } from "../data";
 import { CategoryGlyph } from "../lib/categoryIcons";
 import IdeaCard from "../components/IdeaCard";
 import HeroAnimation from "../components/HeroAnimation";
+import ProjectPreview from "../components/ProjectPreview";
 import { FadeIn, Stagger, StaggerItem } from "../components/motion";
-
-const FEATURES = [
-  { labelAr: "ميزانيتك", labelEn: "Your budget", icon: Wallet },
-  { labelAr: "اهتماماتك", labelEn: "Your interests", icon: Lightbulb },
-  { labelAr: "وقتك", labelEn: "Your time", icon: Clock },
-  { labelAr: "طريقة عملك", labelEn: "Your work style", icon: User },
-];
 
 export default function Home() {
   const { lang, t } = useLang();
@@ -27,31 +21,31 @@ export default function Home() {
   const steps =
     lang === "en"
       ? [
-          { num: "01", title: "Answer", desc: "A short set of questions about budget, time, and how you like to work.", icon: Brain },
-          { num: "02", title: "Match", desc: "We score ideas against your answers — the percentage is from the real engine, not decoration.", icon: Clock },
-          { num: "03", title: "Build", desc: "Choose an idea, then work it inside My Idea: roadmap, tasks, notes, and FIKRA AI.", icon: Lightbulb },
+          { title: "Answer", desc: "Share your time, budget and the kind of work you want to do.", icon: Brain },
+          { title: "Match", desc: "See ideas ranked by the dimensions that actually fit your profile.", icon: Route },
+          { title: "Build", desc: "Turn one idea into a working plan with your own roadmap and tasks.", icon: Lightbulb },
         ]
       : [
-          { num: "01", title: "جاوب", desc: "أسئلة قصيرة عن ميزانيتك ووقتك وطريقة عملك.", icon: Brain },
-          { num: "02", title: "نطابق", desc: "نقيّم الأفكار حسب إجاباتك — النسبة من محرك التقييم نفسه.", icon: Clock },
-          { num: "03", title: "ابنِ", desc: "اختر فكرة ثم طوّرها في فكرتي: خطة، مهام، ملاحظات، وFIKRA AI.", icon: Lightbulb },
+          { title: "جاوب", desc: "شارك وقتك وميزانيتك وطريقة العمل التي تناسبك.", icon: Brain },
+          { title: "نطابق", desc: "شاهد أفكاراً مرتبة حسب العناصر التي تناسب ملفك فعلاً.", icon: Route },
+          { title: "ابنِ", desc: "حوّل فكرة واحدة إلى خطة قابلة للتنفيذ، مع خارطة طريق ومهامك الخاصة.", icon: Lightbulb },
         ];
 
   return (
     <div>
-      <section className="border-b border-line">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:px-8 lg:py-24">
+      <section className="liquid-surface overflow-hidden border-b border-line">
+        <div className="mx-auto grid min-h-[calc(100dvh-88px)] max-w-7xl items-center gap-10 px-5 py-12 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.78fr)] lg:px-8 lg:py-20">
           <FadeIn>
             <p className="section-label">{t("اكتشف مشروعك الأول", "Discover your first project")}</p>
-            <h1 className="mt-4 text-4xl leading-[1.15] text-fg sm:text-5xl lg:text-[3.25rem]">
-              <span className="block min-h-[2.4em]">
+            <h1 className="mt-4 text-4xl leading-[1.12] text-fg sm:text-5xl lg:text-6xl">
+              <span className="block min-h-[2.3em]">
                 <HeroAnimation />
               </span>
             </h1>
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-muted">
+            <p className="mt-6 max-w-[34rem] text-base leading-relaxed text-muted">
               {t(
-                "جاوب على أسئلة بسيطة، واكتشف مشروعاً يناسب اهتماماتك وميزانيتك وطريقتك في العمل — ثم طوّره داخل فكرتي.",
-                "Answer a few questions, find a project that fits your interests, budget, and work style — then develop it inside My Idea."
+                "جاوب على أسئلة بسيطة، واكتشف مشروعاً يناسبك ثم ابدأ بتحويله إلى مشروع حقيقي.",
+                "Answer a few questions, find a project that fits you, then start turning it into something real."
               )}
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -64,38 +58,12 @@ export default function Home() {
               </button>
             </div>
             <p className="mt-8 text-sm text-subtle">
-              {ideas.length} {t("فكرة مشروع", "project ideas")}
-              <span className="mx-2 text-line-strong">·</span>
-              {t("توصيات مبنية على إجاباتك", "Recommendations from your answers")}
+              {ideas.length} {t("فكرة مشروع منظمة", "structured project ideas")}
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.08} className="hidden lg:block">
-            <div className="card overflow-hidden p-0">
-              <div className="border-b border-line px-5 py-3">
-                <p className="text-xs font-medium uppercase tracking-wide text-subtle">{t("فكرتي", "My Idea")}</p>
-                <p className="mt-1 text-sm font-semibold text-fg">{t("مساحة العمل", "Workspace")}</p>
-              </div>
-              <div className="grid grid-cols-2 gap-px bg-line">
-                {FEATURES.map((f) => (
-                  <div key={f.labelEn} className="flex items-center gap-3 bg-surface px-5 py-6">
-                    <div className="icon-container h-9 w-9">
-                      <f.icon size={16} className="icon-static" />
-                    </div>
-                    <span className="text-sm font-medium text-fg">{lang === "en" ? f.labelEn : f.labelAr}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="border-t border-line px-5 py-4">
-                <div className="flex items-center justify-between text-xs text-muted">
-                  <span>{t("التقدم", "Progress")}</span>
-                  <span className="tabular-nums">0%</span>
-                </div>
-                <div className="mt-2 h-1 rounded-full bg-line">
-                  <div className="h-full w-[8%] rounded-full bg-accent" />
-                </div>
-              </div>
-            </div>
+          <FadeIn delay={0.08} className="mx-auto w-full max-w-xl lg:mx-0">
+            <ProjectPreview />
           </FadeIn>
         </div>
       </section>
@@ -106,12 +74,12 @@ export default function Home() {
             <span className="section-label">{t("كيف تعمل", "How it works")}</span>
             <h2 className="mt-3 max-w-xl text-3xl text-fg sm:text-4xl">{t("ثلاث خطوات إلى مشروعك", "Three steps to a project")}</h2>
           </FadeIn>
-          <Stagger className="mt-12 grid gap-8 md:grid-cols-3" stagger={0.08}>
+          <Stagger className="mt-12 grid gap-5 md:grid-cols-[1.1fr_0.9fr_1fr]" stagger={0.08}>
             {steps.map((s) => (
-              <StaggerItem key={s.num}>
-                <p className="font-mono text-xs text-subtle">{s.num}</p>
-                <h3 className="mt-3 text-xl text-fg">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{s.desc}</p>
+              <StaggerItem key={s.title} className="card-hover rounded-2xl border border-line bg-surface/70 p-5">
+                <s.icon className="text-accent-text" strokeWidth={1.6} />
+                <h3 className="mt-6 text-xl text-fg">{s.title}</h3>
+                <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">{s.desc}</p>
               </StaggerItem>
             ))}
           </Stagger>

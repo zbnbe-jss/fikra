@@ -145,7 +145,7 @@ export default function MyIdea() {
   return (
     <div className="page-shell">
       <div className="mx-auto max-w-5xl px-5 py-10 lg:px-8">
-        <FadeIn>
+        <FadeIn className="liquid-surface overflow-hidden rounded-[24px] border border-line bg-surface px-5 py-7 sm:px-7">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="min-w-0 max-w-2xl">
               <p className="section-label">{t("فكرتي", "My Idea")}</p>
@@ -163,14 +163,14 @@ export default function MyIdea() {
             </div>
           </div>
 
-          <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-4">
+          <dl className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-4">
             {[
               { k: t("التوافق", "Compatibility"), v: insights.score != null ? `${insights.score}%` : "—" },
               { k: t("نوع المشروع", "Project type"), v: label(CHANNEL_LABEL, idea.channel, lang) },
               { k: t("الميزانية", "Budget"), v: idea.budgetLabel },
               { k: t("الصعوبة", "Difficulty"), v: label(DIFFICULTY_LABEL, idea.difficulty, lang) },
             ].map((item) => (
-              <div key={item.k} className="bg-surface px-4 py-3">
+              <div key={item.k} className="rounded-xl border border-line bg-surface/70 px-4 py-3">
                 <dt className="text-[11px] font-medium uppercase tracking-wide text-subtle">{item.k}</dt>
                 <dd className="mt-1 text-sm font-semibold text-fg">{item.v}</dd>
               </div>

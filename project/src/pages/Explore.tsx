@@ -74,14 +74,14 @@ export default function Explore() {
   return (
     <div className="page-shell">
       <div className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
-        <FadeIn>
+        <FadeIn className="liquid-surface overflow-hidden rounded-[24px] border border-line bg-surface px-5 py-7 sm:px-7">
           <h1 className="text-3xl text-fg sm:text-4xl">{t("استكشف الأفكار", "Explore Ideas")}</h1>
           <p className="mt-2 max-w-xl text-sm text-muted">
             {t(`تصفح ${ideas.length} فكرة. رشّح حسب الميزانية والنوع والصعوبة.`, `Browse ${ideas.length} ideas. Filter by budget, type, and difficulty.`)}
           </p>
         </FadeIn>
 
-        <div className="mt-8 flex flex-wrap gap-2">
+        <div className="glass-subtle mt-5 flex flex-wrap gap-2 rounded-2xl p-3">
           {QUICK_FILTERS.map((f) => (
             <button
               key={f.key}
@@ -95,7 +95,7 @@ export default function Explore() {
           ))}
         </div>
 
-        <div className="mt-5 flex flex-col gap-2 sm:flex-row">
+        <div className="glass-subtle mt-3 flex flex-col gap-2 rounded-2xl p-3 sm:flex-row">
           <div className="relative flex-1">
             <Search className="pointer-events-none absolute top-1/2 end-3 -translate-y-1/2 text-subtle" />
             <input
@@ -174,7 +174,7 @@ export default function Explore() {
         </p>
 
         {shown.length === 0 ? (
-          <div className="mt-16 text-center">
+          <div className="mt-16 rounded-2xl border border-dashed border-line-strong px-5 py-14 text-center">
             <Search className="mx-auto text-subtle" />
             <p className="mt-3 text-sm text-muted">{t("ما لقينا أفكار تطابق بحثك.", "No ideas match your search.")}</p>
             <button

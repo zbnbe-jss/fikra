@@ -1,5 +1,6 @@
 import type { Idea } from "../data/types";
 import { BUDGET_MIN } from "./labels";
+import { normalizeArabic, understandDiscovery } from "./understanding";
 
 /**
  * Maps free-text natural language queries (Arabic, English, or mixed) to
@@ -9,39 +10,38 @@ import { BUDGET_MIN } from "./labels";
  * "ما أبي أتعامل مع ناس", "online business", "low budget".
  */
 export function smartSearch(query: string, ideas: Idea[]): Idea[] {
-  const q = query.trim().toLowerCase();
+  const q = normalizeArabic(query);
   if (!q) return ideas;
 
   let pool = ideas;
+  const intent = understandDiscovery(query);
 
-  const numberMatch = q.match(/(\d{3,6})/);
-  if (numberMatch) {
-    const budget = parseInt(numberMatch[1], 10);
-    pool = pool.filter((i) => (BUDGET_MIN[i.budgetRange] ?? Infinity) <= budget);
+  if (intent.budget) {
+    pool = pool.filter((i) => (BUDGET_MIN[i.budgetRange] ?? Infinity) <= intent.budget!);
   }
 
-  if (/اونلاين|أونلاين|online/.test(q)) {
+  if (intent.channel === "online") {
     pool = pool.filter((i) => i.channel !== "physical");
   }
-  if (/واقعي|physical|offline/.test(q)) {
+  if (intent.channel === "physical") {
     pool = pool.filter((i) => i.channel !== "online");
   }
-  if (/سهل|بسيط|easy|simple|مبتدئ|beginner/.test(q)) {
+  if (intent.beginner) {
     pool = pool.filter((i) => i.difficulty === "beginner");
   }
-  if (/رخيص|قليل|صغير|low.?budget|cheap|قليله/.test(q)) {
+  if (intent.lowBudget) {
     pool = pool.filter((i) => i.budgetRange === "under500" || i.budgetRange === "500to2000");
   }
-  if (/بروحي|لحالي|وحدي|alone|solo|by myself/.test(q)) {
+  if (intent.solo) {
     pool = pool.filter((i) => i.workStyles?.includes("alone") || i.workStyles?.includes("onePerson"));
   }
-  if (/ما أبي أتعامل مع ناس|بدون ناس|no customers|minimal.*(customer|people)/.test(q)) {
+  if (intent.lowInteraction) {
     pool = pool.filter((i) => i.customerInteraction === "minimal" || i.customerInteraction === "none");
   }
-  if (/يكبر|توسع|scalable|scale/.test(q)) {
+  if (intent.scalable) {
     pool = pool.filter((i) => i.scalability === "high");
   }
-  if (/بيت|منزل|home/.test(q)) {
+  if (intent.home) {
     pool = pool.filter((i) => i.channel !== "physical");
   }
 
@@ -61,9 +61,9 @@ export function smartSearch(query: string, ideas: Idea[]): Idea[] {
         ...(i.skillsEn ?? []),
       ]
         .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return words.some((w) => haystack.includes(w));
+        .join(" ");
+      const normalizedHaystack = normalizeArabic(haystack);
+      return words.some((w) => normalizedHaystack.includes(w));
     });
     // Combine: prefer items that satisfy both the structured filters AND the
     // text match; if that's empty, fall back to whichever pool is non-empty.

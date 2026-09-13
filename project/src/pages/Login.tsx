@@ -75,7 +75,7 @@ export default function Login({ initialMode = "login" }: { initialMode?: Mode })
       if (authError) setError(authErrorMessage(authError.message, lang));
       else {
         if (data.user) setAuthenticatedProfile(data.user, { displayName: displayName.trim() || undefined });
-        setMessage(t("تم إنشاء حسابك. تحقق من بريدك الإلكتروني لتأكيده.", "Your account is ready. Check your email to confirm it."));
+        setMessage(t("تم إنشاء حسابك. تحقّق من بريدك الإلكتروني لتأكيده.", "Your account is ready. Check your email to confirm it."));
       }
       return;
     }
@@ -101,15 +101,15 @@ export default function Login({ initialMode = "login" }: { initialMode?: Mode })
   };
   const submitLabels: Record<Mode, { ar: string; en: string }> = {
     login: { ar: "دخول", en: "Log in" },
-    signup: { ar: "إنشاء الحساب", en: "Create account" },
+      signup: { ar: "إنشاء الحساب", en: "Create account" },
     reset: { ar: "إرسال رابط الاستعادة", en: "Send reset link" },
   };
 
   const subtitle = mode === "login"
     ? t("سجّل الدخول لمتابعة رحلتك.", "Sign in to continue your journey.")
     : mode === "signup"
-      ? t("أنشئ حساباً وابدأ باكتشاف أفكارك.", "Create an account and start discovering your ideas.")
-      : t("سنرسل لك رابطاً لإعادة تعيين كلمة المرور.", "We will send you a link to reset your password.");
+      ? t("أنشئ حسابًا وابدأ باكتشاف أفكارك.", "Create an account and start discovering your ideas.")
+      : t("سنرسل لك رابطًا لإعادة تعيين كلمة المرور.", "We will send you a link to reset your password.");
 
   return (
     <div className="page-shell flex min-h-dvh items-center justify-center px-5 py-10 sm:py-16">
@@ -152,7 +152,7 @@ export default function Login({ initialMode = "login" }: { initialMode?: Mode })
           <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
             <div>
               <label htmlFor="auth-email" className="mb-2 block text-sm font-medium text-fg">{t("البريد الإلكتروني", "Email address")}</label>
-              <div className="relative">
+              <div className="relative" dir="ltr">
                 <Mail size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
                 <input id="auth-email" type="email" required autoComplete="email" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} dir="ltr" className="input-field pe-10 text-start" />
               </div>
@@ -171,9 +171,9 @@ export default function Login({ initialMode = "login" }: { initialMode?: Mode })
             {mode !== "reset" && (
               <div>
                 <label htmlFor="auth-password" className="mb-2 block text-sm font-medium text-fg">{t("كلمة المرور", "Password")}</label>
-                <div className="relative">
+                <div className="relative" dir={lang === "ar" ? "rtl" : "ltr"}>
                   <Lock size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
-                  <input id="auth-password" type={showPassword ? "text" : "password"} required minLength={6} autoComplete={mode === "signup" ? "new-password" : "current-password"} placeholder={t("6 أحرف على الأقل", "At least 6 characters")} value={password} onChange={(e) => setPassword(e.target.value)} dir="ltr" className="input-field pe-20 text-start" />
+                  <input id="auth-password" type={showPassword ? "text" : "password"} required minLength={6} autoComplete={mode === "signup" ? "new-password" : "current-password"} placeholder={t("6 أحرف على الأقل", "At least 6 characters")} value={password} onChange={(e) => setPassword(e.target.value)} dir={lang === "ar" ? "rtl" : "ltr"} className="input-field pe-20 text-start" />
                   <button type="button" onClick={() => setShowPassword((shown) => !shown)} className="absolute end-10 top-1/2 -translate-y-1/2 text-subtle hover:text-fg" aria-label={showPassword ? t("إخفاء كلمة المرور", "Hide password") : t("إظهار كلمة المرور", "Show password")}>
                     {showPassword ? <EyeOff size={17} className="icon-static" /> : <Eye size={17} className="icon-static" />}
                   </button>
@@ -184,9 +184,9 @@ export default function Login({ initialMode = "login" }: { initialMode?: Mode })
             {mode === "signup" && (
               <div>
                 <label htmlFor="auth-confirm-password" className="mb-2 block text-sm font-medium text-fg">{t("تأكيد كلمة المرور", "Confirm password")}</label>
-                <div className="relative">
+                <div className="relative" dir={lang === "ar" ? "rtl" : "ltr"}>
                   <Lock size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
-                  <input id="auth-confirm-password" type={showPassword ? "text" : "password"} required minLength={6} autoComplete="new-password" placeholder={t("أعد كتابة كلمة المرور", "Re-enter your password")} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} dir="ltr" className="input-field pe-10 text-start" />
+                  <input id="auth-confirm-password" type={showPassword ? "text" : "password"} required minLength={6} autoComplete="new-password" placeholder={t("أعد كتابة كلمة المرور", "Re-enter your password")} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} dir={lang === "ar" ? "rtl" : "ltr"} className="input-field pe-10 text-start" />
                 </div>
               </div>
             )}
@@ -204,7 +204,7 @@ export default function Login({ initialMode = "login" }: { initialMode?: Mode })
           )}
 
           <div className="mt-5 text-center text-sm text-muted">
-            {mode !== "signup" && <button type="button" onClick={() => { setMode("signup"); clearNotice(); }} className="hover:text-fg">{t("ليس لديك حساب؟ ", "Don't have an account? ")}<span className="font-semibold text-accent-text">{t("أنشئ حساباً", "Create one")}</span></button>}
+            {mode !== "signup" && <button type="button" onClick={() => { setMode("signup"); clearNotice(); }} className="hover:text-fg">{t("ليس لديك حساب؟ ", "Don't have an account? ")}<span className="font-semibold text-accent-text">{t("أنشئ حسابًا", "Create one")}</span></button>}
             {mode !== "login" && <button type="button" onClick={() => { setMode("login"); clearNotice(); }} className="font-semibold text-accent-text">{t("العودة إلى تسجيل الدخول", "Back to log in")}</button>}
           </div>
           {mode === "login" && <button type="button" onClick={() => { setMode("reset"); clearNotice(); }} className="mt-3 w-full text-center text-sm text-subtle hover:text-fg">{t("هل نسيت كلمة المرور؟", "Forgot your password?")}</button>}

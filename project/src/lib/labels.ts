@@ -2,10 +2,10 @@
 // `answers` (e.g. "under500", "1to3h") — used anywhere those raw values would
 // otherwise leak into user-facing text (Result profile summary, etc).
 export const CHANNEL_LABEL: Record<string, { ar: string; en: string }> = {
-  online: { ar: "أونلاين", en: "Online" },
-  physical: { ar: "واقعي", en: "Physical" },
-  both: { ar: "أونلاين وواقعي", en: "Online & Physical" },
-  notSure: { ar: "ما متأكد", en: "Not sure" },
+  online: { ar: "عبر الإنترنت", en: "Online" },
+  physical: { ar: "على أرض الواقع", en: "Physical" },
+  both: { ar: "عبر الإنترنت وعلى أرض الواقع", en: "Online & Physical" },
+  notSure: { ar: "لست متأكدًا", en: "Not sure" },
 };
 
 export const BUDGET_LABEL: Record<string, { ar: string; en: string }> = {
@@ -17,9 +17,9 @@ export const BUDGET_LABEL: Record<string, { ar: string; en: string }> = {
 };
 
 export const TIME_LABEL: Record<string, { ar: string; en: string }> = {
-  under1h: { ar: "أقل من ساعة يومياً", en: "Less than 1 hour/day" },
-  "1to3h": { ar: "1 – 3 ساعات يومياً", en: "1–3 hours/day" },
-  "3to6h": { ar: "3 – 6 ساعات يومياً", en: "3–6 hours/day" },
+  under1h: { ar: "أقل من ساعة يوميًا", en: "Less than 1 hour/day" },
+  "1to3h": { ar: "1 – 3 ساعات يوميًا", en: "1–3 hours/day" },
+  "3to6h": { ar: "3 – 6 ساعات يوميًا", en: "3–6 hours/day" },
   mostOfDay: { ar: "معظم اليوم", en: "Most of the day" },
 };
 
@@ -56,10 +56,10 @@ export const SCALABILITY_LABEL: Record<string, { ar: string; en: string }> = {
 };
 
 export const AMBITION_LABEL: Record<string, { ar: string; en: string }> = {
-  safeSmall: { ar: "أبي أبدأ صغير وآمن", en: "Start small and safe" },
-  learnByDoing: { ar: "أبي أجرب وأتعلم", en: "Try things and learn" },
+  safeSmall: { ar: "أريد أن أبدأ صغيرًا وبأمان", en: "Start small and safe" },
+  learnByDoing: { ar: "أريد أن أجرّب وأتعلّم", en: "Try things and learn" },
   sideIncome: { ar: "دخل إضافي", en: "Extra income" },
-  growFast: { ar: "أبي مشروع يكبر بسرعة", en: "A project that grows fast" },
+  growFast: { ar: "أريد مشروعًا ينمو بسرعة", en: "A project that grows fast" },
 };
 
 // The minimum AED value each budgetRange enum represents. Do NOT derive this

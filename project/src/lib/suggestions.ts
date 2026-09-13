@@ -40,7 +40,7 @@ export function getSmartSuggestions(idea: Idea): Suggestion[] {
     if (order.indexOf(ideaBudget) > order.indexOf(userBudget) && order.indexOf(userBudget) >= 0) {
       out.push({
         id: "budget-mvp",
-        ar: "ميزانيتك تشير إن البداية بنسخة أصغر (MVP) أوضح وأأمن.",
+        ar: "تشير ميزانيتك إلى أن البدء بنسخة أصغر (MVP) أوضح وأكثر أمانًا.",
         en: "Your budget suggests starting with a smaller MVP before investing more.",
       });
     }
@@ -49,7 +49,7 @@ export function getSmartSuggestions(idea: Idea): Suggestion[] {
   if (progress.percent === 0) {
     out.push({
       id: "validate",
-      ar: "اختبر الفكرة مع 10 عملاء محتملين قبل ما تستثمر أكثر.",
+      ar: "اختبر الفكرة مع 10 عملاء محتملين قبل الاستثمار أكثر.",
       en: "Consider testing this idea with 10 potential customers before investing more.",
     });
   }
@@ -57,7 +57,7 @@ export function getSmartSuggestions(idea: Idea): Suggestion[] {
   if (tasks.length === 0) {
     out.push({
       id: "first-task",
-      ar: "أضف مهمة واحدة واضحة لهذا الأسبوع — حتى لو كانت بسيطة.",
+      ar: "أضف مهمة واحدة واضحة لهذا الأسبوع، حتى لو كانت بسيطة.",
       en: "Add one clear task for this week, even a small one.",
     });
   } else if (tasks.some((t) => !t.done)) {
@@ -72,7 +72,7 @@ export function getSmartSuggestions(idea: Idea): Suggestion[] {
   if (!notes.trim() && progress.percent > 0) {
     out.push({
       id: "notes",
-      ar: "اكتب ملاحظة قصيرة عما تعلمته حتى الآن — تساعدك لاحقاً مع FIKRA AI.",
+      ar: "اكتب ملاحظة قصيرة عمّا تعلّمته حتى الآن؛ ستساعدك لاحقًا مع FIKRA AI.",
       en: "Write a short note about what you have learned so far — it helps FIKRA AI later.",
     });
   }
@@ -80,7 +80,7 @@ export function getSmartSuggestions(idea: Idea): Suggestion[] {
   if (answers?.timeRequired === "under1h" && idea.timeRequired !== "under1h") {
     out.push({
       id: "time",
-      ar: "وقتك محدود. ركّز على خطوة واحدة قابلة للتنفيذ هذا الأسبوع.",
+      ar: "وقتك محدود؛ ركّز على خطوة واحدة قابلة للتنفيذ هذا الأسبوع.",
       en: "Your available time is limited. Focus on one executable step this week.",
     });
   }
@@ -107,14 +107,14 @@ export function getInsights(idea: Idea, lang: "ar" | "en") {
       idea.channel === "online"
         ? lang === "en"
           ? "Online"
-          : "أونلاين"
+          : "عبر الإنترنت"
         : idea.channel === "physical"
           ? lang === "en"
             ? "Physical"
-            : "واقعي"
+            : "على أرض الواقع"
           : lang === "en"
             ? "Online & Physical"
-            : "أونلاين وواقعي",
+            : "عبر الإنترنت وعلى أرض الواقع",
     budget: label(BUDGET_LABEL, idea.budgetRange, lang),
     difficulty: label(DIFFICULTY_LABEL, idea.difficulty, lang),
     time: label(TIME_LABEL, answers?.timeRequired ?? idea.timeRequired, lang),

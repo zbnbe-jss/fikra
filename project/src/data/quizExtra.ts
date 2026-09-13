@@ -7,9 +7,9 @@ import type { QuizQuestion } from "./types";
 export const quizExtraQuestions: QuizQuestion[] = [
   {
     id: "personality",
-    title: "وش يوصفك أكثر؟",
+    title: "ما الذي يصفك أكثر؟",
     titleEn: "What describes you best?",
-    subtitle: "اختر الأقرب لطريقة تفكيرك وتعاملك",
+    subtitle: "اختر الأقرب إلى طريقة تفكيرك وتعاملك",
     subtitleEn: "Pick what's closest to how you think and work",
     options: [
       { value: "independentAnalytical", label: "مستقل وتحليلي", labelEn: "Independent & analytical", icon: "🧠" },
@@ -20,9 +20,9 @@ export const quizExtraQuestions: QuizQuestion[] = [
   },
   {
     id: "skills",
-    title: "شنو مهاراتك؟",
+    title: "ما مهاراتك؟",
     titleEn: "What are your skills?",
-    subtitle: "اختر كل اللي ينطبق عليك",
+    subtitle: "اختر كل ما ينطبق عليك",
     subtitleEn: "Choose everything that applies to you",
     multi: true,
     options: [
@@ -36,15 +36,15 @@ export const quizExtraQuestions: QuizQuestion[] = [
   },
   {
     id: "ambition",
-    title: "شو طموحك للمشروع؟",
+    title: "ما طموحك للمشروع؟",
     titleEn: "What's your ambition for this project?",
-    subtitle: "هذا يساعدنا نقترح عليك مشاريع بالمستوى المناسب",
+    subtitle: "يساعدنا ذلك على اقتراح مشاريع بالمستوى المناسب لك",
     subtitleEn: "This helps us suggest projects at the right scale for you",
     options: [
-      { value: "safeSmall", label: "أبي أبدأ صغير وآمن", labelEn: "Start small and safe", icon: "🌱" },
-      { value: "learnByDoing", label: "أبي أجرب وأتعلم", labelEn: "Try things and learn", icon: "🧪" },
-      { value: "sideIncome", label: "أبي دخل إضافي بس", labelEn: "Just extra income", icon: "💵" },
-      { value: "growFast", label: "أبي مشروع يكبر بسرعة", labelEn: "A project that grows fast", icon: "🚀" },
+      { value: "safeSmall", label: "أريد أن أبدأ صغيرًا وبأمان", labelEn: "Start small and safe", icon: "🌱" },
+      { value: "learnByDoing", label: "أريد أن أجرّب وأتعلّم", labelEn: "Try things and learn", icon: "🧪" },
+      { value: "sideIncome", label: "أريد دخلًا إضافيًا فقط", labelEn: "Just extra income", icon: "💵" },
+      { value: "growFast", label: "أريد مشروعًا ينمو بسرعة", labelEn: "A project that grows fast", icon: "🚀" },
     ],
   },
 ];

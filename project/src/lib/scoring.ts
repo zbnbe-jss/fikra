@@ -178,29 +178,29 @@ export function scoreIdea(idea: Idea, answers: QuizAnswers, weights: Partial<Rec
   const reasons: ScoredIdea["reasons"] = [];
   if (dims.budget >= 1) reasons.push({ ar: "يناسب ميزانيتك", en: "Fits your budget" });
   if (dims.time >= 1) reasons.push({ ar: "يتوافق مع وقتك المتاح", en: "Matches your available time" });
-  if (dims.channel >= 1) reasons.push({ ar: "يناسب تفضيلك أونلاين/واقعي", en: "Matches your online/physical preference" });
+  if (dims.channel >= 1) reasons.push({ ar: "يناسب تفضيلك بين الإنترنت والعمل على أرض الواقع", en: "Matches your online/physical preference" });
   if (dims.interests > 0.4) reasons.push({ ar: "قريب من اهتماماتك", en: "Close to your interests" });
   if (dims.workStyle > 0.4) reasons.push({ ar: "يناسب أسلوب عملك", en: "Fits your working style" });
   if (dims.experience >= 1) reasons.push({ ar: "مناسب لمستوى خبرتك", en: "Fits your experience level" });
   if (dims.personality > 0.4) reasons.push({ ar: "يناسب شخصيتك", en: "Fits your personality" });
   if (dims.risk >= 1) reasons.push({ ar: "يناسب طموحك وتحملك للمخاطرة", en: "Fits your ambition and risk tolerance" });
   if (dims.scalability >= 1) reasons.push({ ar: "يتوافق مع قابلية التوسع التي تريدها", en: "Matches the scalability you want" });
-  if (dims.readiness >= 1) reasons.push({ ar: "مناسب لوقت بدءك", en: "Fits when you want to start" });
+  if (dims.readiness >= 1) reasons.push({ ar: "يناسب موعد البدء الذي تفضّله", en: "Fits when you want to start" });
 
   let challenge: ScoredIdea["challenge"];
   if (dims.skills < 0.3) {
     challenge = {
-      ar: "قد تحتاج تطور مهارات جديدة تناسب هالمجال",
+      ar: "قد تحتاج إلى تطوير مهارات جديدة لهذا المجال",
       en: "You may need to develop new skills for this field",
     };
   } else if (dims.budget < 0.5) {
     challenge = {
-      ar: "الميزانية المطلوبة أعلى شوي من اللي حددته",
+      ar: "الميزانية المطلوبة أعلى قليلًا من النطاق الذي حددته",
       en: "The required budget is a bit higher than what you set",
     };
   } else if (dims.difficulty === 0) {
     challenge = {
-      ar: "قد تحتاج مستوى خبرة أعلى قبل البدء الكامل",
+      ar: "قد تحتاج إلى مستوى خبرة أعلى قبل البدء الكامل",
       en: "You may need more experience before a full launch",
     };
   }

@@ -23,8 +23,8 @@ type Sort = "default" | "budgetAsc" | "budgetDesc" | "name";
 
 const QUICK_FILTERS = [
   { key: "random", icon: Shuffle, ar: "فكرة عشوائية", en: "Random idea" },
-  { key: "online", icon: Monitor, ar: "أونلاين", en: "Online" },
-  { key: "physical", icon: Store, ar: "واقعي", en: "Physical" },
+  { key: "online", icon: Monitor, ar: "عبر الإنترنت", en: "Online" },
+  { key: "physical", icon: Store, ar: "على أرض الواقع", en: "Physical" },
   { key: "fast", icon: Zap, ar: "بداية سريعة", en: "Quick start" },
   { key: "lowBudget", icon: Wallet, ar: "ميزانية صغيرة", en: "Low budget" },
   { key: "home", icon: HomeIcon, ar: "من البيت", en: "From home" },

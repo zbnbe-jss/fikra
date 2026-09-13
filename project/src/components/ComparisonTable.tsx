@@ -6,7 +6,7 @@ const ROWS: { key: keyof Idea | "channel"; ar: string; en: string }[] = [
   { key: "budgetLabel", ar: "الميزانية", en: "Budget" },
   { key: "timeLabel", ar: "الوقت", en: "Time" },
   { key: "difficulty", ar: "الصعوبة", en: "Difficulty" },
-  { key: "channel", ar: "أونلاين/واقعي", en: "Online/Physical" },
+  { key: "channel", ar: "نوع الحضور", en: "Project format" },
   { key: "riskLevel", ar: "المخاطرة", en: "Risk" },
   { key: "scalability", ar: "قابلية التوسع", en: "Scalability" },
 ];

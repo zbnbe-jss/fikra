@@ -28,9 +28,9 @@ const BUDGET_LABEL: Record<string, [string, string, number, number | undefined]>
 };
 
 const TIME_LABEL: Record<string, [string, string]> = {
-  under1h: ["أقل من ساعة يومياً", "Less than 1 hour/day"],
-  "1to3h": ["1 – 3 ساعات يومياً", "1–3 hours/day"],
-  "3to6h": ["3 – 6 ساعات يومياً", "3–6 hours/day"],
+  under1h: ["أقل من ساعة يوميًا", "Less than 1 hour/day"],
+  "1to3h": ["1 – 3 ساعات يوميًا", "1–3 hours/day"],
+  "3to6h": ["3 – 6 ساعات يوميًا", "3–6 hours/day"],
   mostOfDay: ["معظم اليوم", "Most of the day"],
 };
 
@@ -80,9 +80,9 @@ const SKILLS: Record<string, [string, string]> = {
 };
 
 function channelLabel(channel: Descriptor["channel"]): [string, string] {
-  if (channel === "online") return ["أونلاين", "Online"];
-  if (channel === "physical") return ["واقعي", "Physical"];
-  return ["أونلاين وواقعي", "Online & physical"];
+  if (channel === "online") return ["عبر الإنترنت", "Online"];
+  if (channel === "physical") return ["على أرض الواقع", "Physical"];
+  return ["عبر الإنترنت وعلى أرض الواقع", "Online & physical"];
 }
 
 function channelValue(channel: Descriptor["channel"]): Idea["channel"] {

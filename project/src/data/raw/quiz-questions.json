@@ -1,32 +1,32 @@
 [
   {
     "id": "channel",
-    "title": "وين تبي مشروعك؟",
-    "titleEn": "Where do you want your project?",
-    "subtitle": "هل تفضل مشروع أونلاين، واقعي، أو الاثنين؟",
-    "subtitleEn": "Do you prefer an online, physical, or both?",
+    "title": "أين تفضّل أن يكون مشروعك؟",
+    "titleEn": "Where do you want your project to be?",
+    "subtitle": "هل تفضّل مشروعًا عبر الإنترنت، على أرض الواقع، أم يجمع بينهما؟",
+    "subtitleEn": "Do you prefer an online, physical, or hybrid project?",
     "options": [
       {
         "value": "online",
-        "label": "أونلاين",
+        "label": "عبر الإنترنت",
         "labelEn": "Online",
         "icon": "💻"
       },
       {
         "value": "physical",
-        "label": "واقعي",
+        "label": "على أرض الواقع",
         "labelEn": "Physical",
         "icon": "🏪"
       },
       {
         "value": "both",
-        "label": "الاثنين",
+        "label": "كلاهما",
         "labelEn": "Both",
         "icon": "🔄"
       },
       {
         "value": "notSure",
-        "label": "ما متأكد",
+        "label": "لست متأكدًا",
         "labelEn": "Not sure",
         "icon": "🤔"
       }
@@ -34,9 +34,9 @@
   },
   {
     "id": "interests",
-    "title": "شنو اهتماماتك؟",
+    "title": "ما اهتماماتك؟",
     "titleEn": "What are your interests?",
-    "subtitle": "اختر اللي يهمك — يمكنك اختيار أكثر من خيار",
+    "subtitle": "اختر ما يهمك — يمكنك اختيار أكثر من خيار",
     "subtitleEn": "Choose what interests you — you can select more than one",
     "multi": true,
     "options": [
@@ -161,9 +161,9 @@
   },
   {
     "id": "time",
-    "title": "كم وقت تقدر تخصص للمشروع؟",
+    "title": "كم من الوقت يمكنك تخصيصه للمشروع؟",
     "titleEn": "How much time can you dedicate to the project?",
-    "subtitle": "صار صريح — هذا يساعدنا نختار مشروع واقعي",
+    "subtitle": "كن صريحًا — يساعدنا ذلك على اختيار مشروع عملي",
     "subtitleEn": "Be honest — this helps us pick a realistic project",
     "options": [
       {
@@ -194,9 +194,9 @@
   },
   {
     "id": "workStyle",
-    "title": "كيف تفضل تشتغل؟",
+    "title": "كيف تفضّل العمل؟",
     "titleEn": "How do you prefer to work?",
-    "subtitle": "اختر اللي يناسبك — يمكنك اختيار أكثر من خيار",
+    "subtitle": "اختر ما يناسبك — يمكنك اختيار أكثر من خيار",
     "subtitleEn": "Choose what suits you — you can select more than one",
     "multi": true,
     "options": [
@@ -241,7 +241,7 @@
       },
       {
         "value": "dontMind",
-        "label": "ما عندي مانع",
+        "label": "لا أمانع",
         "labelEn": "I don't mind",
         "icon": "🙂"
       },
@@ -261,9 +261,9 @@
   },
   {
     "id": "motivation",
-    "title": "شنو اللي يحفزك؟",
+    "title": "ما الذي يحفزك؟",
     "titleEn": "What motivates you?",
-    "subtitle": "اختر كل اللي ينطبق عليك",
+    "subtitle": "اختر كل ما ينطبق عليك",
     "subtitleEn": "Select all that apply to you",
     "multi": true,
     "options": [
@@ -307,7 +307,7 @@
   },
   {
     "id": "experience",
-    "title": "شنو خبرتك؟",
+    "title": "ما مستوى خبرتك؟",
     "titleEn": "What is your experience?",
     "subtitle": "هذا يساعدنا نقترح مشروع بمستوى مناسب لك",
     "subtitleEn": "This helps us suggest a project at the right level for you",
@@ -340,14 +340,14 @@
   },
   {
     "id": "readiness",
-    "title": "متى تبي تبدأ؟",
+    "title": "متى تريد أن تبدأ؟",
     "titleEn": "When do you want to start?",
-    "subtitle": "آخر سؤال — احنا قربنا نخلاص",
+    "subtitle": "السؤال الأخير — أوشكنا على الانتهاء",
     "subtitleEn": "Last question — we're almost done",
     "options": [
       {
         "value": "now",
-        "label": "الحين",
+        "label": "الآن",
         "labelEn": "Right now",
         "icon": "⚡"
       },
@@ -359,13 +359,13 @@
       },
       {
         "value": "later",
-        "label": "بعد فترة",
+        "label": "لاحقًا",
         "labelEn": "After a while",
         "icon": "🗓️"
       },
       {
         "value": "exploring",
-        "label": "بس أستكشف",
+        "label": "أستكشف فقط",
         "labelEn": "Just exploring",
         "icon": "🔍"
       }

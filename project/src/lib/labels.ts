@@ -43,6 +43,18 @@ export const DIFFICULTY_LABEL: Record<string, { ar: string; en: string }> = {
   advanced: { ar: "متقدم", en: "Advanced" },
 };
 
+export const RISK_LABEL: Record<string, { ar: string; en: string }> = {
+  low: { ar: "منخفضة", en: "Low" },
+  medium: { ar: "متوسطة", en: "Medium" },
+  high: { ar: "مرتفعة", en: "High" },
+};
+
+export const SCALABILITY_LABEL: Record<string, { ar: string; en: string }> = {
+  low: { ar: "محدودة", en: "Low" },
+  medium: { ar: "متوسطة", en: "Medium" },
+  high: { ar: "عالية", en: "High" },
+};
+
 export const AMBITION_LABEL: Record<string, { ar: string; en: string }> = {
   safeSmall: { ar: "أبي أبدأ صغير وآمن", en: "Start small and safe" },
   learnByDoing: { ar: "أبي أجرب وأتعلم", en: "Try things and learn" },
@@ -68,5 +80,5 @@ export function label(map: Record<string, { ar: string; en: string }>, value: un
 
 export function labelList(map: Record<string, { ar: string; en: string }>, values: unknown, lang: "ar" | "en"): string {
   if (!Array.isArray(values) || values.length === 0) return "—";
-  return values.map((v) => (map[v] ? map[v][lang] : String(v))).join("، ");
+  return values.map((v) => (map[v] ? map[v][lang] : String(v))).join(lang === "en" ? ", " : "، ");
 }

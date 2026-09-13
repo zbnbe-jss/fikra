@@ -13,7 +13,7 @@ import {
   Wallet,
 } from "lucide-react";
 import { useLang } from "../lib/language";
-import { respond, type AiMessage } from "../lib/aiAssistant";
+import { respond, type AiContext, type AiMessage } from "../lib/aiAssistant";
 import { getMyIdea } from "../lib/myIdea";
 import IdeaCard from "../components/IdeaCard";
 import ComparisonTable from "../components/ComparisonTable";
@@ -54,12 +54,11 @@ export default function Ai() {
   const [messages, setMessages] = useState<AiMessage[]>([{ role: "assistant", content: greeting }]);
   const [input, setInput] = useState(location.state?.prompt ?? "");
   const [sending, setSending] = useState(false);
-  const lastIdeaId = useRef<string | null>(getMyIdea()?.id ?? null);
+  const contextRef = useRef<AiContext>({ lastIdeaId: getMyIdea()?.id ?? null, myIdeaBrief: location.state?.context ?? "" });
   const scrollRef = useRef<HTMLDivElement>(null);
-  const contextRef = useRef(location.state?.context ?? "");
 
   useEffect(() => {
-    if (aboutMyIdea) lastIdeaId.current = getMyIdea()?.id ?? lastIdeaId.current;
+    if (aboutMyIdea) contextRef.current = { ...contextRef.current, lastIdeaId: getMyIdea()?.id ?? contextRef.current.lastIdeaId };
   }, [aboutMyIdea]);
 
   const send = (text: string) => {
@@ -69,9 +68,8 @@ export default function Ai() {
     setInput("");
     setSending(true);
     setTimeout(() => {
-      const reply = respond(trimmed, { lastIdeaId: lastIdeaId.current, myIdeaBrief: contextRef.current });
-      const mentioned = reply.ideas?.[0] ?? reply.comparison?.[0];
-      if (mentioned) lastIdeaId.current = mentioned.id;
+      const reply = respond(trimmed, contextRef.current);
+      contextRef.current = { ...contextRef.current, ...reply.context };
       setMessages((m) => [...m, reply]);
       setSending(false);
       requestAnimationFrame(() => scrollRef.current?.scrollTo(0, scrollRef.current.scrollHeight));
@@ -80,7 +78,7 @@ export default function Ai() {
 
   const reset = () => {
     setMessages([{ role: "assistant", content: greeting }]);
-    lastIdeaId.current = getMyIdea()?.id ?? null;
+    contextRef.current = { lastIdeaId: getMyIdea()?.id ?? null };
   };
 
   const prompts = lang === "en" ? PROMPTS_EN : PROMPTS_AR;
@@ -118,8 +116,8 @@ export default function Ai() {
         >
           {messages.map((m, idx) =>
             m.role === "user" ? (
-              <div key={idx} className="flex items-start justify-end gap-2">
-                <div className="max-w-[80%] rounded-xl bg-accent px-4 py-2.5 text-sm text-accent-fg shadow-sm">{m.content}</div>
+                <div key={idx} className="flex items-start justify-end gap-2">
+                <div dir="auto" className="max-w-[80%] rounded-xl bg-accent px-4 py-2.5 text-sm text-accent-fg shadow-sm">{m.content}</div>
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-line text-muted">
                   <User size={14} className="icon-static" />
                 </div>
@@ -130,7 +128,7 @@ export default function Ai() {
                   <Lightbulb size={14} className="icon-static" />
                 </div>
                 <div className="max-w-[85%] space-y-3">
-                  <div className="glass-subtle rounded-2xl px-4 py-3 text-sm leading-relaxed text-fg">
+                  <div dir="auto" className="glass-subtle rounded-2xl px-4 py-3 text-sm leading-relaxed text-fg">
                     {m.content.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
                       part.startsWith("**") && part.endsWith("**") ? (
                         <strong key={i}>{part.slice(2, -2)}</strong>
@@ -185,6 +183,7 @@ export default function Ai() {
               }
             }}
             placeholder={t("اكتب سؤالك…", "Type your question…")}
+            dir="auto"
             rows={1}
             disabled={sending}
             className="input-field flex-1 resize-none"

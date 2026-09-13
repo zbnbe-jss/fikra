@@ -15,13 +15,13 @@ export default function SavedIdeas() {
       <FadeIn>
       <h1 className="mb-2 text-3xl text-fg">{t("الأفكار المحفوظة", "Saved Ideas")}</h1>
       <p className="mb-8 text-muted">
-        {t("الأفكار اللي حفظتها عشان ترجع لها لاحقاً", "Ideas you've saved to consider later")}
+        {t("الأفكار التي حفظتها للعودة إليها لاحقاً", "Ideas you've saved to consider later")}
       </p>
       </FadeIn>
 
       {saved.length === 0 ? (
         <FadeIn className="rounded-2xl border border-dashed border-ink-200 py-16 text-center">
-          <p className="mb-6 text-muted">{t("ما حفظت أي فكرة بعد", "You haven't saved any ideas yet")}</p>
+          <p className="mb-6 text-muted">{t("لم تحفظ أي فكرة بعد.", "You haven't saved any ideas yet")}</p>
           <button
             onClick={() => navigate("/explore")}
             className="btn-primary"

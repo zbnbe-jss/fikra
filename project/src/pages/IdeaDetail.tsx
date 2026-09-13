@@ -6,7 +6,7 @@ import { ideas } from "../data";
 import { getRoadmapProgress, isIdeaSaved, setMyIdea, toggleSavedIdea } from "../lib/myIdea";
 import IdeaCard from "../components/IdeaCard";
 import { FadeIn } from "../components/motion";
-import { CHANNEL_LABEL, DIFFICULTY_LABEL, INTERACTION_LABEL, label } from "../lib/labels";
+import { CHANNEL_LABEL, DIFFICULTY_LABEL, INTERACTION_LABEL, RISK_LABEL, SCALABILITY_LABEL, label } from "../lib/labels";
 import { getAnswers } from "../lib/quizState";
 import { scoreIdea } from "../lib/scoring";
 
@@ -20,7 +20,7 @@ export default function IdeaDetail() {
   if (!idea) {
     return (
       <div className="mx-auto max-w-xl px-5 py-24 text-center">
-        <p className="mb-6 text-muted">{t("ما لقينا هذي الفكرة", "We couldn't find this idea")}</p>
+        <p className="mb-6 text-muted">{t("تعذّر العثور على هذه الفكرة.", "We couldn't find this idea")}</p>
         <button type="button" onClick={() => navigate("/explore")} className="btn-primary">
           {t("استكشف الأفكار", "Explore Ideas")}
         </button>
@@ -173,7 +173,7 @@ export default function IdeaDetail() {
         <section className="mt-10">
           <h2 className="text-lg font-semibold text-fg">{t("تحديات محتملة", "Potential challenges")}</h2>
           <p className="mt-2 text-sm text-muted">
-            {t("مستوى المخاطرة", "Risk level")}: {idea.riskLevel} · {t("قابلية التوسع", "Scalability")}: {idea.scalability}
+            {t("مستوى المخاطرة", "Risk level")}: {label(RISK_LABEL, idea.riskLevel, lang)} <span className="mx-1 text-line-strong">|</span> {t("قابلية التوسع", "Scalability")}: {label(SCALABILITY_LABEL, idea.scalability, lang)}
           </p>
         </section>
 

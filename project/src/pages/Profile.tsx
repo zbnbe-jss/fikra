@@ -7,6 +7,7 @@ import { supabase } from "../lib/supabaseClient";
 import { getAnswers } from "../lib/quizState";
 import { getMyIdea, getRoadmapProgress, getSavedIdeas } from "../lib/myIdea";
 import { BUDGET_LABEL, CHANNEL_LABEL, label } from "../lib/labels";
+import { getUserProfile } from "../lib/profile";
 
 export default function Profile() {
   const { lang, t } = useLang();
@@ -23,7 +24,7 @@ export default function Profile() {
     return (
       <div className="flex min-h-[60vh] items-center justify-center px-5">
         <div className="mx-auto max-w-md text-center">
-          <p className="mb-6 text-muted">{t("لازم تسجل الدخول عشان تشوف ملفك الشخصي", "You need to log in to view your profile")}</p>
+          <p className="mb-6 text-muted">{t("سجّل الدخول لعرض ملفك الشخصي.", "You need to log in to view your profile")}</p>
           <Link to="/login" className="btn-primary">
             {t("تسجيل الدخول", "Log in")}
           </Link>
@@ -36,6 +37,8 @@ export default function Profile() {
   const savedIdeas = getSavedIdeas();
   const answers = getAnswers();
   const progress = myIdea ? getRoadmapProgress(myIdea) : null;
+  const profile = getUserProfile();
+  const displayName = user.user_metadata?.display_name ?? user.user_metadata?.name ?? profile?.displayName;
 
   return (
     <div className="page-shell">
@@ -59,9 +62,8 @@ export default function Profile() {
             <User size={22} className="icon-static" />
           </div>
           <div>
-            <p className="text-sm font-medium text-fg" dir="ltr">
-              {user.email}
-            </p>
+            {displayName && <p className="text-sm font-semibold text-fg">{displayName}</p>}
+            <p className="text-sm text-muted" dir="ltr">{user.email}</p>
             <p className="text-xs text-subtle">{t("حساب فكرة", "FIKRA account")}</p>
           </div>
         </section>
@@ -83,7 +85,7 @@ export default function Profile() {
               </Link>
             </div>
           ) : (
-            <p className="mt-2 text-sm text-muted">{t("ما عندك فكرة مختارة بعد", "No idea chosen yet")}</p>
+            <p className="mt-2 text-sm text-muted">{t("لم تختر فكرة بعد.", "No idea chosen yet")}</p>
           )}
         </section>
 
@@ -116,7 +118,7 @@ export default function Profile() {
           <p className="mt-2 text-sm text-muted">
             {savedIdeas.length > 0
               ? t(`عندك ${savedIdeas.length} فكرة محفوظة`, `You have ${savedIdeas.length} saved ideas`)
-              : t("ما حفظت أي فكرة بعد", "You haven't saved any ideas yet")}
+              : t("لم تحفظ أي فكرة بعد.", "You haven't saved any ideas yet")}
           </p>
         </section>
       </div>

@@ -42,6 +42,50 @@ export interface Idea {
   personalityTags: string[];
   roadmap: RoadmapStep[];
   relatedIdeas: string[];
+
+  name?: { ar: string; en: string };
+  shortDescriptionLocalized?: { ar: string; en: string };
+  fullDescriptionLocalized?: { ar: string; en: string };
+
+  /** Optional v2 enrichment fields. Existing JSON remains valid while the catalog grows. */
+  subCategory?: string;
+  businessType?: string;
+  format?: "online" | "physical" | "hybrid";
+  budget?: { min: number; max?: number; recommended?: number };
+  requiredSkills?: string[];
+  learnableSkills?: string[];
+  targetAudience?: string;
+  businessModel?: string;
+  revenueModel?: string;
+  pricingModel?: string;
+  equipment?: string[];
+  software?: string[];
+  suppliersOrSources?: string[];
+  locationRequirements?: string;
+  marketingChannels?: string[];
+  salesChannels?: string[];
+  firstWeekPlan?: string[];
+  first30DaysPlan?: string[];
+  growthPath?: string[];
+  profitPotential?: "variable" | "low" | "medium" | "high";
+  competitionLevel?: "low" | "medium" | "high";
+  advantages?: string[];
+  disadvantages?: string[];
+  commonChallenges?: string[];
+  keywords?: string[];
+  arabicKeywords?: string[];
+  englishKeywords?: string[];
+  arabicSynonyms?: string[];
+  relatedTerms?: string[];
+  tags?: string[];
+  similarIdeas?: string[];
+  cheaperAlternatives?: string[];
+  easierAlternatives?: string[];
+  advancedAlternatives?: string[];
+  onlineAlternatives?: string[];
+  physicalAlternatives?: string[];
+  hybridAlternatives?: string[];
+  complementaryIdeas?: string[];
 }
 
 export interface RoadmapStep {

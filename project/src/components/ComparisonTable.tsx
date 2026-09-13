@@ -1,5 +1,6 @@
 import { useLang } from "../lib/language";
 import type { Idea } from "../data/types";
+import { CHANNEL_LABEL, DIFFICULTY_LABEL, RISK_LABEL, SCALABILITY_LABEL, label } from "../lib/labels";
 
 const ROWS: { key: keyof Idea | "channel"; ar: string; en: string }[] = [
   { key: "budgetLabel", ar: "الميزانية", en: "Budget" },
@@ -31,7 +32,15 @@ export default function ComparisonTable({ ideas }: { ideas: Idea[] }) {
               <td className="p-3 font-medium text-muted">{lang === "en" ? row.en : row.ar}</td>
               {ideas.map((idea) => (
                 <td key={idea.id} className="p-3 text-fg">
-                  {String(idea[row.key as keyof Idea] ?? "—")}
+                  {row.key === "channel"
+                    ? label(CHANNEL_LABEL, idea.channel, lang)
+                    : row.key === "difficulty"
+                      ? label(DIFFICULTY_LABEL, idea.difficulty, lang)
+                      : row.key === "riskLevel"
+                        ? label(RISK_LABEL, idea.riskLevel, lang)
+                        : row.key === "scalability"
+                          ? label(SCALABILITY_LABEL, idea.scalability, lang)
+                          : String(idea[row.key as keyof Idea] ?? "—")}
                 </td>
               ))}
             </tr>

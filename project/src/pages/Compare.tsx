@@ -41,7 +41,7 @@ export default function Compare() {
       <FadeIn>
       <h1 className="mb-2 text-3xl text-fg">{t("قارن الأفكار", "Compare Ideas")}</h1>
       <p className="mb-8 text-muted">
-        {t(`اختر حتى ${MAX_COMPARE} أفكار عشان تقارن بينها`, `Pick up to ${MAX_COMPARE} ideas to compare`)}
+        {t(`اختر حتى ${MAX_COMPARE} أفكار لمقارنتها`, `Pick up to ${MAX_COMPARE} ideas to compare`)}
       </p>
       </FadeIn>
 
@@ -92,7 +92,7 @@ export default function Compare() {
 
       {selected.length < 2 ? (
         <div className="rounded-xl border border-dashed border-line py-16 text-center text-muted">
-          {t("أضف فكرتين على الأقل عشان تشوف المقارنة", "Add at least two ideas to see the comparison")}
+          {t("أضف فكرتين على الأقل لعرض المقارنة.", "Add at least two ideas to see the comparison")}
         </div>
       ) : (
         <>

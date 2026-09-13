@@ -6,7 +6,8 @@
 - **Routes:** Home, Explore, idea detail, quiz, results, FIKRA AI, My Idea, comparison, saved ideas, profile, settings, login and about are already wired through React Router.
 - **State:** Language, visual preferences, quiz answers/results, saved ideas and My Idea workspace use browser storage. Supabase is used only for optional authentication.
 - **Product logic:** The quiz currently renders 12 questions. Matching has configurable dimension weights and produces reasons/challenges. Search recognizes a useful Arabic/English starter vocabulary. My Idea persists roadmap state, tasks and notes.
-- **Data reality:** The repository contains 203 structured ideas and 333 glossary records. It is not yet a 500-idea or 1,000-term dataset. The code must retain this fact, avoid fake counts, and support a future repository or database-backed expansion.
+- **Product logic:** The quiz currently renders 12 questions. Matching has configurable dimension weights, hard constraints, diversity ranking and reasons/challenges. Search and the local assistant share Arabic/English intent normalization. My Idea persists roadmap state, tasks and notes.
+- **Data reality:** The repository contains 203 structured ideas and 333 glossary records with 939 reviewed aliases. It is not yet a 500-idea catalog; the code retains this fact, avoids fake counts, and exposes a typed access seam for a future repository or database-backed expansion.
 
 ## Findings to preserve
 
@@ -40,3 +41,10 @@
 - Explanatory match signals in the scorer and result surface.
 - Shared Arabic text normalization and constraint extraction for search and the local assistant.
 - Visual consistency updates across Explore, FIKRA AI, My Idea, results and reusable idea cards.
+- Arabic auth and RTL pass: direct `/signup` route, field labels, logical padding, localized Supabase errors, and corrected Arabic UI copy across the primary product surfaces.
+- Typed idea access layer (`getAllIdeas`, `getIdeaById`, `searchIdeas`, `filterIdeas`, `getRelatedIdeas`) with deterministic schema adapters and relationship validation.
+- Local-first user profile model carrying language, preferences, quiz answers and selected idea; auth sessions hydrate it without discarding existing quiz/workspace state.
+- Matching hard constraints plus category/channel/difficulty diversity selection; reusable `getPersonalizedIdeas` recommendation seam.
+- Intent layer for Gulf Arabic and mixed English business phrases, conversation recommendation memory, rejected-idea down-ranking and a structured `getAIContext` read model for My Idea + quiz state.
+- Signup now captures a display name, confirms passwords, supports show/hide password, and stores localized auth feedback.
+- `npm run validate:catalog` verifies idea count, unique IDs, core fields, relationship references and glossary term count.

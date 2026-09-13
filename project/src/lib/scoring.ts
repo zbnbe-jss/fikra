@@ -18,6 +18,13 @@ const WEIGHTS = {
 } as const;
 
 const BUDGET_ORDER = ["under500", "500to2000", "2000to5000", "5000to15000", "over15000"];
+const BUDGET_LIMIT: Record<string, number> = {
+  under500: 500,
+  "500to2000": 2000,
+  "2000to5000": 5000,
+  "5000to15000": 15000,
+  over15000: Number.POSITIVE_INFINITY,
+};
 const TIME_ORDER = ["under1h", "1to3h", "3to6h", "mostOfDay"];
 const INTERACTION_ORDER = ["none", "minimal", "some", "enjoy"];
 
@@ -166,8 +173,62 @@ export function scoreIdea(idea: Idea, answers: QuizAnswers): ScoredIdea {
 }
 
 export function matchIdeas(answers: QuizAnswers, limit = 6): ScoredIdea[] {
-  return ideas
+  const eligible = ideas
+    .filter((idea) => {
+      if (answers.channel === "online" && idea.channel === "physical") return false;
+      if (answers.channel === "physical" && idea.channel === "online") return false;
+      if (answers.budgetRange && budgetMinForIdea(idea.budgetRange) > (BUDGET_LIMIT[answers.budgetRange] ?? Number.POSITIVE_INFINITY)) return false;
+      if (answers.customerInteraction === "none" && idea.customerInteraction === "enjoy") return false;
+      if (answers.timeRequired === "under1h" && idea.timeRequired === "mostOfDay") return false;
+      return true;
+    })
     .map((idea) => scoreIdea(idea, answers))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit);
+    .sort((a, b) => b.score - a.score);
+
+  if (eligible.length <= limit) return eligible;
+
+  const topScore = eligible[0]?.score ?? 0;
+  const selected: ScoredIdea[] = [];
+  const categories = new Map<string, number>();
+  const formats = new Map<string, number>();
+  const difficulties = new Map<string, number>();
+
+  for (const candidate of eligible) {
+    if (candidate.score < Math.max(0, topScore - 34) && selected.length >= 2) continue;
+    const categoryCount = categories.get(candidate.idea.category) ?? 0;
+    const format = candidate.idea.channel;
+    const formatCount = formats.get(format) ?? 0;
+    const difficultyCount = difficulties.get(candidate.idea.difficulty) ?? 0;
+    const adjusted = candidate.score - categoryCount * 7 - formatCount * 4 - difficultyCount * 2;
+
+    const bestSelected = selected.length === 0
+      ? Number.NEGATIVE_INFINITY
+      : Math.max(...selected.map((item) => item.score));
+    if (selected.length < limit && (selected.length < 2 || adjusted >= bestSelected - 24)) {
+      selected.push(candidate);
+      categories.set(candidate.idea.category, categoryCount + 1);
+      formats.set(format, formatCount + 1);
+      difficulties.set(candidate.idea.difficulty, difficultyCount + 1);
+    }
+    if (selected.length === limit) break;
+  }
+
+  // A narrow catalog or strict profile should still return useful results.
+  if (selected.length < limit) {
+    for (const candidate of eligible) {
+      if (!selected.some((item) => item.idea.id === candidate.idea.id)) selected.push(candidate);
+      if (selected.length === limit) break;
+    }
+  }
+  return selected;
+}
+
+function budgetMinForIdea(range: string): number {
+  return {
+    under500: 0,
+    "500to2000": 500,
+    "2000to5000": 2000,
+    "5000to15000": 5000,
+    over15000: 15000,
+  }[range] ?? Number.POSITIVE_INFINITY;
 }

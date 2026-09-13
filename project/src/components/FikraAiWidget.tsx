@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Lightbulb, RotateCcw, Send, Sparkles, User, X } from "lucide-react";
 import { useLang } from "../lib/language";
-import { respond, type AiMessage } from "../lib/aiAssistant";
+import { respond, type AiContext, type AiMessage } from "../lib/aiAssistant";
 import { getMyIdea } from "../lib/myIdea";
 import IdeaCard from "./IdeaCard";
 import ComparisonTable from "./ComparisonTable";
@@ -31,7 +31,7 @@ export default function FikraAiWidget() {
   ]);
   const [input, setInput] = useState("");
   const [sending, setSending] = useState(false);
-  const lastIdeaId = useRef<string | null>(getMyIdea()?.id ?? null);
+  const contextRef = useRef<AiContext>({ lastIdeaId: getMyIdea()?.id ?? null });
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const send = (text: string) => {
@@ -41,9 +41,8 @@ export default function FikraAiWidget() {
     setInput("");
     setSending(true);
     setTimeout(() => {
-      const reply = respond(trimmed, { lastIdeaId: lastIdeaId.current });
-      const mentioned = reply.ideas?.[0] ?? reply.comparison?.[0];
-      if (mentioned) lastIdeaId.current = mentioned.id;
+      const reply = respond(trimmed, contextRef.current);
+      contextRef.current = { ...contextRef.current, ...reply.context };
       setMessages((m) => [...m, reply]);
       setSending(false);
       requestAnimationFrame(() => scrollRef.current?.scrollTo(0, scrollRef.current.scrollHeight));
@@ -52,7 +51,7 @@ export default function FikraAiWidget() {
 
   const reset = () => {
     setMessages([{ role: "assistant", content: t("محادثة جديدة. شنو تبي تعرف؟", "New conversation. What do you need?") }]);
-    lastIdeaId.current = getMyIdea()?.id ?? null;
+    contextRef.current = { lastIdeaId: getMyIdea()?.id ?? null };
   };
 
   const suggestions = lang === "en" ? SUGGESTIONS_EN : SUGGESTIONS_AR;
@@ -63,7 +62,7 @@ export default function FikraAiWidget() {
       <motion.button
         type="button"
         onClick={() => setOpen(true)}
-        className="fixed bottom-5 left-5 z-50 flex h-12 items-center gap-2 rounded-lg bg-accent px-4 text-sm font-semibold text-accent-fg"
+        className="fixed bottom-5 start-5 z-50 flex h-12 items-center gap-2 rounded-lg bg-accent px-4 text-sm font-semibold text-accent-fg"
         aria-label="FIKRA AI"
         animate={{ scale: open ? 0 : 1, opacity: open ? 0 : 1 }}
         transition={{ duration: 0.16, ease }}
@@ -114,7 +113,7 @@ export default function FikraAiWidget() {
                 {messages.map((m, idx) =>
                   m.role === "user" ? (
                     <div key={idx} className="flex justify-end gap-2">
-                      <div className="max-w-[80%] rounded-lg bg-accent px-3 py-2 text-sm text-accent-fg">{m.content}</div>
+                      <div dir="auto" className="max-w-[80%] rounded-lg bg-accent px-3 py-2 text-sm text-accent-fg">{m.content}</div>
                       <div className="flex h-7 w-7 items-center justify-center rounded-md bg-line">
                         <User size={12} className="icon-static" />
                       </div>
@@ -125,7 +124,7 @@ export default function FikraAiWidget() {
                         <Lightbulb size={12} className="icon-static" />
                       </div>
                       <div className="max-w-[85%] space-y-2">
-                        <div className="rounded-lg border border-line bg-surface px-3 py-2 text-sm leading-relaxed text-fg whitespace-pre-line">
+                        <div dir="auto" className="rounded-lg border border-line bg-surface px-3 py-2 text-sm leading-relaxed text-fg whitespace-pre-line">
                           {m.content}
                         </div>
                         {m.ideas?.map((idea) => (
@@ -162,6 +161,7 @@ export default function FikraAiWidget() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder={t("اكتب سؤالك…", "Type your question…")}
+                  dir="auto"
                   disabled={sending}
                   className="input-field flex-1 !min-h-10 py-2 text-sm"
                 />

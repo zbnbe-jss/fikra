@@ -21,7 +21,7 @@ import FikraAiWidget from "./components/FikraAiWidget";
 import { ease } from "./components/motion";
 import { useLang } from "./lib/language";
 
-const HIDE_CHROME_ON = new Set(["/quiz", "/login"]);
+const HIDE_CHROME_ON = new Set(["/quiz", "/login", "/signup"]);
 
 function Shell() {
   const location = useLocation();
@@ -53,6 +53,7 @@ function Shell() {
               <Route path="/ai" element={<Ai />} />
               <Route path="/about" element={<About />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Login initialMode="signup" />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/result/latest" element={<Result />} />
               <Route path="/my-idea" element={<MyIdea />} />

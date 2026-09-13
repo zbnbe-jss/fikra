@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { saveUserProfile } from "./profile";
 
 export type Lang = "ar" | "en";
 
@@ -35,6 +36,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     } catch {
       /* ignore */
     }
+    saveUserProfile({ language: lang });
   }, [lang]);
 
   const setLang = (l: Lang) => setLangState(l);

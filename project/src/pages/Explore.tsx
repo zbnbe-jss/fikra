@@ -176,7 +176,7 @@ export default function Explore() {
         {shown.length === 0 ? (
           <div className="mt-16 rounded-2xl border border-dashed border-line-strong px-5 py-14 text-center">
             <Search className="mx-auto text-subtle" />
-            <p className="mt-3 text-sm text-muted">{t("ما لقينا أفكار تطابق بحثك.", "No ideas match your search.")}</p>
+            <p className="mt-3 text-sm text-muted">{t("لم نعثر على أفكار تطابق بحثك.", "No ideas match your search.")}</p>
             <button
               type="button"
               onClick={() => {

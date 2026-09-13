@@ -72,7 +72,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <FadeIn>
             <span className="section-label">{t("كيف تعمل", "How it works")}</span>
-            <h2 className="mt-3 max-w-xl text-3xl text-fg sm:text-4xl">{t("ثلاث خطوات إلى مشروعك", "Three steps to a project")}</h2>
+            <h2 className="mt-3 max-w-xl text-3xl text-fg sm:text-4xl">{t("ثلاث خطوات نحو مشروعك", "Three steps to a project")}</h2>
           </FadeIn>
           <Stagger className="mt-12 grid gap-5 md:grid-cols-[1.1fr_0.9fr_1fr]" stagger={0.08}>
             {steps.map((s) => (
@@ -130,9 +130,9 @@ export default function Home() {
 
       <section className="border-t border-line py-20">
         <div className="mx-auto max-w-3xl px-5 lg:px-8">
-          <h2 className="text-3xl text-fg sm:text-4xl">{t("جاهز تكتشف فكرتك؟", "Ready to find your idea?")}</h2>
+          <h2 className="text-3xl text-fg sm:text-4xl">{t("هل أنت مستعد لاكتشاف فكرتك؟", "Ready to find your idea?")}</h2>
           <p className="mt-3 max-w-md text-muted">
-            {t("خمس دقائق من الأسئلة، ثم مساحة عمل لمتابعة المشروع.", "Five minutes of questions, then a workspace to follow through.")}
+            {t("خمس دقائق من الأسئلة، ثم مساحة عمل تساعدك على متابعة المشروع.", "Five minutes of questions, then a workspace to follow through.")}
           </p>
           <button type="button" onClick={() => navigate("/quiz")} className="btn-primary mt-8">
             {t("ابدأ الاختبار", "Take the Quiz")}

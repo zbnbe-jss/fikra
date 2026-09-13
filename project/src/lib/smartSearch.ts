@@ -44,6 +44,11 @@ export function smartSearch(query: string, ideas: Idea[]): Idea[] {
   if (intent.home) {
     pool = pool.filter((i) => i.channel !== "physical");
   }
+  if (intent.timeRequired) {
+    const order = ["under1h", "1to3h", "3to6h", "mostOfDay"];
+    const maxIndex = order.indexOf(intent.timeRequired);
+    pool = pool.filter((i) => order.indexOf(i.timeRequired) <= maxIndex);
+  }
 
   // Free-text fallback over title/description/tags — always applied so a
   // plain keyword search (e.g. "قهوة", "design") still works standalone.

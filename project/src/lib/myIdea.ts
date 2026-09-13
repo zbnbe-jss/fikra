@@ -1,5 +1,6 @@
 import { ideas } from "../data";
 import type { Idea } from "../data/types";
+import { saveUserProfile } from "./profile";
 
 // "My Idea" is a persistent workspace (unlike the quiz's sessionStorage state)
 // — it should survive across visits, so everything here lives in
@@ -57,6 +58,7 @@ const HISTORY_KEY = "fikra_my_idea_history";
 
 export function setMyIdea(ideaId: string) {
   localStorage.setItem(MY_IDEA_KEY, ideaId);
+  saveUserProfile({ selectedIdeaId: ideaId });
   const hist = readJSON<string[]>(HISTORY_KEY, []);
   writeJSON(HISTORY_KEY, [ideaId, ...hist.filter((id) => id !== ideaId)].slice(0, 24));
 }

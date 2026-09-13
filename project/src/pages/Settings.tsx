@@ -117,11 +117,11 @@ export default function Settings() {
         <p className="section-label">{t("الحساب", "Account")}</p>
         <h1 className="mt-2 text-3xl text-fg">{t("الإعدادات", "Settings")}</h1>
         <p className="mt-2 text-sm text-muted">
-          {t("خصّص مظهر فكرة وإمكانية الوصول. تُحفظ التفضيلات على هذا الجهاز.", "Customize FIKRA appearance and accessibility. Preferences are saved on this device.")}
+          {t("خصّص مظهر فكرة وإمكانية الوصول. تُحفظ تفضيلاتك على هذا الجهاز.", "Customize FIKRA appearance and accessibility. Preferences are saved on this device.")}
         </p>
 
-        <Section title={t("المظهر", "Appearance")} desc={t("الثيم ولون العلامة.", "Theme and brand accent.")}>
-          <p className="mb-2 text-xs font-medium text-muted">{t("الثيم", "Theme")}</p>
+        <Section title={t("المظهر", "Appearance")} desc={t("المظهر ولون العلامة.", "Theme and brand accent.")}>
+          <p className="mb-2 text-xs font-medium text-muted">{t("المظهر", "Theme")}</p>
           <OptionGrid<ThemeMode>
             value={prefs.theme}
             onChange={(theme) => setPrefs({ theme })}

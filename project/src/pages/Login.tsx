@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
+import { ArrowRight, Check, Eye, EyeOff, Lock, Mail, UserRound } from "lucide-react";
 import { useAppReducedMotion } from "../lib/preferences";
-import { ArrowRight, Lock, Mail } from "lucide-react";
 import { useLang } from "../lib/language";
 import { supabase } from "../lib/supabaseClient";
 import Logo from "../components/Logo";
 import { ease } from "../components/motion";
+import { authErrorMessage } from "../lib/authMessages";
+import { setAuthenticatedProfile } from "../lib/profile";
 
 type Mode = "login" | "signup" | "reset";
 
@@ -21,187 +23,195 @@ function GoogleIcon() {
   );
 }
 
-export default function Login() {
-  const { t } = useLang();
+export default function Login({ initialMode = "login" }: { initialMode?: Mode }) {
+  const { lang, t } = useLang();
   const navigate = useNavigate();
   const reduce = useAppReducedMotion();
-  const [mode, setMode] = useState<Mode>("login");
+  const [mode, setMode] = useState<Mode>(initialMode);
+  const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  const clearNotice = () => {
+    setError(null);
+    setMessage(null);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setError(null);
-    setMessage(null);
+    clearNotice();
 
     if (mode === "reset") {
-      const { error } = await supabase.auth.resetPasswordForEmail(email);
+      const { error: authError } = await supabase.auth.resetPasswordForEmail(email);
       setLoading(false);
-      if (error) setError(error.message);
-      else setMessage(t("أرسلنا لك رابط استعادة كلمة المرور على بريدك", "We sent a password reset link to your email"));
+      if (authError) setError(authErrorMessage(authError.message, lang));
+      else setMessage(t("أرسلنا رابط استعادة كلمة المرور إلى بريدك الإلكتروني.", "We sent a password reset link to your email."));
       return;
     }
 
     if (mode === "signup") {
-      const { error } = await supabase.auth.signUp({ email, password });
+      if (password.length < 6) {
+        setLoading(false);
+        setError(t("كلمة المرور يجب أن تكون 6 أحرف على الأقل.", "Password must be at least 6 characters."));
+        return;
+      }
+      if (password !== confirmPassword) {
+        setLoading(false);
+        setError(t("كلمتا المرور غير متطابقتين.", "Passwords do not match."));
+        return;
+      }
+      const { data, error: authError } = await supabase.auth.signUp({
+        email,
+        password,
+        options: { data: displayName.trim() ? { display_name: displayName.trim(), name: displayName.trim() } : undefined },
+      });
       setLoading(false);
-      if (error) setError(error.message);
-      else setMessage(t("تم إنشاء الحساب! تحقق من بريدك لتأكيد الحساب.", "Account created! Check your email to confirm."));
+      if (authError) setError(authErrorMessage(authError.message, lang));
+      else {
+        if (data.user) setAuthenticatedProfile(data.user, { displayName: displayName.trim() || undefined });
+        setMessage(t("تم إنشاء حسابك. تحقق من بريدك الإلكتروني لتأكيده.", "Your account is ready. Check your email to confirm it."));
+      }
       return;
     }
 
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { data, error: authError } = await supabase.auth.signInWithPassword({ email, password });
     setLoading(false);
-    if (error) setError(error.message);
-    else navigate("/profile");
+    if (authError) setError(authErrorMessage(authError.message, lang));
+    else {
+      if (data.user) setAuthenticatedProfile(data.user);
+      navigate("/profile");
+    }
   };
 
   const handleGoogle = async () => {
-    await supabase.auth.signInWithOAuth({ provider: "google" });
+    const { error: authError } = await supabase.auth.signInWithOAuth({ provider: "google" });
+    if (authError) setError(authErrorMessage(authError.message, lang));
   };
 
   const titles: Record<Mode, { ar: string; en: string }> = {
-    login: { ar: "تسجيل الدخول", en: "Log In" },
-    signup: { ar: "إنشاء حساب", en: "Sign Up" },
-    reset: { ar: "استعادة كلمة المرور", en: "Reset Password" },
+    login: { ar: "تسجيل الدخول", en: "Log in" },
+    signup: { ar: "إنشاء حساب", en: "Create an account" },
+    reset: { ar: "استعادة كلمة المرور", en: "Reset password" },
   };
   const submitLabels: Record<Mode, { ar: string; en: string }> = {
-    login: { ar: "دخول", en: "Log In" },
-    signup: { ar: "إنشاء حساب", en: "Sign Up" },
-    reset: { ar: "إرسال رابط الاستعادة", en: "Send Reset Link" },
+    login: { ar: "دخول", en: "Log in" },
+    signup: { ar: "إنشاء الحساب", en: "Create account" },
+    reset: { ar: "إرسال رابط الاستعادة", en: "Send reset link" },
   };
 
+  const subtitle = mode === "login"
+    ? t("سجّل الدخول لمتابعة رحلتك.", "Sign in to continue your journey.")
+    : mode === "signup"
+      ? t("أنشئ حساباً وابدأ باكتشاف أفكارك.", "Create an account and start discovering your ideas.")
+      : t("سنرسل لك رابطاً لإعادة تعيين كلمة المرور.", "We will send you a link to reset your password.");
+
   return (
-    <div className="flex min-h-dvh items-center justify-center bg-page px-5 py-16">
-      <motion.div
-        className="w-full max-w-md"
-        initial={reduce ? false : { opacity: 0, y: 24, scale: 0.96 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.45, ease }}
-      >
-        <div className="mb-6 text-center">
-          <motion.button
-            onClick={() => navigate("/")}
-            className="inline-block"
-            whileHover={reduce ? undefined : { scale: 1.05 }}
-            whileTap={reduce ? undefined : { scale: 0.97 }}
-          >
+    <div className="page-shell flex min-h-dvh items-center justify-center px-5 py-10 sm:py-16">
+      <div className="mx-auto grid w-full max-w-5xl items-stretch overflow-hidden rounded-[28px] border border-line bg-surface shadow-float lg:grid-cols-[0.9fr_1.1fr]">
+        <aside className="liquid-surface hidden flex-col justify-between bg-accent-soft p-8 lg:flex xl:p-12" aria-label={t("حول فكرة", "About FIKRA")}>
+          <div>
             <Logo />
-          </motion.button>
-        </div>
-        <div className="card p-8">
+            <p className="mt-14 text-sm font-medium text-accent-text">{t("من فكرة إلى بداية واضحة", "From a thought to a clear beginning")}</p>
+            <h2 className="mt-4 max-w-sm text-4xl leading-tight text-fg xl:text-5xl">{t("خلّ فكرتك تتحرك.", "Give your idea a direction.")}</h2>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted">
+              {t("فكرة تساعدك تكتشف مشروعاً يناسبك، ثم تمنحك مساحة عملية لتطويره خطوة بخطوة.", "FIKRA helps you discover a project that fits you, then gives you a practical space to build it step by step.")}
+            </p>
+          </div>
+          <ul className="mt-12 space-y-3 text-sm text-fg">
+            {[t("اختبار مبني على ملفك", "A quiz built around your profile"), t("توصيات مفهومة وليست أرقاماً فقط", "Recommendations with reasons, not just numbers"), t("مساحة عمل تحفظ تقدمك", "A workspace that keeps your progress")].map((item) => (
+              <li key={item} className="flex items-center gap-2"><Check size={16} className="icon-static text-accent-text" />{item}</li>
+            ))}
+          </ul>
+        </aside>
+
+        <motion.main
+          className="w-full max-w-md justify-self-center p-5 sm:p-8 lg:p-10"
+          initial={reduce ? false : { opacity: 0, y: 24, scale: 0.96 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.45, ease }}
+          dir={lang === "ar" ? "rtl" : "ltr"}
+        >
+          <div className="mb-6 flex justify-center lg:hidden">
+            <motion.button type="button" onClick={() => navigate("/")} aria-label={t("العودة إلى الرئيسية", "Back to home")} whileHover={reduce ? undefined : { scale: 1.05 }} whileTap={reduce ? undefined : { scale: 0.97 }}>
+              <Logo />
+            </motion.button>
+          </div>
+
           <h1 className="text-center text-2xl font-semibold text-fg">{t(titles[mode].ar, titles[mode].en)}</h1>
-          <p className="mt-2 text-center text-sm text-muted">
-            {mode === "login" && t("ادخل لحسابك واصل رحلتك", "Sign in to continue your journey")}
-            {mode === "signup" && t("أنشئ حساب وابدأ اكتشاف أفكارك", "Create an account and start discovering your ideas")}
-            {mode === "reset" && t("بنرسل لك رابط لإعادة تعيين كلمة المرور", "We'll send you a link to reset your password")}
-          </p>
+          <p className="mt-2 text-center text-sm text-muted">{subtitle}</p>
 
-          {error && <div className="mt-4 rounded-xl bg-red-50 px-4 py-3 text-sm text-red-600">{error}</div>}
-          {message && <div className="mt-4 rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-600">{message}</div>}
+          {error && <div role="alert" className="mt-5 rounded-xl border border-danger/20 bg-danger-soft px-4 py-3 text-sm leading-relaxed text-danger">{error}</div>}
+          {message && <div role="status" className="mt-5 rounded-xl border border-ok/20 bg-ok-soft px-4 py-3 text-sm leading-relaxed text-ok">{message}</div>}
 
-          <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-3">
-            <div className="relative">
-              <Mail size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
-              <input
-                type="email"
-                required
-                placeholder={t("البريد الإلكتروني", "Email")}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                dir="ltr"
-                className="input-field pr-10 text-left"
-              />
-            </div>
-            {mode !== "reset" && (
+          <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
+            <div>
+              <label htmlFor="auth-email" className="mb-2 block text-sm font-medium text-fg">{t("البريد الإلكتروني", "Email address")}</label>
               <div className="relative">
-                <Lock size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
-                <input
-                  type="password"
-                  required
-                  placeholder={t("كلمة المرور", "Password")}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  dir="ltr"
-                  className="input-field pr-10 text-left"
-                />
+                <Mail size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
+                <input id="auth-email" type="email" required autoComplete="email" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} dir="ltr" className="input-field pe-10 text-start" />
+              </div>
+            </div>
+
+            {mode === "signup" && (
+              <div>
+                <label htmlFor="auth-name" className="mb-2 block text-sm font-medium text-fg">{t("الاسم", "Name")}</label>
+                <div className="relative">
+                  <UserRound size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
+                  <input id="auth-name" type="text" required autoComplete="name" placeholder={t("كيف نناديك؟", "How should we call you?")} value={displayName} onChange={(e) => setDisplayName(e.target.value)} className="input-field pe-10 text-start" />
+                </div>
               </div>
             )}
-            <motion.button
-              type="submit"
-              disabled={loading}
-              className="btn-primary mt-2 w-full"
-              whileTap={reduce || loading ? undefined : { scale: 0.97 }}
-            >
-              {loading ? t("جاري التحميل...", "Loading...") : t(submitLabels[mode].ar, submitLabels[mode].en)}
+
+            {mode !== "reset" && (
+              <div>
+                <label htmlFor="auth-password" className="mb-2 block text-sm font-medium text-fg">{t("كلمة المرور", "Password")}</label>
+                <div className="relative">
+                  <Lock size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
+                  <input id="auth-password" type={showPassword ? "text" : "password"} required minLength={6} autoComplete={mode === "signup" ? "new-password" : "current-password"} placeholder={t("6 أحرف على الأقل", "At least 6 characters")} value={password} onChange={(e) => setPassword(e.target.value)} dir="ltr" className="input-field pe-20 text-start" />
+                  <button type="button" onClick={() => setShowPassword((shown) => !shown)} className="absolute end-10 top-1/2 -translate-y-1/2 text-subtle hover:text-fg" aria-label={showPassword ? t("إخفاء كلمة المرور", "Hide password") : t("إظهار كلمة المرور", "Show password")}>
+                    {showPassword ? <EyeOff size={17} className="icon-static" /> : <Eye size={17} className="icon-static" />}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {mode === "signup" && (
+              <div>
+                <label htmlFor="auth-confirm-password" className="mb-2 block text-sm font-medium text-fg">{t("تأكيد كلمة المرور", "Confirm password")}</label>
+                <div className="relative">
+                  <Lock size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-subtle" />
+                  <input id="auth-confirm-password" type={showPassword ? "text" : "password"} required minLength={6} autoComplete="new-password" placeholder={t("أعد كتابة كلمة المرور", "Re-enter your password")} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} dir="ltr" className="input-field pe-10 text-start" />
+                </div>
+              </div>
+            )}
+
+            <motion.button type="submit" disabled={loading} className="btn-primary mt-1 w-full" whileTap={reduce || loading ? undefined : { scale: 0.97 }}>
+              {loading ? t("جارٍ التنفيذ...", "Working...") : t(submitLabels[mode].ar, submitLabels[mode].en)}
             </motion.button>
           </form>
 
           {mode === "login" && (
             <>
-              <div className="my-4 flex items-center gap-3">
-                <div className="h-px flex-1 bg-line" />
-                <span className="text-xs text-subtle">{t("أو", "or")}</span>
-                <div className="h-px flex-1 bg-line" />
-              </div>
-              <button onClick={handleGoogle} disabled={loading} className="btn-secondary w-full">
-                <GoogleIcon />
-                {t("تابع مع جوجل", "Continue with Google")}
-              </button>
+              <div className="my-5 flex items-center gap-3"><div className="h-px flex-1 bg-line" /><span className="text-xs text-subtle">{t("أو", "or")}</span><div className="h-px flex-1 bg-line" /></div>
+              <button type="button" onClick={handleGoogle} disabled={loading} className="btn-secondary w-full"><GoogleIcon />{t("المتابعة باستخدام Google", "Continue with Google")}</button>
             </>
           )}
 
-          <p className="mt-4 text-center text-sm text-muted">
-            {mode !== "signup" && (
-              <button
-                onClick={() => {
-                  setMode("signup");
-                  setError(null);
-                  setMessage(null);
-                }}
-              >
-                {t("ما عندك حساب؟ ", "Don't have an account? ")}
-                <span className="font-semibold text-accent-text">{t("أنشئ حساب", "Sign up")}</span>
-              </button>
-            )}
-            {mode !== "login" && (
-              <button
-                onClick={() => {
-                  setMode("login");
-                  setError(null);
-                  setMessage(null);
-                }}
-                className="font-semibold text-accent-text"
-              >
-                {t("رجوع لتسجيل الدخول", "Back to log in")}
-              </button>
-            )}
-          </p>
-          {mode === "login" && (
-            <button
-              onClick={() => {
-                setMode("reset");
-                setError(null);
-                setMessage(null);
-              }}
-              className="mt-2 w-full text-center text-sm text-subtle"
-            >
-              {t("نسيت كلمة المرور؟", "Forgot password?")}
-            </button>
-          )}
-        </div>
-        <button
-          onClick={() => navigate("/")}
-          className="mt-4 flex w-full items-center justify-center gap-1 text-sm text-subtle hover:text-fg"
-        >
-          <ArrowRight size={14} />
-          {t("العودة للرئيسية", "Back to home")}
-        </button>
-      </motion.div>
+          <div className="mt-5 text-center text-sm text-muted">
+            {mode !== "signup" && <button type="button" onClick={() => { setMode("signup"); clearNotice(); }} className="hover:text-fg">{t("ليس لديك حساب؟ ", "Don't have an account? ")}<span className="font-semibold text-accent-text">{t("أنشئ حساباً", "Create one")}</span></button>}
+            {mode !== "login" && <button type="button" onClick={() => { setMode("login"); clearNotice(); }} className="font-semibold text-accent-text">{t("العودة إلى تسجيل الدخول", "Back to log in")}</button>}
+          </div>
+          {mode === "login" && <button type="button" onClick={() => { setMode("reset"); clearNotice(); }} className="mt-3 w-full text-center text-sm text-subtle hover:text-fg">{t("هل نسيت كلمة المرور؟", "Forgot your password?")}</button>}
+
+          <button type="button" onClick={() => navigate("/")} className="mt-8 flex w-full items-center justify-center gap-1 text-sm text-subtle hover:text-fg"><ArrowRight size={14} className="icon-static" />{t("العودة إلى الرئيسية", "Back to home")}</button>
+        </motion.main>
+      </div>
     </div>
   );
 }

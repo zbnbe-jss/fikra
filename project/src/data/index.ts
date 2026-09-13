@@ -33,3 +33,7 @@ export const categoryIcons: Record<string, string> = {
 };
 
 export const categories = ["الكل", ...Object.keys(categoryTranslations)];
+
+// Typed data-access seam for future JSON, Supabase or D1-backed catalogs.
+export { filterIdeas, getAllIdeas, getIdeaById, getRelatedIdeas, searchIdeas } from "./access";
+export type { IdeaRecord } from "./access";

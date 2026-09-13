@@ -1,5 +1,5 @@
 import type { Idea } from "../data/types";
-import { BUDGET_LABEL, TIME_LABEL, WORKSTYLE_LABEL, label } from "./labels";
+import { BUDGET_LABEL, CHANNEL_LABEL, DIFFICULTY_LABEL, TIME_LABEL, WORKSTYLE_LABEL, label } from "./labels";
 import {
   getNotes,
   getRoadmapProgress,
@@ -116,7 +116,7 @@ export function getInsights(idea: Idea, lang: "ar" | "en") {
             ? "Online & Physical"
             : "أونلاين وواقعي",
     budget: idea.budgetLabel,
-    difficulty: idea.difficulty,
+    difficulty: label(DIFFICULTY_LABEL, idea.difficulty, lang),
     time: answers ? label(TIME_LABEL, answers.timeRequired, lang) : idea.timeLabel,
     work: answers ? label(WORKSTYLE_LABEL, (answers.workStyles as string[])?.[0], lang) : "—",
     quizBudget: answers ? label(BUDGET_LABEL, answers.budgetRange, lang) : null,
@@ -138,8 +138,8 @@ export function buildMyIdeaAiContext(idea: Idea, lang: "ar" | "en"): string {
     lang === "en" ? `Active project: ${title}` : `المشروع الحالي: ${title}`,
     desc,
     lang === "en"
-      ? `Type: ${idea.channel}. Budget: ${idea.budgetLabel}. Difficulty: ${idea.difficulty}.`
-      : `النوع: ${idea.channel}. الميزانية: ${idea.budgetLabel}. الصعوبة: ${idea.difficulty}.`,
+      ? `Type: ${label(CHANNEL_LABEL, idea.channel, lang)}. Budget: ${idea.budgetLabel}. Difficulty: ${label(DIFFICULTY_LABEL, idea.difficulty, lang)}.`
+      : `النوع: ${label(CHANNEL_LABEL, idea.channel, lang)}. الميزانية: ${idea.budgetLabel}. الصعوبة: ${label(DIFFICULTY_LABEL, idea.difficulty, lang)}.`,
     lang === "en"
       ? `Progress: ${progress.completed}/${progress.total} steps (${progress.percent}%).`
       : `التقدم: ${progress.completed}/${progress.total} خطوات (${progress.percent}%).`,
@@ -153,8 +153,8 @@ export function buildMyIdeaAiContext(idea: Idea, lang: "ar" | "en"): string {
   if (answers) {
     lines.push(
       lang === "en"
-        ? `Quiz profile — budget: ${String(answers.budgetRange ?? "—")}, time: ${String(answers.timeRequired ?? "—")}, channel: ${String(answers.channel ?? "—")}.`
-        : `ملف الاختبار — الميزانية: ${String(answers.budgetRange ?? "—")}، الوقت: ${String(answers.timeRequired ?? "—")}، النوع: ${String(answers.channel ?? "—")}.`
+        ? `Quiz profile - budget: ${label(BUDGET_LABEL, answers.budgetRange, lang)}, time: ${label(TIME_LABEL, answers.timeRequired, lang)}, channel: ${label(CHANNEL_LABEL, answers.channel, lang)}.`
+        : `ملف الاختبار: الميزانية ${label(BUDGET_LABEL, answers.budgetRange, lang)}، الوقت ${label(TIME_LABEL, answers.timeRequired, lang)}، النوع ${label(CHANNEL_LABEL, answers.channel, lang)}.`,
     );
   }
   const openTasks = tasks.filter((t) => !t.done).slice(0, 4);

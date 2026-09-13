@@ -13,7 +13,7 @@ export default function Footer() {
             <Logo />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted">
               {t(
-                "فكرة تساعدك تكتشف مشروعاً يناسبك، ثم تطوّره من الفكرة إلى التنفيذ.",
+                "فكرة تساعدك على اكتشاف مشروع يناسبك، ثم تطويره من الفكرة إلى التنفيذ.",
                 "FIKRA helps you discover a project that fits you, then develop it from idea to execution."
               )}
             </p>

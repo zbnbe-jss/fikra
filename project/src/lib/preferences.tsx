@@ -1,5 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { supabase } from "./supabaseClient";
+import { saveUserProfile, setAuthenticatedProfile } from "./profile";
 
 export type ThemeMode = "light" | "dark" | "system";
 export type AccentId = "purple" | "blue" | "green" | "orange";
@@ -97,6 +98,7 @@ export function PreferencesProvider({ children }: { children: React.ReactNode })
     supabase.auth.getUser().then(({ data }) => {
       const id = data.user?.id ?? null;
       setUserId(id);
+      setAuthenticatedProfile(data.user ?? null);
       if (id) {
         const userPrefs = readPrefs(`${PREFS_KEY}_${id}`);
         if (userPrefs) setPrefsState(mergePrefs(userPrefs));
@@ -105,6 +107,7 @@ export function PreferencesProvider({ children }: { children: React.ReactNode })
     const { data: sub } = supabase.auth.onAuthStateChange((_e, session) => {
       const id = session?.user?.id ?? null;
       setUserId(id);
+      setAuthenticatedProfile(session?.user ?? null);
       if (id) {
         const userPrefs = readPrefs(`${PREFS_KEY}_${id}`);
         if (userPrefs) setPrefsState(mergePrefs(userPrefs));
@@ -117,6 +120,12 @@ export function PreferencesProvider({ children }: { children: React.ReactNode })
     applyPreferences(prefs);
     writePrefs(PREFS_KEY, prefs);
     if (userId) writePrefs(`${PREFS_KEY}_${userId}`, prefs);
+    saveUserProfile({
+      theme: prefs.theme,
+      accent: prefs.accent,
+      typography: { fontSize: prefs.fontSize, fontFamily: prefs.fontFamily, iconSize: prefs.iconSize },
+      accessibility: { reducedMotion: prefs.reducedMotion, highContrast: prefs.highContrast, strongFocus: prefs.strongFocus, comfortableSpacing: prefs.comfortableSpacing },
+    });
   }, [prefs, userId]);
 
   useEffect(() => {

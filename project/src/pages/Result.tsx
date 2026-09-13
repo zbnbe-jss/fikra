@@ -160,7 +160,7 @@ export default function Result() {
     return (
       <div className="flex min-h-dvh items-center justify-center bg-page px-5">
         <div className="text-center">
-          <p className="mb-6 text-muted">{t("ما عندنا نتائج بعد. جاوب على الاختبار أول.", "No results yet. Take the quiz first.")}</p>
+          <p className="mb-6 text-muted">{t("لا توجد نتائج بعد. أجب عن الاختبار أولاً.", "No results yet. Take the quiz first.")}</p>
           <button type="button" onClick={() => navigate("/quiz")} className="btn-primary">
             {t("ابدأ الاختبار", "Take the Quiz")}
           </button>

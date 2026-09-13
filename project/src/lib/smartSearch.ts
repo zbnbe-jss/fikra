@@ -26,6 +26,9 @@ export function smartSearch(query: string, ideas: Idea[]): Idea[] {
   if (intent.channel === "physical") {
     pool = pool.filter((i) => i.channel !== "online");
   }
+  if (intent.channel === "hybrid") {
+    pool = pool.filter((i) => i.channel === "both");
+  }
   if (intent.beginner) {
     pool = pool.filter((i) => i.difficulty === "beginner");
   }
@@ -64,6 +67,13 @@ export function smartSearch(query: string, ideas: Idea[]): Idea[] {
         i.categoryEn,
         ...(i.skills ?? []),
         ...(i.skillsEn ?? []),
+        ...(i.keywords ?? []),
+        ...(i.arabicKeywords ?? []),
+        ...(i.englishKeywords ?? []),
+        ...(i.arabicSynonyms ?? []),
+        ...(i.tags ?? []),
+        i.businessModel,
+        i.revenueModel,
       ]
         .filter(Boolean)
         .join(" ");

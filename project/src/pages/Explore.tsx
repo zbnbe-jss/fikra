@@ -51,8 +51,8 @@ export default function Explore() {
   const filtered = useMemo(() => {
     let list = query.trim() ? smartSearch(query, ideas) : ideas.slice();
     if (category !== "الكل") list = list.filter((i) => i.category === category);
-    if (quick === "online") list = list.filter((i) => i.channel === "online");
-    if (quick === "physical") list = list.filter((i) => i.channel === "physical");
+    if (quick === "online") list = list.filter((i) => i.channel === "online" || i.channel === "both");
+    if (quick === "physical") list = list.filter((i) => i.channel === "physical" || i.channel === "both");
     if (quick === "fast") list = list.filter((i) => i.timeRequired === "under1h" || i.timeRequired === "1to3h");
     if (quick === "lowBudget") list = list.filter((i) => i.budgetRange === "under500" || i.budgetRange === "500to2000");
     if (quick === "home") list = list.filter((i) => i.workStyles?.includes("alone") && i.channel !== "physical");
@@ -103,6 +103,7 @@ export default function Explore() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={t("ابحث عن فكرة…", "Search for an idea…")}
+              dir="auto"
               className="input-field pe-10"
             />
           </div>

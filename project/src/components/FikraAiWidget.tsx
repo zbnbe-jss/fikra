@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Lightbulb, RotateCcw, Send, Sparkles, User, X } from "lucide-react";
 import { useLang } from "../lib/language";
-import { respond, type AiContext, type AiMessage } from "../lib/aiAssistant";
+import { loadAiContext, respond, saveAiContext, type AiContext, type AiMessage } from "../lib/aiAssistant";
 import { getMyIdea } from "../lib/myIdea";
 import IdeaCard from "./IdeaCard";
 import ComparisonTable from "./ComparisonTable";
@@ -31,7 +31,7 @@ export default function FikraAiWidget() {
   ]);
   const [input, setInput] = useState("");
   const [sending, setSending] = useState(false);
-  const contextRef = useRef<AiContext>({ lastIdeaId: getMyIdea()?.id ?? null });
+  const contextRef = useRef<AiContext>(loadAiContext({ lastIdeaId: getMyIdea()?.id ?? null }));
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const send = (text: string) => {
@@ -43,6 +43,7 @@ export default function FikraAiWidget() {
     setTimeout(() => {
       const reply = respond(trimmed, contextRef.current);
       contextRef.current = { ...contextRef.current, ...reply.context };
+      saveAiContext(contextRef.current);
       setMessages((m) => [...m, reply]);
       setSending(false);
       requestAnimationFrame(() => scrollRef.current?.scrollTo(0, scrollRef.current.scrollHeight));
@@ -52,6 +53,7 @@ export default function FikraAiWidget() {
   const reset = () => {
     setMessages([{ role: "assistant", content: t("محادثة جديدة. شنو تبي تعرف؟", "New conversation. What do you need?") }]);
     contextRef.current = { lastIdeaId: getMyIdea()?.id ?? null };
+    saveAiContext(contextRef.current);
   };
 
   const suggestions = lang === "en" ? SUGGESTIONS_EN : SUGGESTIONS_AR;

@@ -1,6 +1,8 @@
-import { ideas } from "../data";
+import { getAllIdeas } from "../data/access";
 import type { Idea } from "../data/types";
-import { saveUserProfile } from "./profile";
+import { saveProfileWorkspace, saveUserProfile } from "./profile";
+
+const ideas: Idea[] = getAllIdeas();
 
 // "My Idea" is a persistent workspace (unlike the quiz's sessionStorage state)
 // — it should survive across visits, so everything here lives in
@@ -61,6 +63,7 @@ export function setMyIdea(ideaId: string) {
   saveUserProfile({ selectedIdeaId: ideaId });
   const hist = readJSON<string[]>(HISTORY_KEY, []);
   writeJSON(HISTORY_KEY, [ideaId, ...hist.filter((id) => id !== ideaId)].slice(0, 24));
+  persistWorkspace(ideaId);
 }
 
 export function chooseIdea(ideaId: string) {
@@ -69,6 +72,7 @@ export function chooseIdea(ideaId: string) {
 
 export function clearMyIdea() {
   localStorage.removeItem(MY_IDEA_KEY);
+  saveUserProfile({ selectedIdeaId: null, workspace: undefined });
 }
 
 export function getIdeaHistory(): Idea[] {
@@ -88,6 +92,7 @@ export function setRoadmapStepStatus(ideaId: string, stepId: string, status: Ste
   const current = getRoadmapStatus(ideaId);
   current[stepId] = status;
   writeJSON(roadmapKey(ideaId), current);
+  persistWorkspace(ideaId);
 }
 
 export function getRoadmapProgress(idea: Idea): { completed: number; total: number; percent: number } {
@@ -105,24 +110,28 @@ export function addTask(ideaId: string, text: string, priority: Task["priority"]
   const tasks = getTasks(ideaId);
   tasks.push({ id: `task-${Date.now()}`, text, done: false, priority, createdAt: Date.now() });
   writeJSON(tasksKey(ideaId), tasks);
+  persistWorkspace(ideaId);
   return tasks;
 }
 
 export function toggleTask(ideaId: string, taskId: string) {
   const tasks = getTasks(ideaId).map((t) => (t.id === taskId ? { ...t, done: !t.done } : t));
   writeJSON(tasksKey(ideaId), tasks);
+  persistWorkspace(ideaId);
   return tasks;
 }
 
 export function deleteTask(ideaId: string, taskId: string) {
   const tasks = getTasks(ideaId).filter((t) => t.id !== taskId);
   writeJSON(tasksKey(ideaId), tasks);
+  persistWorkspace(ideaId);
   return tasks;
 }
 
 export function updateTask(ideaId: string, taskId: string, patch: Partial<Pick<Task, "text" | "priority" | "done">>) {
   const tasks = getTasks(ideaId).map((t) => (t.id === taskId ? { ...t, ...patch } : t));
   writeJSON(tasksKey(ideaId), tasks);
+  persistWorkspace(ideaId);
   return tasks;
 }
 
@@ -137,9 +146,22 @@ export function getNotes(ideaId: string): string {
 export function saveNotes(ideaId: string, text: string) {
   try {
     localStorage.setItem(notesKey(ideaId), text);
+    persistWorkspace(ideaId);
   } catch {
     /* ignore */
   }
+}
+
+function persistWorkspace(ideaId: string) {
+  const idea = ideas.find((item) => item.id === ideaId);
+  if (!idea) return;
+  saveProfileWorkspace({
+    ideaId,
+    roadmap: getRoadmapStatus(ideaId),
+    tasks: getTasks(ideaId),
+    notes: getNotes(ideaId),
+    progress: getRoadmapProgress(idea),
+  });
 }
 
 export function getSavedIdeas(): Idea[] {

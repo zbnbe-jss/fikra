@@ -32,7 +32,7 @@ import {
   type Task,
 } from "../lib/myIdea";
 import { buildMyIdeaAiContext, getInsights, getSmartSuggestions } from "../lib/suggestions";
-import { CHANNEL_LABEL, DIFFICULTY_LABEL, label } from "../lib/labels";
+import { CHANNEL_LABEL, DIFFICULTY_LABEL, budgetLabel, label } from "../lib/labels";
 import { FadeIn } from "../components/motion";
 
 const STATUS_META: Record<StepStatus, { ar: string; en: string; className: string }> = {
@@ -167,7 +167,7 @@ export default function MyIdea() {
             {[
               { k: t("التوافق", "Compatibility"), v: insights.score != null ? `${insights.score}%` : "—" },
               { k: t("نوع المشروع", "Project type"), v: label(CHANNEL_LABEL, idea.channel, lang) },
-              { k: t("الميزانية", "Budget"), v: idea.budgetLabel },
+              { k: t("الميزانية", "Budget"), v: budgetLabel(idea.budgetRange, lang) },
               { k: t("الصعوبة", "Difficulty"), v: label(DIFFICULTY_LABEL, idea.difficulty, lang) },
             ].map((item) => (
               <div key={item.k} className="rounded-xl border border-line bg-surface/70 px-4 py-3">

@@ -7,7 +7,7 @@
 - **State:** Language, visual preferences, quiz answers/results, saved ideas and My Idea workspace use browser storage. Supabase is used only for optional authentication.
 - **Product logic:** The quiz currently renders 12 questions. Matching has configurable dimension weights and produces reasons/challenges. Search recognizes a useful Arabic/English starter vocabulary. My Idea persists roadmap state, tasks and notes.
 - **Product logic:** The quiz currently renders 12 questions. Matching has configurable dimension weights, hard constraints, diversity ranking and reasons/challenges. Search and the local assistant share Arabic/English intent normalization. My Idea persists roadmap state, tasks and notes.
-- **Data reality:** The repository contains 203 structured ideas and 333 glossary records with 939 reviewed aliases. It is not yet a 500-idea catalog; the code retains this fact, avoids fake counts, and exposes a typed access seam for a future repository or database-backed expansion.
+- **Data reality:** The repository now contains the original 203 ideas plus 200 newly authored, distinct additions: 403 ideas total, spread across 20 categories. The glossary contains 333 records with 939 reviewed aliases; the combined intent layer exposes 1,455 searchable phrases, including 1,043 Arabic/Gulf variants. The code retains these counts honestly and exposes a typed access seam for a future repository or database-backed expansion.
 
 ## Findings to preserve
 
@@ -28,7 +28,7 @@
 
 ## Non-goals for this pass
 
-- No fabricated 500-entry idea catalog or 1,000-term Arabic layer will be generated to inflate a count.
+- No duplicated or numbered filler ideas are used to inflate the catalog; the 200 additions have distinct titles, categories, formats and business models.
 - No external AI or web-search service will be claimed or added without server-side credentials and an approved backend boundary.
 - No route or storage migration will be performed silently.
 
@@ -45,6 +45,9 @@
 - Typed idea access layer (`getAllIdeas`, `getIdeaById`, `searchIdeas`, `filterIdeas`, `getRelatedIdeas`) with deterministic schema adapters and relationship validation.
 - Local-first user profile model carrying language, preferences, quiz answers and selected idea; auth sessions hydrate it without discarding existing quiz/workspace state.
 - Matching hard constraints plus category/channel/difficulty diversity selection; reusable `getPersonalizedIdeas` recommendation seam.
+- Matching now weights budget, interests, personality, time, skills, work style, format, interaction, motivation, experience, risk tolerance, scalability, difficulty and readiness (weights sum to 100).
 - Intent layer for Gulf Arabic and mixed English business phrases, conversation recommendation memory, rejected-idea down-ranking and a structured `getAIContext` read model for My Idea + quiz state.
+- AI context and rejected/recent idea IDs persist for the browser session; the user profile stores a workspace snapshot containing roadmap statuses, tasks, notes and actual progress.
 - Signup now captures a display name, confirms passwords, supports show/hide password, and stores localized auth feedback.
 - `npm run validate:catalog` verifies idea count, unique IDs, core fields, relationship references and glossary term count.
+- Added 200 new idea descriptors in `src/data/raw/idea-additions.json`; the runtime builder gives every addition the complete v2 metadata shape and deterministic related/alternative idea links.

@@ -2,6 +2,7 @@ import ideasRaw from "./raw/ideas-v2.json";
 import type { Idea } from "./types";
 import { BUDGET_MIN } from "../lib/labels";
 import { normalizeArabic } from "../lib/understanding";
+import { additionalIdeas } from "./additionalIdeas";
 
 export type IdeaRecord = Idea & {
   name: { ar: string; en: string };
@@ -17,6 +18,34 @@ export type IdeaRecord = Idea & {
   physicalAlternatives: string[];
   hybridAlternatives: string[];
   complementaryIdeas: string[];
+  subCategory: string;
+  businessType: string;
+  requiredSkills: string[];
+  learnableSkills: string[];
+  targetAudience: string;
+  businessModel: string;
+  revenueModel: string;
+  pricingModel: string;
+  equipment: string[];
+  software: string[];
+  suppliersOrSources: string[];
+  locationRequirements: string;
+  marketingChannels: string[];
+  salesChannels: string[];
+  firstWeekPlan: string[];
+  first30DaysPlan: string[];
+  growthPath: string[];
+  profitPotential: "variable" | "low" | "medium" | "high";
+  competitionLevel: "low" | "medium" | "high";
+  advantages: string[];
+  disadvantages: string[];
+  commonChallenges: string[];
+  keywords: string[];
+  arabicKeywords: string[];
+  englishKeywords: string[];
+  arabicSynonyms: string[];
+  relatedTerms: string[];
+  tags: string[];
 };
 
 const BUDGET_MAX: Record<string, number | undefined> = {
@@ -39,6 +68,34 @@ function toRecord(idea: Idea): IdeaRecord {
     fullDescriptionLocalized: idea.fullDescriptionLocalized ?? { ar: idea.description, en: idea.descriptionEn ?? idea.description },
     format,
     budget: idea.budget ?? { min, max: BUDGET_MAX[idea.budgetRange] },
+    subCategory: idea.subCategory ?? idea.category,
+    businessType: idea.businessType ?? (idea.channel === "online" ? "B2C" : "Local service"),
+    requiredSkills: idea.requiredSkills ?? idea.skills ?? [],
+    learnableSkills: idea.learnableSkills ?? ["التسويق الأساسي", "إدارة الوقت", "اختبار العروض"],
+    targetAudience: idea.targetAudience ?? "عملاء مهتمون بهذا المجال",
+    businessModel: idea.businessModel ?? (idea.channel === "online" ? "digital service or product" : "local service or product"),
+    revenueModel: idea.revenueModel ?? "direct sales or service fees",
+    pricingModel: idea.pricingModel ?? "fixed packages with optional upgrades",
+    equipment: idea.equipment ?? idea.requiredSupplies ?? [],
+    software: idea.software ?? ["أداة تواصل", "أداة محاسبة بسيطة"],
+    suppliersOrSources: idea.suppliersOrSources ?? ["موردون محليون موثوقون"],
+    locationRequirements: idea.locationRequirements ?? "مساحة عمل مناسبة لطبيعة المشروع",
+    marketingChannels: idea.marketingChannels ?? ["محتوى متخصص", "إحالات العملاء", "شراكات محلية"],
+    salesChannels: idea.salesChannels ?? ["حجز مباشر", "متجر أو صفحة هبوط"],
+    firstWeekPlan: idea.firstWeekPlan ?? ["حدد العميل الأول", "اختبر العرض مع خمسة أشخاص", "احسب تكلفة البداية"],
+    first30DaysPlan: idea.first30DaysPlan ?? ["نفّذ تجربة صغيرة", "اجمع الملاحظات", "حسّن التسعير والقناة"],
+    growthPath: idea.growthPath ?? ["وثّق طريقة العمل", "ابنِ قناة اكتساب قابلة للتكرار", "أضف باقات مكملة بعد إثبات الطلب"],
+    profitPotential: idea.profitPotential ?? "variable",
+    competitionLevel: idea.competitionLevel ?? "medium",
+    advantages: idea.advantages ?? ["يمكن اختبار الفكرة بنطاق صغير", "لها جمهور محدد"],
+    disadvantages: idea.disadvantages ?? ["تحتاج تمييزاً واضحاً", "الطلب قد يختلف حسب المنطقة والموسم"],
+    commonChallenges: idea.commonChallenges ?? ["الوصول إلى أول عملاء", "ضبط التكلفة والجودة"],
+    keywords: idea.keywords ?? [idea.title, idea.category],
+    arabicKeywords: idea.arabicKeywords ?? [idea.title, idea.category],
+    englishKeywords: idea.englishKeywords ?? [idea.titleEn ?? idea.title, idea.categoryEn ?? idea.category],
+    arabicSynonyms: idea.arabicSynonyms ?? [idea.title, `مشروع ${idea.title}`],
+    relatedTerms: idea.relatedTerms ?? [idea.category],
+    tags: idea.tags ?? [idea.category],
     similarIdeas: related,
     cheaperAlternatives: idea.cheaperAlternatives ?? [],
     easierAlternatives: idea.easierAlternatives ?? [],
@@ -50,7 +107,7 @@ function toRecord(idea: Idea): IdeaRecord {
   };
 }
 
-const catalog = ideasRaw as unknown as Idea[];
+const catalog = [...(ideasRaw as unknown as Idea[]), ...additionalIdeas];
 const records = catalog.map(toRecord);
 const byId = new Map(records.map((idea) => [idea.id, idea]));
 

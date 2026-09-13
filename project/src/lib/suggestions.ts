@@ -115,9 +115,9 @@ export function getInsights(idea: Idea, lang: "ar" | "en") {
           : lang === "en"
             ? "Online & Physical"
             : "أونلاين وواقعي",
-    budget: idea.budgetLabel,
+    budget: label(BUDGET_LABEL, idea.budgetRange, lang),
     difficulty: label(DIFFICULTY_LABEL, idea.difficulty, lang),
-    time: answers ? label(TIME_LABEL, answers.timeRequired, lang) : idea.timeLabel,
+    time: label(TIME_LABEL, answers?.timeRequired ?? idea.timeRequired, lang),
     work: answers ? label(WORKSTYLE_LABEL, (answers.workStyles as string[])?.[0], lang) : "—",
     quizBudget: answers ? label(BUDGET_LABEL, answers.budgetRange, lang) : null,
   };
@@ -138,8 +138,8 @@ export function buildMyIdeaAiContext(idea: Idea, lang: "ar" | "en"): string {
     lang === "en" ? `Active project: ${title}` : `المشروع الحالي: ${title}`,
     desc,
     lang === "en"
-      ? `Type: ${label(CHANNEL_LABEL, idea.channel, lang)}. Budget: ${idea.budgetLabel}. Difficulty: ${label(DIFFICULTY_LABEL, idea.difficulty, lang)}.`
-      : `النوع: ${label(CHANNEL_LABEL, idea.channel, lang)}. الميزانية: ${idea.budgetLabel}. الصعوبة: ${label(DIFFICULTY_LABEL, idea.difficulty, lang)}.`,
+        ? `Type: ${label(CHANNEL_LABEL, idea.channel, lang)}. Budget: ${label(BUDGET_LABEL, idea.budgetRange, lang)}. Difficulty: ${label(DIFFICULTY_LABEL, idea.difficulty, lang)}.`
+        : `النوع: ${label(CHANNEL_LABEL, idea.channel, lang)}. الميزانية: ${label(BUDGET_LABEL, idea.budgetRange, lang)}. الصعوبة: ${label(DIFFICULTY_LABEL, idea.difficulty, lang)}.`,
     lang === "en"
       ? `Progress: ${progress.completed}/${progress.total} steps (${progress.percent}%).`
       : `التقدم: ${progress.completed}/${progress.total} خطوات (${progress.percent}%).`,

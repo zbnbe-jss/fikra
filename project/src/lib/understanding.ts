@@ -7,7 +7,7 @@ import { intentPhraseKnowledge } from "../data/knowledge";
  */
 export type DiscoveryIntent = {
   budget?: number;
-  channel?: "online" | "physical";
+  channel?: "online" | "physical" | "hybrid";
   beginner?: boolean;
   lowBudget?: boolean;
   solo?: boolean;
@@ -72,7 +72,9 @@ export function understandDiscovery(input: string): DiscoveryIntent {
 
   return {
     budget: number ? Number(number[1]) : undefined,
-    channel: has(text, ["اونلاين", "online", "من البيت", "من المنزل", "رقمي"])
+    channel: has(text, ["اونلاين وواقعي", "online and physical", "hybrid", "هجين"])
+      ? "hybrid"
+      : has(text, ["اونلاين", "online", "من البيت", "من المنزل", "رقمي"])
       ? "online"
       : has(text, ["واقعي", "physical", "اوفلاين", "محل", "متجر"])
         ? "physical"
@@ -109,7 +111,7 @@ export function detectIntent(input: string): DetectedIntent {
   add("develop", ["طور", "طوره", "عدل", "حسن", "develop", "improve"]);
   add("cheaper", ["ارخص", "رخيص", "cheap", "cheaper"]);
   add("easier", ["اسهل", "بسيط", "easy", "easier"]);
-  add("recommend_different", ["غيرها", "غيره", "غير", "ما عجب", "مو مناسب", "another", "different"]);
+  add("recommend_different", ["غيرها", "غيره", "غير هذي", "شي ثاني", "ما عجب", "مو مناسب", "another", "different"]);
   add("online", ["اونلاين", "online", "رقمي", "من البيت"]);
   add("physical", ["واقعي", "physical", "اوفلاين", "محل", "متجر"]);
   add("hybrid", ["هجين", "hybrid", "اونلاين وواقعي"]);

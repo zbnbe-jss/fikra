@@ -82,3 +82,11 @@ export function labelList(map: Record<string, { ar: string; en: string }>, value
   if (!Array.isArray(values) || values.length === 0) return "—";
   return values.map((v) => (map[v] ? map[v][lang] : String(v))).join(lang === "en" ? ", " : "، ");
 }
+
+export function budgetLabel(value: unknown, lang: "ar" | "en"): string {
+  return label(BUDGET_LABEL, value, lang);
+}
+
+export function timeLabel(value: unknown, lang: "ar" | "en"): string {
+  return label(TIME_LABEL, value, lang);
+}

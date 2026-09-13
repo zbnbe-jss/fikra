@@ -6,7 +6,7 @@ import { ideas } from "../data";
 import { getRoadmapProgress, isIdeaSaved, setMyIdea, toggleSavedIdea } from "../lib/myIdea";
 import IdeaCard from "../components/IdeaCard";
 import { FadeIn } from "../components/motion";
-import { CHANNEL_LABEL, DIFFICULTY_LABEL, INTERACTION_LABEL, RISK_LABEL, SCALABILITY_LABEL, label } from "../lib/labels";
+import { CHANNEL_LABEL, DIFFICULTY_LABEL, INTERACTION_LABEL, RISK_LABEL, SCALABILITY_LABEL, budgetLabel, label, timeLabel } from "../lib/labels";
 import { getAnswers } from "../lib/quizState";
 import { scoreIdea } from "../lib/scoring";
 
@@ -60,8 +60,8 @@ export default function IdeaDetail() {
 
             <dl className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-4">
               {[
-                { k: t("الميزانية", "Budget"), v: idea.budgetLabel },
-                { k: t("الوقت", "Time"), v: idea.timeLabel },
+                { k: t("الميزانية", "Budget"), v: budgetLabel(idea.budgetRange, lang) },
+                { k: t("الوقت", "Time"), v: timeLabel(idea.timeRequired, lang) },
                 { k: t("الصعوبة", "Difficulty"), v: label(DIFFICULTY_LABEL, idea.difficulty, lang) },
                 { k: t("النوع", "Type"), v: label(CHANNEL_LABEL, idea.channel, lang) },
               ].map((s) => (

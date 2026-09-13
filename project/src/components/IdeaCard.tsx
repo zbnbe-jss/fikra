@@ -3,7 +3,7 @@ import { ArrowLeft, Bookmark, BookmarkCheck } from "lucide-react";
 import { useLang } from "../lib/language";
 import { isIdeaSaved, setMyIdea, toggleSavedIdea } from "../lib/myIdea";
 import type { Idea } from "../data/types";
-import { CHANNEL_LABEL, DIFFICULTY_LABEL, label } from "../lib/labels";
+import { CHANNEL_LABEL, DIFFICULTY_LABEL, budgetLabel, label, timeLabel } from "../lib/labels";
 
 export default function IdeaCard({ idea, compatibility }: { idea: Idea; compatibility?: number }) {
   const { lang, t } = useLang();
@@ -28,7 +28,7 @@ export default function IdeaCard({ idea, compatibility }: { idea: Idea; compatib
       <dl className="mt-4 grid grid-cols-2 gap-2 text-xs">
         <div>
           <dt className="text-subtle">{t("الميزانية", "Budget")}</dt>
-          <dd className="mt-0.5 font-medium text-fg">{idea.budgetLabel}</dd>
+          <dd className="mt-0.5 font-medium text-fg">{budgetLabel(idea.budgetRange, lang)}</dd>
         </div>
         <div>
           <dt className="text-subtle">{t("النوع", "Type")}</dt>
@@ -40,7 +40,7 @@ export default function IdeaCard({ idea, compatibility }: { idea: Idea; compatib
         </div>
         <div>
           <dt className="text-subtle">{t("الوقت", "Time")}</dt>
-          <dd className="mt-0.5 font-medium text-fg">{idea.timeLabel}</dd>
+          <dd className="mt-0.5 font-medium text-fg">{timeLabel(idea.timeRequired, lang)}</dd>
         </div>
       </dl>
       <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-line pt-4">

@@ -1,5 +1,27 @@
 import type { QuizAnswers } from "./quizState";
 
+export interface ProfileWorkspace {
+  ideaId: string;
+  roadmap: Record<string, "notStarted" | "inProgress" | "completed">;
+  tasks: { id: string; text: string; done: boolean; priority: "low" | "medium" | "high"; createdAt: number }[];
+  notes: string;
+  progress: { completed: number; total: number; percent: number };
+}
+
+export interface QuizProfile {
+  budget?: string;
+  interests?: string[];
+  skills?: string[];
+  timeAvailable?: string;
+  workStyle?: string[];
+  customerInteraction?: string;
+  motivation?: string[];
+  personalitySignals?: string;
+  riskTolerance?: string;
+  scalabilityPreference?: string;
+  readiness?: string;
+}
+
 const PROFILE_KEY = "fikra_profile";
 const profileKeyForUser = (userId: string) => `${PROFILE_KEY}_${userId}`;
 
@@ -13,7 +35,10 @@ export interface UserProfile {
   typography?: { fontSize: "sm" | "md" | "lg" | "xl"; fontFamily: "default" | "modern" | "readable"; iconSize: "sm" | "md" | "lg" };
   accessibility?: { reducedMotion: boolean; highContrast: boolean; strongFocus: boolean; comfortableSpacing: boolean };
   quizAnswers?: QuizAnswers;
+  quizProfile?: QuizProfile;
+  goals?: string[];
   selectedIdeaId?: string | null;
+  workspace?: ProfileWorkspace;
   updatedAt: number;
 }
 
@@ -80,7 +105,27 @@ export function setAuthenticatedProfile(
 }
 
 export function saveProfileQuiz(quizAnswers: QuizAnswers) {
-  return saveUserProfile({ quizAnswers });
+  return saveUserProfile({
+    quizAnswers,
+    goals: quizAnswers.motivations,
+    quizProfile: {
+      budget: quizAnswers.budgetRange,
+      interests: quizAnswers.interests,
+      skills: quizAnswers.skills,
+      timeAvailable: quizAnswers.timeRequired,
+      workStyle: quizAnswers.workStyles,
+      customerInteraction: quizAnswers.customerInteraction,
+      motivation: quizAnswers.motivations,
+      personalitySignals: quizAnswers.personality,
+      riskTolerance: quizAnswers.ambition,
+      scalabilityPreference: quizAnswers.ambition === "growFast" ? "high" : quizAnswers.ambition === "safeSmall" ? "low" : undefined,
+      readiness: quizAnswers.readiness,
+    },
+  });
+}
+
+export function saveProfileWorkspace(workspace: ProfileWorkspace) {
+  return saveUserProfile({ selectedIdeaId: workspace.ideaId, workspace });
 }
 
 export { PROFILE_KEY };

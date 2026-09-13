@@ -67,6 +67,7 @@ export function clearAnswers() {
     localStorage.removeItem(ANSWERS_KEY);
     localStorage.removeItem(RESULTS_KEY);
     localStorage.removeItem(PROFILE_ANSWERS_KEY);
+    saveUserProfile({ quizAnswers: undefined, quizProfile: undefined });
   } catch {
     /* ignore */
   }

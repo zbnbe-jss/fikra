@@ -13,7 +13,7 @@ import {
   Wallet,
 } from "lucide-react";
 import { useLang } from "../lib/language";
-import { respond, type AiContext, type AiMessage } from "../lib/aiAssistant";
+import { loadAiContext, respond, saveAiContext, type AiContext, type AiMessage } from "../lib/aiAssistant";
 import { getMyIdea } from "../lib/myIdea";
 import IdeaCard from "../components/IdeaCard";
 import ComparisonTable from "../components/ComparisonTable";
@@ -54,7 +54,7 @@ export default function Ai() {
   const [messages, setMessages] = useState<AiMessage[]>([{ role: "assistant", content: greeting }]);
   const [input, setInput] = useState(location.state?.prompt ?? "");
   const [sending, setSending] = useState(false);
-  const contextRef = useRef<AiContext>({ lastIdeaId: getMyIdea()?.id ?? null, myIdeaBrief: location.state?.context ?? "" });
+  const contextRef = useRef<AiContext>(loadAiContext({ lastIdeaId: getMyIdea()?.id ?? null, myIdeaBrief: location.state?.context ?? "" }));
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -70,6 +70,7 @@ export default function Ai() {
     setTimeout(() => {
       const reply = respond(trimmed, contextRef.current);
       contextRef.current = { ...contextRef.current, ...reply.context };
+      saveAiContext(contextRef.current);
       setMessages((m) => [...m, reply]);
       setSending(false);
       requestAnimationFrame(() => scrollRef.current?.scrollTo(0, scrollRef.current.scrollHeight));
@@ -79,6 +80,7 @@ export default function Ai() {
   const reset = () => {
     setMessages([{ role: "assistant", content: greeting }]);
     contextRef.current = { lastIdeaId: getMyIdea()?.id ?? null };
+    saveAiContext(contextRef.current);
   };
 
   const prompts = lang === "en" ? PROMPTS_EN : PROMPTS_AR;

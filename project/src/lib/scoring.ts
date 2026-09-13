@@ -4,17 +4,22 @@ import type { QuizAnswers } from "./quizState";
 
 // Weighted scoring engine — weights follow the FIKRA 2.0 spec exactly
 // (they sum to 100 and are kept in one place so they can be tuned later).
-const WEIGHTS = {
-  budget: 20,
-  interests: 15,
-  personality: 15,
+export const MATCH_WEIGHTS = {
+  budget: 16,
+  interests: 14,
+  personality: 12,
   time: 10,
-  skills: 10,
-  workStyle: 10,
+  skills: 9,
+  workStyle: 8,
   channel: 5,
   customerInteraction: 5,
   motivation: 5,
-  experience: 5,
+  experience: 4,
+  risk: 4,
+  scalability: 3,
+  difficulty: 2,
+  readiness: 1,
+  businessModel: 2,
 } as const;
 
 const BUDGET_ORDER = ["under500", "500to2000", "2000to5000", "5000to15000", "over15000"];
@@ -68,7 +73,7 @@ export interface ScoredIdea {
 }
 
 export interface MatchSignal {
-  id: keyof typeof WEIGHTS;
+  id: keyof typeof MATCH_WEIGHTS;
   score: number;
   weight: number;
   state: "strong" | "partial" | "mismatch" | "neutral";
@@ -76,7 +81,7 @@ export interface MatchSignal {
   en: string;
 }
 
-const SIGNAL_COPY: Record<keyof typeof WEIGHTS, { ar: string; en: string }> = {
+const SIGNAL_COPY: Record<keyof typeof MATCH_WEIGHTS, { ar: string; en: string }> = {
   budget: { ar: "الميزانية", en: "Budget" },
   interests: { ar: "الاهتمامات", en: "Interests" },
   personality: { ar: "الشخصية", en: "Personality" },
@@ -87,10 +92,15 @@ const SIGNAL_COPY: Record<keyof typeof WEIGHTS, { ar: string; en: string }> = {
   customerInteraction: { ar: "التعامل مع العملاء", en: "Customer interaction" },
   motivation: { ar: "الدافع", en: "Motivation" },
   experience: { ar: "الخبرة", en: "Experience" },
+  risk: { ar: "تحمّل المخاطرة", en: "Risk tolerance" },
+  scalability: { ar: "قابلية التوسع", en: "Scalability" },
+  difficulty: { ar: "مستوى الصعوبة", en: "Difficulty" },
+  readiness: { ar: "الجاهزية", en: "Readiness" },
+  businessModel: { ar: "نموذج العمل", en: "Business model" },
 };
 
 function scoreDimensions(idea: Idea, answers: QuizAnswers) {
-  const dims: Record<keyof typeof WEIGHTS, number> = {
+  const dims: Record<keyof typeof MATCH_WEIGHTS, number> = {
     budget: adjacentScore(BUDGET_ORDER, idea.budgetRange, answers.budgetRange as string),
     interests: overlapRatio(answers.interests as string[], idea.interests),
     personality: (() => {
@@ -120,15 +130,48 @@ function scoreDimensions(idea: Idea, answers: QuizAnswers) {
       answers.experienceMatch && idea.experienceMatch?.includes(answers.experienceMatch as string)
         ? 1
         : 0,
+    risk: (() => {
+      const ambition = String(answers.ambition ?? "");
+      if (!ambition) return 0.5;
+      if (ambition === "safeSmall" || ambition === "sideIncome") return idea.riskLevel === "low" ? 1 : idea.riskLevel === "medium" ? 0.5 : 0;
+      if (ambition === "growFast") return idea.riskLevel === "high" ? 1 : idea.riskLevel === "medium" ? 0.5 : 0;
+      return 0.5;
+    })(),
+    scalability: (() => {
+      const ambition = String(answers.ambition ?? "");
+      if (ambition === "growFast") return idea.scalability === "high" ? 1 : idea.scalability === "medium" ? 0.5 : 0;
+      if (ambition === "safeSmall" || ambition === "sideIncome") return idea.scalability === "low" ? 1 : idea.scalability === "medium" ? 0.5 : 0;
+      return 0.5;
+    })(),
+    difficulty: (() => {
+      const experience = String(answers.experienceMatch ?? "");
+      if (experience === "first" && idea.difficulty === "beginner") return 1;
+      if (experience === "experienced" && idea.difficulty === "advanced") return 1;
+      if (experience === "smallProjects" && idea.difficulty === "intermediate") return 1;
+      return experience ? 0.5 : 0;
+    })(),
+    readiness: (() => {
+      const readiness = String(answers.readiness ?? "");
+      if (readiness === "now") return idea.difficulty === "beginner" ? 1 : idea.difficulty === "intermediate" ? 0.5 : 0;
+      if (readiness === "exploring") return idea.difficulty === "beginner" || idea.difficulty === "intermediate" ? 1 : 0.5;
+      return readiness ? 0.5 : 0;
+    })(),
+    businessModel: (() => {
+      const requested = String(answers.businessModel ?? "").toLowerCase();
+      if (!requested) return 0.5;
+      const actual = `${idea.businessModel ?? ""} ${idea.revenueModel ?? ""} ${idea.businessType ?? ""} ${idea.channel} ${(idea.tags ?? []).join(" ")}`.toLowerCase();
+      return actual.includes(requested) ? 1 : 0;
+    })(),
   };
   return dims;
 }
 
-export function scoreIdea(idea: Idea, answers: QuizAnswers): ScoredIdea {
+export function scoreIdea(idea: Idea, answers: QuizAnswers, weights: Partial<Record<keyof typeof MATCH_WEIGHTS, number>> = {}): ScoredIdea {
+  const activeWeights = { ...MATCH_WEIGHTS, ...weights };
   const dims = scoreDimensions(idea, answers);
   let total = 0;
-  for (const key of Object.keys(WEIGHTS) as (keyof typeof WEIGHTS)[]) {
-    total += dims[key] * WEIGHTS[key];
+  for (const key of Object.keys(MATCH_WEIGHTS) as (keyof typeof MATCH_WEIGHTS)[]) {
+    total += dims[key] * activeWeights[key];
   }
   const score = Math.round(total);
 
@@ -140,6 +183,9 @@ export function scoreIdea(idea: Idea, answers: QuizAnswers): ScoredIdea {
   if (dims.workStyle > 0.4) reasons.push({ ar: "يناسب أسلوب عملك", en: "Fits your working style" });
   if (dims.experience >= 1) reasons.push({ ar: "مناسب لمستوى خبرتك", en: "Fits your experience level" });
   if (dims.personality > 0.4) reasons.push({ ar: "يناسب شخصيتك", en: "Fits your personality" });
+  if (dims.risk >= 1) reasons.push({ ar: "يناسب طموحك وتحملك للمخاطرة", en: "Fits your ambition and risk tolerance" });
+  if (dims.scalability >= 1) reasons.push({ ar: "يتوافق مع قابلية التوسع التي تريدها", en: "Matches the scalability you want" });
+  if (dims.readiness >= 1) reasons.push({ ar: "مناسب لوقت بدءك", en: "Fits when you want to start" });
 
   let challenge: ScoredIdea["challenge"];
   if (dims.skills < 0.3) {
@@ -152,9 +198,14 @@ export function scoreIdea(idea: Idea, answers: QuizAnswers): ScoredIdea {
       ar: "الميزانية المطلوبة أعلى شوي من اللي حددته",
       en: "The required budget is a bit higher than what you set",
     };
+  } else if (dims.difficulty === 0) {
+    challenge = {
+      ar: "قد تحتاج مستوى خبرة أعلى قبل البدء الكامل",
+      en: "You may need more experience before a full launch",
+    };
   }
 
-  const signals = (Object.keys(WEIGHTS) as (keyof typeof WEIGHTS)[])
+  const signals = (Object.keys(MATCH_WEIGHTS) as (keyof typeof MATCH_WEIGHTS)[])
     .map((id) => {
       const dimension = dims[id];
       const copy = SIGNAL_COPY[id];
@@ -165,14 +216,18 @@ export function scoreIdea(idea: Idea, answers: QuizAnswers): ScoredIdea {
           : dimension === 0
             ? "mismatch"
             : "neutral";
-      return { id, score: dimension, weight: WEIGHTS[id], state, ...copy };
+      return { id, score: dimension, weight: activeWeights[id], state, ...copy };
     })
     .sort((a, b) => b.score * b.weight - a.score * a.weight);
 
   return { idea, score, reasons, challenge, signals };
 }
 
-export function matchIdeas(answers: QuizAnswers, limit = 6): ScoredIdea[] {
+export function matchIdeas(
+  answers: QuizAnswers,
+  limit = 6,
+  weights: Partial<Record<keyof typeof MATCH_WEIGHTS, number>> = {},
+): ScoredIdea[] {
   const eligible = ideas
     .filter((idea) => {
       if (answers.channel === "online" && idea.channel === "physical") return false;
@@ -182,7 +237,7 @@ export function matchIdeas(answers: QuizAnswers, limit = 6): ScoredIdea[] {
       if (answers.timeRequired === "under1h" && idea.timeRequired === "mostOfDay") return false;
       return true;
     })
-    .map((idea) => scoreIdea(idea, answers))
+    .map((idea) => scoreIdea(idea, answers, weights))
     .sort((a, b) => b.score - a.score);
 
   if (eligible.length <= limit) return eligible;

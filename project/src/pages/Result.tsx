@@ -13,8 +13,10 @@ import {
   INTERACTION_LABEL,
   TIME_LABEL,
   WORKSTYLE_LABEL,
+  budgetLabel,
   label,
   labelList,
+  timeLabel,
 } from "../lib/labels";
 import Logo from "../components/Logo";
 import { FadeIn } from "../components/motion";
@@ -67,8 +69,8 @@ function ResultCard({ scored, primary }: { scored: ScoredIdea; primary?: boolean
       </p>
 
       <div className="mt-5 flex flex-wrap gap-2">
-        <Snapshot icon={Wallet} label={t("الميزانية", "Budget")} value={idea.budgetLabel} />
-        <Snapshot icon={Clock} label={t("الوقت", "Time")} value={idea.timeLabel} />
+        <Snapshot icon={Wallet} label={t("الميزانية", "Budget")} value={budgetLabel(idea.budgetRange, lang)} />
+        <Snapshot icon={Clock} label={t("الوقت", "Time")} value={timeLabel(idea.timeRequired, lang)} />
         <Snapshot icon={channelIcon} label={t("النوع", "Type")} value={label(CHANNEL_LABEL, idea.channel, lang)} />
         <Snapshot icon={Lightbulb} label={t("الصعوبة", "Difficulty")} value={label(DIFFICULTY_LABEL, idea.difficulty, lang)} />
       </div>
